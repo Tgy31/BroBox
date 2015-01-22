@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BBViewController.h
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 22/01/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BBViewController : UIViewController
 
 @end
-
