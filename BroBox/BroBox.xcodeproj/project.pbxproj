@@ -41,6 +41,12 @@
 		5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */; };
 		5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC277C1A72C8CE00ECF6FA /* BBRootVC.m */; };
 		5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */; };
+		5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */; };
+		5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */; };
+		5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */; };
+		5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */; };
+		5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */; };
+		5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27911A72E07200ECF6FA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +105,15 @@
 		5AAC277B1A72C8CE00ECF6FA /* BBRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRootVC.h; path = BBRootVC/BBRootVC.h; sourceTree = "<group>"; };
 		5AAC277C1A72C8CE00ECF6FA /* BBRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRootVC.m; path = BBRootVC/BBRootVC.m; sourceTree = "<group>"; };
 		5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBRootVC.xib; path = BBRootVC/BBRootVC.xib; sourceTree = "<group>"; };
+		5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		5AAC27851A72CFF000ECF6FA /* BBMapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMapNavigationController.h; path = BBMapNavigationController/BBMapNavigationController.h; sourceTree = "<group>"; };
+		5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapNavigationController.m; path = BBMapNavigationController/BBMapNavigationController.m; sourceTree = "<group>"; };
+		5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapNavigationController.xib; path = BBMapNavigationController/BBMapNavigationController.xib; sourceTree = "<group>"; };
+		5AAC278B1A72DF5900ECF6FA /* BBMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMapVC.h; path = BBMapVC/BBMapVC.h; sourceTree = "<group>"; };
+		5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapVC.m; path = BBMapVC/BBMapVC.m; sourceTree = "<group>"; };
+		5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapVC.xib; path = BBMapVC/BBMapVC.xib; sourceTree = "<group>"; };
+		5AAC27911A72E07200ECF6FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */,
 				5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */,
 				5AAC27651A72B19700ECF6FA /* Social.framework in Frameworks */,
 				5AAC27631A72B10F00ECF6FA /* libsqlite3.dylib in Frameworks */,
@@ -144,6 +160,7 @@
 		20D26F11A65B4DC2BD880D25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AAC27911A72E07200ECF6FA /* MapKit.framework */,
 				5AAC27661A72B22300ECF6FA /* libstdc++.6.dylib */,
 				5AAC27641A72B19700ECF6FA /* Social.framework */,
 				5AAC27621A72B10F00ECF6FA /* libsqlite3.dylib */,
@@ -233,6 +250,8 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5AAC27901A72DF8300ECF6FA /* BBMapVC */,
+				5AAC27841A72CFB600ECF6FA /* Navigation Controllers */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
 				5AAC27761A72C19200ECF6FA /* BBLoginVC */,
 				5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */,
@@ -304,6 +323,36 @@
 				5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */,
 			);
 			name = BBRootVC;
+			sourceTree = "<group>";
+		};
+		5AAC27841A72CFB600ECF6FA /* Navigation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */,
+				5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */,
+				5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */,
+			);
+			name = "Navigation Controllers";
+			sourceTree = "<group>";
+		};
+		5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27851A72CFF000ECF6FA /* BBMapNavigationController.h */,
+				5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */,
+				5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */,
+			);
+			name = BBMapNavigationController;
+			sourceTree = "<group>";
+		};
+		5AAC27901A72DF8300ECF6FA /* BBMapVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC278B1A72DF5900ECF6FA /* BBMapVC.h */,
+				5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */,
+				5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */,
+			);
+			name = BBMapVC;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -400,9 +449,11 @@
 			files = (
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
+				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
+				5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +509,13 @@
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
+				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
+				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
+				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
