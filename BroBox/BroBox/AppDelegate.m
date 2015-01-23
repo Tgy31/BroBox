@@ -14,7 +14,7 @@
 
 // Controllers
 #import "BBLoginVC.h"
-#import "BBLogoutVC.h"
+#import "BBRootVC.h"
 
 // Managers
 #import "BBLoginManager.h"
@@ -90,7 +90,7 @@
 }
 
 - (void)presentRootScreen {
-    self.window.rootViewController = [BBLogoutVC new];
+    self.window.rootViewController = [BBRootVC new];
 }
 
 + (void)presentLoginScreen
