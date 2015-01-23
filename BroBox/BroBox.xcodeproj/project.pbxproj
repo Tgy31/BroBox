@@ -251,10 +251,10 @@
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
 				5AAC27901A72DF8300ECF6FA /* BBMapVC */,
-				5AAC27841A72CFB600ECF6FA /* Navigation Controllers */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
 				5AAC27761A72C19200ECF6FA /* BBLoginVC */,
 				5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */,
+				5AAC27841A72CFB600ECF6FA /* Navigation Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
