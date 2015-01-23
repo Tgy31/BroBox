@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
@@ -24,8 +25,13 @@
     // Parse.com
     [Parse setApplicationId:@"fI62p2aPbqyKFQIL61QpVP3jPCu9PwMmrYCGPAMz"
                   clientKey:@"KAKyr3cG0gkx2bHHkLNgG8yRbz07dYTQCGA5MnO1"];
+    [PFFacebookUtils initializeFacebook];
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [self loginWithFacebook];
+    
+    [self initializeWindow];
     
     return YES;
 }
@@ -47,6 +53,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+    
     // Logs 'install' and 'app activate' App Events.
     [FBAppEvents activateApp];
 }
@@ -62,5 +70,46 @@
     // attempt to extract a token from the url
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
+
+#pragma mark - App screens
+
+- (void)initializeWindow {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)presentLoginScreen {
+    self.window.rootViewController = [UIViewController new];
+    self.window.rootViewController.view.backgroundColor = [UIColor redColor];
+}
+
+- (void)presentRootScreen {
+    self.window.rootViewController = [UIViewController new];
+    self.window.rootViewController.view.backgroundColor = [UIColor blueColor];
+}
+
+#pragma mark - Login
+#pragma mark Facebook
+
+#define FACEBOOK_PERMISSIONS @[]
+
+- (void)loginWithFacebook {
+    [PFFacebookUtils logInWithPermissions:FACEBOOK_PERMISSIONS block:^(PFUser *user, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else if (!user) {
+            // No cached user or user canceled login
+            [self presentLoginScreen];
+        } else if (user.isNew) {
+            NSLog(@"User signed up and logged in through Facebook!");
+            [self presentRootScreen];
+        } else {
+            NSLog(@"User logged in through Facebook!");
+            [self presentRootScreen];
+        }
+    }];
+}
+
 
 @end
