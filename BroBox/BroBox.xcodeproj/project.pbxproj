@@ -34,6 +34,11 @@
 		5AAC27631A72B10F00ECF6FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27621A72B10F00ECF6FA /* libsqlite3.dylib */; };
 		5AAC27651A72B19700ECF6FA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27641A72B19700ECF6FA /* Social.framework */; };
 		5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27661A72B22300ECF6FA /* libstdc++.6.dylib */; };
+		5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27691A72B9BF00ECF6FA /* BBLogoutVC.m */; };
+		5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC276A1A72B9BF00ECF6FA /* BBLogoutVC.xib */; };
+		5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27721A72C18E00ECF6FA /* BBLoginVC.m */; };
+		5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC27731A72C18E00ECF6FA /* BBLoginVC.xib */; };
+		5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,14 @@
 		5AAC27621A72B10F00ECF6FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5AAC27641A72B19700ECF6FA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		5AAC27661A72B22300ECF6FA /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		5AAC27681A72B9BF00ECF6FA /* BBLogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBLogoutVC.h; path = BBLogoutVC/BBLogoutVC.h; sourceTree = "<group>"; };
+		5AAC27691A72B9BF00ECF6FA /* BBLogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBLogoutVC.m; path = BBLogoutVC/BBLogoutVC.m; sourceTree = "<group>"; };
+		5AAC276A1A72B9BF00ECF6FA /* BBLogoutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBLogoutVC.xib; path = BBLogoutVC/BBLogoutVC.xib; sourceTree = "<group>"; };
+		5AAC27711A72C18E00ECF6FA /* BBLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBLoginVC.h; path = BBLoginVC/BBLoginVC.h; sourceTree = "<group>"; };
+		5AAC27721A72C18E00ECF6FA /* BBLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBLoginVC.m; path = BBLoginVC/BBLoginVC.m; sourceTree = "<group>"; };
+		5AAC27731A72C18E00ECF6FA /* BBLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBLoginVC.xib; path = BBLoginVC/BBLoginVC.xib; sourceTree = "<group>"; };
+		5AAC27781A72C3AB00ECF6FA /* BBLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBLoginManager.h; sourceTree = "<group>"; };
+		5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBLoginManager.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +186,7 @@
 			children = (
 				5A1B0C1D1A710CA500425431 /* AppDelegate.h */,
 				5A1B0C1E1A710CA500425431 /* AppDelegate.m */,
+				5AAC27771A72C3AB00ECF6FA /* Managers */,
 				5A1B0C511A710DD000425431 /* Views */,
 				5A1B0C4A1A710D9400425431 /* Model */,
 				5A1B0C431A710D5E00425431 /* Controllers */,
@@ -214,6 +228,8 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5AAC27761A72C19200ECF6FA /* BBLoginVC */,
+				5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +259,35 @@
 				5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */,
 			);
 			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
+		5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27681A72B9BF00ECF6FA /* BBLogoutVC.h */,
+				5AAC27691A72B9BF00ECF6FA /* BBLogoutVC.m */,
+				5AAC276A1A72B9BF00ECF6FA /* BBLogoutVC.xib */,
+			);
+			name = BBLogoutVC;
+			sourceTree = "<group>";
+		};
+		5AAC27761A72C19200ECF6FA /* BBLoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27711A72C18E00ECF6FA /* BBLoginVC.h */,
+				5AAC27721A72C18E00ECF6FA /* BBLoginVC.m */,
+				5AAC27731A72C18E00ECF6FA /* BBLoginVC.xib */,
+			);
+			name = BBLoginVC;
+			sourceTree = "<group>";
+		};
+		5AAC27771A72C3AB00ECF6FA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27781A72C3AB00ECF6FA /* BBLoginManager.h */,
+				5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -337,8 +382,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
+				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +438,9 @@
 			files = (
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
+				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
+				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
+				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,

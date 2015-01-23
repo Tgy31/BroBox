@@ -12,6 +12,13 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <FacebookSDK/FacebookSDK.h>
 
+// Controllers
+#import "BBLoginVC.h"
+#import "BBLogoutVC.h"
+
+// Managers
+#import "BBLoginManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -29,9 +36,8 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    [self loginWithFacebook];
-    
     [self initializeWindow];
+    [self presentLoginScreen];
     
     return YES;
 }
@@ -80,36 +86,27 @@
 }
 
 - (void)presentLoginScreen {
-    self.window.rootViewController = [UIViewController new];
-    self.window.rootViewController.view.backgroundColor = [UIColor redColor];
+    self.window.rootViewController = [BBLoginVC new];
 }
 
 - (void)presentRootScreen {
-    self.window.rootViewController = [UIViewController new];
-    self.window.rootViewController.view.backgroundColor = [UIColor blueColor];
+    self.window.rootViewController = [BBLogoutVC new];
 }
 
-#pragma mark - Login
-#pragma mark Facebook
-
-#define FACEBOOK_PERMISSIONS @[]
-
-- (void)loginWithFacebook {
-    [PFFacebookUtils logInWithPermissions:FACEBOOK_PERMISSIONS block:^(PFUser *user, NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else if (!user) {
-            // No cached user or user canceled login
-            [self presentLoginScreen];
-        } else if (user.isNew) {
-            NSLog(@"User signed up and logged in through Facebook!");
-            [self presentRootScreen];
-        } else {
-            NSLog(@"User logged in through Facebook!");
-            [self presentRootScreen];
-        }
-    }];
++ (void)presentLoginScreen
+{
+    [[self sharedDelegate] presentLoginScreen];
 }
 
++ (void)presentRootScreen
+{
+    [[self sharedDelegate] presentRootScreen];
+}
+
+#pragma mark - Helpers
+
++ (AppDelegate *)sharedDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 @end
