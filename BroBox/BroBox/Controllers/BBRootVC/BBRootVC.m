@@ -10,6 +10,7 @@
 
 // Navigation Controllers
 #import "BBMapNavigationController.h"
+#import "BBMissionListNavigationController.h"
 
 // Controllers
 #import "BBLogoutVC.h"
@@ -33,9 +34,7 @@
     if (self) {
         self.mapVC = [BBMapNavigationController new];
         
-        self.missionsVC = [UIViewController new];
-        self.missionsVC.view.backgroundColor = [UIColor greenColor];
-        self.missionsVC.title = @"Missions";
+        self.missionsVC = [BBMissionListNavigationController new];
         
         self.createVC = [UIViewController new];
         self.createVC.view.backgroundColor = [UIColor yellowColor];
