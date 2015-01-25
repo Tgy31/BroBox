@@ -20,6 +20,9 @@
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
 		5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */; };
 		5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */; };
+		5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D421A755830001C07F6 /* BBGeoPoint.m */; };
+		5AA60D461A755830001C07F6 /* BBMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D441A755830001C07F6 /* BBMission.m */; };
+		5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D481A75584E001C07F6 /* BBParseManager.m */; };
 		5AAC26851A72AE7300ECF6FA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */; };
 		5AAC26861A72AE7300ECF6FA /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */; };
 		5AAC274B1A72AFDB00ECF6FA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27471A72AFDB00ECF6FA /* Parse.framework */; };
@@ -86,6 +89,12 @@
 		5AA60D341A75473D001C07F6 /* BBMissionListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListNavigationController.h; path = BBMissionListNavigationController/BBMissionListNavigationController.h; sourceTree = "<group>"; };
 		5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionListNavigationController.m; path = BBMissionListNavigationController/BBMissionListNavigationController.m; sourceTree = "<group>"; };
 		5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionListNavigationController.xib; path = BBMissionListNavigationController/BBMissionListNavigationController.xib; sourceTree = "<group>"; };
+		5AA60D411A755830001C07F6 /* BBGeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGeoPoint.h; sourceTree = "<group>"; };
+		5AA60D421A755830001C07F6 /* BBGeoPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGeoPoint.m; sourceTree = "<group>"; };
+		5AA60D431A755830001C07F6 /* BBMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMission.h; sourceTree = "<group>"; };
+		5AA60D441A755830001C07F6 /* BBMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMission.m; sourceTree = "<group>"; };
+		5AA60D471A75584E001C07F6 /* BBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseManager.h; sourceTree = "<group>"; };
+		5AA60D481A75584E001C07F6 /* BBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseManager.m; sourceTree = "<group>"; };
 		5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		5AAC27471A72AFDB00ECF6FA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -275,6 +284,7 @@
 			children = (
 				5A1B0C4B1A710D9400425431 /* BBObject.h */,
 				5A1B0C4C1A710D9400425431 /* BBObject.m */,
+				5AA60D401A755830001C07F6 /* Parse.com */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +316,19 @@
 				5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */,
 			);
 			name = BBMissionListNavigationController;
+			sourceTree = "<group>";
+		};
+		5AA60D401A755830001C07F6 /* Parse.com */ = {
+			isa = PBXGroup;
+			children = (
+				5AA60D471A75584E001C07F6 /* BBParseManager.h */,
+				5AA60D481A75584E001C07F6 /* BBParseManager.m */,
+				5AA60D411A755830001C07F6 /* BBGeoPoint.h */,
+				5AA60D421A755830001C07F6 /* BBGeoPoint.m */,
+				5AA60D431A755830001C07F6 /* BBMission.h */,
+				5AA60D441A755830001C07F6 /* BBMission.m */,
+			);
+			path = Parse.com;
 			sourceTree = "<group>";
 		};
 		5AAC25681A72AE7200ECF6FA /* FacebookSDK */ = {
@@ -539,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
+				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
 				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
@@ -551,6 +575,8 @@
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
+				5AA60D461A755830001C07F6 /* BBMission.m in Sources */,
+				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,9 +22,9 @@
     BBMissionListVC *missionListVC = [BBMissionListVC new];
     BBMissionListNavigationController *navigationController = [[BBMissionListNavigationController alloc] initWithRootViewController:missionListVC];
     
-    missionListVC.title = @"Missions";
+    missionListVC.title = NSLocalizedString(@"Missions", @"Mission list screen title");
     
-    navigationController.title = @"Missions";
+    navigationController.title = NSLocalizedString(@"Missions", @"Mission tab title");
     
     return navigationController;
 }
