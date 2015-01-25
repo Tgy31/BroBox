@@ -8,9 +8,6 @@
 
 #import "BBParseManager.h"
 
-// PFObjects
-#import "BBGeoPoint.h"
-
 @implementation BBParseManager
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block {

@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+// PFObjects
+#import "BBGeoPoint.h"
+
 ///--------------------------------------
 /// @name Blocks
 ///--------------------------------------
 
 typedef void (^BBArrayResultBlock)(NSArray *objects, NSError *error);
+
 
 @interface BBParseManager : NSObject
 

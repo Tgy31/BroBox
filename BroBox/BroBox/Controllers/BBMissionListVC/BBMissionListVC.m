@@ -78,6 +78,7 @@
 }
 
 #define CELL_IDENTIFIER @"geoPointCell"
+#define SUBTITLE_PATERN @"x: %f - y: %f"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -85,10 +86,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
     
+    BBGeoPoint *geoPoint = [self.data objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = @"GeoPoint";
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:SUBTITLE_PATERN, geoPoint.coordinate.latitude, geoPoint.coordinate.longitude];
     
     return cell;
 }
