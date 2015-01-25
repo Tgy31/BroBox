@@ -8,6 +8,6 @@
 
 #import "BBViewController.h"
 
-@interface BBMissionListVC : BBViewController
+@interface BBMissionListVC : UITableViewController
 
 @end

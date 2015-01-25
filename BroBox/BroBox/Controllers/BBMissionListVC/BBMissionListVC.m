@@ -11,10 +11,9 @@
 // Managers
 #import "BBParseManager.h"
 
-@interface BBMissionListVC () <UITableViewDataSource, UITableViewDelegate>
+@interface BBMissionListVC ()
 
 // Views
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // Properties
 @property (strong, nonatomic) NSArray *data;
@@ -40,6 +39,7 @@
         } else {
             NSLog(@"%@", error);
         }
+        [self.refreshControl endRefreshing];
     }];
 }
 
@@ -51,12 +51,21 @@
     [self.tableView reloadData];
 }
 
-#pragma - UITableviewDataSource
+#pragma mark - TableView
 
 - (void)initializeTableview {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    // Initialize the refresh control.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchData)
+                  forControlEvents:UIControlEventValueChanged];
+
 }
+
+#pragma mark UITableviewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
