@@ -8,30 +8,78 @@
 
 #import "BBMapVC.h"
 
-@interface BBMapVC ()
+// Frameworks
+#import <MapKit/MapKit.h>
+
+// Controllers
+
+// Managers
+#import "BBParseManager.h"
+
+
+@interface BBMapVC () <MKMapViewDelegate>
+
+// Views
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+// Properties
+@property (strong, nonatomic) NSArray *missionRequests;
 
 @end
 
 @implementation BBMapVC
 
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self fetchMissionRequests];
+    [self initializeMapView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - API
+
+- (void)fetchMissionRequests {
+    [BBParseManager fetchGeoPointsWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.missionRequests = objects;
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Getters & Setters
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setMissionRequests:(NSArray *)missionRequests {
+    _missionRequests = missionRequests;
+    [self updateAnnotations];
 }
-*/
+
+#pragma mark - Mapview
+
+- (void)initializeMapView {
+    self.mapView.delegate = self;
+}
+
+#pragma mark - Annotations
+
+#define SUBTITLE_PATERN @"x: %f - y: %f"
+
+- (void)updateAnnotations {
+    NSMutableArray *tempAnnotations = [[NSMutableArray alloc] init];
+    
+    for (BBGeoPoint *geoPoint in self.missionRequests) {
+        
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        annotation.title = @"GeoPoint";
+        annotation.subtitle = [NSString stringWithFormat:SUBTITLE_PATERN, geoPoint.coordinate.latitude, geoPoint.coordinate.longitude];
+        annotation.coordinate = CLLocationCoordinate2DMake(geoPoint.coordinate.latitude, geoPoint.coordinate.longitude);
+        [tempAnnotations addObject:annotation];
+        
+    }
+    
+    [self.mapView addAnnotations:tempAnnotations];
+}
 
 @end
