@@ -16,6 +16,12 @@
 // Managers
 #import "BBParseManager.h"
 
+// Objects
+#import "BBMissionRequestAnnotation.h"
+
+// Views
+#import "BBMissionRequestAnnotationView.h"
+
 
 @interface BBMapVC () <MKMapViewDelegate>
 
@@ -80,6 +86,32 @@
     }
     
     [self.mapView addAnnotations:tempAnnotations];
+}
+
+#pragma mark - AnnotationViews
+
+#define ANNOTATIONVIEW_IDENTIFIER @"missionRequestAnnotationView"
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id<MKAnnotation>)annotation {
+    BBMissionRequestAnnotationView *annotationView = (BBMissionRequestAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+    if (!annotationView) {
+        annotationView = [[BBMissionRequestAnnotationView alloc] initWithAnnotation:annotation
+                                                                    reuseIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+    }
+    annotationView.annotation = annotation;
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView
+didSelectAnnotationView:(MKAnnotationView *)view {
+    
+}
+
+- (void)mapView:(MKMapView *)mapView
+ annotationView:(MKAnnotationView *)view
+calloutAccessoryControlTapped:(UIControl *)control {
+    
 }
 
 @end

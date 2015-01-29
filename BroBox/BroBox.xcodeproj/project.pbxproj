@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1F2DC7A35B9D9A5CE3071D1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC967E515C162D18BF4910 /* libPods.a */; };
+		5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */; };
+		5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */; };
+		5A0E1EF81A7AAC18002B314E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF71A7AAC18002B314E /* pin.png */; };
+		5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */; };
 		5A1B0C1C1A710CA500425431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1B1A710CA500425431 /* main.m */; };
 		5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1E1A710CA500425431 /* AppDelegate.m */; };
 		5A1B0C271A710CA500425431 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B0C261A710CA500425431 /* Images.xcassets */; };
@@ -67,6 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0E1EEF1A7AA79B002B314E /* BBMissionRequestAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestAnnotationView.h; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.h; sourceTree = "<group>"; };
+		5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestAnnotationView.m; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.m; sourceTree = "<group>"; };
+		5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMissionRequestAnnotation.h; sourceTree = "<group>"; };
+		5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMissionRequestAnnotation.m; sourceTree = "<group>"; };
+		5A0E1EF71A7AAC18002B314E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		5A1B0C161A710CA500425431 /* BroBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1B0C1A1A710CA500425431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A1B0C1B1A710CA500425431 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -202,6 +213,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E1EEF1A7AA79B002B314E /* BBMissionRequestAnnotationView.h */,
+				5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */,
+			);
+			name = BBMissionRequestAnnotationView;
+			sourceTree = "<group>";
+		};
+		5A0E1EF61A7AAC18002B314E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E1EF71A7AAC18002B314E /* pin.png */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
 		5A1B0C0D1A710CA500425431 = {
 			isa = PBXGroup;
 			children = (
@@ -227,12 +255,15 @@
 			children = (
 				5A1B0C1D1A710CA500425431 /* AppDelegate.h */,
 				5A1B0C1E1A710CA500425431 /* AppDelegate.m */,
+				5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */,
+				5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */,
 				5AAC27771A72C3AB00ECF6FA /* Managers */,
 				5A1B0C511A710DD000425431 /* Views */,
 				5A1B0C4A1A710D9400425431 /* Model */,
 				5A1B0C431A710D5E00425431 /* Controllers */,
 				5A1B0C261A710CA500425431 /* Images.xcassets */,
 				5A1B0C281A710CA500425431 /* LaunchScreen.xib */,
+				5A0E1EF61A7AAC18002B314E /* images */,
 				5A1B0C191A710CA500425431 /* Supporting Files */,
 			);
 			path = BroBox;
@@ -284,6 +315,8 @@
 			children = (
 				5A1B0C4B1A710D9400425431 /* BBObject.h */,
 				5A1B0C4C1A710D9400425431 /* BBObject.m */,
+				5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */,
+				5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */,
 				5AA60D401A755830001C07F6 /* Parse.com */,
 			);
 			path = Model;
@@ -294,6 +327,7 @@
 			children = (
 				5A1B0C521A710DD000425431 /* BBView.h */,
 				5A1B0C531A710DD000425431 /* BBView.m */,
+				5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -505,6 +539,7 @@
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
+				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
@@ -570,6 +605,7 @@
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
+				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
@@ -577,6 +613,8 @@
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
 				5AA60D461A755830001C07F6 /* BBMission.m in Sources */,
 				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
+				5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */,
+				5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
