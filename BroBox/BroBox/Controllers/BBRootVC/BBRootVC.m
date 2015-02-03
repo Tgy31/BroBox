@@ -8,6 +8,10 @@
 
 #import "BBRootVC.h"
 
+// Navigation Controllers
+#import "BBMapNavigationController.h"
+#import "BBMissionListNavigationController.h"
+
 // Controllers
 #import "BBLogoutVC.h"
 
@@ -28,13 +32,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mapVC = [UIViewController new];
-        self.mapVC.view.backgroundColor = [UIColor blueColor];
-        self.mapVC.title = @"Map";
+        self.mapVC = [BBMapNavigationController new];
         
-        self.missionsVC = [UIViewController new];
-        self.missionsVC.view.backgroundColor = [UIColor greenColor];
-        self.missionsVC.title = @"Missions";
+        self.missionsVC = [BBMissionListNavigationController new];
         
         self.createVC = [UIViewController new];
         self.createVC.view.backgroundColor = [UIColor yellowColor];

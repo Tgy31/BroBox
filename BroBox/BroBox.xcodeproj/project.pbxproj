@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1F2DC7A35B9D9A5CE3071D1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC967E515C162D18BF4910 /* libPods.a */; };
+		5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */; };
+		5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */; };
+		5A0E1EF81A7AAC18002B314E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF71A7AAC18002B314E /* pin.png */; };
+		5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */; };
 		5A1B0C1C1A710CA500425431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1B1A710CA500425431 /* main.m */; };
 		5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1E1A710CA500425431 /* AppDelegate.m */; };
 		5A1B0C271A710CA500425431 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B0C261A710CA500425431 /* Images.xcassets */; };
@@ -16,6 +20,14 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
+		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
+		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
+		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
+		5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */; };
+		5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */; };
+		5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D421A755830001C07F6 /* BBGeoPoint.m */; };
+		5AA60D461A755830001C07F6 /* BBMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D441A755830001C07F6 /* BBMission.m */; };
+		5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D481A75584E001C07F6 /* BBParseManager.m */; };
 		5AAC26851A72AE7300ECF6FA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */; };
 		5AAC26861A72AE7300ECF6FA /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */; };
 		5AAC274B1A72AFDB00ECF6FA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27471A72AFDB00ECF6FA /* Parse.framework */; };
@@ -41,6 +53,13 @@
 		5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */; };
 		5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC277C1A72C8CE00ECF6FA /* BBRootVC.m */; };
 		5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */; };
+		5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */; };
+		5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */; };
+		5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */; };
+		5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */; };
+		5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */; };
+		5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27911A72E07200ECF6FA /* MapKit.framework */; };
+		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +73,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0E1EEF1A7AA79B002B314E /* BBMissionRequestAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestAnnotationView.h; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.h; sourceTree = "<group>"; };
+		5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestAnnotationView.m; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.m; sourceTree = "<group>"; };
+		5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMissionRequestAnnotation.h; sourceTree = "<group>"; };
+		5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMissionRequestAnnotation.m; sourceTree = "<group>"; };
+		5A0E1EF71A7AAC18002B314E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		5A1B0C161A710CA500425431 /* BroBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1B0C1A1A710CA500425431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A1B0C1B1A710CA500425431 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +96,20 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
+		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
+		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
+		5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionListVC.m; path = BBMissionListVC/BBMissionListVC.m; sourceTree = "<group>"; };
+		5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionListVC.xib; path = BBMissionListVC/BBMissionListVC.xib; sourceTree = "<group>"; };
+		5AA60D341A75473D001C07F6 /* BBMissionListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListNavigationController.h; path = BBMissionListNavigationController/BBMissionListNavigationController.h; sourceTree = "<group>"; };
+		5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionListNavigationController.m; path = BBMissionListNavigationController/BBMissionListNavigationController.m; sourceTree = "<group>"; };
+		5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionListNavigationController.xib; path = BBMissionListNavigationController/BBMissionListNavigationController.xib; sourceTree = "<group>"; };
+		5AA60D411A755830001C07F6 /* BBGeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGeoPoint.h; sourceTree = "<group>"; };
+		5AA60D421A755830001C07F6 /* BBGeoPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGeoPoint.m; sourceTree = "<group>"; };
+		5AA60D431A755830001C07F6 /* BBMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMission.h; sourceTree = "<group>"; };
+		5AA60D441A755830001C07F6 /* BBMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMission.m; sourceTree = "<group>"; };
+		5AA60D471A75584E001C07F6 /* BBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseManager.h; sourceTree = "<group>"; };
+		5AA60D481A75584E001C07F6 /* BBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseManager.m; sourceTree = "<group>"; };
 		5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		5AAC27471A72AFDB00ECF6FA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -99,6 +139,17 @@
 		5AAC277B1A72C8CE00ECF6FA /* BBRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRootVC.h; path = BBRootVC/BBRootVC.h; sourceTree = "<group>"; };
 		5AAC277C1A72C8CE00ECF6FA /* BBRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRootVC.m; path = BBRootVC/BBRootVC.m; sourceTree = "<group>"; };
 		5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBRootVC.xib; path = BBRootVC/BBRootVC.xib; sourceTree = "<group>"; };
+		5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		5AAC27851A72CFF000ECF6FA /* BBMapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMapNavigationController.h; path = BBMapNavigationController/BBMapNavigationController.h; sourceTree = "<group>"; };
+		5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapNavigationController.m; path = BBMapNavigationController/BBMapNavigationController.m; sourceTree = "<group>"; };
+		5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapNavigationController.xib; path = BBMapNavigationController/BBMapNavigationController.xib; sourceTree = "<group>"; };
+		5AAC278B1A72DF5900ECF6FA /* BBMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMapVC.h; path = BBMapVC/BBMapVC.h; sourceTree = "<group>"; };
+		5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapVC.m; path = BBMapVC/BBMapVC.m; sourceTree = "<group>"; };
+		5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapVC.xib; path = BBMapVC/BBMapVC.xib; sourceTree = "<group>"; };
+		5AAC27911A72E07200ECF6FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
+		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */,
+				5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */,
 				5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */,
 				5AAC27651A72B19700ECF6FA /* Social.framework in Frameworks */,
 				5AAC27631A72B10F00ECF6FA /* libsqlite3.dylib in Frameworks */,
@@ -144,6 +197,8 @@
 		20D26F11A65B4DC2BD880D25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */,
+				5AAC27911A72E07200ECF6FA /* MapKit.framework */,
 				5AAC27661A72B22300ECF6FA /* libstdc++.6.dylib */,
 				5AAC27641A72B19700ECF6FA /* Social.framework */,
 				5AAC27621A72B10F00ECF6FA /* libsqlite3.dylib */,
@@ -165,6 +220,23 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E1EEF1A7AA79B002B314E /* BBMissionRequestAnnotationView.h */,
+				5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */,
+			);
+			name = BBMissionRequestAnnotationView;
+			sourceTree = "<group>";
+		};
+		5A0E1EF61A7AAC18002B314E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E1EF71A7AAC18002B314E /* pin.png */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
 		};
 		5A1B0C0D1A710CA500425431 = {
 			isa = PBXGroup;
@@ -191,12 +263,16 @@
 			children = (
 				5A1B0C1D1A710CA500425431 /* AppDelegate.h */,
 				5A1B0C1E1A710CA500425431 /* AppDelegate.m */,
+				5AA3DBDD1A80FA47005D8663 /* BBConstants.h */,
+				5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */,
+				5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */,
 				5AAC27771A72C3AB00ECF6FA /* Managers */,
 				5A1B0C511A710DD000425431 /* Views */,
 				5A1B0C4A1A710D9400425431 /* Model */,
 				5A1B0C431A710D5E00425431 /* Controllers */,
 				5A1B0C261A710CA500425431 /* Images.xcassets */,
 				5A1B0C281A710CA500425431 /* LaunchScreen.xib */,
+				5A0E1EF61A7AAC18002B314E /* images */,
 				5A1B0C191A710CA500425431 /* Supporting Files */,
 			);
 			path = BroBox;
@@ -233,9 +309,12 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5AA60D331A7546DC001C07F6 /* BBMissionListVC */,
+				5AAC27901A72DF8300ECF6FA /* BBMapVC */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
 				5AAC27761A72C19200ECF6FA /* BBLoginVC */,
 				5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */,
+				5AAC27841A72CFB600ECF6FA /* Navigation Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +324,9 @@
 			children = (
 				5A1B0C4B1A710D9400425431 /* BBObject.h */,
 				5A1B0C4C1A710D9400425431 /* BBObject.m */,
+				5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */,
+				5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */,
+				5AA60D401A755830001C07F6 /* Parse.com */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,8 +336,42 @@
 			children = (
 				5A1B0C521A710DD000425431 /* BBView.h */,
 				5A1B0C531A710DD000425431 /* BBView.m */,
+				5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */,
+				5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */,
+				5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */,
+			);
+			name = BBMissionListVC;
+			sourceTree = "<group>";
+		};
+		5AA60D391A754740001C07F6 /* BBMissionListNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5AA60D341A75473D001C07F6 /* BBMissionListNavigationController.h */,
+				5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */,
+				5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */,
+			);
+			name = BBMissionListNavigationController;
+			sourceTree = "<group>";
+		};
+		5AA60D401A755830001C07F6 /* Parse.com */ = {
+			isa = PBXGroup;
+			children = (
+				5AA60D471A75584E001C07F6 /* BBParseManager.h */,
+				5AA60D481A75584E001C07F6 /* BBParseManager.m */,
+				5AA60D411A755830001C07F6 /* BBGeoPoint.h */,
+				5AA60D421A755830001C07F6 /* BBGeoPoint.m */,
+				5AA60D431A755830001C07F6 /* BBMission.h */,
+				5AA60D441A755830001C07F6 /* BBMission.m */,
+			);
+			path = Parse.com;
 			sourceTree = "<group>";
 		};
 		5AAC25681A72AE7200ECF6FA /* FacebookSDK */ = {
@@ -292,6 +408,8 @@
 			children = (
 				5AAC27781A72C3AB00ECF6FA /* BBLoginManager.h */,
 				5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */,
+				5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */,
+				5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -304,6 +422,37 @@
 				5AAC277D1A72C8CE00ECF6FA /* BBRootVC.xib */,
 			);
 			name = BBRootVC;
+			sourceTree = "<group>";
+		};
+		5AAC27841A72CFB600ECF6FA /* Navigation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */,
+				5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */,
+				5AA60D391A754740001C07F6 /* BBMissionListNavigationController */,
+				5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */,
+			);
+			name = "Navigation Controllers";
+			sourceTree = "<group>";
+		};
+		5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC27851A72CFF000ECF6FA /* BBMapNavigationController.h */,
+				5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */,
+				5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */,
+			);
+			name = BBMapNavigationController;
+			sourceTree = "<group>";
+		};
+		5AAC27901A72DF8300ECF6FA /* BBMapVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC278B1A72DF5900ECF6FA /* BBMapVC.h */,
+				5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */,
+				5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */,
+			);
+			name = BBMapVC;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -400,9 +549,14 @@
 			files = (
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
+				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
+				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
+				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
+				5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */,
+				5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,14 +608,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
+				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
+				5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */,
+				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
+				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
+				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
+				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
+				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
+				5AA60D461A755830001C07F6 /* BBMission.m in Sources */,
+				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
+				5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */,
+				5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */,
+				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
