@@ -20,6 +20,7 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
+		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
 		5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */; };
@@ -58,6 +59,7 @@
 		5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */; };
 		5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */; };
 		5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27911A72E07200ECF6FA /* MapKit.framework */; };
+		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
+		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
+		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
 		5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionListVC.m; path = BBMissionListVC/BBMissionListVC.m; sourceTree = "<group>"; };
 		5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionListVC.xib; path = BBMissionListVC/BBMissionListVC.xib; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		5AAC278C1A72DF5900ECF6FA /* BBMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapVC.m; path = BBMapVC/BBMapVC.m; sourceTree = "<group>"; };
 		5AAC278D1A72DF5900ECF6FA /* BBMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapVC.xib; path = BBMapVC/BBMapVC.xib; sourceTree = "<group>"; };
 		5AAC27911A72E07200ECF6FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
+		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */,
 				5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */,
 				5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */,
 				5AAC27651A72B19700ECF6FA /* Social.framework in Frameworks */,
@@ -190,6 +197,7 @@
 		20D26F11A65B4DC2BD880D25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */,
 				5AAC27911A72E07200ECF6FA /* MapKit.framework */,
 				5AAC27661A72B22300ECF6FA /* libstdc++.6.dylib */,
 				5AAC27641A72B19700ECF6FA /* Social.framework */,
@@ -255,6 +263,7 @@
 			children = (
 				5A1B0C1D1A710CA500425431 /* AppDelegate.h */,
 				5A1B0C1E1A710CA500425431 /* AppDelegate.m */,
+				5AA3DBDD1A80FA47005D8663 /* BBConstants.h */,
 				5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */,
 				5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */,
 				5AAC27771A72C3AB00ECF6FA /* Managers */,
@@ -399,6 +408,8 @@
 			children = (
 				5AAC27781A72C3AB00ECF6FA /* BBLoginManager.h */,
 				5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */,
+				5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */,
+				5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -599,6 +610,7 @@
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
+				5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */,
 				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,

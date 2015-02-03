@@ -15,6 +15,7 @@
 
 // Managers
 #import "BBParseManager.h"
+#import "BBCanalTpManager.h"
 
 // Objects
 #import "BBMissionRequestAnnotation.h"
@@ -49,9 +50,23 @@
     [BBParseManager fetchGeoPointsWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.missionRequests = objects;
+            [self fetchJourney];
         } else {
             NSLog(@"%@", error);
         }
+    }];
+    
+    
+}
+
+- (void)fetchJourney {
+    
+    BBGeoPoint *geoFrom = [self.missionRequests firstObject];
+    CLLocationCoordinate2D from = CLLocationCoordinate2DMake(geoFrom.coordinate.latitude, geoFrom.coordinate.longitude);
+    BBGeoPoint *geoTo = [self.missionRequests lastObject];
+    CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
+    [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
+        
     }];
 }
 
