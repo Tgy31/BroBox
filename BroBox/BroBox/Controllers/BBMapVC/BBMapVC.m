@@ -66,7 +66,11 @@
     BBGeoPoint *geoTo = [self.missionRequests lastObject];
     CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
     [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
-        
+        if (!error) {
+            NSDictionary *journey = [[json objectForKey:@"journeys"] firstObject];
+            NSArray *path = [BBCanalTpManager pathForJourney:journey];
+            [self drawRoute:path];
+        }
     }];
 }
 
@@ -77,13 +81,13 @@
     [self updateAnnotations];
 }
 
-#pragma mark - Mapview
+#pragma mark - Mapview -
 
 - (void)initializeMapView {
     self.mapView.delegate = self;
 }
 
-#pragma mark - Annotations
+#pragma mark Annotations
 
 #define SUBTITLE_PATERN @"x: %f - y: %f"
 
@@ -103,7 +107,7 @@
     [self.mapView addAnnotations:tempAnnotations];
 }
 
-#pragma mark - AnnotationViews
+#pragma mark AnnotationViews
 
 #define ANNOTATIONVIEW_IDENTIFIER @"missionRequestAnnotationView"
 
@@ -127,6 +131,34 @@ didSelectAnnotationView:(MKAnnotationView *)view {
  annotationView:(MKAnnotationView *)view
 calloutAccessoryControlTapped:(UIControl *)control {
     
+}
+
+#pragma mark Overlay
+
+- (void)drawRoute:(NSArray *)path
+{
+    NSInteger numberOfSteps = path.count;
+    
+    CLLocationCoordinate2D coordinates[numberOfSteps];
+    for (NSInteger index = 0; index < numberOfSteps; index++) {
+        CLLocation *location = [path objectAtIndex:index];
+        CLLocationCoordinate2D coordinate = location.coordinate;
+        coordinates[index] = coordinate;
+    }
+    
+    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:numberOfSteps];
+    [self.mapView addOverlay:polyLine];
+}
+
+#pragma mark Overlay views
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
+    MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
+    polylineView.strokeColor = [UIColor blueColor];
+    polylineView.lineWidth = 5.0;
+    polylineView.alpha = 0.7;
+    
+    return polylineView;
 }
 
 @end

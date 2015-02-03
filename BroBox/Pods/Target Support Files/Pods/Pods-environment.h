@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// UIViewController+KeyboardAnimation
+#define COCOAPODS_POD_AVAILABLE_UIViewController_KeyboardAnimation
+#define COCOAPODS_VERSION_MAJOR_UIViewController_KeyboardAnimation 1
+#define COCOAPODS_VERSION_MINOR_UIViewController_KeyboardAnimation 2
+#define COCOAPODS_VERSION_PATCH_UIViewController_KeyboardAnimation 0
+

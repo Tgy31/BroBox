@@ -49,6 +49,27 @@ static BBCanalTpManager *sharedManager;
     return [NSString stringWithFormat:@"%f;%f", coordinate.longitude, coordinate.latitude];
 }
 
+#pragma mark - Data format
+
++ (NSArray *)pathForJourney:(NSDictionary *)journey {
+    return [[BBCanalTpManager sharedManager] pathForJourney:journey];
+}
+
+- (NSArray *)pathForJourney:(NSDictionary *)journey {
+    NSMutableArray *locations = [[NSMutableArray alloc] init];
+    NSArray *sections = [journey objectForKey:@"sections"];
+    for (NSDictionary *section in sections) {
+        NSArray *coordinates = [[section objectForKey:@"geojson"] objectForKey:@"coordinates"];
+        for (NSArray *coordinate in coordinates) {
+            double latitude = [[coordinate lastObject] doubleValue];
+            double longitude = [[coordinate firstObject] doubleValue];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+            [locations addObject:location];
+        }
+    }
+    return locations;
+}
+
 #pragma mark - Services -
 
 #pragma mark Journeys
@@ -71,9 +92,9 @@ static BBCanalTpManager *sharedManager;
                                  };
     
     [self GET:@"journeys" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+        block(responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        block(nil, error);
     }];
 }
 
