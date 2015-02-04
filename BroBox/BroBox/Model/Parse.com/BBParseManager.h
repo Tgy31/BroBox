@@ -10,6 +10,7 @@
 
 // PFObjects
 #import "BBGeoPoint.h"
+#import "BBParseMissionRequest.h"
 
 ///--------------------------------------
 /// @name Blocks
@@ -21,5 +22,6 @@ typedef void (^BBArrayResultBlock)(NSArray *objects, NSError *error);
 @interface BBParseManager : NSObject
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block;
++ (void)fetchMissionRequestsWithBlock:(BBArrayResultBlock)block;
 
 @end

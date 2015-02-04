@@ -17,4 +17,15 @@
     }];
 }
 
++ (void)fetchMissionRequestsWithBlock:(BBArrayResultBlock)block {
+    PFQuery *query = [BBParseMissionRequest query];
+    [query includeKey:@"mission"];
+    [query includeKey:@"mission.from"];
+    [query includeKey:@"mission.to"];
+    [query includeKey:@"mission.creator"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        block(objects, error);
+    }];
+}
+
 @end

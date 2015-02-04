@@ -18,7 +18,6 @@
 #import "BBCanalTpManager.h"
 
 // Objects
-#import "BBMissionRequestAnnotation.h"
 
 // Views
 #import "BBMissionRequestAnnotationView.h"
@@ -40,14 +39,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fetchMissionRequests];
     [self initializeMapView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self fetchMissionRequests];
 }
 
 #pragma mark - API
 
 - (void)fetchMissionRequests {
-    [BBParseManager fetchGeoPointsWithBlock:^(NSArray *objects, NSError *error) {
+    [BBParseManager fetchMissionRequestsWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.missionRequests = objects;
             [self fetchJourney];
@@ -61,9 +64,10 @@
 
 - (void)fetchJourney {
     
-    BBGeoPoint *geoFrom = [self.missionRequests firstObject];
+    BBParseMissionRequest *missionRequest = [self.missionRequests firstObject];
+    BBGeoPoint *geoFrom = missionRequest.mission.from;
     CLLocationCoordinate2D from = CLLocationCoordinate2DMake(geoFrom.coordinate.latitude, geoFrom.coordinate.longitude);
-    BBGeoPoint *geoTo = [self.missionRequests lastObject];
+    BBGeoPoint *geoTo = missionRequest.mission.to;
     CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
     [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
         if (!error) {
@@ -89,17 +93,15 @@
 
 #pragma mark Annotations
 
-#define SUBTITLE_PATERN @"x: %f - y: %f"
-
 - (void)updateAnnotations {
     NSMutableArray *tempAnnotations = [[NSMutableArray alloc] init];
     
-    for (BBGeoPoint *geoPoint in self.missionRequests) {
+    for (BBParseMissionRequest *missionRequest in self.missionRequests) {
         
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        annotation.title = @"GeoPoint";
-        annotation.subtitle = [NSString stringWithFormat:SUBTITLE_PATERN, geoPoint.coordinate.latitude, geoPoint.coordinate.longitude];
-        annotation.coordinate = CLLocationCoordinate2DMake(geoPoint.coordinate.latitude, geoPoint.coordinate.longitude);
+        annotation.title = missionRequest.mission.from.title;
+        annotation.subtitle = missionRequest.mission.from.subtitle;
+        annotation.coordinate = CLLocationCoordinate2DMake(missionRequest.mission.from.coordinate.latitude, missionRequest.mission.from.coordinate.longitude);
         [tempAnnotations addObject:annotation];
         
     }

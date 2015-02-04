@@ -10,4 +10,6 @@
 
 @interface BBViewController : UIViewController
 
+@property (nonatomic) BOOL navigationBarShouldCoverViewController;
+
 @end

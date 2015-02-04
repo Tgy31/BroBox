@@ -33,7 +33,7 @@
 #pragma mark - API
 
 - (void)fetchData {
-    [BBParseManager fetchGeoPointsWithBlock:^(NSArray *objects, NSError *error) {
+    [BBParseManager fetchMissionRequestsWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.data = objects;
         } else {
@@ -78,7 +78,6 @@
 }
 
 #define CELL_IDENTIFIER @"geoPointCell"
-#define SUBTITLE_PATERN @"x: %f - y: %f"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,11 +88,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
     
-    BBGeoPoint *geoPoint = [self.data objectAtIndex:indexPath.row];
+    BBParseMissionRequest *missionRequest = [self.data objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = @"GeoPoint";
-    
-    cell.detailTextLabel.text = [NSString stringWithFormat:SUBTITLE_PATERN, geoPoint.coordinate.latitude, geoPoint.coordinate.longitude];
+    cell.textLabel.text = missionRequest.mission.from.title;
+    cell.detailTextLabel.text = missionRequest.mission.from.subtitle;
     
     return cell;
 }

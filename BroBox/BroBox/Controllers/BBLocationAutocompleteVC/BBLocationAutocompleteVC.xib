@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBLocationAutocompleteVC">
+            <connections>
+                <outlet property="loadingIndicator" destination="Y8I-AV-LSy" id="hc3-4S-Zyg"/>
+                <outlet property="searchBar" destination="Jdz-DB-fct" id="ONV-pD-aJk"/>
+                <outlet property="tableView" destination="5Zx-wr-Ibs" id="DCW-LJ-4LM"/>
+                <outlet property="tableViewBottomConstraint" destination="aJA-0H-FfE" id="fJV-aw-lcG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Zx-wr-Ibs">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-DB-fct">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="OUg-0j-iVd"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y8I-AV-LSy">
+                    <rect key="frame" x="540" y="12" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jdz-DB-fct" secondAttribute="trailing" id="AjX-TK-xiq"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CJp-cG-PFY"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DqD-ZU-p2a"/>
+                <constraint firstItem="5Zx-wr-Ibs" firstAttribute="top" secondItem="Jdz-DB-fct" secondAttribute="bottom" id="I33-mk-jSG"/>
+                <constraint firstItem="5Zx-wr-Ibs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z9n-wS-uAI"/>
+                <constraint firstAttribute="bottom" secondItem="5Zx-wr-Ibs" secondAttribute="bottom" id="aJA-0H-FfE"/>
+                <constraint firstAttribute="trailing" secondItem="5Zx-wr-Ibs" secondAttribute="trailing" id="aec-Un-9Ik"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="trailing" secondItem="Y8I-AV-LSy" secondAttribute="trailing" constant="40" id="cGg-Jl-yBT"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="centerY" secondItem="Y8I-AV-LSy" secondAttribute="centerY" id="zXh-ej-0Db"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
