@@ -159,8 +159,8 @@
     [BBGoogleManager fetchDetailsForPlaceReference:reference block:^(NSDictionary *json, NSError *error) {
         if (!error) {
             NSDictionary *coordinate = [[[json objectForKey:@"result"] objectForKey:@"geometry"] objectForKey:@"location"];
-            double latitude = [[coordinate objectForKey:GOOGLE_KEY_LATITUDE] doubleValue];
-            double longitude = [[coordinate objectForKey:GOOGLE_KEY_LONGITUDE] doubleValue];
+            double latitude = [[coordinate objectForKey:GOOGLE_KEY_LATITUDE] floatValue];
+            double longitude = [[coordinate objectForKey:GOOGLE_KEY_LONGITUDE] floatValue];
             CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
             [place setObject:location forKey:BBPLACE_KEY_LOCATION];
         } else {
