@@ -8,6 +8,9 @@
 
 #import "BBCreateRequestVC.h"
 
+// Controllers
+#import "BBLocationAutocompleteVC.h"
+
 @interface BBCreateRequestVC ()
 
 // From views
@@ -68,11 +71,15 @@
 #pragma mark - Handlers
 
 - (void)fromViewTapHandler {
-    
+    BBLocationAutocompleteVC *destination = [BBLocationAutocompleteVC new];
+    destination.title = NSLocalizedString(@"Pick up", @"Autocompletion screen when setting up pick up location");
+    [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)toViewTapHandler {
-    
+    BBLocationAutocompleteVC *destination = [BBLocationAutocompleteVC new];
+    destination.title = NSLocalizedString(@"Drop off", @"Autocompletion screen when setting up drop off location");
+    [self.navigationController pushViewController:destination animated:YES];
 }
 
 
