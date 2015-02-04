@@ -6,8 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBLocationAutocompleteVC">
             <connections>
+                <outlet property="loadingIndicator" destination="Y8I-AV-LSy" id="hc3-4S-Zyg"/>
                 <outlet property="searchBar" destination="Jdz-DB-fct" id="ONV-pD-aJk"/>
                 <outlet property="tableView" destination="5Zx-wr-Ibs" id="DCW-LJ-4LM"/>
+                <outlet property="tableViewBottomConstraint" destination="aJA-0H-FfE" id="fJV-aw-lcG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +29,9 @@
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y8I-AV-LSy">
+                    <rect key="frame" x="540" y="12" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -37,6 +42,8 @@
                 <constraint firstItem="5Zx-wr-Ibs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z9n-wS-uAI"/>
                 <constraint firstAttribute="bottom" secondItem="5Zx-wr-Ibs" secondAttribute="bottom" id="aJA-0H-FfE"/>
                 <constraint firstAttribute="trailing" secondItem="5Zx-wr-Ibs" secondAttribute="trailing" id="aec-Un-9Ik"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="trailing" secondItem="Y8I-AV-LSy" secondAttribute="trailing" constant="40" id="cGg-Jl-yBT"/>
+                <constraint firstItem="Jdz-DB-fct" firstAttribute="centerY" secondItem="Y8I-AV-LSy" secondAttribute="centerY" id="zXh-ej-0Db"/>
             </constraints>
         </view>
     </objects>

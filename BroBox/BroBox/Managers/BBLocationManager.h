@@ -8,10 +8,14 @@
 
 #import "BBObject.h"
 
+// Frameworks
+#import <CoreLocation/CoreLocation.h>
+
 static NSString *BBNotificationLocationAuthorizationDenied = @"BBNotificationLocationAuthorizationDenied";
 
 @interface BBLocationManager : BBObject
 
 + (void)startUpdatingLocation;
++ (CLLocation *)userLocation;
 
 @end

@@ -9,7 +9,7 @@
 #import "BBGoogleManager.h"
 
 #define GOOGLE_PLACE_API_KEY @"AIzaSyD0tUcYWxjL0iw56FHIK-TqY9e5NkhT63s"
-#define PLACE_TYPE @"(address)"
+#define PLACE_TYPE @"address"
 #define PLACE_RADIUS 500000
 
 #define GOOGLE_KEY_PREDICTIONS @"predictions"
@@ -29,9 +29,8 @@ static BBGoogleManager *sharedManager;
 #pragma mark - API Services
 
 + (void)fetchCompletionWithString:(NSString *)string
-                         location:(CLLocationCoordinate2D)location
+                         location:(CLLocation *)location
                             block:(BBGoogleAutoCompleteResult)block {
-    
     [[BBGoogleManager sharedManager] fetchCompletionWithString:string
                                                       location:location
                                                          block:block];
@@ -39,15 +38,20 @@ static BBGoogleManager *sharedManager;
 
 
 - (void)fetchCompletionWithString:(NSString *)string
-                         location:(CLLocationCoordinate2D)location
+                         location:(CLLocation *)location
                             block:(BBGoogleAutoCompleteResult)block {
     static NSString *sURL = @"https://maps.googleapis.com/maps/api/place/autocomplete/json";
     
-    NSDictionary *parameters = @{
-                                 @"key": GOOGLE_PLACE_API_KEY,
-                                 @"input": string,
-                                 @"types": PLACE_TYPE
-                                 };
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                      @"key": GOOGLE_PLACE_API_KEY,
+                                                                                      @"input": string,
+                                                                                      @"types": PLACE_TYPE
+                                                                                      }];
+    
+    if (location) {
+        NSString *locationParameter = [NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+        [parameters setObject:locationParameter forKey:@"location"];
+    }
     
     [self GET:sURL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         block(responseObject, nil);

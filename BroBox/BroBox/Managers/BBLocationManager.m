@@ -8,9 +8,6 @@
 
 #import "BBLocationManager.h"
 
-// Frameworks
-#import <CoreLocation/CoreLocation.h>
-
 static BBLocationManager *sharedManager;
 
 @interface BBLocationManager () <CLLocationManagerDelegate>
@@ -35,6 +32,10 @@ static BBLocationManager *sharedManager;
 
 + (void)startUpdatingLocation {
     [[BBLocationManager sharedManager] initializeManager];
+}
+
++ (CLLocation *)userLocation {
+    return [[BBLocationManager sharedManager].locationManager location];
 }
 
 #pragma mark - Initialization
