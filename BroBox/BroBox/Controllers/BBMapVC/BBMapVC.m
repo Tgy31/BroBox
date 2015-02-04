@@ -18,7 +18,7 @@
 #import "BBCanalTpManager.h"
 
 // Objects
-#import "BBMissionRequestAnnotation.h"
+#import "BBMissionRequest.h"
 
 // Views
 #import "BBMissionRequestAnnotationView.h"

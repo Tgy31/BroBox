@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F2DC7A35B9D9A5CE3071D1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC967E515C162D18BF4910 /* libPods.a */; };
 		5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */; };
-		5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */; };
+		5A0E1EF51A7AA81B002B314E /* BBMissionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF41A7AA81B002B314E /* BBMissionRequest.m */; };
 		5A0E1EF81A7AAC18002B314E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF71A7AAC18002B314E /* pin.png */; };
 		5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */; };
 		5A1B0C1C1A710CA500425431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1B1A710CA500425431 /* main.m */; };
@@ -20,13 +20,14 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
+		5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
 		5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D351A75473D001C07F6 /* BBMissionListNavigationController.m */; };
 		5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */; };
 		5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D421A755830001C07F6 /* BBGeoPoint.m */; };
-		5AA60D461A755830001C07F6 /* BBMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D441A755830001C07F6 /* BBMission.m */; };
+		5AA60D461A755830001C07F6 /* BBParseMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D441A755830001C07F6 /* BBParseMission.m */; };
 		5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D481A75584E001C07F6 /* BBParseManager.m */; };
 		5AAC26851A72AE7300ECF6FA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */; };
 		5AAC26861A72AE7300ECF6FA /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC256B1A72AE7200ECF6FA /* FBAudienceNetwork.framework */; };
@@ -75,8 +76,8 @@
 /* Begin PBXFileReference section */
 		5A0E1EEF1A7AA79B002B314E /* BBMissionRequestAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestAnnotationView.h; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.h; sourceTree = "<group>"; };
 		5A0E1EF01A7AA79B002B314E /* BBMissionRequestAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestAnnotationView.m; path = BBMissionRequestAnnotationView/BBMissionRequestAnnotationView.m; sourceTree = "<group>"; };
-		5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMissionRequestAnnotation.h; sourceTree = "<group>"; };
-		5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMissionRequestAnnotation.m; sourceTree = "<group>"; };
+		5A0E1EF31A7AA81B002B314E /* BBMissionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMissionRequest.h; sourceTree = "<group>"; };
+		5A0E1EF41A7AA81B002B314E /* BBMissionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMissionRequest.m; sourceTree = "<group>"; };
 		5A0E1EF71A7AAC18002B314E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
@@ -96,6 +97,8 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
+		5A3053D61A825121006E9A95 /* BBParseMissionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseMissionRequest.h; sourceTree = "<group>"; };
+		5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseMissionRequest.m; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -106,8 +109,8 @@
 		5AA60D361A75473D001C07F6 /* BBMissionListNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionListNavigationController.xib; path = BBMissionListNavigationController/BBMissionListNavigationController.xib; sourceTree = "<group>"; };
 		5AA60D411A755830001C07F6 /* BBGeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGeoPoint.h; sourceTree = "<group>"; };
 		5AA60D421A755830001C07F6 /* BBGeoPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGeoPoint.m; sourceTree = "<group>"; };
-		5AA60D431A755830001C07F6 /* BBMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMission.h; sourceTree = "<group>"; };
-		5AA60D441A755830001C07F6 /* BBMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMission.m; sourceTree = "<group>"; };
+		5AA60D431A755830001C07F6 /* BBParseMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseMission.h; sourceTree = "<group>"; };
+		5AA60D441A755830001C07F6 /* BBParseMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseMission.m; sourceTree = "<group>"; };
 		5AA60D471A75584E001C07F6 /* BBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseManager.h; sourceTree = "<group>"; };
 		5AA60D481A75584E001C07F6 /* BBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseManager.m; sourceTree = "<group>"; };
 		5AAC256A1A72AE7200ECF6FA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -324,8 +327,8 @@
 			children = (
 				5A1B0C4B1A710D9400425431 /* BBObject.h */,
 				5A1B0C4C1A710D9400425431 /* BBObject.m */,
-				5A0E1EF31A7AA81B002B314E /* BBMissionRequestAnnotation.h */,
-				5A0E1EF41A7AA81B002B314E /* BBMissionRequestAnnotation.m */,
+				5A0E1EF31A7AA81B002B314E /* BBMissionRequest.h */,
+				5A0E1EF41A7AA81B002B314E /* BBMissionRequest.m */,
 				5AA60D401A755830001C07F6 /* Parse.com */,
 			);
 			path = Model;
@@ -368,8 +371,10 @@
 				5AA60D481A75584E001C07F6 /* BBParseManager.m */,
 				5AA60D411A755830001C07F6 /* BBGeoPoint.h */,
 				5AA60D421A755830001C07F6 /* BBGeoPoint.m */,
-				5AA60D431A755830001C07F6 /* BBMission.h */,
-				5AA60D441A755830001C07F6 /* BBMission.m */,
+				5AA60D431A755830001C07F6 /* BBParseMission.h */,
+				5AA60D441A755830001C07F6 /* BBParseMission.m */,
+				5A3053D61A825121006E9A95 /* BBParseMissionRequest.h */,
+				5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */,
 			);
 			path = Parse.com;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
+				5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
@@ -623,9 +629,9 @@
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
-				5AA60D461A755830001C07F6 /* BBMission.m in Sources */,
+				5AA60D461A755830001C07F6 /* BBParseMission.m in Sources */,
 				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
-				5A0E1EF51A7AA81B002B314E /* BBMissionRequestAnnotation.m in Sources */,
+				5A0E1EF51A7AA81B002B314E /* BBMissionRequest.m in Sources */,
 				5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);

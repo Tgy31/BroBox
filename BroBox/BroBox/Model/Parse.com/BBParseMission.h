@@ -8,6 +8,12 @@
 
 #import <Parse/Parse.h>
 
-@interface BBMission : PFObject
+// Models
+#import "BBGeoPoint.h"
+
+@interface BBParseMission : PFObject
+
+@property (strong, nonatomic) BBGeoPoint *from;
+@property (strong, nonatomic) BBGeoPoint *to;
 
 @end

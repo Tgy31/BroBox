@@ -10,6 +10,6 @@
 
 #import <MapKit/MapKit.h>
 
-@interface BBMissionRequestAnnotation : BBObject
+@interface BBMissionRequest : BBObject
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBMissionRequestAnnotation.h"
+#import "BBMissionRequest.h"
 
-@interface BBMissionRequestAnnotation() <MKAnnotation>
+@interface BBMissionRequest() <MKAnnotation>
 
 @end
 
-@implementation BBMissionRequestAnnotation
+@implementation BBMissionRequest
 
 @dynamic coordinate;
 
