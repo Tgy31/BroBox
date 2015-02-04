@@ -10,6 +10,7 @@
 
 // Controllers
 #import "BBLocationAutocompleteVC.h"
+#import "BBMissionRequestEditionVC.h"
 
 // Model
 #import "BBGeoPoint.h"
@@ -146,10 +147,24 @@
 }
 
 - (void)doneButtonHandler {
-    BBParseMissionRequest *request = [BBParseMissionRequest missionRequestFrom:self.placeFrom
+    BBParseMissionRequest *missionRequest = [BBParseMissionRequest missionRequestFrom:self.placeFrom
                                                                             to:self.placeTo];
-    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        
+    
+    BBMissionRequestEditionVC *destination = [BBMissionRequestEditionVC new];
+    destination.missionRequest = missionRequest;
+    [self.navigationController pushViewController:destination animated:YES];
+    
+    [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSString *title = NSLocalizedString(@"Mission saved", @"");
+            NSString *subtitle = NSLocalizedString(@"Your mission has been saved. You can have only one mission at a time", @"");
+            [destination showPlaceHolderWithtitle:title subtitle:subtitle];
+            [destination setAsRootViewController];
+        } else {
+            NSString *title = NSLocalizedString(@"Mission save failed", @"");
+            NSString *subtitle = [error localizedDescription];
+            [destination showPlaceHolderWithtitle:title subtitle:subtitle];
+        }
     }];
 }
 

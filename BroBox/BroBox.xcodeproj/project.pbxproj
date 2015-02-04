@@ -36,6 +36,9 @@
 		5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054091A826826006E9A95 /* DBPrivateHelperController.m */; };
 		5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */; };
 		5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */; };
+		5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054171A828956006E9A95 /* GFPlaceholderView.m */; };
+		5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */; };
+		5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -144,6 +147,11 @@
 		5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		5A30540C1A826826006E9A95 /* UIViewController+DBPrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DBPrivacyHelper.h"; sourceTree = "<group>"; };
 		5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DBPrivacyHelper.m"; sourceTree = "<group>"; };
+		5A3054161A828956006E9A95 /* GFPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPlaceholderView.h; sourceTree = "<group>"; };
+		5A3054171A828956006E9A95 /* GFPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPlaceholderView.m; sourceTree = "<group>"; };
+		5A3054191A828988006E9A95 /* BBMissionRequestEditionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestEditionVC.h; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.h; sourceTree = "<group>"; };
+		5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestEditionVC.m; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.m; sourceTree = "<group>"; };
+		5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestEditionVC.xib; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.xib; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -358,6 +366,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */,
 				5A3053F51A825F8A006E9A95 /* BBLocationAutocompleteVC */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
 				5A3053E71A8252E1006E9A95 /* BBCreateRequestVC */,
@@ -425,6 +434,7 @@
 		5A3053F91A826826006E9A95 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5A3054151A828956006E9A95 /* GFPlaceholderView */,
 				5A3053FA1A826826006E9A95 /* DBPrivacyHelper */,
 			);
 			path = Libraries;
@@ -455,6 +465,25 @@
 				5A3053FF1A826826006E9A95 /* DBPrivacyHelperLocalizable.strings */,
 			);
 			path = DBPrivacyHelperLocalizations;
+			sourceTree = "<group>";
+		};
+		5A3054151A828956006E9A95 /* GFPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				5A3054161A828956006E9A95 /* GFPlaceholderView.h */,
+				5A3054171A828956006E9A95 /* GFPlaceholderView.m */,
+			);
+			path = GFPlaceholderView;
+			sourceTree = "<group>";
+		};
+		5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A3054191A828988006E9A95 /* BBMissionRequestEditionVC.h */,
+				5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */,
+				5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */,
+			);
+			name = BBMissionRequestEditionVC;
 			sourceTree = "<group>";
 		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
@@ -677,6 +706,7 @@
 			files = (
 				5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
+				5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
@@ -740,7 +770,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */,
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
+				5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
