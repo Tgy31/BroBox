@@ -12,6 +12,9 @@
 @implementation BBGeoPoint
 
 @dynamic coordinate;
+@dynamic googleReference;
+@dynamic title;
+@dynamic subtitle;
 
 + (instancetype)geoPointWithLatitude:(double)latitude longitude:(double)longitude {
     BBGeoPoint *geoPoint = [BBGeoPoint object];

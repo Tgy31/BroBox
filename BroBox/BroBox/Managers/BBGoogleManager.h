@@ -24,4 +24,7 @@ typedef void (^BBGoogleAutoCompleteResult)(NSDictionary *json, NSError *error);
                          location:(CLLocation *)location
                             block:(BBGoogleAutoCompleteResult)block;
 
++ (void)fetchDetailsForPlaceReference:(NSString *)reference
+                                block:(BBGoogleAutoCompleteResult)block;
+
 @end

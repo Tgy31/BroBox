@@ -11,6 +11,9 @@
 @interface BBGeoPoint : PFObject
 
 @property (strong, nonatomic) PFGeoPoint *coordinate;
+@property (strong, nonatomic) NSString *googleReference;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *subtitle;
 
 + (instancetype)geoPointWithLatitude:(double)latitude longitude:(double)longitude;
 

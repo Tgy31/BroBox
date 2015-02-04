@@ -104,17 +104,24 @@
     [self.loadingIndicator startAnimating];
     CLLocation *location = [BBLocationManager userLocation];
     [BBGoogleManager fetchCompletionWithString:string location:location block:^(NSDictionary *json, NSError *error) {
-        self.places = [self placeNamesFromJson:json];
-        [self.loadingIndicator stopAnimating];
+        if (!error) {
+            self.places = [self placeNamesFromJson:json];
+            [self.loadingIndicator stopAnimating];
+        } else {
+            NSLog(@"%@", error);
+        }
     }];
 }
 
 #define GOOGLE_KEY_PREDICTIONS @"predictions"
 #define GOOGLE_KEY_TERMS @"terms"
 #define GOOGLE_KEY_VALUE @"value"
+#define GOOGLE_KEY_REFERENCE @"reference"
 
 #define BBPLACE_KEY_TITLE @"title"
 #define BBPLACE_KEY_SUBTITLE @"subtitle"
+#define BBPLACE_KEY_REFERENCE @"reference"
+#define BBPLACE_KEY_LOCATION @"location"
 
 - (NSArray *)placeNamesFromJson:(NSDictionary *)json {
     NSArray *predictions = [json objectForKey:GOOGLE_KEY_PREDICTIONS];
@@ -135,9 +142,31 @@
         }
         [place setObject:subtitle forKey:BBPLACE_KEY_SUBTITLE];
         
+//        Reference
+        NSString *reference = [prediction objectForKey:GOOGLE_KEY_REFERENCE];
+        [place setObject:reference forKey:BBPLACE_KEY_REFERENCE];
+        [self fetchDetailsForPlace:place withReference:reference];
+        
         [places addObject:place];
     }
     return places;
+}
+
+#define GOOGLE_KEY_LATITUDE @"lat"
+#define GOOGLE_KEY_LONGITUDE @"lng"
+
+- (void)fetchDetailsForPlace:(NSMutableDictionary *)place withReference:(NSString *)reference {
+    [BBGoogleManager fetchDetailsForPlaceReference:reference block:^(NSDictionary *json, NSError *error) {
+        if (!error) {
+            NSDictionary *coordinate = [[[json objectForKey:@"result"] objectForKey:@"geometry"] objectForKey:@"location"];
+            double latitude = [[coordinate objectForKey:GOOGLE_KEY_LATITUDE] doubleValue];
+            double longitude = [[coordinate objectForKey:GOOGLE_KEY_LONGITUDE] doubleValue];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+            [place setObject:location forKey:BBPLACE_KEY_LOCATION];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -181,7 +210,27 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSDictionary *placeInfo = [self.places objectAtIndex:indexPath.row];
+    if ([self.delegate respondsToSelector:@selector(locationAutocompleteReturnedPlace:)]) {
+        BBGeoPoint *place = [self geoPointFromPlaceInfo:placeInfo];
+        [self.delegate locationAutocompleteReturnedPlace:place];
+    }
+    if (self.completionBlock) {
+        BBGeoPoint *place = [self geoPointFromPlaceInfo:placeInfo];
+        self.completionBlock(place);
+    }
+}
+
+#pragma mark - GeoPoint Helpers
+
+- (BBGeoPoint *)geoPointFromPlaceInfo:(NSDictionary *)place {
+    CLLocation *location = [place objectForKey:BBPLACE_KEY_LOCATION];
+    BBGeoPoint *geoPoint = [BBGeoPoint geoPointWithLatitude:location.coordinate.latitude
+                                                  longitude:location.coordinate.longitude];
+    geoPoint.googleReference = [place objectForKey:BBPLACE_KEY_REFERENCE];
+    geoPoint.title = [place objectForKey:BBPLACE_KEY_TITLE];
+    geoPoint.subtitle = [place objectForKey:BBPLACE_KEY_SUBTITLE];
+    return geoPoint;
 }
 
 @end

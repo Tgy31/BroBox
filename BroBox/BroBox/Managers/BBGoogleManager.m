@@ -60,4 +60,29 @@ static BBGoogleManager *sharedManager;
     }];
 }
 
++ (void)fetchDetailsForPlaceReference:(NSString *)reference
+                                block:(BBGoogleAutoCompleteResult)block {
+    
+    [[BBGoogleManager sharedManager] fetchDetailsForPlaceReference:reference
+                                                             block:block];
+}
+
+- (void)fetchDetailsForPlaceReference:(NSString *)reference
+                                block:(BBGoogleAutoCompleteResult)block {
+    
+    static NSString *sURL = @"https://maps.googleapis.com/maps/api/place/details/json?reference=CjQrAAAAjAY3qyGp2Rl1XSsXmRwlKBtDjQ0IpWr0ODtv-QK5ic_wq2PMBlUfgJeidR7S4w7rEhABkROs9VL06zJ9q7CDeZgKGhTGeVkdZhQBdXNQoJh7oGRjE1obfA&sensor=true&key=AIzaSyD0tUcYWxjL0iw56FHIK-TqY9e5NkhT63s";
+    
+    NSDictionary *parameters = @{
+                                 @"key": GOOGLE_PLACE_API_KEY,
+                                 @"reference": reference
+                                 };
+    
+    [self GET:sURL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        block(nil, error);
+    }];
+    
+}
+
 @end
