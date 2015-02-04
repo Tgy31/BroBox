@@ -29,6 +29,13 @@
 		5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053F11A825F87006E9A95 /* BBLocationAutocompleteVC.m */; };
 		5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053F21A825F87006E9A95 /* BBLocationAutocompleteVC.xib */; };
 		5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053F71A826238006E9A95 /* BBLocationManager.m */; };
+		5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053FB1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets */; };
+		5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053FD1A826826006E9A95 /* DBPrivacyHelperDataSource.m */; };
+		5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053FF1A826826006E9A95 /* DBPrivacyHelperLocalizable.strings */; };
+		5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054071A826826006E9A95 /* DBPrivateHelperCell.m */; };
+		5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054091A826826006E9A95 /* DBPrivateHelperController.m */; };
+		5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */; };
+		5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -120,6 +127,23 @@
 		5A3053F21A825F87006E9A95 /* BBLocationAutocompleteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBLocationAutocompleteVC.xib; path = BBLocationAutocompleteVC/BBLocationAutocompleteVC.xib; sourceTree = "<group>"; };
 		5A3053F61A826238006E9A95 /* BBLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBLocationManager.h; sourceTree = "<group>"; };
 		5A3053F71A826238006E9A95 /* BBLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBLocationManager.m; sourceTree = "<group>"; };
+		5A3053FB1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DBPrivacyHelperAssets.xcassets; sourceTree = "<group>"; };
+		5A3053FC1A826826006E9A95 /* DBPrivacyHelperDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrivacyHelperDataSource.h; sourceTree = "<group>"; };
+		5A3053FD1A826826006E9A95 /* DBPrivacyHelperDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrivacyHelperDataSource.m; sourceTree = "<group>"; };
+		5A3054001A826826006E9A95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DBPrivacyHelperLocalizable.strings; sourceTree = "<group>"; };
+		5A3054011A826826006E9A95 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/DBPrivacyHelperLocalizable.strings; sourceTree = "<group>"; };
+		5A3054021A826826006E9A95 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/DBPrivacyHelperLocalizable.strings; sourceTree = "<group>"; };
+		5A3054031A826826006E9A95 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/DBPrivacyHelperLocalizable.strings; sourceTree = "<group>"; };
+		5A3054041A826826006E9A95 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/DBPrivacyHelperLocalizable.strings"; sourceTree = "<group>"; };
+		5A3054051A826826006E9A95 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/DBPrivacyHelperLocalizable.strings"; sourceTree = "<group>"; };
+		5A3054061A826826006E9A95 /* DBPrivateHelperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrivateHelperCell.h; sourceTree = "<group>"; };
+		5A3054071A826826006E9A95 /* DBPrivateHelperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrivateHelperCell.m; sourceTree = "<group>"; };
+		5A3054081A826826006E9A95 /* DBPrivateHelperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrivateHelperController.h; sourceTree = "<group>"; };
+		5A3054091A826826006E9A95 /* DBPrivateHelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrivateHelperController.m; sourceTree = "<group>"; };
+		5A30540A1A826826006E9A95 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		5A30540C1A826826006E9A95 /* UIViewController+DBPrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DBPrivacyHelper.h"; sourceTree = "<group>"; };
+		5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DBPrivacyHelper.m"; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -296,6 +320,7 @@
 				5A1B0C431A710D5E00425431 /* Controllers */,
 				5A1B0C261A710CA500425431 /* Images.xcassets */,
 				5A1B0C281A710CA500425431 /* LaunchScreen.xib */,
+				5A3053F91A826826006E9A95 /* Libraries */,
 				5A0E1EF61A7AAC18002B314E /* images */,
 				5A1B0C191A710CA500425431 /* Supporting Files */,
 			);
@@ -395,6 +420,41 @@
 				5A3053F21A825F87006E9A95 /* BBLocationAutocompleteVC.xib */,
 			);
 			name = BBLocationAutocompleteVC;
+			sourceTree = "<group>";
+		};
+		5A3053F91A826826006E9A95 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5A3053FA1A826826006E9A95 /* DBPrivacyHelper */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		5A3053FA1A826826006E9A95 /* DBPrivacyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5A3053FB1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets */,
+				5A3053FC1A826826006E9A95 /* DBPrivacyHelperDataSource.h */,
+				5A3053FD1A826826006E9A95 /* DBPrivacyHelperDataSource.m */,
+				5A3053FE1A826826006E9A95 /* DBPrivacyHelperLocalizations */,
+				5A3054061A826826006E9A95 /* DBPrivateHelperCell.h */,
+				5A3054071A826826006E9A95 /* DBPrivateHelperCell.m */,
+				5A3054081A826826006E9A95 /* DBPrivateHelperController.h */,
+				5A3054091A826826006E9A95 /* DBPrivateHelperController.m */,
+				5A30540A1A826826006E9A95 /* UIImage+ImageEffects.h */,
+				5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */,
+				5A30540C1A826826006E9A95 /* UIViewController+DBPrivacyHelper.h */,
+				5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */,
+			);
+			path = DBPrivacyHelper;
+			sourceTree = "<group>";
+		};
+		5A3053FE1A826826006E9A95 /* DBPrivacyHelperLocalizations */ = {
+			isa = PBXGroup;
+			children = (
+				5A3053FF1A826826006E9A95 /* DBPrivacyHelperLocalizable.strings */,
+			);
+			path = DBPrivacyHelperLocalizations;
 			sourceTree = "<group>";
 		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
@@ -593,6 +653,11 @@
 				en,
 				Base,
 				he,
+				es,
+				it,
+				ko,
+				"pt-PT",
+				"zh-Hant",
 			);
 			mainGroup = 5A1B0C0D1A710CA500425431;
 			productRefGroup = 5A1B0C171A710CA500425431 /* Products */;
@@ -617,10 +682,12 @@
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
+				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
 				5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
+				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
 				5AAC278F1A72DF5900ECF6FA /* BBMapVC.xib in Resources */,
 				5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */,
 			);
@@ -674,16 +741,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
+				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
 				5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */,
 				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
+				5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
 				5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
+				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */,
@@ -698,6 +768,8 @@
 				5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */,
 				5A0E1EF51A7AA81B002B314E /* BBMissionRequest.m in Sources */,
 				5A0E1EF11A7AA79C002B314E /* BBMissionRequestAnnotationView.m in Sources */,
+				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
+				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMapVC.m in Sources */,
 			);
@@ -728,6 +800,19 @@
 				5A1B0C291A710CA500425431 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		5A3053FF1A826826006E9A95 /* DBPrivacyHelperLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A3054001A826826006E9A95 /* en */,
+				5A3054011A826826006E9A95 /* es */,
+				5A3054021A826826006E9A95 /* it */,
+				5A3054031A826826006E9A95 /* ko */,
+				5A3054041A826826006E9A95 /* pt-PT */,
+				5A3054051A826826006E9A95 /* zh-Hant */,
+			);
+			name = DBPrivacyHelperLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

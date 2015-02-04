@@ -44,8 +44,12 @@ static BBLocationManager *sharedManager;
     switch ([CLLocationManager authorizationStatus]) {
             
         case kCLAuthorizationStatusDenied:
-        case kCLAuthorizationStatusNotDetermined:
         case kCLAuthorizationStatusRestricted: {
+            [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationLocationAuthorizationDenied
+                                                                object:nil];
+        }
+            
+        case kCLAuthorizationStatusNotDetermined: {
             [sharedManager.locationManager requestWhenInUseAuthorization];
             break;
         }

@@ -12,6 +12,9 @@
 #import "BBGoogleManager.h"
 #import "BBLocationManager.h"
 
+// Libraries
+#import "UIViewController+DBPrivacyHelper.h"
+
 @interface BBLocationAutocompleteVC () <UITableViewDataSource, UITableViewDelegate>
 
 // Views
@@ -30,12 +33,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self registerToLocationManagerNotifications];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     self.title = NSLocalizedString(@"Search location", @"Default location autocomplete screen title");
     
     [BBLocationManager startUpdatingLocation];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Broadcasts
+
+- (void)registerToLocationManagerNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(locationAuthorizationDeniedHandler)
+                                                 name:BBNotificationLocationAuthorizationDenied
+                                               object:nil];
+}
+
+- (void)locationAuthorizationDeniedHandler {
+    
+    [self showPrivacyHelperForType:DBPrivacyTypeLocation controller:^(DBPrivateHelperController *vc) {
+        //customize the view controller to present
+    } didPresent:^{
+    } didDismiss:^{
+        [self showPrivacyHelperForType:DBPrivacyTypeLocation];
+    } useDefaultSettingPane:NO]; //If NO force to use DBPrivateHelperController instead of the default settings pane on iOS 8. Only for iOS 8. Default value is YES.
 }
 
 #pragma mark - API 
