@@ -10,8 +10,20 @@
 
 @implementation BBParseMission
 
+@dynamic creator;
 @dynamic from;
 @dynamic to;
+
+#pragma mark - Factory
+
++ (BBParseMission *)missionFrom:(BBGeoPoint *)from
+                             to:(BBGeoPoint *)to {
+    BBParseMission *mission = [BBParseMission object];
+    mission.from = from;
+    mission.to = to;
+    mission.creator = [PFUser currentUser];
+    return mission;
+}
 
 #pragma mark - Parse subclassing
 

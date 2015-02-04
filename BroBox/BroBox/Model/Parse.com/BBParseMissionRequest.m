@@ -15,7 +15,16 @@
 
 @dynamic mission;
 
+#pragma mark - Factory
 
++ (BBParseMissionRequest *)missionRequestFrom:(BBGeoPoint *)from
+                                           to:(BBGeoPoint *)to {
+    
+    BBParseMissionRequest *request = [BBParseMissionRequest object];
+    request.mission = [BBParseMission missionFrom:from
+                                               to:to];
+    return request;
+}
 
 #pragma mark - Parse subclassing
 

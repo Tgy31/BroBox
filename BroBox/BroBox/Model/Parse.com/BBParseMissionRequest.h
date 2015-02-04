@@ -15,4 +15,7 @@
 
 @property (strong, nonatomic) BBParseMission *mission;
 
++ (BBParseMissionRequest *)missionRequestFrom:(BBGeoPoint *)from
+                                           to:(BBGeoPoint *)to;
+
 @end

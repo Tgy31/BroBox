@@ -13,8 +13,9 @@
 
 // Model
 #import "BBGeoPoint.h"
+#import "BBParseMissionRequest.h"
 
-@interface BBCreateRequestVC () <BBLocationAutocompleteDelegate>
+@interface BBCreateRequestVC ()
 
 // From views
 @property (weak, nonatomic) IBOutlet UIView *fromView;
@@ -145,13 +146,11 @@
 }
 
 - (void)doneButtonHandler {
-    
-}
-
-#pragma mark - BBLocationAutocompleteDelegate
-
-- (void)locationAutocompleteReturnedPlace:(BBGeoPoint *)place {
-    
+    BBParseMissionRequest *request = [BBParseMissionRequest missionRequestFrom:self.placeFrom
+                                                                            to:self.placeTo];
+    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+    }];
 }
 
 

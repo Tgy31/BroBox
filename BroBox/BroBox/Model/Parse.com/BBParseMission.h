@@ -13,7 +13,12 @@
 
 @interface BBParseMission : PFObject
 
+@property (strong, nonatomic) PFUser *creator;
 @property (strong, nonatomic) BBGeoPoint *from;
 @property (strong, nonatomic) BBGeoPoint *to;
+
+
++ (BBParseMission *)missionFrom:(BBGeoPoint *)from
+                             to:(BBGeoPoint *)to;
 
 @end
