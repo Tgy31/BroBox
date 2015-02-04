@@ -18,9 +18,9 @@
 #define GOOGLE_KEY_PREDICTIONS @"predictions"
 #define GOOGLE_KEY_PREDICTION_DESCRIPTION @"description"
 
-- (void)requestCompletionWithString:(NSString *)string
-                           location:(CLLocationCoordinate2D)location
-                              block:(BBGoogleAutoCompleteResult)block
+- (void)fetchCompletionWithString:(NSString *)string
+                         location:(CLLocationCoordinate2D)location
+                            block:(BBGoogleAutoCompleteResult)block
 {
     static NSString *sURL = @"https://maps.googleapis.com/maps/api/place/autocomplete/json";
     

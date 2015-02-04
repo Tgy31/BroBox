@@ -20,8 +20,8 @@ typedef void (^BBGoogleAutoCompleteResult)(NSDictionary *json, NSError *error);
 
 @interface BBGoogleManager : AFHTTPSessionManager
 
-- (void)requestCompletionWithString:(NSString *)string
-                           location:(CLLocationCoordinate2D)location
-                              block:(BBGoogleAutoCompleteResult)block;
+- (void)fetchCompletionWithString:(NSString *)string
+                         location:(CLLocationCoordinate2D)location
+                            block:(BBGoogleAutoCompleteResult)block;
 
 @end
