@@ -6,13 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBCreateRequestVC">
             <connections>
-                <outlet property="fromTitleLabel" destination="IZ9-Cc-wQT" id="fUs-d7-DkT"/>
-                <outlet property="fromValueLabel" destination="fZn-2x-QE0" id="4rB-If-ljm"/>
-                <outlet property="fromView" destination="4Zt-cd-jAB" id="WMd-Kp-G1V"/>
-                <outlet property="toTitleLabel" destination="zJE-l5-2ur" id="W5v-M0-yWm"/>
-                <outlet property="toValueLabel" destination="Diy-tW-330" id="WoI-f8-i5D"/>
-                <outlet property="toView" destination="cmx-OP-ZAU" id="PQR-IJ-luA"/>
+                <outlet property="titleLabelFrom" destination="IZ9-Cc-wQT" id="962-eO-gRm"/>
+                <outlet property="titleLabelTo" destination="zJE-l5-2ur" id="Mo9-qF-H5r"/>
+                <outlet property="valueLabelFrom" destination="fZn-2x-QE0" id="NSd-CC-clm"/>
+                <outlet property="valueLabelTo" destination="Diy-tW-330" id="865-dO-mBV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewFrom" destination="4Zt-cd-jAB" id="I1u-eX-94r"/>
+                <outlet property="viewTo" destination="cmx-OP-ZAU" id="kwK-tp-iJs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
