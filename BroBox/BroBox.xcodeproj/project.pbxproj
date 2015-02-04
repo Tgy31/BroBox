@@ -25,6 +25,7 @@
 		5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */; };
 		5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053E41A8252DE006E9A95 /* BBCreateRequestVC.xib */; };
+		5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -109,6 +110,8 @@
 		5A3053E21A8252DE006E9A95 /* BBCreateRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateRequestVC.h; path = BBCreateRequestVC/BBCreateRequestVC.h; sourceTree = "<group>"; };
 		5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateRequestVC.m; path = BBCreateRequestVC/BBCreateRequestVC.m; sourceTree = "<group>"; };
 		5A3053E41A8252DE006E9A95 /* BBCreateRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateRequestVC.xib; path = BBCreateRequestVC/BBCreateRequestVC.xib; sourceTree = "<group>"; };
+		5A3053E81A825B6C006E9A95 /* BBGoogleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGoogleManager.h; sourceTree = "<group>"; };
+		5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGoogleManager.m; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -446,6 +449,8 @@
 				5AAC27791A72C3AB00ECF6FA /* BBLoginManager.m */,
 				5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */,
 				5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */,
+				5A3053E81A825B6C006E9A95 /* BBGoogleManager.h */,
+				5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
+				5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A3053E51A8252DE006E9A95 /* BBCreateRequestVC.m in Sources */,
