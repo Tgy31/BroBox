@@ -26,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *toTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toValueLabel;
 
+// Other views
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
+
 // Objects
 @property (strong, nonatomic) BBGeoPoint *placeFrom;
 @property (strong, nonatomic) BBGeoPoint *placeTo;
@@ -58,6 +61,7 @@
     self.toTitleLabel.text = NSLocalizedString(@"Drop off", @"Create mission request title");
     self.toValueLabel.text = @"";
     
+    self.doneButton.enabled = NO;
 }
 
 - (void)gestureInitialization {
@@ -85,16 +89,37 @@
     self.toValueLabel.text = self.placeTo.title;
 }
 
+- (void)updateDoneButtonEnabled {
+    if (!self.placeFrom
+        || ! self.placeTo) {
+        self.doneButton.enabled = NO;
+    } else {
+        self.doneButton.enabled = YES;
+    }
+}
+
 #pragma mark - Getters & Setters
+
+- (UIBarButtonItem *)doneButton {
+    if (!_doneButton) {
+        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                    target:self
+                                                                    action:@selector(doneButtonHandler)];
+        self.navigationItem.rightBarButtonItem = _doneButton;
+    }
+    return _doneButton;
+}
 
 - (void)setPlaceFrom:(BBGeoPoint *)placeFrom {
     _placeFrom = placeFrom;
     [self updateViewFrom];
+    [self updateDoneButtonEnabled];
 }
 
 - (void)setPlaceTo:(BBGeoPoint *)placeTo {
     _placeTo = placeTo;
     [self updateViewTo];
+    [self updateDoneButtonEnabled];
 }
 
 #pragma mark - Handlers
@@ -117,6 +142,10 @@
         [self.navigationController popViewControllerAnimated:YES];
     }];
     [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (void)doneButtonHandler {
+    
 }
 
 #pragma mark - BBLocationAutocompleteDelegate
