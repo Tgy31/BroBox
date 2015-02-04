@@ -8,9 +8,6 @@
 
 #import "BBGoogleManager.h"
 
-
-@implementation BBGoogleManager
-
 #define GOOGLE_PLACE_API_KEY @"AIzaSyD0tUcYWxjL0iw56FHIK-TqY9e5NkhT63s"
 #define PLACE_TYPE @"(address)"
 #define PLACE_RADIUS 500000
@@ -18,10 +15,32 @@
 #define GOOGLE_KEY_PREDICTIONS @"predictions"
 #define GOOGLE_KEY_PREDICTION_DESCRIPTION @"description"
 
+static BBGoogleManager *sharedManager;
+
+@implementation BBGoogleManager
+
++ (instancetype)sharedManager {
+    if (!sharedManager) {
+        sharedManager = [BBGoogleManager new];
+    }
+    return sharedManager;
+}
+
+#pragma mark - API Services
+
++ (void)fetchCompletionWithString:(NSString *)string
+                         location:(CLLocationCoordinate2D)location
+                            block:(BBGoogleAutoCompleteResult)block {
+    
+    [[BBGoogleManager sharedManager] fetchCompletionWithString:string
+                                                      location:location
+                                                         block:block];
+}
+
+
 - (void)fetchCompletionWithString:(NSString *)string
                          location:(CLLocationCoordinate2D)location
-                            block:(BBGoogleAutoCompleteResult)block
-{
+                            block:(BBGoogleAutoCompleteResult)block {
     static NSString *sURL = @"https://maps.googleapis.com/maps/api/place/autocomplete/json";
     
     NSDictionary *parameters = @{
