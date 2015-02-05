@@ -18,15 +18,18 @@
 #import "BBCanalTpManager.h"
 
 // Objects
+#import "BBMissionAnnotation.h"
 
 // Views
-#import "BBMissionRequestAnnotationView.h"
+#import "BBMissionAnnotationView.h"
 
 
 @interface BBMapVC () <MKMapViewDelegate>
 
 // Views
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+@property (strong, nonatomic) BBMissionAnnotationView *selectedMissionRequestView;
 
 // Properties
 @property (strong, nonatomic) NSArray *missionRequests;
@@ -53,7 +56,6 @@
     [BBParseManager fetchMissionRequestsWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.missionRequests = objects;
-            [self fetchJourney];
         } else {
             NSLog(@"%@", error);
         }
@@ -62,27 +64,56 @@
     
 }
 
-- (void)fetchJourney {
+- (void)fetchJourneyForMission:(BBParseMission *)mission {
     
-    BBParseMissionRequest *missionRequest = [self.missionRequests firstObject];
-    BBGeoPoint *geoFrom = missionRequest.mission.from;
-    CLLocationCoordinate2D from = CLLocationCoordinate2DMake(geoFrom.coordinate.latitude, geoFrom.coordinate.longitude);
-    BBGeoPoint *geoTo = missionRequest.mission.to;
-    CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
-    [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
-        if (!error) {
-            NSDictionary *journey = [[json objectForKey:@"journeys"] firstObject];
-            NSArray *path = [BBCanalTpManager pathForJourney:journey];
-            [self drawRoute:path];
-        }
-    }];
+    if (mission) {
+        BBGeoPoint *geoFrom = mission.from;
+        CLLocationCoordinate2D from = CLLocationCoordinate2DMake(geoFrom.coordinate.latitude, geoFrom.coordinate.longitude);
+        BBGeoPoint *geoTo = mission.to;
+        CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
+        [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
+            if (!error) {
+                NSDictionary *journey = [[json objectForKey:@"journeys"] firstObject];
+                NSArray *path = [BBCanalTpManager pathForJourney:journey];
+                [self drawRoute:path];
+            }
+        }];
+    }
+}
+
+- (void)fetchDirectionsFromAppleForMission:(BBParseMission *)mission {
+    
 }
 
 #pragma mark - Getters & Setters
 
 - (void)setMissionRequests:(NSArray *)missionRequests {
     _missionRequests = missionRequests;
-    [self updateAnnotations];
+    
+    if (!self.selectedMissionRequestView) { // If no selection, update annotations
+        [self showMissionRequestList:missionRequests];
+    }
+}
+
+- (void)setSelectedMissionRequestView:(BBMissionAnnotationView *)selectedMissionRequestView {
+    _selectedMissionRequestView = selectedMissionRequestView;
+    
+    if (selectedMissionRequestView) {
+        [self showMissionDetails:selectedMissionRequestView.missionAnnotation.mission];
+    } else {
+        [self showMissionRequestList:self.missionRequests];
+    }
+}
+
+#pragma mark - Helpers
+
+- (BBMissionAnnotation *)annotationForMission:(BBParseMission *)mission {
+    for (BBMissionAnnotation *annotation in self.mapView.annotations) {
+        if ([annotation.mission isEqual:mission]) {
+            return annotation;
+        }
+    }
+    return nil;
 }
 
 #pragma mark - Mapview -
@@ -93,20 +124,32 @@
 
 #pragma mark Annotations
 
-- (void)updateAnnotations {
-    NSMutableArray *tempAnnotations = [[NSMutableArray alloc] init];
+- (void)showMissionRequestList:(NSArray *)missionRequests {
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView removeOverlays:self.mapView.overlays];
     
     for (BBParseMissionRequest *missionRequest in self.missionRequests) {
-        
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        annotation.title = missionRequest.mission.from.title;
-        annotation.subtitle = missionRequest.mission.from.subtitle;
-        annotation.coordinate = CLLocationCoordinate2DMake(missionRequest.mission.from.coordinate.latitude, missionRequest.mission.from.coordinate.longitude);
-        [tempAnnotations addObject:annotation];
-        
+        BBMissionAnnotation *missionAnnotation = [BBMissionAnnotation annotationForMission:missionRequest.mission
+                                                                                  withType:BBMissionAnnotationTypeFrom];
+        [self.mapView addAnnotation:missionAnnotation];
     }
+}
+
+- (void)showMissionDetails:(BBParseMission *)mission {
+    [self fetchJourneyForMissionRequest:mission];
     
-    [self.mapView addAnnotations:tempAnnotations];
+    //    Remove unselected annotations
+//    NSMutableArray *otherAnnotations = [self.mapView.annotations mutableCopy];
+//    [otherAnnotations removeObject:self.selectedMissionRequestView.missionAnnotation];
+//    [self.mapView removeAnnotations:otherAnnotations];
+    
+    //    Add drop off annotation and move camera
+    BBMissionAnnotation *pickUpAnnotation = [self annotationForMission:mission];
+    BBMissionAnnotation *dropOffAnnotation = [BBMissionAnnotation annotationForMission:mission
+                                                                              withType:BBMissionAnnotationTypeTo];
+    [self.mapView addAnnotation:dropOffAnnotation];
+    
+    [self.mapView showAnnotations:@[pickUpAnnotation, dropOffAnnotation] animated:YES];
 }
 
 #pragma mark AnnotationViews
@@ -115,9 +158,9 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
             viewForAnnotation:(id<MKAnnotation>)annotation {
-    BBMissionRequestAnnotationView *annotationView = (BBMissionRequestAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+    BBMissionAnnotationView *annotationView = (BBMissionAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_IDENTIFIER];
     if (!annotationView) {
-        annotationView = [[BBMissionRequestAnnotationView alloc] initWithAnnotation:annotation
+        annotationView = [[BBMissionAnnotationView alloc] initWithAnnotation:annotation
                                                                     reuseIdentifier:ANNOTATIONVIEW_IDENTIFIER];
     }
     annotationView.annotation = annotation;
@@ -127,7 +170,19 @@
 - (void)mapView:(MKMapView *)mapView
 didSelectAnnotationView:(MKAnnotationView *)view {
     
+    if ([view.annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        self.selectedMissionRequestView = (BBMissionAnnotationView *)view;
+    }
 }
+
+- (void)mapView:(MKMapView *)mapView
+didDeselectAnnotationView:(MKAnnotationView *)view {
+    
+    if ([view.annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        self.selectedMissionRequestView = nil;
+    }
+}
+
 
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view

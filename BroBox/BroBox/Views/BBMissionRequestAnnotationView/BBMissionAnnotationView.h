@@ -8,6 +8,11 @@
 
 #import <MapKit/MapKit.h>
 
-@interface BBMissionRequestAnnotationView : MKAnnotationView
+// Model
+#import "BBMissionAnnotation.h"
+
+@interface BBMissionAnnotationView : MKAnnotationView
+
+@property (weak, nonatomic) BBMissionAnnotation *missionAnnotation;
 
 @end
