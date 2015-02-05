@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBMapVC.h"
+#import "BBMissionRequestsMapVC.h"
 
 // Frameworks
 #import <MapKit/MapKit.h>
@@ -24,7 +24,7 @@
 #import "BBMissionAnnotationView.h"
 
 
-@interface BBMapVC () <MKMapViewDelegate>
+@interface BBMissionRequestsMapVC () <MKMapViewDelegate>
 
 // Views
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -36,7 +36,7 @@
 
 @end
 
-@implementation BBMapVC
+@implementation BBMissionRequestsMapVC
 
 #pragma mark - Life cycle
 
