@@ -136,7 +136,7 @@
 }
 
 - (void)showMissionDetails:(BBParseMission *)mission {
-    [self fetchJourneyForMissionRequest:mission];
+    [self fetchJourneyForMission:mission];
     
     //    Remove unselected annotations
 //    NSMutableArray *otherAnnotations = [self.mapView.annotations mutableCopy];
