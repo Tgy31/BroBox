@@ -8,6 +8,6 @@
 
 #import <MapKit/MapKit.h>
 
-@interface BBMissionRequestAnnotationView : MKPinAnnotationView
+@interface BBMissionRequestAnnotationView : MKAnnotationView
 
 @end
