@@ -8,6 +8,9 @@
 
 #import "BBMissionRequestVC.h"
 
+// Managers
+#import "BBParseManager.h"
+
 @interface BBMissionRequestVC ()
 
 
@@ -21,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTo;
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
 
-
 @end
 
 @implementation BBMissionRequestVC
@@ -34,7 +36,7 @@
     self.navigationBarShouldCoverViewController = NO;
     
     [self initialiazeView];
-    [self setViewForMission:self.mission];
+    [self setViewForMissionRequest:self.missionRequest];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -60,24 +62,54 @@
                 forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)setViewForMission:(BBParseMission *)mission {
-    if (mission) {
-        self.labelFrom.text = self.mission.from.title;
-        self.labelTo.text = self.mission.to.title;
+- (void)setViewForMissionRequest:(BBParseMissionRequest *)missionRequest {
+    if (missionRequest) {
+        self.labelFrom.text = missionRequest.mission.from.title;
+        self.labelTo.text = missionRequest.mission.to.title;
     }
 }
 
 #pragma mark - Getters & Setters
 
-- (void)setMission:(BBParseMission *)mission {
-    _mission = mission;
-    [self setViewForMission:mission];
+- (void)setMissionRequest:(BBParseMissionRequest *)missionRequest {
+    _missionRequest = missionRequest;
+    [self setViewForMissionRequest:missionRequest];
+}
+
+#pragma marl - View Methods
+
+- (void)showAcceptMissionRequestSuccess {
+    NSString *title = NSLocalizedString(@"Success", @"");
+    NSString *subtitle = NSLocalizedString(@"You succesfully accepted to carry this mission. Please wait for the creator to select a carrier", @"");
+    [self showPlaceHolderWithtitle:title subtitle:subtitle];
+}
+
+- (void)showAcceptMissionRequestFailedWithError:(NSError *)error {
+    NSString *title = NSLocalizedString(@"Error", @"");
+    NSString *subtitle = [error localizedFailureReason];
+    [self showPlaceHolderWithtitle:title subtitle:subtitle];
 }
 
 #pragma mark - Handlers
 
 - (void)actionButtonHandler {
-    
+    [self acceptMissionRequest];
+}
+
+#pragma mark - API
+
+- (void)acceptMissionRequest {
+    [self startLoading];
+    [BBParseManager missionRequest:self.missionRequest
+                        addCarrier:[PFUser currentUser]
+                         withBlock:^(BOOL succeeded, NSError *error) {
+                             if (!error ) {
+                                 [self showAcceptMissionRequestSuccess];
+                             } else {
+                                 NSLog(@"%@", error);
+                                 [self showAcceptMissionRequestFailedWithError:error];
+                             }
+    }];
 }
 
 @end

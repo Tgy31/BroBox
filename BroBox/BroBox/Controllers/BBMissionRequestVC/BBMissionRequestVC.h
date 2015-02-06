@@ -9,10 +9,10 @@
 #import "BBViewController.h"
 
 // Model
-#import "BBParseMission.h"
+#import "BBParseMissionRequest.h"
 
 @interface BBMissionRequestVC : BBViewController
 
-@property (strong, nonatomic) BBParseMission *mission;
+@property (strong, nonatomic) BBParseMissionRequest *missionRequest;
 
 @end
