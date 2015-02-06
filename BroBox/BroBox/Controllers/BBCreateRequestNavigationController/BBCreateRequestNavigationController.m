@@ -52,8 +52,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
-                                        animated:NO];
+    if (![BBInstallationManager userActiveMissionRequestIsLoading]) {
+        [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
+                                            animated:NO];    }
     
     [self registerToUserActiveMissionNotifications];
 }
