@@ -45,8 +45,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBarShouldCoverViewController = NO;
-    
     [self viewInitialization];
     [self gestureInitialization];
 }

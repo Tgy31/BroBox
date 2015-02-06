@@ -33,8 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBarShouldCoverViewController = NO;
-    
     [self initialiazeView];
     [self setViewForMissionRequest:self.missionRequest];
 }

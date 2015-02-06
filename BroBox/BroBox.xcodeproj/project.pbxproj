@@ -41,6 +41,11 @@
 		5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */; };
 		5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */; };
 		5A8C324F1A85028A00F03821 /* BBMissionRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */; };
+		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
+		5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32531A85200C00F03821 /* BBSignUpNavigationController.xib */; };
+		5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32581A85203500F03821 /* BBSignUpVC.m */; };
+		5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32591A85203500F03821 /* BBSignUpVC.xib */; };
+		5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C325E1A8520F600F03821 /* BBFacebookManager.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -157,6 +162,14 @@
 		5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestVC.h; path = BBMissionRequestVC/BBMissionRequestVC.h; sourceTree = "<group>"; };
 		5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestVC.m; path = BBMissionRequestVC/BBMissionRequestVC.m; sourceTree = "<group>"; };
 		5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestVC.xib; path = BBMissionRequestVC/BBMissionRequestVC.xib; sourceTree = "<group>"; };
+		5A8C32511A85200C00F03821 /* BBSignUpNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBSignUpNavigationController.h; path = BBSignUpNavigationController/BBSignUpNavigationController.h; sourceTree = "<group>"; };
+		5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBSignUpNavigationController.m; path = BBSignUpNavigationController/BBSignUpNavigationController.m; sourceTree = "<group>"; };
+		5A8C32531A85200C00F03821 /* BBSignUpNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBSignUpNavigationController.xib; path = BBSignUpNavigationController/BBSignUpNavigationController.xib; sourceTree = "<group>"; };
+		5A8C32571A85203500F03821 /* BBSignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBSignUpVC.h; path = BBSignUpVC/BBSignUpVC.h; sourceTree = "<group>"; };
+		5A8C32581A85203500F03821 /* BBSignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBSignUpVC.m; path = BBSignUpVC/BBSignUpVC.m; sourceTree = "<group>"; };
+		5A8C32591A85203500F03821 /* BBSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBSignUpVC.xib; path = BBSignUpVC/BBSignUpVC.xib; sourceTree = "<group>"; };
+		5A8C325D1A8520F600F03821 /* BBFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFacebookManager.h; sourceTree = "<group>"; };
+		5A8C325E1A8520F600F03821 /* BBFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFacebookManager.m; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -371,7 +384,8 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
-				5A8C32501A85028F00F03821 /* New Group */,
+				5A8C325C1A85203900F03821 /* BBSignUpVC */,
+				5A8C32501A85028F00F03821 /* BBMissionRequestVC */,
 				5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */,
 				5A3053F51A825F8A006E9A95 /* BBLocationAutocompleteVC */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
@@ -492,14 +506,34 @@
 			name = BBMissionRequestEditionVC;
 			sourceTree = "<group>";
 		};
-		5A8C32501A85028F00F03821 /* New Group */ = {
+		5A8C32501A85028F00F03821 /* BBMissionRequestVC */ = {
 			isa = PBXGroup;
 			children = (
 				5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */,
 				5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */,
 				5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */,
 			);
-			name = "New Group";
+			name = BBMissionRequestVC;
+			sourceTree = "<group>";
+		};
+		5A8C32561A85200F00F03821 /* BBSignUpNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5A8C32511A85200C00F03821 /* BBSignUpNavigationController.h */,
+				5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */,
+				5A8C32531A85200C00F03821 /* BBSignUpNavigationController.xib */,
+			);
+			name = BBSignUpNavigationController;
+			sourceTree = "<group>";
+		};
+		5A8C325C1A85203900F03821 /* BBSignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A8C32571A85203500F03821 /* BBSignUpVC.h */,
+				5A8C32581A85203500F03821 /* BBSignUpVC.m */,
+				5A8C32591A85203500F03821 /* BBSignUpVC.xib */,
+			);
+			name = BBSignUpVC;
 			sourceTree = "<group>";
 		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
@@ -577,6 +611,8 @@
 				5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */,
 				5A3053F61A826238006E9A95 /* BBLocationManager.h */,
 				5A3053F71A826238006E9A95 /* BBLocationManager.m */,
+				5A8C325D1A8520F600F03821 /* BBFacebookManager.h */,
+				5A8C325E1A8520F600F03821 /* BBFacebookManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -596,6 +632,7 @@
 			children = (
 				5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */,
 				5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */,
+				5A8C32561A85200F00F03821 /* BBSignUpNavigationController */,
 				5A3053DE1A825277006E9A95 /* BBCreateRequestNavigationController */,
 				5AA60D391A754740001C07F6 /* BBMissionListNavigationController */,
 				5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */,
@@ -732,6 +769,8 @@
 				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
+				5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */,
+				5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */,
 				5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
@@ -794,12 +833,14 @@
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
 				5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */,
+				5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */,
 				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
 				5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */,
+				5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
@@ -820,6 +861,7 @@
 				5A0E1EF11A7AA79C002B314E /* BBMissionAnnotationView.m in Sources */,
 				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
+				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
 				5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m in Sources */,
 			);

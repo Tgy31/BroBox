@@ -15,6 +15,7 @@
 // Controllers
 #import "BBLoginVC.h"
 #import "BBRootVC.h"
+#import "BBSignUpNavigationController.h"
 
 // Managers
 #import "BBLoginManager.h"
@@ -93,6 +94,10 @@
     self.window.rootViewController = [BBRootVC new];
 }
 
+- (void)presentSignUpScreen {
+    self.window.rootViewController = [BBSignUpNavigationController new];
+}
+
 + (void)presentLoginScreen
 {
     [[self sharedDelegate] presentLoginScreen];
@@ -101,6 +106,10 @@
 + (void)presentRootScreen
 {
     [[self sharedDelegate] presentRootScreen];
+}
+
++ (void)presentSignUpScreen {
+    [[self sharedDelegate] presentSignUpScreen];
 }
 
 #pragma mark - Helpers

@@ -13,6 +13,7 @@
 
 // Managers
 #import "BBLoginManager.h"
+#import "BBFacebookManager.h"
 
 @interface BBLoginVC ()
 
@@ -41,8 +42,7 @@
 
 - (void)tryLoginFromCache {
     // Whenever a person opens the app, check for a cached session
-    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded
-        || FBSession.activeSession.state == FBSessionStateOpen) {
+    if ([BBFacebookManager isSessionAvailable]) {
         [self automaticLogin];
     }
 }
@@ -53,7 +53,7 @@
         if (error) {
         } else if (!user) {
         } else if (user.isNew) {
-            [self openApplication];
+            [self mustSignUp];
         } else {
             [self openApplication];
         }
@@ -67,7 +67,7 @@
         if (error) {
         } else if (!user) {
         } else if (user.isNew) {
-            [self openApplication];
+            [self mustSignUp];
         } else {
             [self openApplication];
         }
@@ -79,6 +79,10 @@
 
 - (void)openApplication {
     [AppDelegate presentRootScreen];
+}
+
+- (void)mustSignUp {
+    [AppDelegate presentSignUpScreen];
 }
 
 #pragma mark - View
