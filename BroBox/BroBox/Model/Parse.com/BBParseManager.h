@@ -17,11 +17,13 @@
 ///--------------------------------------
 
 typedef void (^BBArrayResultBlock)(NSArray *objects, NSError *error);
+typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 
 
 @interface BBParseManager : NSObject
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block;
 + (void)fetchMissionRequestsWithBlock:(BBArrayResultBlock)block;
++ (void)missionRequest:(BBParseMissionRequest *)missionRequest addCarrier:(PFUser *)carrier withBlock:(BBBooleanResultBlock)block;
 
 @end

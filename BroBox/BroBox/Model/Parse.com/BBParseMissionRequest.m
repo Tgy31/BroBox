@@ -36,4 +36,10 @@
     return @"BBParseMissionRequest";
 }
 
+#pragma mark - Parse relations
+
+- (PFRelation *)carriersAwaitingRelation {
+    return [self relationForKey:@"carriersAwaiting"];
+}
+
 @end

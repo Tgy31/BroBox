@@ -1,8 +1,8 @@
 //
-//  BBMissionRequestEditionVC.h
+//  BBMissionRequestVC.h
 //  BroBox
 //
-//  Created by Tanguy Hélesbeux on 04/02/2015.
+//  Created by Tanguy Hélesbeux on 06/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
@@ -11,10 +11,8 @@
 // Model
 #import "BBParseMissionRequest.h"
 
-@interface BBMissionRequestEditionVC : BBViewController
+@interface BBMissionRequestVC : BBViewController
 
 @property (strong, nonatomic) BBParseMissionRequest *missionRequest;
-
-- (void)setAsRootViewController;
 
 @end

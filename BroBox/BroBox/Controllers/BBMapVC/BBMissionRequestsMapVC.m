@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 
 // Controllers
+#import "BBMissionRequestVC.h"
 
 // Managers
 #import "BBParseManager.h"
@@ -116,6 +117,27 @@
     return nil;
 }
 
+- (BBParseMissionRequest *)missionRequestForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        BBMissionAnnotation *missionAnnotation = (BBMissionAnnotation *)annotation;
+        for (BBParseMissionRequest *missionRequest in self.missionRequests) {
+            if ([missionRequest.mission isEqual:missionAnnotation.mission]) {
+                return missionRequest;
+            }
+        }
+    }
+    return nil;
+}
+
+#pragma mark - Handlers
+
+- (void)presentViewControllerForMission:(BBParseMissionRequest *)missionRequest {
+    
+    BBMissionRequestVC *destination = [BBMissionRequestVC new];
+    destination.missionRequest = missionRequest;
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
 #pragma mark - Mapview -
 
 - (void)initializeMapView {
@@ -187,7 +209,16 @@ didDeselectAnnotationView:(MKAnnotationView *)view {
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view
 calloutAccessoryControlTapped:(UIControl *)control {
-    
+    if ([control isEqual:view.rightCalloutAccessoryView]) {
+        if ([view isKindOfClass:[BBMissionAnnotationView class]]) {
+            BBParseMissionRequest *missionRequest = [self missionRequestForAnnotation:view.annotation];
+            [self presentViewControllerForMission:missionRequest];
+        }
+    } else if ([control isEqual:view.leftCalloutAccessoryView]) {
+        
+    } else {
+        
+    }
 }
 
 #pragma mark Overlay

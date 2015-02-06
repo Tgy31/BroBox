@@ -39,6 +39,8 @@
 		5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */; };
 		5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */; };
 		5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */; };
+		5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */; };
+		5A8C324F1A85028A00F03821 /* BBMissionRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -152,6 +154,9 @@
 		5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestEditionVC.xib; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.xib; sourceTree = "<group>"; };
 		5A714CD31A839FCD00B20FC7 /* BBMissionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionAnnotation.h; path = BBMissionAnnotation/BBMissionAnnotation.h; sourceTree = "<group>"; };
 		5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionAnnotation.m; path = BBMissionAnnotation/BBMissionAnnotation.m; sourceTree = "<group>"; };
+		5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestVC.h; path = BBMissionRequestVC/BBMissionRequestVC.h; sourceTree = "<group>"; };
+		5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestVC.m; path = BBMissionRequestVC/BBMissionRequestVC.m; sourceTree = "<group>"; };
+		5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestVC.xib; path = BBMissionRequestVC/BBMissionRequestVC.xib; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -366,6 +371,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A8C32501A85028F00F03821 /* New Group */,
 				5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */,
 				5A3053F51A825F8A006E9A95 /* BBLocationAutocompleteVC */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
@@ -484,6 +490,16 @@
 				5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */,
 			);
 			name = BBMissionRequestEditionVC;
+			sourceTree = "<group>";
+		};
+		5A8C32501A85028F00F03821 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */,
+				5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */,
+				5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
@@ -707,6 +723,7 @@
 				5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */,
+				5A8C324F1A85028A00F03821 /* BBMissionRequestVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
@@ -787,6 +804,7 @@
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
 				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
+				5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */,

@@ -28,4 +28,15 @@
     }];
 }
 
++ (void)missionRequest:(BBParseMissionRequest *)missionRequest
+            addCarrier:(PFUser *)carrier
+             withBlock:(BBBooleanResultBlock)block {
+    
+    PFRelation *carrierRelation = [missionRequest carriersAwaitingRelation];
+    [carrierRelation addObject:carrier];
+    [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        block(succeeded, error);
+    }];
+}
+
 @end
