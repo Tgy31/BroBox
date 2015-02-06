@@ -49,7 +49,7 @@
 
 - (void)automaticLogin {
     [self startLoading];
-    [BBLoginManager loginWithFacebookWithBlock:^(PFUser *user, NSError *error) {
+    [BBLoginManager loginWithFacebookWithBlock:^(BBParseUser *user, NSError *error) {
         if (error) {
         } else if (!user) {
         } else if (user.isNew) {
@@ -63,7 +63,7 @@
 
 - (void)manualLogin {
     [self startLoading];
-    [BBLoginManager loginWithFacebookWithBlock:^(PFUser *user, NSError *error) {
+    [BBLoginManager loginWithFacebookWithBlock:^(BBParseUser *user, NSError *error) {
         if (error) {
         } else if (!user) {
         } else if (user.isNew) {

@@ -21,7 +21,7 @@
     BBParseMission *mission = [BBParseMission object];
     mission.from = from;
     mission.to = to;
-    mission.creator = [PFUser currentUser];
+    mission.creator = [BBParseUser currentUser];
     return mission;
 }
 

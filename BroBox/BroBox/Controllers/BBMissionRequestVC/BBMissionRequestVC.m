@@ -11,6 +11,9 @@
 // Managers
 #import "BBParseManager.h"
 
+// Model
+#import "BBParseUser.h"
+
 @interface BBMissionRequestVC ()
 
 
@@ -99,7 +102,7 @@
 - (void)acceptMissionRequest {
     [self startLoading];
     [BBParseManager missionRequest:self.missionRequest
-                        addCarrier:[PFUser currentUser]
+                        addCarrier:[BBParseUser currentUser]
                          withBlock:^(BOOL succeeded, NSError *error) {
                              if (!error ) {
                                  [self showAcceptMissionRequestSuccess];

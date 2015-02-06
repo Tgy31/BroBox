@@ -29,7 +29,7 @@
 }
 
 + (void)missionRequest:(BBParseMissionRequest *)missionRequest
-            addCarrier:(PFUser *)carrier
+            addCarrier:(BBParseUser *)carrier
              withBlock:(BBBooleanResultBlock)block {
     
     PFRelation *carrierRelation = [missionRequest carriersAwaitingRelation];
