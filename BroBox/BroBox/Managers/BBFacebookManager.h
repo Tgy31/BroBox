@@ -18,7 +18,7 @@ typedef void (^BBFacebookRequestHandler)(id result, NSError *error);
 + (NSString *)firstNameFromJson:(NSDictionary *)json;
 + (NSString *)lastNameFromJson:(NSDictionary *)json;
 + (NSString *)emailFromJson:(NSDictionary *)json;
-+ (NSString *)birthdateFromJson:(NSDictionary *)json;
++ (NSString *)birthdayFromJson:(NSDictionary *)json;
 
 + (BOOL)isSessionAvailable;
 + (BOOL)isSessionOpen;

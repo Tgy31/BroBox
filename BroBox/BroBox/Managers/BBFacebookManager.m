@@ -28,7 +28,7 @@
 #define FACEBOOK_KEY_FIRSTNAME @"first_name"
 #define FACEBOOK_KEY_LASTNAME @"last_name"
 #define FACEBOOK_KEY_EMAIL @"email"
-#define FACEBOOK_KEY_BIRTHDATE @"birthday"
+#define FACEBOOK_KEY_BIRTHDAY @"birthday"
 
 + (NSString *)facebookIDFromJson:(NSDictionary *)json {
     return [json objectForKey:FACEBOOK_KEY_ID];
@@ -46,8 +46,8 @@
     return [json objectForKey:FACEBOOK_KEY_EMAIL];
 }
 
-+ (NSString *)birthdateFromJson:(NSDictionary *)json {
-    return [json objectForKey:FACEBOOK_KEY_BIRTHDATE];
++ (NSString *)birthdayFromJson:(NSDictionary *)json {
+    return [json objectForKey:FACEBOOK_KEY_BIRTHDAY];
 }
 
 #pragma mark - API CALLS
