@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 
 // Controllers
+#import "BBMissionRequestVC.h"
 
 // Managers
 #import "BBParseManager.h"
@@ -116,6 +117,14 @@
     return nil;
 }
 
+#pragma mark - Handlers
+
+- (void)presentViewControllerForMission:(BBParseMission *)mission {
+    BBMissionRequestVC *destination = [BBMissionRequestVC new];
+    
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
 #pragma mark - Mapview -
 
 - (void)initializeMapView {
@@ -187,7 +196,15 @@ didDeselectAnnotationView:(MKAnnotationView *)view {
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view
 calloutAccessoryControlTapped:(UIControl *)control {
-    
+    if ([control isEqual:view.rightCalloutAccessoryView]) {
+        if ([view isKindOfClass:[BBMissionAnnotationView class]]) {
+            [self presentViewControllerForMission:((BBMissionAnnotationView *)view).missionAnnotation.mission];
+        }
+    } else if ([control isEqual:view.leftCalloutAccessoryView]) {
+        
+    } else {
+        
+    }
 }
 
 #pragma mark Overlay
