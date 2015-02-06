@@ -22,8 +22,6 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    [self startLoading];
 }
 
 #pragma mark - Initialization

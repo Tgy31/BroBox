@@ -53,6 +53,7 @@
                                    self.notificationVC,
                                    self.settingsVC
                                    ]];
+        self.tabBar.translucent = NO;
     }
     return self;
 }

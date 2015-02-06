@@ -47,13 +47,32 @@ static BBInstallationManager *sharedManager;
 
 #pragma mark - Getters & Setters
 
++ (BBParseMissionRequest *)userActiveMissionRequest {
+    return [BBInstallationManager sharedManager].userActiveMissionRequest;
+}
+
++ (BOOL)userActiveMissionRequestIsLoading {
+    return [BBInstallationManager sharedManager].userActiveMissionRequestIsLoading;
+}
+
++ (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest {
+    [[BBInstallationManager sharedManager] setUserActiveMissionRequest:userActiveMissionRequest];
+}
+
+- (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest {
+    BOOL shouldNotify = ![_userActiveMissionRequest isEqual:userActiveMissionRequest];
+    _userActiveMissionRequest = userActiveMissionRequest;
+    
+    if (shouldNotify) {
+        [self notifiUserActiveMissionRequestDidChange];
+    }
+}
+
 - (void)setUserActiveMissionRequestIsLoading:(BOOL)userActiveMissionRequestIsLoading {
     _userActiveMissionRequestIsLoading = userActiveMissionRequestIsLoading;
     
     if (userActiveMissionRequestIsLoading) {
         [self notifyUserActiveMisssionRequestIsLoading];
-    } else {
-        [self notifiUserActiveMissionRequestDidChange];
     }
 }
 

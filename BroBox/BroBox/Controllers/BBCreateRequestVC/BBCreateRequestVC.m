@@ -8,6 +8,9 @@
 
 #import "BBCreateRequestVC.h"
 
+// Managers
+#import "BBInstallationManager.h"
+
 // Controllers
 #import "BBLocationAutocompleteVC.h"
 #import "BBMissionRequestEditionVC.h"
@@ -47,6 +50,21 @@
     
     [self viewInitialization];
     [self gestureInitialization];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    if ([BBInstallationManager userActiveMissionRequestIsLoading]) {
+        [self startLoading];
+    } else {
+        BBParseMissionRequest *userMissionRequest = [BBInstallationManager userActiveMissionRequest];
+        if (userMissionRequest) {
+            NSString *title = NSLocalizedString(@"Mission saved", @"");
+            NSString *subtitle = NSLocalizedString(@"Your mission has been saved. You can have only one mission at a time", @"");
+            [self showPlaceHolderWithtitle:title subtitle:subtitle];
+        }
+    }
 }
 
 #pragma mark - Initialization

@@ -21,4 +21,8 @@ static NSString *BBNotificationUserActiveMissionRequestDidChange = @"BBNotificat
 
 + (void)initialize;
 
++ (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest;
++ (BBParseMissionRequest *)userActiveMissionRequest;
++ (BOOL)userActiveMissionRequestIsLoading;
+
 @end
