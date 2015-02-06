@@ -19,7 +19,6 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
-		5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */; };
 		5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateRequestNavigationController.m */; };
 		5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */; };
@@ -122,8 +121,6 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
-		5A3053D61A825121006E9A95 /* BBParseMissionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseMissionRequest.h; sourceTree = "<group>"; };
-		5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseMissionRequest.m; sourceTree = "<group>"; };
 		5A3053D91A825272006E9A95 /* BBCreateRequestNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateRequestNavigationController.h; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.h; sourceTree = "<group>"; };
 		5A3053DA1A825272006E9A95 /* BBCreateRequestNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateRequestNavigationController.m; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.m; sourceTree = "<group>"; };
 		5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateRequestNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.xib; sourceTree = "<group>"; };
@@ -573,8 +570,6 @@
 				5A8C32611A85277000F03821 /* BBParseUser.m */,
 				5AA60D431A755830001C07F6 /* BBParseMission.h */,
 				5AA60D441A755830001C07F6 /* BBParseMission.m */,
-				5A3053D61A825121006E9A95 /* BBParseMissionRequest.h */,
-				5A3053D71A825121006E9A95 /* BBParseMissionRequest.m */,
 			);
 			path = Parse.com;
 			sourceTree = "<group>";
@@ -850,7 +845,6 @@
 				5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
-				5A3053D81A825121006E9A95 /* BBParseMissionRequest.m in Sources */,
 				5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,

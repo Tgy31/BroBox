@@ -22,4 +22,6 @@
 + (BBParseMission *)missionFrom:(BBGeoPoint *)from
                              to:(BBGeoPoint *)to;
 
+- (PFRelation *)carriersAwaitingRelation;
+
 @end
