@@ -24,7 +24,7 @@
     
     missionListVC.title = NSLocalizedString(@"Missions", @"Mission list screen title");
     
-    navigationController.title = NSLocalizedString(@"Missions", @"Mission tab title");
+    navigationController.title = NSLocalizedString(@"List", @"Mission tab title");
     
     return navigationController;
 }

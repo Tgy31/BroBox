@@ -418,14 +418,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5A3053DE1A825277006E9A95 /* BBCreateRequestNavigationController */ = {
+		5A3053DE1A825277006E9A95 /* BBCreateMissionNavigationController */ = {
 			isa = PBXGroup;
 			children = (
 				5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */,
 				5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */,
 				5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */,
 			);
-			name = BBCreateRequestNavigationController;
+			name = BBCreateMissionNavigationController;
 			sourceTree = "<group>";
 		};
 		5A3053E71A8252E1006E9A95 /* BBCreateMissionVC */ = {
@@ -622,7 +622,7 @@
 				5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */,
 				5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */,
 				5A8C32561A85200F00F03821 /* BBSignUpNavigationController */,
-				5A3053DE1A825277006E9A95 /* BBCreateRequestNavigationController */,
+				5A3053DE1A825277006E9A95 /* BBCreateMissionNavigationController */,
 				5AA60D391A754740001C07F6 /* BBMissionListNavigationController */,
 				5AAC278A1A72CFF400ECF6FA /* BBMapNavigationController */,
 			);
