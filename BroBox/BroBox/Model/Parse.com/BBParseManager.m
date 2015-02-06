@@ -47,4 +47,29 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     }];
 }
 
++ (void)fetchUserActiveMissionRequest:(BBParseUser *)user
+                            withBlock:(BBObjectResultBlock)block{
+    PFQuery *query = [BBParseMissionRequest query];
+    [query includeKey:@"mission"];
+    [query includeKey:@"mission.from"];
+    [query includeKey:@"mission.to"];
+    [query includeKey:@"mission.creator"];
+    
+    PFQuery *missionQuery = [BBParseMission query];
+    [missionQuery whereKey:@"creator" equalTo:user];
+    
+    [query whereKey:@"mission" matchesQuery:missionQuery];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            if (objects.count != 1) {
+                error = [NSError errorWithDomain:@"More than one active mission request for this user" code:404 userInfo:nil];
+            }
+            block([objects firstObject], error);
+        } else {
+            NSLog(@"%@", error);
+            block(nil, error);
+        }
+    }];
+}
+
 @end

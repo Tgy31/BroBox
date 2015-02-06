@@ -11,8 +11,14 @@
 // Model
 #import "BBParseMissionRequest.h"
 
+static NSString *BBNotificationUserActiveMissionRequestIsLoading = @"BBNotificationUserActiveMissionRequestIsLoading";
+static NSString *BBNotificationUserActiveMissionRequestDidChange = @"BBNotificationUserActiveMissionRequestDidChange";
+
 @interface BBInstallationManager : BBObject
 
 @property (strong, nonatomic) BBParseMissionRequest *userActiveMissionRequest;
+@property (nonatomic) BOOL userActiveMissionRequestIsLoading;
+
++ (void)initialize;
 
 @end

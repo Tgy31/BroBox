@@ -18,6 +18,7 @@
 ///--------------------------------------
 
 typedef void (^BBArrayResultBlock)(NSArray *objects, NSError *error);
+typedef void (^BBObjectResultBlock)(PFObject *object, NSError *error);
 typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 
 
@@ -26,7 +27,8 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block;
 + (void)fetchMissionRequestsWithBlock:(BBArrayResultBlock)block;
 + (void)missionRequest:(BBParseMissionRequest *)missionRequest addCarrier:(BBParseUser *)carrier withBlock:(BBBooleanResultBlock)block;
-
 + (void)user:(BBParseUser *)user confirmSignUpWithBlock:(BBBooleanResultBlock)block;
++ (void)fetchUserActiveMissionRequest:(BBParseUser *)user
+                            withBlock:(BBObjectResultBlock)block;
 
 @end
