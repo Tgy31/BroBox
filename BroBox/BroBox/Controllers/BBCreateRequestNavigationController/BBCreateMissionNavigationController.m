@@ -1,24 +1,24 @@
 //
-//  BBCreateRequestNavigationController.m
+//  BBCreateMissionNavigationController.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 04/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBCreateRequestNavigationController.h"
+#import "BBCreateMissionNavigationController.h"
 
 // Managers
 #import "BBInstallationManager.h"
 
 // Controllers
-#import "BBCreateRequestVC.h"
+#import "BBCreateMissionVC.h"
 
-@interface BBCreateRequestNavigationController ()
+@interface BBCreateMissionNavigationController ()
 
 @end
 
-@implementation BBCreateRequestNavigationController
+@implementation BBCreateMissionNavigationController
 
 #pragma mark - Initialization
 
@@ -30,9 +30,9 @@
         [rootVC startLoading];
     } else {
         BBParseMission *mission = [BBInstallationManager userActiveMission];
-        rootVC = [BBCreateRequestNavigationController rootViewControllerForUserActiveMission:mission];
+        rootVC = [BBCreateMissionNavigationController rootViewControllerForUserActiveMission:mission];
     }
-    BBCreateRequestNavigationController *navigationController = [[BBCreateRequestNavigationController alloc] initWithRootViewController:rootVC];
+    BBCreateMissionNavigationController *navigationController = [[BBCreateMissionNavigationController alloc] initWithRootViewController:rootVC];
     
     navigationController.title = NSLocalizedString(@"My mission", @"");
     
@@ -41,7 +41,7 @@
 
 - (void)setViewControllersForUserActiveMission:(BBParseMission *)mission
                                       animated:(BOOL)animated {
-    BBViewController *rootVC = [BBCreateRequestNavigationController rootViewControllerForUserActiveMission:mission];
+    BBViewController *rootVC = [BBCreateMissionNavigationController rootViewControllerForUserActiveMission:mission];
     [self setViewControllers:@[rootVC] animated:animated];
 }
 
@@ -52,7 +52,7 @@
         rootVC.title = NSLocalizedString(@"My mission", @"");
         return rootVC;
     } else {
-        BBCreateRequestVC *rootVC = [BBCreateRequestVC new];
+        BBCreateMissionVC *rootVC = [BBCreateMissionVC new];
         rootVC.title = NSLocalizedString(@"Create mission", @"");
         return rootVC;
     }

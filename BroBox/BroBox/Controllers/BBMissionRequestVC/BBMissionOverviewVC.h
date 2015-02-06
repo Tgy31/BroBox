@@ -1,5 +1,5 @@
 //
-//  BBMissionRequestVC.h
+//  BBMissionOverviewVC.h
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 06/02/2015.
@@ -11,7 +11,7 @@
 // Model
 #import "BBParseMission.h"
 
-@interface BBMissionRequestVC : BBViewController
+@interface BBMissionOverviewVC : BBViewController
 
 @property (strong, nonatomic) BBParseMission *mission;
 

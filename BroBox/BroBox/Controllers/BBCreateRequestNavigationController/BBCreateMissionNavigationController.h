@@ -1,5 +1,5 @@
 //
-//  BBCreateRequestNavigationController.h
+//  BBCreateMissionNavigationController.h
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 04/02/2015.
@@ -11,7 +11,7 @@
 // Model
 #import "BBParseMission.h"
 
-@interface BBCreateRequestNavigationController : BBNavigationController
+@interface BBCreateMissionNavigationController : BBNavigationController
 
 
 - (void)setViewControllersForUserActiveMission:(BBParseMission *)mission

@@ -56,7 +56,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count > 1) {
-                error = [NSError errorWithDomain:@"More than one active mission request for this user" code:404 userInfo:nil];
+                error = [NSError errorWithDomain:@"More than one active mission for this user" code:404 userInfo:nil];
             }
             block([objects firstObject], error);
         } else {

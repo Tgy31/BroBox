@@ -11,7 +11,7 @@
 // Navigation Controllers
 #import "BBMapNavigationController.h"
 #import "BBMissionListNavigationController.h"
-#import "BBCreateRequestNavigationController.h"
+#import "BBCreateMissionNavigationController.h"
 
 // Controllers
 #import "BBLogoutVC.h"
@@ -37,7 +37,7 @@
         
         self.missionsVC = [BBMissionListNavigationController new];
         
-        self.createVC = [BBCreateRequestNavigationController new];
+        self.createVC = [BBCreateMissionNavigationController new];
         
         self.notificationVC = [UIViewController new];
         self.notificationVC.view.backgroundColor = [UIColor redColor];

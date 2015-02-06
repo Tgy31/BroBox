@@ -1,26 +1,25 @@
 //
-//  BBCreateRequestVC.m
+//  BBCreateMissionVC.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 04/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBCreateRequestVC.h"
+#import "BBCreateMissionVC.h"
 
 // Managers
 #import "BBInstallationManager.h"
 
 // Controllers
 #import "BBLocationAutocompleteVC.h"
-#import "BBMissionRequestEditionVC.h"
-#import "BBCreateRequestNavigationController.h"
+#import "BBCreateMissionNavigationController.h"
 
 // Model
 #import "BBGeoPoint.h"
 #import "BBParseMission.h"
 
-@interface BBCreateRequestVC ()
+@interface BBCreateMissionVC ()
 
 // From views
 @property (weak, nonatomic) IBOutlet UIView *viewFrom;
@@ -42,7 +41,7 @@
 
 @end
 
-@implementation BBCreateRequestVC
+@implementation BBCreateMissionVC
 
 #pragma mark - View life cycle
 
@@ -62,11 +61,11 @@
 - (void)viewInitialization {
     
 //    From views
-    self.titleLabelFrom.text = NSLocalizedString(@"Pick up", @"Create mission request title");
+    self.titleLabelFrom.text = NSLocalizedString(@"Pick up", @"Create mission title");
     self.valueLabelFrom.text = @"";
     
 //    To views
-    self.titleLabelTo.text = NSLocalizedString(@"Drop off", @"Create mission request title");
+    self.titleLabelTo.text = NSLocalizedString(@"Drop off", @"Create mission title");
     self.valueLabelTo.text = @"";
     
     self.doneButton.enabled = NO;
@@ -162,6 +161,8 @@
 #pragma mark - API
 
 - (void)saveMission:(BBParseMission *)mission {
+    [self startLoading];
+    self.doneButton.enabled = NO;
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             [BBInstallationManager setUserActiveMission:mission];
@@ -172,6 +173,8 @@
             [destination showPlaceHolderWithtitle:title subtitle:subtitle];
             [self.navigationController pushViewController:destination animated:YES];
         }
+        [self stopLoading];
+        self.doneButton.enabled = YES;
     }];
 }
 

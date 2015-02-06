@@ -1,12 +1,12 @@
 //
-//  BBMissionRequestVC.m
+//  BBMissionOverviewVC.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 06/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBMissionRequestVC.h"
+#import "BBMissionOverviewVC.h"
 
 // Managers
 #import "BBParseManager.h"
@@ -14,7 +14,7 @@
 // Model
 #import "BBParseUser.h"
 
-@interface BBMissionRequestVC ()
+@interface BBMissionOverviewVC ()
 
 
 // Scroll properties
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation BBMissionRequestVC
+@implementation BBMissionOverviewVC
 
 #pragma mark - View life cycle
 
@@ -54,7 +54,7 @@
 - (void)initialiazeView {
     
 //    Texts
-    NSString *actionTitle = NSLocalizedString(@"Accept mission", @"Action button title in mission request screen");
+    NSString *actionTitle = NSLocalizedString(@"Accept mission", @"Action button title in mission overview screen");
     [self.actionButton setTitle:actionTitle forState:UIControlStateNormal];
     
 //    Controls
@@ -94,12 +94,12 @@
 #pragma mark - Handlers
 
 - (void)actionButtonHandler {
-    [self acceptMissionRequest];
+    [self acceptMission];
 }
 
 #pragma mark - API
 
-- (void)acceptMissionRequest {
+- (void)acceptMission {
     [self startLoading];
     [BBParseManager mission:self.mission
                  addCarrier:[BBParseUser currentUser]

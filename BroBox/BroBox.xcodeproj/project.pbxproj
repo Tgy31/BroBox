@@ -19,10 +19,10 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
-		5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateRequestNavigationController.m */; };
-		5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */; };
-		5A3053E51A8252DE006E9A95 /* BBCreateRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */; };
-		5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053E41A8252DE006E9A95 /* BBCreateRequestVC.xib */; };
+		5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */; };
+		5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */; };
+		5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */; };
+		5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053E41A8252DE006E9A95 /* BBCreateMissionVC.xib */; };
 		5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */; };
 		5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053F11A825F87006E9A95 /* BBLocationAutocompleteVC.m */; };
 		5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053F21A825F87006E9A95 /* BBLocationAutocompleteVC.xib */; };
@@ -35,11 +35,9 @@
 		5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */; };
 		5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */; };
 		5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054171A828956006E9A95 /* GFPlaceholderView.m */; };
-		5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */; };
-		5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */; };
 		5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */; };
-		5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */; };
-		5A8C324F1A85028A00F03821 /* BBMissionRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */; };
+		5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */; };
+		5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */; };
 		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
 		5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32531A85200C00F03821 /* BBSignUpNavigationController.xib */; };
 		5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32581A85203500F03821 /* BBSignUpVC.m */; };
@@ -121,12 +119,12 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
-		5A3053D91A825272006E9A95 /* BBCreateRequestNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateRequestNavigationController.h; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.h; sourceTree = "<group>"; };
-		5A3053DA1A825272006E9A95 /* BBCreateRequestNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateRequestNavigationController.m; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.m; sourceTree = "<group>"; };
-		5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateRequestNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateRequestNavigationController.xib; sourceTree = "<group>"; };
-		5A3053E21A8252DE006E9A95 /* BBCreateRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateRequestVC.h; path = BBCreateRequestVC/BBCreateRequestVC.h; sourceTree = "<group>"; };
-		5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateRequestVC.m; path = BBCreateRequestVC/BBCreateRequestVC.m; sourceTree = "<group>"; };
-		5A3053E41A8252DE006E9A95 /* BBCreateRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateRequestVC.xib; path = BBCreateRequestVC/BBCreateRequestVC.xib; sourceTree = "<group>"; };
+		5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionNavigationController.h; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.h; sourceTree = "<group>"; };
+		5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionNavigationController.m; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.m; sourceTree = "<group>"; };
+		5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.xib; sourceTree = "<group>"; };
+		5A3053E21A8252DE006E9A95 /* BBCreateMissionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionVC.h; path = BBCreateRequestVC/BBCreateMissionVC.h; sourceTree = "<group>"; };
+		5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionVC.m; path = BBCreateRequestVC/BBCreateMissionVC.m; sourceTree = "<group>"; };
+		5A3053E41A8252DE006E9A95 /* BBCreateMissionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionVC.xib; path = BBCreateRequestVC/BBCreateMissionVC.xib; sourceTree = "<group>"; };
 		5A3053E81A825B6C006E9A95 /* BBGoogleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGoogleManager.h; sourceTree = "<group>"; };
 		5A3053E91A825B6C006E9A95 /* BBGoogleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGoogleManager.m; sourceTree = "<group>"; };
 		5A3053F01A825F87006E9A95 /* BBLocationAutocompleteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBLocationAutocompleteVC.h; path = BBLocationAutocompleteVC/BBLocationAutocompleteVC.h; sourceTree = "<group>"; };
@@ -153,14 +151,11 @@
 		5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DBPrivacyHelper.m"; sourceTree = "<group>"; };
 		5A3054161A828956006E9A95 /* GFPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPlaceholderView.h; sourceTree = "<group>"; };
 		5A3054171A828956006E9A95 /* GFPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPlaceholderView.m; sourceTree = "<group>"; };
-		5A3054191A828988006E9A95 /* BBMissionRequestEditionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestEditionVC.h; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.h; sourceTree = "<group>"; };
-		5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestEditionVC.m; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.m; sourceTree = "<group>"; };
-		5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestEditionVC.xib; path = BBMissionRequestEditionVC/BBMissionRequestEditionVC.xib; sourceTree = "<group>"; };
 		5A714CD31A839FCD00B20FC7 /* BBMissionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionAnnotation.h; path = BBMissionAnnotation/BBMissionAnnotation.h; sourceTree = "<group>"; };
 		5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionAnnotation.m; path = BBMissionAnnotation/BBMissionAnnotation.m; sourceTree = "<group>"; };
-		5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestVC.h; path = BBMissionRequestVC/BBMissionRequestVC.h; sourceTree = "<group>"; };
-		5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestVC.m; path = BBMissionRequestVC/BBMissionRequestVC.m; sourceTree = "<group>"; };
-		5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestVC.xib; path = BBMissionRequestVC/BBMissionRequestVC.xib; sourceTree = "<group>"; };
+		5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionOverviewVC.h; path = BBMissionRequestVC/BBMissionOverviewVC.h; sourceTree = "<group>"; };
+		5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionOverviewVC.m; path = BBMissionRequestVC/BBMissionOverviewVC.m; sourceTree = "<group>"; };
+		5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionOverviewVC.xib; path = BBMissionRequestVC/BBMissionOverviewVC.xib; sourceTree = "<group>"; };
 		5A8C32511A85200C00F03821 /* BBSignUpNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBSignUpNavigationController.h; path = BBSignUpNavigationController/BBSignUpNavigationController.h; sourceTree = "<group>"; };
 		5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBSignUpNavigationController.m; path = BBSignUpNavigationController/BBSignUpNavigationController.m; sourceTree = "<group>"; };
 		5A8C32531A85200C00F03821 /* BBSignUpNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBSignUpNavigationController.xib; path = BBSignUpNavigationController/BBSignUpNavigationController.xib; sourceTree = "<group>"; };
@@ -388,13 +383,12 @@
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
 				5A8C325C1A85203900F03821 /* BBSignUpVC */,
-				5A8C32501A85028F00F03821 /* BBMissionRequestVC */,
-				5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */,
+				5A8C32501A85028F00F03821 /* BBMissionOverviewVC */,
 				5A3053F51A825F8A006E9A95 /* BBLocationAutocompleteVC */,
 				5AAC27801A72C8D200ECF6FA /* BBRootVC */,
-				5A3053E71A8252E1006E9A95 /* BBCreateRequestVC */,
+				5A3053E71A8252E1006E9A95 /* BBCreateMissionVC */,
 				5AA60D331A7546DC001C07F6 /* BBMissionListVC */,
-				5AAC27901A72DF8300ECF6FA /* BBMapVC */,
+				5AAC27901A72DF8300ECF6FA /* BBMissionsMapVC */,
 				5AAC27761A72C19200ECF6FA /* BBLoginVC */,
 				5AAC276D1A72B9C700ECF6FA /* BBLogoutVC */,
 				5AAC27841A72CFB600ECF6FA /* Navigation Controllers */,
@@ -427,21 +421,21 @@
 		5A3053DE1A825277006E9A95 /* BBCreateRequestNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				5A3053D91A825272006E9A95 /* BBCreateRequestNavigationController.h */,
-				5A3053DA1A825272006E9A95 /* BBCreateRequestNavigationController.m */,
-				5A3053DB1A825272006E9A95 /* BBCreateRequestNavigationController.xib */,
+				5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */,
+				5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */,
+				5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */,
 			);
 			name = BBCreateRequestNavigationController;
 			sourceTree = "<group>";
 		};
-		5A3053E71A8252E1006E9A95 /* BBCreateRequestVC */ = {
+		5A3053E71A8252E1006E9A95 /* BBCreateMissionVC */ = {
 			isa = PBXGroup;
 			children = (
-				5A3053E21A8252DE006E9A95 /* BBCreateRequestVC.h */,
-				5A3053E31A8252DE006E9A95 /* BBCreateRequestVC.m */,
-				5A3053E41A8252DE006E9A95 /* BBCreateRequestVC.xib */,
+				5A3053E21A8252DE006E9A95 /* BBCreateMissionVC.h */,
+				5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */,
+				5A3053E41A8252DE006E9A95 /* BBCreateMissionVC.xib */,
 			);
-			name = BBCreateRequestVC;
+			name = BBCreateMissionVC;
 			sourceTree = "<group>";
 		};
 		5A3053F51A825F8A006E9A95 /* BBLocationAutocompleteVC */ = {
@@ -499,24 +493,14 @@
 			path = GFPlaceholderView;
 			sourceTree = "<group>";
 		};
-		5A30541E1A82898C006E9A95 /* BBMissionRequestEditionVC */ = {
+		5A8C32501A85028F00F03821 /* BBMissionOverviewVC */ = {
 			isa = PBXGroup;
 			children = (
-				5A3054191A828988006E9A95 /* BBMissionRequestEditionVC.h */,
-				5A30541A1A828988006E9A95 /* BBMissionRequestEditionVC.m */,
-				5A30541B1A828988006E9A95 /* BBMissionRequestEditionVC.xib */,
+				5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */,
+				5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */,
+				5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */,
 			);
-			name = BBMissionRequestEditionVC;
-			sourceTree = "<group>";
-		};
-		5A8C32501A85028F00F03821 /* BBMissionRequestVC */ = {
-			isa = PBXGroup;
-			children = (
-				5A8C324B1A85028A00F03821 /* BBMissionRequestVC.h */,
-				5A8C324C1A85028A00F03821 /* BBMissionRequestVC.m */,
-				5A8C324D1A85028A00F03821 /* BBMissionRequestVC.xib */,
-			);
-			name = BBMissionRequestVC;
+			name = BBMissionOverviewVC;
 			sourceTree = "<group>";
 		};
 		5A8C32561A85200F00F03821 /* BBSignUpNavigationController */ = {
@@ -655,14 +639,14 @@
 			name = BBMapNavigationController;
 			sourceTree = "<group>";
 		};
-		5AAC27901A72DF8300ECF6FA /* BBMapVC */ = {
+		5AAC27901A72DF8300ECF6FA /* BBMissionsMapVC */ = {
 			isa = PBXGroup;
 			children = (
 				5AAC278B1A72DF5900ECF6FA /* BBMissionsMapVC.h */,
 				5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */,
 				5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */,
 			);
-			name = BBMapVC;
+			name = BBMissionsMapVC;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -762,10 +746,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3053DD1A825272006E9A95 /* BBCreateRequestNavigationController.xib in Resources */,
+				5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
-				5A30541D1A828988006E9A95 /* BBMissionRequestEditionVC.xib in Resources */,
-				5A8C324F1A85028A00F03821 /* BBMissionRequestVC.xib in Resources */,
+				5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
@@ -776,7 +759,7 @@
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
 				5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */,
 				5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */,
-				5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */,
+				5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
 				5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */,
@@ -833,7 +816,6 @@
 			files = (
 				5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */,
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
-				5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */,
 				5A8C32621A85277000F03821 /* BBParseUser.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
@@ -851,7 +833,7 @@
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
 				5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */,
 				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
-				5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */,
+				5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */,
@@ -859,7 +841,7 @@
 				5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
-				5A3053E51A8252DE006E9A95 /* BBCreateRequestVC.m in Sources */,
+				5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
 				5AA60D461A755830001C07F6 /* BBParseMission.m in Sources */,
 				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
@@ -868,7 +850,7 @@
 				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
-				5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */,
+				5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

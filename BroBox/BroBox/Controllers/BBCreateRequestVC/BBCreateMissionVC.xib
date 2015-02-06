@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBCreateRequestVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBCreateMissionVC">
             <connections>
                 <outlet property="titleLabelFrom" destination="IZ9-Cc-wQT" id="962-eO-gRm"/>
                 <outlet property="titleLabelTo" destination="zJE-l5-2ur" id="Mo9-qF-H5r"/>
