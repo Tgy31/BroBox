@@ -1,22 +1,25 @@
 //
-//  BBCreateRequestVC.m
+//  BBCreateMissionVC.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 04/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBCreateRequestVC.h"
+#import "BBCreateMissionVC.h"
+
+// Managers
+#import "BBInstallationManager.h"
 
 // Controllers
 #import "BBLocationAutocompleteVC.h"
-#import "BBMissionRequestEditionVC.h"
+#import "BBCreateMissionNavigationController.h"
 
 // Model
 #import "BBGeoPoint.h"
-#import "BBParseMissionRequest.h"
+#import "BBParseMission.h"
 
-@interface BBCreateRequestVC ()
+@interface BBCreateMissionVC ()
 
 // From views
 @property (weak, nonatomic) IBOutlet UIView *viewFrom;
@@ -38,7 +41,7 @@
 
 @end
 
-@implementation BBCreateRequestVC
+@implementation BBCreateMissionVC
 
 #pragma mark - View life cycle
 
@@ -49,16 +52,20 @@
     [self gestureInitialization];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+}
+
 #pragma mark - Initialization
 
 - (void)viewInitialization {
     
 //    From views
-    self.titleLabelFrom.text = NSLocalizedString(@"Pick up", @"Create mission request title");
+    self.titleLabelFrom.text = NSLocalizedString(@"Pick up", @"Create mission title");
     self.valueLabelFrom.text = @"";
     
 //    To views
-    self.titleLabelTo.text = NSLocalizedString(@"Drop off", @"Create mission request title");
+    self.titleLabelTo.text = NSLocalizedString(@"Drop off", @"Create mission title");
     self.valueLabelTo.text = @"";
     
     self.doneButton.enabled = NO;
@@ -145,24 +152,29 @@
 }
 
 - (void)doneButtonHandler {
-    BBParseMissionRequest *missionRequest = [BBParseMissionRequest missionRequestFrom:self.placeFrom
-                                                                            to:self.placeTo];
+    BBParseMission *mission = [BBParseMission missionFrom:self.placeFrom
+                                                       to:self.placeTo];
     
-    BBMissionRequestEditionVC *destination = [BBMissionRequestEditionVC new];
-    destination.missionRequest = missionRequest;
-    [self.navigationController pushViewController:destination animated:YES];
-    
-    [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [self saveMission:mission];
+}
+
+#pragma mark - API
+
+- (void)saveMission:(BBParseMission *)mission {
+    [self startLoading];
+    self.doneButton.enabled = NO;
+    [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            NSString *title = NSLocalizedString(@"Mission saved", @"");
-            NSString *subtitle = NSLocalizedString(@"Your mission has been saved. You can have only one mission at a time", @"");
-            [destination showPlaceHolderWithtitle:title subtitle:subtitle];
-            [destination setAsRootViewController];
+            [BBInstallationManager setUserActiveMission:mission];
         } else {
             NSString *title = NSLocalizedString(@"Mission save failed", @"");
             NSString *subtitle = [error localizedDescription];
+            BBViewController *destination = [BBViewController new];
             [destination showPlaceHolderWithtitle:title subtitle:subtitle];
+            [self.navigationController pushViewController:destination animated:YES];
         }
+        [self stopLoading];
+        self.doneButton.enabled = YES;
     }];
 }
 

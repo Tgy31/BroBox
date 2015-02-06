@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBMissionRequestsMapVC.h"
+#import "BBMissionsMapVC.h"
 
 // Frameworks
 #import <MapKit/MapKit.h>
 
 // Controllers
-#import "BBMissionRequestVC.h"
+#import "BBMissionOverviewVC.h"
 
 // Managers
 #import "BBParseManager.h"
@@ -25,19 +25,19 @@
 #import "BBMissionAnnotationView.h"
 
 
-@interface BBMissionRequestsMapVC () <MKMapViewDelegate>
+@interface BBMissionsMapVC () <MKMapViewDelegate>
 
 // Views
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (strong, nonatomic) BBMissionAnnotationView *selectedMissionRequestView;
+@property (strong, nonatomic) BBMissionAnnotationView *selectedMissionView;
 
 // Properties
-@property (strong, nonatomic) NSArray *missionRequests;
+@property (strong, nonatomic) NSArray *missions;
 
 @end
 
-@implementation BBMissionRequestsMapVC
+@implementation BBMissionsMapVC
 
 #pragma mark - Life cycle
 
@@ -48,15 +48,15 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self fetchMissionRequests];
+    [self fetchMissions];
 }
 
 #pragma mark - API
 
-- (void)fetchMissionRequests {
-    [BBParseManager fetchMissionRequestsWithBlock:^(NSArray *objects, NSError *error) {
+- (void)fetchMissions {
+    [BBParseManager fetchMissionsAwaitingWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            self.missionRequests = objects;
+            self.missions = objects;
         } else {
             NSLog(@"%@", error);
         }
@@ -88,21 +88,21 @@
 
 #pragma mark - Getters & Setters
 
-- (void)setMissionRequests:(NSArray *)missionRequests {
-    _missionRequests = missionRequests;
+- (void)setMissions:(NSArray *)missions {
+    _missions = missions;
     
-    if (!self.selectedMissionRequestView) { // If no selection, update annotations
-        [self showMissionRequestList:missionRequests];
+    if (!self.selectedMissionView) { // If no selection, update annotations
+        [self showMissionList:missions];
     }
 }
 
-- (void)setSelectedMissionRequestView:(BBMissionAnnotationView *)selectedMissionRequestView {
-    _selectedMissionRequestView = selectedMissionRequestView;
+- (void)setSelectedMissionView:(BBMissionAnnotationView *)selectedMissionView {
+    _selectedMissionView = selectedMissionView;
     
-    if (selectedMissionRequestView) {
-        [self showMissionDetails:selectedMissionRequestView.missionAnnotation.mission];
+    if (selectedMissionView) {
+        [self showMissionDetails:selectedMissionView.missionAnnotation.mission];
     } else {
-        [self showMissionRequestList:self.missionRequests];
+        [self showMissionList:self.missions];
     }
 }
 
@@ -117,24 +117,12 @@
     return nil;
 }
 
-- (BBParseMissionRequest *)missionRequestForAnnotation:(id<MKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
-        BBMissionAnnotation *missionAnnotation = (BBMissionAnnotation *)annotation;
-        for (BBParseMissionRequest *missionRequest in self.missionRequests) {
-            if ([missionRequest.mission isEqual:missionAnnotation.mission]) {
-                return missionRequest;
-            }
-        }
-    }
-    return nil;
-}
-
 #pragma mark - Handlers
 
-- (void)presentViewControllerForMission:(BBParseMissionRequest *)missionRequest {
+- (void)presentViewControllerForMission:(BBParseMission *)mission {
     
-    BBMissionRequestVC *destination = [BBMissionRequestVC new];
-    destination.missionRequest = missionRequest;
+    BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+    destination.mission = mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
@@ -146,12 +134,12 @@
 
 #pragma mark Annotations
 
-- (void)showMissionRequestList:(NSArray *)missionRequests {
+- (void)showMissionList:(NSArray *)missions {
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView removeOverlays:self.mapView.overlays];
     
-    for (BBParseMissionRequest *missionRequest in self.missionRequests) {
-        BBMissionAnnotation *missionAnnotation = [BBMissionAnnotation annotationForMission:missionRequest.mission
+    for (BBParseMission *mission in self.missions) {
+        BBMissionAnnotation *missionAnnotation = [BBMissionAnnotation annotationForMission:mission
                                                                                   withType:BBMissionAnnotationTypeFrom];
         [self.mapView addAnnotation:missionAnnotation];
     }
@@ -159,11 +147,6 @@
 
 - (void)showMissionDetails:(BBParseMission *)mission {
     [self fetchJourneyForMission:mission];
-    
-    //    Remove unselected annotations
-//    NSMutableArray *otherAnnotations = [self.mapView.annotations mutableCopy];
-//    [otherAnnotations removeObject:self.selectedMissionRequestView.missionAnnotation];
-//    [self.mapView removeAnnotations:otherAnnotations];
     
     //    Add drop off annotation and move camera
     BBMissionAnnotation *pickUpAnnotation = [self annotationForMission:mission];
@@ -176,7 +159,7 @@
 
 #pragma mark AnnotationViews
 
-#define ANNOTATIONVIEW_IDENTIFIER @"missionRequestAnnotationView"
+#define ANNOTATIONVIEW_IDENTIFIER @"missionAnnotationView"
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
             viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -193,7 +176,7 @@
 didSelectAnnotationView:(MKAnnotationView *)view {
     
     if ([view.annotation isKindOfClass:[BBMissionAnnotation class]]) {
-        self.selectedMissionRequestView = (BBMissionAnnotationView *)view;
+        self.selectedMissionView = (BBMissionAnnotationView *)view;
     }
 }
 
@@ -201,7 +184,7 @@ didSelectAnnotationView:(MKAnnotationView *)view {
 didDeselectAnnotationView:(MKAnnotationView *)view {
     
     if ([view.annotation isKindOfClass:[BBMissionAnnotation class]]) {
-        self.selectedMissionRequestView = nil;
+        self.selectedMissionView = nil;
     }
 }
 
@@ -211,8 +194,8 @@ didDeselectAnnotationView:(MKAnnotationView *)view {
 calloutAccessoryControlTapped:(UIControl *)control {
     if ([control isEqual:view.rightCalloutAccessoryView]) {
         if ([view isKindOfClass:[BBMissionAnnotationView class]]) {
-            BBParseMissionRequest *missionRequest = [self missionRequestForAnnotation:view.annotation];
-            [self presentViewControllerForMission:missionRequest];
+            BBParseMission *mission = ((BBMissionAnnotation *)view.annotation).mission;
+            [self presentViewControllerForMission:mission];
         }
     } else if ([control isEqual:view.leftCalloutAccessoryView]) {
         

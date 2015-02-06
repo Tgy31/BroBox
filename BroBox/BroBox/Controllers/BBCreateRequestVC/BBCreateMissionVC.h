@@ -1,5 +1,5 @@
 //
-//  BBCreateRequestVC.h
+//  BBCreateMissionVC.h
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 04/02/2015.
@@ -8,6 +8,6 @@
 
 #import "BBViewController.h"
 
-@interface BBCreateRequestVC : BBViewController
+@interface BBCreateMissionVC : BBViewController
 
 @end

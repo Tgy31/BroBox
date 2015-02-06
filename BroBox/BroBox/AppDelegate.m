@@ -19,6 +19,7 @@
 
 // Managers
 #import "BBLoginManager.h"
+#import "BBInstallationManager.h"
 
 @interface AppDelegate ()
 
@@ -36,6 +37,8 @@
     [PFFacebookUtils initializeFacebook];
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [BBInstallationManager initialize];
     
     [self initializeWindow];
     [self presentLoginScreen];

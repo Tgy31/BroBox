@@ -32,6 +32,10 @@
     self.navigationBarShouldCoverViewController = NO;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewWillLayoutSubviews];
+}
+
 #pragma marl - View Methods
 
 - (void)startLoading {

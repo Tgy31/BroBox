@@ -33,7 +33,7 @@
 #pragma mark - API
 
 - (void)fetchData {
-    [BBParseManager fetchMissionRequestsWithBlock:^(NSArray *objects, NSError *error) {
+    [BBParseManager fetchMissionsAwaitingWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.data = objects;
         } else {
@@ -88,10 +88,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
     
-    BBParseMissionRequest *missionRequest = [self.data objectAtIndex:indexPath.row];
+    BBParseMission *mission = [self.data objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = missionRequest.mission.from.title;
-    cell.detailTextLabel.text = missionRequest.mission.from.subtitle;
+    cell.textLabel.text = mission.from.title;
+    cell.detailTextLabel.text = mission.from.subtitle;
     
     return cell;
 }

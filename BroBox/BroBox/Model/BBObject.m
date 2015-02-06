@@ -10,4 +10,8 @@
 
 @implementation BBObject
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

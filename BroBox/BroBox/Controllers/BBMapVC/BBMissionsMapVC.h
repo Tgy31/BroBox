@@ -8,6 +8,6 @@
 
 #import "BBViewController.h"
 
-@interface BBMissionRequestsMapVC : BBViewController
+@interface BBMissionsMapVC : BBViewController
 
 @end
