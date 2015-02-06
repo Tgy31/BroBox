@@ -26,6 +26,8 @@
 }
 
 - (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
     [self startLoading];
 }
 

@@ -10,28 +10,44 @@
 
 @interface BBMissionRequestVC ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidthConstraint;
+
 @end
 
 @implementation BBMissionRequestVC
 
+#pragma mark - View life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.navigationBarShouldCoverViewController = NO;
+    
+    [self setViewForMission:self.mission];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    self.contentViewWidthConstraint.constant = self.view.frame.size.width;
+    
+    [self.scrollView layoutIfNeeded];
+    self.scrollView.contentSize = self.contentView.frame.size;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Initialization
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setViewForMission:(BBParseMission *)mission {
+    
 }
-*/
+
+#pragma mark - Getters & Setters
+
+- (void)setMission:(BBParseMission *)mission {
+    _mission = mission;
+    [self setViewForMission:mission];
+}
 
 @end
