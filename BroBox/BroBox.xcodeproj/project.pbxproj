@@ -47,6 +47,7 @@
 		5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32591A85203500F03821 /* BBSignUpVC.xib */; };
 		5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C325E1A8520F600F03821 /* BBFacebookManager.m */; };
 		5A8C32621A85277000F03821 /* BBParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32611A85277000F03821 /* BBParseUser.m */; };
+		5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32641A85361200F03821 /* BBInstallationManager.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -173,6 +174,8 @@
 		5A8C325E1A8520F600F03821 /* BBFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFacebookManager.m; sourceTree = "<group>"; };
 		5A8C32601A85277000F03821 /* BBParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseUser.h; sourceTree = "<group>"; };
 		5A8C32611A85277000F03821 /* BBParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseUser.m; sourceTree = "<group>"; };
+		5A8C32631A85361200F03821 /* BBInstallationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInstallationManager.h; sourceTree = "<group>"; };
+		5A8C32641A85361200F03821 /* BBInstallationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInstallationManager.m; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 				5A3053F71A826238006E9A95 /* BBLocationManager.m */,
 				5A8C325D1A8520F600F03821 /* BBFacebookManager.h */,
 				5A8C325E1A8520F600F03821 /* BBFacebookManager.m */,
+				5A8C32631A85361200F03821 /* BBInstallationManager.h */,
+				5A8C32641A85361200F03821 /* BBInstallationManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -850,6 +855,7 @@
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
+				5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */,
 				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
 				5A8C324E1A85028A00F03821 /* BBMissionRequestVC.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
