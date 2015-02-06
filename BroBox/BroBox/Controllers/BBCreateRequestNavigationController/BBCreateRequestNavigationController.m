@@ -8,6 +8,9 @@
 
 #import "BBCreateRequestNavigationController.h"
 
+// Managers
+#import "BBInstallationManager.h"
+
 // Controllers
 #import "BBCreateRequestVC.h"
 
@@ -21,21 +24,60 @@
 
 + (instancetype)new
 {
-    BBCreateRequestVC *rootVC = [BBCreateRequestVC new];
+    BBViewController *rootVC = [BBViewController new];
+    [rootVC startLoading];
     BBCreateRequestNavigationController *navigationController = [[BBCreateRequestNavigationController alloc] initWithRootViewController:rootVC];
     
-    rootVC.title = @"Create request";
-    
-    navigationController.title = @"Create";
+    navigationController.title = NSLocalizedString(@"My mission", @"");
     
     return navigationController;
+}
+
+- (void)setViewControllersForUserActiveMission:(BBParseMissionRequest *)missionRequest
+                                      animated:(BOOL)animated {
+    if (missionRequest) {
+        BBViewController *rootVC = [BBViewController new];
+        [rootVC showPlaceHolderWithtitle:@"existing mission" subtitle:@""];
+        rootVC.title = NSLocalizedString(@"My mission", @"");
+        [self setViewControllers:@[rootVC] animated:animated];
+    } else {
+        BBCreateRequestVC *rootVC = [BBCreateRequestVC new];
+        rootVC.title = NSLocalizedString(@"Create mission", @"");
+        [self setViewControllers:@[rootVC] animated:animated];
+    }
 }
 
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
+                                        animated:NO];
+    
+    [self registerToUserActiveMissionNotifications];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Broadcast
+
+- (void)registerToUserActiveMissionNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUserActiveMissionStateDidChange)
+                                                 name:BBNotificationUserActiveMissionRequestDidChange
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUserActiveMissionStateDidChange)
+                                                 name:BBNotificationUserActiveMissionRequestIsLoading
+                                               object:nil];
+}
+
+- (void)handleUserActiveMissionStateDidChange {
+    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
+                                        animated:YES];
 }
 
 @end

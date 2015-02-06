@@ -14,6 +14,7 @@
 // Controllers
 #import "BBLocationAutocompleteVC.h"
 #import "BBMissionRequestEditionVC.h"
+#import "BBCreateRequestNavigationController.h"
 
 // Model
 #import "BBGeoPoint.h"
@@ -54,17 +55,6 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    if ([BBInstallationManager userActiveMissionRequestIsLoading]) {
-        [self startLoading];
-    } else {
-        BBParseMissionRequest *userMissionRequest = [BBInstallationManager userActiveMissionRequest];
-        if (userMissionRequest) {
-            NSString *title = NSLocalizedString(@"Mission saved", @"");
-            NSString *subtitle = NSLocalizedString(@"Your mission has been saved. You can have only one mission at a time", @"");
-            [self showPlaceHolderWithtitle:title subtitle:subtitle];
-        }
-    }
 }
 
 #pragma mark - Initialization
@@ -164,22 +154,23 @@
 
 - (void)doneButtonHandler {
     BBParseMissionRequest *missionRequest = [BBParseMissionRequest missionRequestFrom:self.placeFrom
-                                                                            to:self.placeTo];
+                                                                                   to:self.placeTo];
     
-    BBMissionRequestEditionVC *destination = [BBMissionRequestEditionVC new];
-    destination.missionRequest = missionRequest;
-    [self.navigationController pushViewController:destination animated:YES];
-    
+    [self saveMissionRequest:missionRequest];
+}
+
+#pragma mark - API
+
+- (void)saveMissionRequest:(BBParseMissionRequest *)missionRequest {
     [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            NSString *title = NSLocalizedString(@"Mission saved", @"");
-            NSString *subtitle = NSLocalizedString(@"Your mission has been saved. You can have only one mission at a time", @"");
-            [destination showPlaceHolderWithtitle:title subtitle:subtitle];
-            [destination setAsRootViewController];
+            [BBInstallationManager setUserActiveMissionRequest:missionRequest];
         } else {
             NSString *title = NSLocalizedString(@"Mission save failed", @"");
             NSString *subtitle = [error localizedDescription];
+            BBViewController *destination = [BBViewController new];
             [destination showPlaceHolderWithtitle:title subtitle:subtitle];
+            [self.navigationController pushViewController:destination animated:YES];
         }
     }];
 }

@@ -8,6 +8,13 @@
 
 #import "BBNavigationController.h"
 
+// Model
+#import "BBParseMissionRequest.h"
+
 @interface BBCreateRequestNavigationController : BBNavigationController
+
+
+- (void)setViewControllersForUserActiveMission:(BBParseMissionRequest *)missionRequest
+                                      animated:(BOOL)animated;
 
 @end
