@@ -84,11 +84,19 @@ static BBInstallationManager *sharedManager;
                                                  name:BBSessionLoginNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleSignUpNotification)
+                                                 name:BBSessionSignupNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleLogOutNotification)
                                                  name:BBSessionLogoutNotification object:nil];
 }
 
 - (void)handleLogInNotification {
+    [self fetchUserActiveMission];
+}
+
+- (void)handleSignUpNotification {
     [self fetchUserActiveMission];
 }
 
