@@ -15,11 +15,6 @@
 
 @property (strong, nonatomic) BBParseMissionRequest *missionRequest;
 
-- (void)startLoading;
-- (void)stopLoading;
-- (void)showPlaceHolderWithtitle:(NSString *)title
-                        subtitle:(NSString *)subtitle;
-- (void)hidePlaceHolder;
 - (void)setAsRootViewController;
 
 @end

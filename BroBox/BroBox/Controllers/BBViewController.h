@@ -12,4 +12,11 @@
 
 @property (nonatomic) BOOL navigationBarShouldCoverViewController;
 
+
+- (void)startLoading;
+- (void)stopLoading;
+- (void)showPlaceHolderWithtitle:(NSString *)title
+                        subtitle:(NSString *)subtitle;
+- (void)hidePlaceHolder;
+
 @end
