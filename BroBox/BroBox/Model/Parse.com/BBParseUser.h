@@ -11,7 +11,7 @@
 @interface BBParseUser : PFUser
 
 @property (strong, nonatomic) NSString *facebookID;
-@property (strong, nonatomic) NSString *birthdate;
+@property (strong, nonatomic) NSString *birthday;
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *lastName;
 

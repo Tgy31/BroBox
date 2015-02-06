@@ -14,7 +14,7 @@
 @implementation BBParseUser
 
 @dynamic facebookID;
-@dynamic birthdate;
+@dynamic birthday;
 @dynamic firstName;
 @dynamic lastName;
 

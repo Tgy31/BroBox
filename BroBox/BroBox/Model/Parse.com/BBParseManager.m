@@ -39,4 +39,12 @@
     }];
 }
 
++ (void)user:(BBParseUser *)user
+confirmSignUpWithBlock:(BBBooleanResultBlock)block {
+    
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        block(succeeded, error);
+    }];
+}
+
 @end
