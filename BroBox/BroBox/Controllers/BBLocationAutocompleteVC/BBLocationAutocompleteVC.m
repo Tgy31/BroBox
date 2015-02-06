@@ -56,6 +56,8 @@
 
 #pragma mark - Initializtion
 
+#define TABBAR_DEFAULT_HEIGHT 49.0
+
 - (void)viewInitialisation {
     
     self.title = NSLocalizedString(@"Search location", @"Default location autocomplete screen title");
@@ -66,7 +68,7 @@
     [self.searchBar becomeFirstResponder];
     
     [self an_subscribeKeyboardWithAnimations:^(CGRect keyboardRect, NSTimeInterval duration, BOOL isShowing) {
-        self.tableViewBottomConstraint.constant = isShowing ?  CGRectGetHeight(keyboardRect) : 0;
+        self.tableViewBottomConstraint.constant = isShowing ?  CGRectGetHeight(keyboardRect) - TABBAR_DEFAULT_HEIGHT : 0;
     } completion:^(BOOL finished) {
         
     }];
