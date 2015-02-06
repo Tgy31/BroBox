@@ -10,7 +10,7 @@
 
 // PFObjects
 #import "BBGeoPoint.h"
-#import "BBParseMissionRequest.h"
+#import "BBParseMission.h"
 #import "BBParseUser.h"
 
 ///--------------------------------------
@@ -25,10 +25,10 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 @interface BBParseManager : NSObject
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block;
-+ (void)fetchMissionRequestsWithBlock:(BBArrayResultBlock)block;
-+ (void)missionRequest:(BBParseMissionRequest *)missionRequest addCarrier:(BBParseUser *)carrier withBlock:(BBBooleanResultBlock)block;
++ (void)fetchMissionsAwaitingWithBlock:(BBArrayResultBlock)block;
++ (void)mission:(BBParseMission *)mission addCarrier:(BBParseUser *)carrier withBlock:(BBBooleanResultBlock)block;
 + (void)user:(BBParseUser *)user confirmSignUpWithBlock:(BBBooleanResultBlock)block;
-+ (void)fetchUserActiveMissionRequest:(BBParseUser *)user
-                            withBlock:(BBObjectResultBlock)block;
++ (void)fetchUserActiveMission:(BBParseUser *)user
+                     withBlock:(BBObjectResultBlock)block;
 
 @end

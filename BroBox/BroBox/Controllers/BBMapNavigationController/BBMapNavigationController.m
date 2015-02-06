@@ -9,7 +9,7 @@
 #import "BBMapNavigationController.h"
 
 // Controllers
-#import "BBMissionRequestsMapVC.h"
+#import "BBMissionsMapVC.h"
 
 @interface BBMapNavigationController ()
 
@@ -21,7 +21,7 @@
 
 + (instancetype)new
 {
-    BBMissionRequestsMapVC *mapVC = [BBMissionRequestsMapVC new];
+    BBMissionsMapVC *mapVC = [BBMissionsMapVC new];
     BBMapNavigationController *navigationController = [[BBMapNavigationController alloc] initWithRootViewController:mapVC];
     
     mapVC.title = @"Map";

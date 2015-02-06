@@ -33,9 +33,9 @@
     return navigationController;
 }
 
-- (void)setViewControllersForUserActiveMission:(BBParseMissionRequest *)missionRequest
+- (void)setViewControllersForUserActiveMission:(BBParseMission *)mission
                                       animated:(BOOL)animated {
-    if (missionRequest) {
+    if (mission) {
         BBViewController *rootVC = [BBViewController new];
         [rootVC showPlaceHolderWithtitle:@"existing mission" subtitle:@""];
         rootVC.title = NSLocalizedString(@"My mission", @"");
@@ -52,8 +52,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (![BBInstallationManager userActiveMissionRequestIsLoading]) {
-        [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
+    if (![BBInstallationManager userActiveMissionIsLoading]) {
+        [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMission]
                                             animated:NO];    }
     
     [self registerToUserActiveMissionNotifications];
@@ -68,16 +68,16 @@
 - (void)registerToUserActiveMissionNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserActiveMissionStateDidChange)
-                                                 name:BBNotificationUserActiveMissionRequestDidChange
+                                                 name:BBNotificationUserActiveMissionDidChange
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserActiveMissionStateDidChange)
-                                                 name:BBNotificationUserActiveMissionRequestIsLoading
+                                                 name:BBNotificationUserActiveMissionIsLoading
                                                object:nil];
 }
 
 - (void)handleUserActiveMissionStateDidChange {
-    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMissionRequest]
+    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMission]
                                         animated:YES];
 }
 

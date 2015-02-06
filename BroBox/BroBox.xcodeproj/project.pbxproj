@@ -83,8 +83,8 @@
 		5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */; };
 		5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */; };
 		5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */; };
-		5AAC278E1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m */; };
-		5AAC278F1A72DF5900ECF6FA /* BBMissionRequestsMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMissionRequestsMapVC.xib */; };
+		5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */; };
+		5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */; };
 		5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27911A72E07200ECF6FA /* MapKit.framework */; };
 		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
 /* End PBXBuildFile section */
@@ -221,9 +221,9 @@
 		5AAC27851A72CFF000ECF6FA /* BBMapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMapNavigationController.h; path = BBMapNavigationController/BBMapNavigationController.h; sourceTree = "<group>"; };
 		5AAC27861A72CFF000ECF6FA /* BBMapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMapNavigationController.m; path = BBMapNavigationController/BBMapNavigationController.m; sourceTree = "<group>"; };
 		5AAC27871A72CFF000ECF6FA /* BBMapNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMapNavigationController.xib; path = BBMapNavigationController/BBMapNavigationController.xib; sourceTree = "<group>"; };
-		5AAC278B1A72DF5900ECF6FA /* BBMissionRequestsMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionRequestsMapVC.h; path = BBMapVC/BBMissionRequestsMapVC.h; sourceTree = "<group>"; };
-		5AAC278C1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionRequestsMapVC.m; path = BBMapVC/BBMissionRequestsMapVC.m; sourceTree = "<group>"; };
-		5AAC278D1A72DF5900ECF6FA /* BBMissionRequestsMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionRequestsMapVC.xib; path = BBMapVC/BBMissionRequestsMapVC.xib; sourceTree = "<group>"; };
+		5AAC278B1A72DF5900ECF6FA /* BBMissionsMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionsMapVC.h; path = BBMapVC/BBMissionsMapVC.h; sourceTree = "<group>"; };
+		5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionsMapVC.m; path = BBMapVC/BBMissionsMapVC.m; sourceTree = "<group>"; };
+		5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionsMapVC.xib; path = BBMapVC/BBMissionsMapVC.xib; sourceTree = "<group>"; };
 		5AAC27911A72E07200ECF6FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
 		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
@@ -658,9 +658,9 @@
 		5AAC27901A72DF8300ECF6FA /* BBMapVC */ = {
 			isa = PBXGroup;
 			children = (
-				5AAC278B1A72DF5900ECF6FA /* BBMissionRequestsMapVC.h */,
-				5AAC278C1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m */,
-				5AAC278D1A72DF5900ECF6FA /* BBMissionRequestsMapVC.xib */,
+				5AAC278B1A72DF5900ECF6FA /* BBMissionsMapVC.h */,
+				5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */,
+				5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */,
 			);
 			name = BBMapVC;
 			sourceTree = "<group>";
@@ -779,7 +779,7 @@
 				5A3053E61A8252DE006E9A95 /* BBCreateRequestVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
-				5AAC278F1A72DF5900ECF6FA /* BBMissionRequestsMapVC.xib in Resources */,
+				5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */,
 				5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,7 +869,7 @@
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
 				5A3053DC1A825272006E9A95 /* BBCreateRequestNavigationController.m in Sources */,
-				5AAC278E1A72DF5900ECF6FA /* BBMissionRequestsMapVC.m in Sources */,
+				5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

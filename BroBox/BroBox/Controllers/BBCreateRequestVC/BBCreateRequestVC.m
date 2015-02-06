@@ -18,7 +18,7 @@
 
 // Model
 #import "BBGeoPoint.h"
-#import "BBParseMissionRequest.h"
+#import "BBParseMission.h"
 
 @interface BBCreateRequestVC ()
 
@@ -153,18 +153,18 @@
 }
 
 - (void)doneButtonHandler {
-    BBParseMissionRequest *missionRequest = [BBParseMissionRequest missionRequestFrom:self.placeFrom
-                                                                                   to:self.placeTo];
+    BBParseMission *mission = [BBParseMission missionFrom:self.placeFrom
+                                                       to:self.placeTo];
     
-    [self saveMissionRequest:missionRequest];
+    [self saveMission:mission];
 }
 
 #pragma mark - API
 
-- (void)saveMissionRequest:(BBParseMissionRequest *)missionRequest {
-    [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+- (void)saveMission:(BBParseMission *)mission {
+    [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            [BBInstallationManager setUserActiveMissionRequest:missionRequest];
+            [BBInstallationManager setUserActiveMission:mission];
         } else {
             NSString *title = NSLocalizedString(@"Mission save failed", @"");
             NSString *subtitle = [error localizedDescription];

@@ -1,5 +1,5 @@
 //
-//  BBMissionRequestAnnotationView.m
+//  BBMissionAnnotationView.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 29/01/2015.

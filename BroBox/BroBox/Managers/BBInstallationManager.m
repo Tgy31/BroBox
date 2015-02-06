@@ -32,7 +32,7 @@ static BBInstallationManager *sharedManager;
 
 - (void)initialize {
     if (!self.isInitialized) {
-        sharedManager.userActiveMissionRequestIsLoading = NO;
+        sharedManager.userActiveMissionIsLoading = NO;
         [sharedManager registerToUserSessionStateChanges];
         self.isInitialized = YES;
     }
@@ -47,32 +47,32 @@ static BBInstallationManager *sharedManager;
 
 #pragma mark - Getters & Setters
 
-+ (BBParseMissionRequest *)userActiveMissionRequest {
-    return [BBInstallationManager sharedManager].userActiveMissionRequest;
++ (BBParseMission *)userActiveMission {
+    return [BBInstallationManager sharedManager].userActiveMission;
 }
 
-+ (BOOL)userActiveMissionRequestIsLoading {
-    return [BBInstallationManager sharedManager].userActiveMissionRequestIsLoading;
++ (BOOL)userActiveMissionIsLoading {
+    return [BBInstallationManager sharedManager].userActiveMissionIsLoading;
 }
 
-+ (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest {
-    [[BBInstallationManager sharedManager] setUserActiveMissionRequest:userActiveMissionRequest];
++ (void)setUserActiveMission:(BBParseMission *)userActiveMission {
+    [[BBInstallationManager sharedManager] setUserActiveMission:userActiveMission];
 }
 
-- (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest {
-    BOOL shouldNotify = ![_userActiveMissionRequest isEqual:userActiveMissionRequest];
-    _userActiveMissionRequest = userActiveMissionRequest;
+- (void)setUserActiveMission:(BBParseMission *)userActiveMission {
+    BOOL shouldNotify = ![_userActiveMission isEqual:userActiveMission];
+    _userActiveMission = userActiveMission;
     
     if (shouldNotify) {
-        [self notifiUserActiveMissionRequestDidChange];
+        [self notifiUserActiveMissionDidChange];
     }
 }
 
-- (void)setUserActiveMissionRequestIsLoading:(BOOL)userActiveMissionRequestIsLoading {
-    _userActiveMissionRequestIsLoading = userActiveMissionRequestIsLoading;
+- (void)setUserActiveMissionIsLoading:(BOOL)userActiveMissionIsLoading {
+    _userActiveMissionIsLoading = userActiveMissionIsLoading;
     
-    if (userActiveMissionRequestIsLoading) {
-        [self notifyUserActiveMisssionRequestIsLoading];
+    if (userActiveMissionIsLoading) {
+        [self notifyUserActiveMisssionIsLoading];
     }
 }
 
@@ -89,42 +89,42 @@ static BBInstallationManager *sharedManager;
 }
 
 - (void)handleLogInNotification {
-    [self fetchUserActiveMissionRequest];
+    [self fetchUserActiveMission];
 }
 
 - (void)handleLogOutNotification {
     [self clearUserProperties];
 }
 
-- (void)notifyUserActiveMisssionRequestIsLoading {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionRequestIsLoading
+- (void)notifyUserActiveMisssionIsLoading {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionIsLoading
                                                         object:nil];
 }
 
-- (void)notifiUserActiveMissionRequestDidChange {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionRequestDidChange
+- (void)notifiUserActiveMissionDidChange {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionDidChange
                                                         object:nil];
 }
 
 #pragma mark - API
 
-- (void)fetchUserActiveMissionRequest {
-    self.userActiveMissionRequestIsLoading = YES;
-    [BBParseManager fetchUserActiveMissionRequest:[BBParseUser currentUser]
-                                        withBlock:^(PFObject *object, NSError *error) {
-                                            if (!error) {
-                                                self.userActiveMissionRequest = (BBParseMissionRequest *)object;
-                                            } else {
-                                                self.userActiveMissionRequest = nil;
-                                            }
-                                            self.userActiveMissionRequestIsLoading = NO;
+- (void)fetchUserActiveMission {
+    self.userActiveMissionIsLoading = YES;
+    [BBParseManager fetchUserActiveMission:[BBParseUser currentUser]
+                                 withBlock:^(PFObject *object, NSError *error) {
+                                     if (!error) {
+                                         self.userActiveMission = (BBParseMission *)object;
+                                     } else {
+                                         self.userActiveMission = nil;
+                                     }
+                                     self.userActiveMissionIsLoading = NO;
     }];
 }
 
 #pragma mark - User properties
 
 - (void)clearUserProperties {
-    self.userActiveMissionRequest = nil;
+    self.userActiveMission = nil;
 }
 
 @end

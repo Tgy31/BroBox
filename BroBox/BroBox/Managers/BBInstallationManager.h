@@ -9,20 +9,20 @@
 #import "BBObject.h"
 
 // Model
-#import "BBParseMissionRequest.h"
+#import "BBParseMission.h"
 
-static NSString *BBNotificationUserActiveMissionRequestIsLoading = @"BBNotificationUserActiveMissionRequestIsLoading";
-static NSString *BBNotificationUserActiveMissionRequestDidChange = @"BBNotificationUserActiveMissionRequestDidChange";
+static NSString *BBNotificationUserActiveMissionIsLoading = @"BBNotificationUserActiveMissionIsLoading";
+static NSString *BBNotificationUserActiveMissionDidChange = @"BBNotificationUserActiveMissionDidChange";
 
 @interface BBInstallationManager : BBObject
 
-@property (strong, nonatomic) BBParseMissionRequest *userActiveMissionRequest;
-@property (nonatomic) BOOL userActiveMissionRequestIsLoading;
+@property (strong, nonatomic) BBParseMission *userActiveMission;
+@property (nonatomic) BOOL userActiveMissionIsLoading;
 
 + (void)initialize;
 
-+ (void)setUserActiveMissionRequest:(BBParseMissionRequest *)userActiveMissionRequest;
-+ (BBParseMissionRequest *)userActiveMissionRequest;
-+ (BOOL)userActiveMissionRequestIsLoading;
++ (void)setUserActiveMission:(BBParseMission *)userActiveMission;
++ (BBParseMission *)userActiveMission;
++ (BOOL)userActiveMissionIsLoading;
 
 @end
