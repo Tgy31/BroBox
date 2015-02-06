@@ -117,11 +117,24 @@
     return nil;
 }
 
+- (BBParseMissionRequest *)missionRequestForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        BBMissionAnnotation *missionAnnotation = (BBMissionAnnotation *)annotation;
+        for (BBParseMissionRequest *missionRequest in self.missionRequests) {
+            if ([missionRequest.mission isEqual:missionAnnotation.mission]) {
+                return missionRequest;
+            }
+        }
+    }
+    return nil;
+}
+
 #pragma mark - Handlers
 
-- (void)presentViewControllerForMission:(BBParseMission *)mission {
+- (void)presentViewControllerForMission:(BBParseMissionRequest *)missionRequest {
+    
     BBMissionRequestVC *destination = [BBMissionRequestVC new];
-    destination.mission = mission;
+    destination.missionRequest = missionRequest;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
@@ -198,7 +211,8 @@ didDeselectAnnotationView:(MKAnnotationView *)view {
 calloutAccessoryControlTapped:(UIControl *)control {
     if ([control isEqual:view.rightCalloutAccessoryView]) {
         if ([view isKindOfClass:[BBMissionAnnotationView class]]) {
-            [self presentViewControllerForMission:((BBMissionAnnotationView *)view).missionAnnotation.mission];
+            BBParseMissionRequest *missionRequest = [self missionRequestForAnnotation:view.annotation];
+            [self presentViewControllerForMission:missionRequest];
         }
     } else if ([control isEqual:view.leftCalloutAccessoryView]) {
         
