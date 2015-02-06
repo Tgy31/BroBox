@@ -121,7 +121,7 @@
 
 - (void)presentViewControllerForMission:(BBParseMission *)mission {
     BBMissionRequestVC *destination = [BBMissionRequestVC new];
-    
+    destination.mission = mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 

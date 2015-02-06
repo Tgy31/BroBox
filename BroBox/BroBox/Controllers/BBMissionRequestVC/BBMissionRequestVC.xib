@@ -6,8 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBMissionRequestVC">
             <connections>
+                <outlet property="actionButton" destination="jKU-15-aPt" id="pat-ym-OEB"/>
                 <outlet property="contentView" destination="tI9-JG-gjh" id="exv-GI-c4q"/>
                 <outlet property="contentViewWidthConstraint" destination="fBT-BM-Ux7" id="mFJ-4l-LSp"/>
+                <outlet property="labelFrom" destination="Jm0-Rt-ZvM" id="00E-JR-pZf"/>
+                <outlet property="labelTo" destination="yaR-4c-0M0" id="qB1-Un-HTM"/>
                 <outlet property="scrollView" destination="0z0-6A-Rkb" id="R28-jh-qsH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,23 +24,38 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="951"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-JG-gjh">
-                            <rect key="frame" x="0.0" y="0.0" width="428" height="680"/>
+                            <rect key="frame" x="0.0" y="0.0" width="428" height="157"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXZ-qq-9oY">
-                                    <rect key="frame" x="127" y="182" width="186" height="166"/>
-                                    <color key="backgroundColor" red="0.47843137250000001" green="0.75686274509999996" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="166" id="Y9Y-iG-xUw"/>
-                                    </constraints>
-                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm0-Rt-ZvM">
+                                    <rect key="frame" x="38" y="29" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaR-4c-0M0">
+                                    <rect key="frame" x="38" y="67" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKU-15-aPt">
+                                    <rect key="frame" x="191" y="107" width="46" height="30"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="hXZ-qq-9oY" firstAttribute="top" secondItem="tI9-JG-gjh" secondAttribute="top" constant="182" id="1OI-Lp-GYA"/>
-                                <constraint firstAttribute="bottom" secondItem="hXZ-qq-9oY" secondAttribute="bottom" constant="332" id="5CK-Sy-Kzv"/>
+                                <constraint firstAttribute="centerX" secondItem="jKU-15-aPt" secondAttribute="centerX" id="RNF-eP-hGc"/>
+                                <constraint firstItem="Jm0-Rt-ZvM" firstAttribute="top" secondItem="tI9-JG-gjh" secondAttribute="top" constant="29" id="Rbc-yj-Y7S"/>
+                                <constraint firstItem="yaR-4c-0M0" firstAttribute="leading" secondItem="tI9-JG-gjh" secondAttribute="leading" constant="38" id="TeN-xb-sqd"/>
+                                <constraint firstItem="yaR-4c-0M0" firstAttribute="top" secondItem="Jm0-Rt-ZvM" secondAttribute="bottom" constant="17" id="aAe-hD-YqN"/>
+                                <constraint firstItem="Jm0-Rt-ZvM" firstAttribute="leading" secondItem="tI9-JG-gjh" secondAttribute="leading" constant="38" id="caY-PG-ivr"/>
                                 <constraint firstAttribute="width" constant="428" id="fBT-BM-Ux7"/>
-                                <constraint firstItem="hXZ-qq-9oY" firstAttribute="leading" secondItem="tI9-JG-gjh" secondAttribute="leading" constant="127" id="kso-44-2vN"/>
-                                <constraint firstAttribute="trailing" secondItem="hXZ-qq-9oY" secondAttribute="trailing" constant="115" id="w7g-p2-reS"/>
+                                <constraint firstAttribute="bottom" secondItem="jKU-15-aPt" secondAttribute="bottom" constant="20" id="kGn-fJ-LP5"/>
+                                <constraint firstItem="jKU-15-aPt" firstAttribute="top" secondItem="yaR-4c-0M0" secondAttribute="bottom" constant="19" id="rwO-wA-BTs"/>
                             </constraints>
                         </view>
                     </subviews>
