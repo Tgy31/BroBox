@@ -46,6 +46,7 @@
 		5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32581A85203500F03821 /* BBSignUpVC.m */; };
 		5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32591A85203500F03821 /* BBSignUpVC.xib */; };
 		5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C325E1A8520F600F03821 /* BBFacebookManager.m */; };
+		5A8C32621A85277000F03821 /* BBParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32611A85277000F03821 /* BBParseUser.m */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -170,6 +171,8 @@
 		5A8C32591A85203500F03821 /* BBSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBSignUpVC.xib; path = BBSignUpVC/BBSignUpVC.xib; sourceTree = "<group>"; };
 		5A8C325D1A8520F600F03821 /* BBFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFacebookManager.h; sourceTree = "<group>"; };
 		5A8C325E1A8520F600F03821 /* BBFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFacebookManager.m; sourceTree = "<group>"; };
+		5A8C32601A85277000F03821 /* BBParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseUser.h; sourceTree = "<group>"; };
+		5A8C32611A85277000F03821 /* BBParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseUser.m; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -563,6 +566,8 @@
 				5AA60D481A75584E001C07F6 /* BBParseManager.m */,
 				5AA60D411A755830001C07F6 /* BBGeoPoint.h */,
 				5AA60D421A755830001C07F6 /* BBGeoPoint.m */,
+				5A8C32601A85277000F03821 /* BBParseUser.h */,
+				5A8C32611A85277000F03821 /* BBParseUser.m */,
 				5AA60D431A755830001C07F6 /* BBParseMission.h */,
 				5AA60D441A755830001C07F6 /* BBParseMission.m */,
 				5A3053D61A825121006E9A95 /* BBParseMissionRequest.h */,
@@ -829,6 +834,7 @@
 				5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */,
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
 				5A30541C1A828988006E9A95 /* BBMissionRequestEditionVC.m in Sources */,
+				5A8C32621A85277000F03821 /* BBParseUser.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
