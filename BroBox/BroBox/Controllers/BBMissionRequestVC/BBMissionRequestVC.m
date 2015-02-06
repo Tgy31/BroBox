@@ -11,6 +11,9 @@
 // Managers
 #import "BBParseManager.h"
 
+// Model
+#import "BBParseUser.h"
+
 @interface BBMissionRequestVC ()
 
 
@@ -32,8 +35,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationBarShouldCoverViewController = NO;
     
     [self initialiazeView];
     [self setViewForMissionRequest:self.missionRequest];
@@ -101,7 +102,7 @@
 - (void)acceptMissionRequest {
     [self startLoading];
     [BBParseManager missionRequest:self.missionRequest
-                        addCarrier:[PFUser currentUser]
+                        addCarrier:[BBParseUser currentUser]
                          withBlock:^(BOOL succeeded, NSError *error) {
                              if (!error ) {
                                  [self showAcceptMissionRequestSuccess];

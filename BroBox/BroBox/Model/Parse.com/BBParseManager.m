@@ -29,12 +29,20 @@
 }
 
 + (void)missionRequest:(BBParseMissionRequest *)missionRequest
-            addCarrier:(PFUser *)carrier
+            addCarrier:(BBParseUser *)carrier
              withBlock:(BBBooleanResultBlock)block {
     
     PFRelation *carrierRelation = [missionRequest carriersAwaitingRelation];
     [carrierRelation addObject:carrier];
     [missionRequest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        block(succeeded, error);
+    }];
+}
+
++ (void)user:(BBParseUser *)user
+confirmSignUpWithBlock:(BBBooleanResultBlock)block {
+    
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         block(succeeded, error);
     }];
 }

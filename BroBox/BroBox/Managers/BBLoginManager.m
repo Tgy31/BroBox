@@ -18,8 +18,9 @@
 #pragma mark - Login
 #pragma mark Facebook
 
-+ (void)loginWithFacebookWithBlock:(PFUserResultBlock)block {
-    [PFFacebookUtils logInWithPermissions:FACEBOOK_PERMISSIONS block:^(PFUser *user, NSError *error) {
++ (void)loginWithFacebookWithBlock:(BBUserResultBlock)block {
+    [PFFacebookUtils logInWithPermissions:FACEBOOK_PERMISSIONS block:^(PFUser *u, NSError *error) {
+        BBParseUser *user = (BBParseUser *)u;
         if (error) {
             NSLog(@"%@", error);
         } else if (!user) {

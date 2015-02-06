@@ -24,6 +24,13 @@
     self.navigationController.navigationBar.translucent = navigationBarShouldCoverViewController;
 }
 
+#pragma mark - View life cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.navigationBarShouldCoverViewController = NO;
+}
 
 #pragma marl - View Methods
 

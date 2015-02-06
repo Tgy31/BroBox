@@ -10,10 +10,11 @@
 
 // Models
 #import "BBGeoPoint.h"
+#import "BBParseUser.h"
 
 @interface BBParseMission : PFObject
 
-@property (strong, nonatomic) PFUser *creator;
+@property (strong, nonatomic) BBParseUser *creator;
 @property (strong, nonatomic) BBGeoPoint *from;
 @property (strong, nonatomic) BBGeoPoint *to;
 

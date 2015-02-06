@@ -14,6 +14,7 @@
 
 + (void)presentRootScreen;
 + (void)presentLoginScreen;
++ (void)presentSignUpScreen;
 
 @end
 
