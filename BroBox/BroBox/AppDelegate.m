@@ -20,6 +20,7 @@
 // Managers
 #import "BBLoginManager.h"
 #import "BBInstallationManager.h"
+#import "BBNotificationManager.h"
 
 @interface AppDelegate ()
 
@@ -39,6 +40,7 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [BBInstallationManager initialize];
+    [BBNotificationManager initialize];
     
     [self initializeWindow];
     [self presentLoginScreen];
