@@ -163,6 +163,7 @@
 				TargetAttributes = {
 					39FC4F8219B8EFB400E45E37 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5Y997TN8JS;
 					};
 				};
 			};
@@ -297,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tanguy Helesbeux (6738Z288EE)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -314,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tanguy Helesbeux (6738Z288EE)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
