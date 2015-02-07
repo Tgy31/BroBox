@@ -36,8 +36,6 @@ static BBNotificationManager *sharedManager;
     if (!self.isInitialized) {
         [self registerApp];
         [self registerToNotificationTap];
-        
-        [self test];
         self.isInitialized = YES;
     }
 }
@@ -66,13 +64,6 @@ static BBNotificationManager *sharedManager;
 }
 
 #pragma mark - Notifications
-
-- (void)test {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        LNNotification *notification = [LNNotification notificationWithTitle:@"Title" message:@"Message"];
-        [[LNNotificationCenter defaultCenter] presentNotification:notification forApplicationIdentifier:APP_IDENTIFIER];
-    });
-}
 
 #pragma mark - Handler
 

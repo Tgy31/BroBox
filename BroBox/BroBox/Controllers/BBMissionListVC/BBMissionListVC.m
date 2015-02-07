@@ -8,9 +8,6 @@
 
 #import "BBMissionListVC.h"
 
-// Frameworks
-#import <LNNotificationsUI/LNNotificationsUI.h>
-
 // Managers
 #import "BBParseManager.h"
 
@@ -31,13 +28,6 @@
     [super viewDidLoad];
     [self initializeTableview];
     [self fetchData];
-    
-    
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        LNNotificationSettingsController *destination = [[LNNotificationSettingsController alloc] init];
-        [self.navigationController pushViewController:destination animated:YES];
-    });
 }
 
 #pragma mark - API
