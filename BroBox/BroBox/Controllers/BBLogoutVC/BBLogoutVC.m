@@ -18,6 +18,10 @@
 
 @implementation BBLogoutVC
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
 - (IBAction)disconnectButtonHandler {
     [BBLoginManager logout];
     [AppDelegate presentLoginScreen];

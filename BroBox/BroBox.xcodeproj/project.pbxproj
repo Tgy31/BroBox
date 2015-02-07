@@ -45,6 +45,9 @@
 		5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C325E1A8520F600F03821 /* BBFacebookManager.m */; };
 		5A8C32621A85277000F03821 /* BBParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32611A85277000F03821 /* BBParseUser.m */; };
 		5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32641A85361200F03821 /* BBInstallationManager.m */; };
+		5A8C326D1A8583DE00F03821 /* LNNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */; };
+		5A8C32721A85849F00F03821 /* BBNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32711A85849F00F03821 /* BBNotificationManager.m */; };
+		5A8C32741A858DE400F03821 /* LNNotificationsUIAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
 		5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA60D2F1A7546D9001C07F6 /* BBMissionListVC.m */; };
 		5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA60D301A7546D9001C07F6 /* BBMissionListVC.xib */; };
@@ -94,6 +97,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5A1B0C151A710CA500425431;
 			remoteInfo = BroBox;
+		};
+		5A8C326B1A8583C100F03821 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39FC4F8319B8EFB400E45E37;
+			remoteInfo = LNNotificationsUI;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -168,6 +178,10 @@
 		5A8C32611A85277000F03821 /* BBParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseUser.m; sourceTree = "<group>"; };
 		5A8C32631A85361200F03821 /* BBInstallationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInstallationManager.h; sourceTree = "<group>"; };
 		5A8C32641A85361200F03821 /* BBInstallationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInstallationManager.m; sourceTree = "<group>"; };
+		5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LNNotificationsUI.xcodeproj; path = "../Ressources/LNNotificationsUI-master/LNNotificationsUI/LNNotificationsUI.xcodeproj"; sourceTree = "<group>"; };
+		5A8C32701A85849F00F03821 /* BBNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNotificationManager.h; sourceTree = "<group>"; };
+		5A8C32711A85849F00F03821 /* BBNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNotificationManager.m; sourceTree = "<group>"; };
+		5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LNNotificationsUIAssets.xcassets; sourceTree = "<group>"; };
 		5AA3DBDD1A80FA47005D8663 /* BBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBConstants.h; sourceTree = "<group>"; };
 		5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AA60D2E1A7546D9001C07F6 /* BBMissionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionListVC.h; path = BBMissionListVC/BBMissionListVC.h; sourceTree = "<group>"; };
@@ -232,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8C326D1A8583DE00F03821 /* LNNotificationsUI.framework in Frameworks */,
 				5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */,
 				5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */,
 				5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */,
@@ -313,6 +328,8 @@
 		5A1B0C0D1A710CA500425431 = {
 			isa = PBXGroup;
 			children = (
+				5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */,
+				5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */,
 				5A1B0C181A710CA500425431 /* BroBox */,
 				5A1B0C321A710CA500425431 /* BroBoxTests */,
 				5A1B0C171A710CA500425431 /* Products */,
@@ -523,6 +540,14 @@
 			name = BBSignUpVC;
 			sourceTree = "<group>";
 		};
+		5A8C32681A8583BD00F03821 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +627,8 @@
 				5A8C325E1A8520F600F03821 /* BBFacebookManager.m */,
 				5A8C32631A85361200F03821 /* BBInstallationManager.h */,
 				5A8C32641A85361200F03821 /* BBInstallationManager.m */,
+				5A8C32701A85849F00F03821 /* BBNotificationManager.h */,
+				5A8C32711A85849F00F03821 /* BBNotificationManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -733,6 +760,12 @@
 			mainGroup = 5A1B0C0D1A710CA500425431;
 			productRefGroup = 5A1B0C171A710CA500425431 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5A8C32681A8583BD00F03821 /* Products */;
+					ProjectRef = 5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5A1B0C151A710CA500425431 /* BroBox */,
@@ -741,11 +774,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LNNotificationsUI.framework;
+			remoteRef = 5A8C326B1A8583C100F03821 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		5A1B0C141A710CA500425431 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8C32741A858DE400F03821 /* LNNotificationsUIAssets.xcassets in Resources */,
 				5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */,
@@ -851,6 +895,7 @@
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
 				5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */,
+				5A8C32721A85849F00F03821 /* BBNotificationManager.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
