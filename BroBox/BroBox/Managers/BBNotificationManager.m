@@ -10,7 +10,7 @@
 #import "BBConstants.h"
 
 // Frameworks
-#import <LNNotificationsUI/LNNotificationsUI.h>
+#import "LNNotificationsUI.h"
 
 
 #define APP_NAME @"BroBox"

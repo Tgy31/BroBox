@@ -11,6 +11,14 @@
 		5A0E1EF11A7AA79C002B314E /* BBMissionAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF01A7AA79B002B314E /* BBMissionAnnotationView.m */; };
 		5A0E1EF81A7AAC18002B314E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E1EF71A7AAC18002B314E /* pin.png */; };
 		5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */; };
+		5A0E999B1A85B5F5000956AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E99891A85B5F5000956AF /* Info.plist */; };
+		5A0E999C1A85B5F5000956AF /* LNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E998B1A85B5F5000956AF /* LNNotification.m */; };
+		5A0E999D1A85B5F5000956AF /* LNNotificationAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E998D1A85B5F5000956AF /* LNNotificationAppSettings.m */; };
+		5A0E999E1A85B5F5000956AF /* LNNotificationBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E99901A85B5F5000956AF /* LNNotificationBannerView.m */; };
+		5A0E999F1A85B5F5000956AF /* LNNotificationBannerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E99921A85B5F5000956AF /* LNNotificationBannerWindow.m */; };
+		5A0E99A01A85B5F5000956AF /* LNNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E99941A85B5F5000956AF /* LNNotificationCenter.m */; };
+		5A0E99A11A85B5F5000956AF /* LNNotificationsAppSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E99961A85B5F5000956AF /* LNNotificationsAppSettingsController.m */; };
+		5A0E99A21A85B5F5000956AF /* LNNotificationSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E99981A85B5F5000956AF /* LNNotificationSettingsController.m */; };
 		5A1B0C1C1A710CA500425431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1B1A710CA500425431 /* main.m */; };
 		5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C1E1A710CA500425431 /* AppDelegate.m */; };
 		5A1B0C271A710CA500425431 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B0C261A710CA500425431 /* Images.xcassets */; };
@@ -45,7 +53,6 @@
 		5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C325E1A8520F600F03821 /* BBFacebookManager.m */; };
 		5A8C32621A85277000F03821 /* BBParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32611A85277000F03821 /* BBParseUser.m */; };
 		5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32641A85361200F03821 /* BBInstallationManager.m */; };
-		5A8C326D1A8583DE00F03821 /* LNNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */; };
 		5A8C32721A85849F00F03821 /* BBNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32711A85849F00F03821 /* BBNotificationManager.m */; };
 		5A8C32741A858DE400F03821 /* LNNotificationsUIAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */; };
 		5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA3DBDE1A8113AF005D8663 /* libxml2.dylib */; };
@@ -98,13 +105,6 @@
 			remoteGlobalIDString = 5A1B0C151A710CA500425431;
 			remoteInfo = BroBox;
 		};
-		5A8C326B1A8583C100F03821 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 39FC4F8319B8EFB400E45E37;
-			remoteInfo = LNNotificationsUI;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +113,24 @@
 		5A0E1EF71A7AAC18002B314E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		5A0E1EF91A7AADED002B314E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		5A0E1EFA1A7AADED002B314E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		5A0E99891A85B5F5000956AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0E998A1A85B5F5000956AF /* LNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotification.h; sourceTree = "<group>"; };
+		5A0E998B1A85B5F5000956AF /* LNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotification.m; sourceTree = "<group>"; };
+		5A0E998C1A85B5F5000956AF /* LNNotificationAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationAppSettings.h; sourceTree = "<group>"; };
+		5A0E998D1A85B5F5000956AF /* LNNotificationAppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationAppSettings.m; sourceTree = "<group>"; };
+		5A0E998E1A85B5F5000956AF /* LNNotificationAppSettings_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationAppSettings_Private.h; sourceTree = "<group>"; };
+		5A0E998F1A85B5F5000956AF /* LNNotificationBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationBannerView.h; sourceTree = "<group>"; };
+		5A0E99901A85B5F5000956AF /* LNNotificationBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationBannerView.m; sourceTree = "<group>"; };
+		5A0E99911A85B5F5000956AF /* LNNotificationBannerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationBannerWindow.h; sourceTree = "<group>"; };
+		5A0E99921A85B5F5000956AF /* LNNotificationBannerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationBannerWindow.m; sourceTree = "<group>"; };
+		5A0E99931A85B5F5000956AF /* LNNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationCenter.h; sourceTree = "<group>"; };
+		5A0E99941A85B5F5000956AF /* LNNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationCenter.m; sourceTree = "<group>"; };
+		5A0E99951A85B5F5000956AF /* LNNotificationsAppSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationsAppSettingsController.h; sourceTree = "<group>"; };
+		5A0E99961A85B5F5000956AF /* LNNotificationsAppSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationsAppSettingsController.m; sourceTree = "<group>"; };
+		5A0E99971A85B5F5000956AF /* LNNotificationSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationSettingsController.h; sourceTree = "<group>"; };
+		5A0E99981A85B5F5000956AF /* LNNotificationSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNotificationSettingsController.m; sourceTree = "<group>"; };
+		5A0E99991A85B5F5000956AF /* LNNotificationsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationsUI.h; sourceTree = "<group>"; };
+		5A0E999A1A85B5F5000956AF /* LNNotificationsUI_iOS7.1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNNotificationsUI_iOS7.1.h; sourceTree = "<group>"; };
 		5A1B0C161A710CA500425431 /* BroBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1B0C1A1A710CA500425431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A1B0C1B1A710CA500425431 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -178,7 +196,6 @@
 		5A8C32611A85277000F03821 /* BBParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseUser.m; sourceTree = "<group>"; };
 		5A8C32631A85361200F03821 /* BBInstallationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInstallationManager.h; sourceTree = "<group>"; };
 		5A8C32641A85361200F03821 /* BBInstallationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInstallationManager.m; sourceTree = "<group>"; };
-		5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LNNotificationsUI.xcodeproj; path = "../Ressources/LNNotificationsUI-master/LNNotificationsUI/LNNotificationsUI.xcodeproj"; sourceTree = "<group>"; };
 		5A8C32701A85849F00F03821 /* BBNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNotificationManager.h; sourceTree = "<group>"; };
 		5A8C32711A85849F00F03821 /* BBNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNotificationManager.m; sourceTree = "<group>"; };
 		5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LNNotificationsUIAssets.xcassets; sourceTree = "<group>"; };
@@ -246,7 +263,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A8C326D1A8583DE00F03821 /* LNNotificationsUI.framework in Frameworks */,
 				5AA3DBDF1A8113AF005D8663 /* libxml2.dylib in Frameworks */,
 				5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */,
 				5AAC27671A72B22300ECF6FA /* libstdc++.6.dylib in Frameworks */,
@@ -325,11 +341,35 @@
 			path = images;
 			sourceTree = SOURCE_ROOT;
 		};
+		5A0E99881A85B5F5000956AF /* LNNotificationsUI */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E99891A85B5F5000956AF /* Info.plist */,
+				5A0E998A1A85B5F5000956AF /* LNNotification.h */,
+				5A0E998B1A85B5F5000956AF /* LNNotification.m */,
+				5A0E998C1A85B5F5000956AF /* LNNotificationAppSettings.h */,
+				5A0E998D1A85B5F5000956AF /* LNNotificationAppSettings.m */,
+				5A0E998E1A85B5F5000956AF /* LNNotificationAppSettings_Private.h */,
+				5A0E998F1A85B5F5000956AF /* LNNotificationBannerView.h */,
+				5A0E99901A85B5F5000956AF /* LNNotificationBannerView.m */,
+				5A0E99911A85B5F5000956AF /* LNNotificationBannerWindow.h */,
+				5A0E99921A85B5F5000956AF /* LNNotificationBannerWindow.m */,
+				5A0E99931A85B5F5000956AF /* LNNotificationCenter.h */,
+				5A0E99941A85B5F5000956AF /* LNNotificationCenter.m */,
+				5A0E99951A85B5F5000956AF /* LNNotificationsAppSettingsController.h */,
+				5A0E99961A85B5F5000956AF /* LNNotificationsAppSettingsController.m */,
+				5A0E99971A85B5F5000956AF /* LNNotificationSettingsController.h */,
+				5A0E99981A85B5F5000956AF /* LNNotificationSettingsController.m */,
+				5A0E99991A85B5F5000956AF /* LNNotificationsUI.h */,
+				5A0E999A1A85B5F5000956AF /* LNNotificationsUI_iOS7.1.h */,
+			);
+			path = LNNotificationsUI;
+			sourceTree = "<group>";
+		};
 		5A1B0C0D1A710CA500425431 = {
 			isa = PBXGroup;
 			children = (
 				5A8C32731A858DE400F03821 /* LNNotificationsUIAssets.xcassets */,
-				5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */,
 				5A1B0C181A710CA500425431 /* BroBox */,
 				5A1B0C321A710CA500425431 /* BroBoxTests */,
 				5A1B0C171A710CA500425431 /* Products */,
@@ -468,6 +508,7 @@
 		5A3053F91A826826006E9A95 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5A0E99881A85B5F5000956AF /* LNNotificationsUI */,
 				5A3054151A828956006E9A95 /* GFPlaceholderView */,
 				5A3053FA1A826826006E9A95 /* DBPrivacyHelper */,
 			);
@@ -538,14 +579,6 @@
 				5A8C32591A85203500F03821 /* BBSignUpVC.xib */,
 			);
 			name = BBSignUpVC;
-			sourceTree = "<group>";
-		};
-		5A8C32681A8583BD00F03821 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5AA60D331A7546DC001C07F6 /* BBMissionListVC */ = {
@@ -736,6 +769,7 @@
 				TargetAttributes = {
 					5A1B0C151A710CA500425431 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5Y997TN8JS;
 					};
 					5A1B0C2E1A710CA500425431 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -760,12 +794,6 @@
 			mainGroup = 5A1B0C0D1A710CA500425431;
 			productRefGroup = 5A1B0C171A710CA500425431 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5A8C32681A8583BD00F03821 /* Products */;
-					ProjectRef = 5A8C32671A8583BD00F03821 /* LNNotificationsUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5A1B0C151A710CA500425431 /* BroBox */,
@@ -773,16 +801,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5A8C326C1A8583C100F03821 /* LNNotificationsUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LNNotificationsUI.framework;
-			remoteRef = 5A8C326B1A8583C100F03821 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5A1B0C141A710CA500425431 /* Resources */ = {
@@ -797,6 +815,7 @@
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
+				5A0E999B1A85B5F5000956AF /* Info.plist in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
 				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
@@ -869,13 +888,16 @@
 				5AA60D371A75473D001C07F6 /* BBMissionListNavigationController.m in Sources */,
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */,
+				5A0E99A01A85B5F5000956AF /* LNNotificationCenter.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,
+				5A0E999C1A85B5F5000956AF /* LNNotification.m in Sources */,
 				5AAC277E1A72C8CE00ECF6FA /* BBRootVC.m in Sources */,
 				5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
 				5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */,
+				5A0E999D1A85B5F5000956AF /* LNNotificationAppSettings.m in Sources */,
 				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
 				5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */,
 				5A0E1EFB1A7AADED002B314E /* UIImage+Resize.m in Sources */,
@@ -883,14 +905,18 @@
 				5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */,
 				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
 				5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */,
+				5A0E999F1A85B5F5000956AF /* LNNotificationBannerWindow.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
 				5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
+				5A0E99A21A85B5F5000956AF /* LNNotificationSettingsController.m in Sources */,
+				5A0E99A11A85B5F5000956AF /* LNNotificationsAppSettingsController.m in Sources */,
 				5AA60D461A755830001C07F6 /* BBParseMission.m in Sources */,
 				5AA60D491A75584E001C07F6 /* BBParseManager.m in Sources */,
 				5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */,
 				5A0E1EF11A7AA79C002B314E /* BBMissionAnnotationView.m in Sources */,
+				5A0E999E1A85B5F5000956AF /* LNNotificationBannerView.m in Sources */,
 				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
@@ -1024,6 +1050,8 @@
 			baseConfigurationReference = 9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDK",
@@ -1033,6 +1061,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9fd15495-6a06-4aa9-aecc-29206b3377bf";
 			};
 			name = Debug;
 		};
@@ -1041,6 +1070,8 @@
 			baseConfigurationReference = E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDK",
@@ -1050,6 +1081,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9fd15495-6a06-4aa9-aecc-29206b3377bf";
 			};
 			name = Release;
 		};
