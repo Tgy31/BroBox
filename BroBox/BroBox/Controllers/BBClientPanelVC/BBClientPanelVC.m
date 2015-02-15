@@ -230,6 +230,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)missionDetailsHandler {
     BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+    destination.mission = self.mission;
+    destination.actionType = BBMissionOverviewActionTypeNone;
     [self.navigationController pushViewController:destination animated:YES];
 }
 

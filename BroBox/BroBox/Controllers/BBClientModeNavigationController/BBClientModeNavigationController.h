@@ -8,6 +8,13 @@
 
 #import "BBNavigationController.h"
 
+// Model
+#import "BBParseMission.h"
+
 @interface BBClientModeNavigationController : BBNavigationController
+
+@property (strong, nonatomic) BBParseMission *mission;
+
++ (instancetype)newWithMission:(BBParseMission *)mission;
 
 @end

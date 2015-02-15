@@ -100,6 +100,16 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     [self.actionButton addTarget:self
                           action:@selector(actionButtonHandler)
                 forControlEvents:UIControlEventTouchUpInside];
+    
+    switch (self.actionType) {
+        case BBMissionOverviewActionTypeNone:
+            self.tableview.tableFooterView.hidden = YES;
+            break;
+        
+        case BBMissionOverviewActionTypeAccept:
+            self.tableview.tableFooterView.hidden = NO;
+            break;
+    }
 }
 
 - (void)setViewForMission:(BBParseMission *)mission {

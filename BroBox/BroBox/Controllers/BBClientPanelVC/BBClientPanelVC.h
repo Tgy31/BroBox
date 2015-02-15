@@ -8,6 +8,11 @@
 
 #import "BBViewController.h"
 
+// Model
+#import "BBParseMission.h"
+
 @interface BBClientPanelVC : BBViewController
+
+@property (strong, nonatomic) BBParseMission *mission;
 
 @end

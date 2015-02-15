@@ -129,11 +129,11 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     self.window.rootViewController = [BBSignUpNavigationController new];
 }
 
-- (void)presentClientScreen {
-    self.window.rootViewController = [BBClientModeNavigationController new];
+- (void)presentClientScreenForMission:(BBParseMission *)mission {
+    self.window.rootViewController = [BBClientModeNavigationController newWithMission:mission];
 }
 
-- (void)presentCarrierScreen
+- (void)presentCarrierScreenForMission:(BBParseMission *)mission
 {
     
 }
@@ -152,12 +152,12 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     [[self sharedDelegate] presentSignUpScreen];
 }
 
-+ (void)presentClientScreen {
-    [[self sharedDelegate] presentClientScreen];
++ (void)presentClientScreenForMission:(BBParseMission *)mission {
+    [[self sharedDelegate] presentClientScreenForMission:mission];
 }
 
-+ (void)presentCarrierScreen {
-    [[self sharedDelegate] presentCarrierScreen];
++ (void)presentCarrierScreenForMission:(BBParseMission *)mission {
+    [[self sharedDelegate] presentCarrierScreenForMission:mission];
 }
 
 #pragma mark - Helpers

@@ -11,8 +11,14 @@
 // Model
 #import "BBParseMission.h"
 
+typedef NS_ENUM(NSInteger, BBMissionOverviewActionType) {
+    BBMissionOverviewActionTypeNone,
+    BBMissionOverviewActionTypeAccept
+};
+
 @interface BBMissionOverviewVC : BBViewController
 
 @property (strong, nonatomic) BBParseMission *mission;
+@property (nonatomic) BBMissionOverviewActionType actionType;
 
 @end

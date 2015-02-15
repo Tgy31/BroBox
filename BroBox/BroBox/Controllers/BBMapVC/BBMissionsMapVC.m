@@ -123,6 +123,7 @@
     
     BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
     destination.mission = mission;
+    destination.actionType = BBMissionOverviewActionTypeAccept;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
