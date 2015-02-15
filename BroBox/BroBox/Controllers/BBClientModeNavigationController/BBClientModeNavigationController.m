@@ -10,7 +10,7 @@
 
 
 // Controllers
-#import "BBQRReaderVC.h"
+#import "BBClientModeVC.h"
 
 @interface BBClientModeNavigationController ()
 
@@ -22,10 +22,10 @@
 
 + (instancetype)new
 {
-    BBQRReaderVC *rootVC = [BBQRReaderVC new];
+    BBClientModeVC *rootVC = [BBClientModeVC new];
     BBClientModeNavigationController *navigationController = [[BBClientModeNavigationController alloc] initWithRootViewController:rootVC];
     
-    rootVC.title = NSLocalizedString(@"Client", @"");
+    rootVC.title = NSLocalizedString(@"Carrier on his way", @"");
     
     return navigationController;
 }

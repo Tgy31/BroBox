@@ -52,6 +52,8 @@
 		5A75321B1A90B0640045D9AF /* BBClientModeNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7532191A90B0640045D9AF /* BBClientModeNavigationController.xib */; };
 		5A7532201A90B2310045D9AF /* BBQRReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75321E1A90B2310045D9AF /* BBQRReaderVC.m */; };
 		5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75321F1A90B2310045D9AF /* BBQRReaderVC.xib */; };
+		5A7532261A9106040045D9AF /* BBClientModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7532241A9106040045D9AF /* BBClientModeVC.m */; };
+		5A7532271A9106040045D9AF /* BBClientModeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7532251A9106040045D9AF /* BBClientModeVC.xib */; };
 		5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */; };
 		5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */; };
 		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
@@ -201,6 +203,9 @@
 		5A75321D1A90B2310045D9AF /* BBQRReaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBQRReaderVC.h; path = BBQRReaderVC/BBQRReaderVC.h; sourceTree = "<group>"; };
 		5A75321E1A90B2310045D9AF /* BBQRReaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBQRReaderVC.m; path = BBQRReaderVC/BBQRReaderVC.m; sourceTree = "<group>"; };
 		5A75321F1A90B2310045D9AF /* BBQRReaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBQRReaderVC.xib; path = BBQRReaderVC/BBQRReaderVC.xib; sourceTree = "<group>"; };
+		5A7532231A9106040045D9AF /* BBClientModeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBClientModeVC.h; path = BBClientModeVC/BBClientModeVC.h; sourceTree = "<group>"; };
+		5A7532241A9106040045D9AF /* BBClientModeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBClientModeVC.m; path = BBClientModeVC/BBClientModeVC.m; sourceTree = "<group>"; };
+		5A7532251A9106040045D9AF /* BBClientModeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBClientModeVC.xib; path = BBClientModeVC/BBClientModeVC.xib; sourceTree = "<group>"; };
 		5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionOverviewVC.h; path = BBMissionRequestVC/BBMissionOverviewVC.h; sourceTree = "<group>"; };
 		5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionOverviewVC.m; path = BBMissionRequestVC/BBMissionOverviewVC.m; sourceTree = "<group>"; };
 		5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionOverviewVC.xib; path = BBMissionRequestVC/BBMissionOverviewVC.xib; sourceTree = "<group>"; };
@@ -459,6 +464,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A7532281A91060C0045D9AF /* BBClientModeVC */,
 				5A7532221A90B2B10045D9AF /* BBQRReaderVC */,
 				5A7532161A90A71A0045D9AF /* BBCarrierPickerVC */,
 				5A75320F1A909E7D0045D9AF /* BBMissionPanelVC */,
@@ -612,6 +618,16 @@
 				5A75321F1A90B2310045D9AF /* BBQRReaderVC.xib */,
 			);
 			name = BBQRReaderVC;
+			sourceTree = "<group>";
+		};
+		5A7532281A91060C0045D9AF /* BBClientModeVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A7532231A9106040045D9AF /* BBClientModeVC.h */,
+				5A7532241A9106040045D9AF /* BBClientModeVC.m */,
+				5A7532251A9106040045D9AF /* BBClientModeVC.xib */,
+			);
+			name = BBClientModeVC;
 			sourceTree = "<group>";
 		};
 		5A8C32501A85028F00F03821 /* BBMissionOverviewVC */ = {
@@ -880,6 +896,7 @@
 				5A7532151A90A7160045D9AF /* BBCarrierPickerVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
+				5A7532271A9106040045D9AF /* BBClientModeVC.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A0E999B1A85B5F5000956AF /* Info.plist in Resources */,
@@ -975,6 +992,7 @@
 				5AAC27741A72C18E00ECF6FA /* BBLoginVC.m in Sources */,
 				5A3053F81A826238006E9A95 /* BBLocationManager.m in Sources */,
 				5AAC27881A72CFF000ECF6FA /* BBMapNavigationController.m in Sources */,
+				5A7532261A9106040045D9AF /* BBClientModeVC.m in Sources */,
 				5A3053EA1A825B6C006E9A95 /* BBGoogleManager.m in Sources */,
 				5A0E999F1A85B5F5000956AF /* LNNotificationBannerWindow.m in Sources */,
 				5A7532201A90B2310045D9AF /* BBQRReaderVC.m in Sources */,
