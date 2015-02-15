@@ -29,6 +29,7 @@
 - (void)awakeFromNib {
     
     self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width/2.0;
+    self.profilePictureView.backgroundColor = [UIColor lightGrayColor];
     
     if (self.user) {
         [self updateViews];

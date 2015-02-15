@@ -46,7 +46,7 @@
     [BBNotificationManager initialize];
     
     [self initializeWindow];
-    [self presentClientScreen];
+    [self presentLoginScreen];
     
     return YES;
 }
