@@ -31,17 +31,66 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabelTo;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabelTo;
 
+// Breakbale view
+@property (weak, nonatomic) IBOutlet UIView *viewBreakable;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabelBreakable;
+@property (weak, nonatomic) IBOutlet UISwitch *switchBreakable;
+
+// Rewards view
+@property (weak, nonatomic) IBOutlet UIView *viewReward;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabelReward;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabelReward;
+
+
 // Other views
-@property (strong, nonatomic) UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *categorySegmentedControl;
+@property (strong, nonatomic) UIBarButtonItem *doneBarButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 // Objects
 @property (strong, nonatomic) BBGeoPoint *placeFrom;
 @property (strong, nonatomic) BBGeoPoint *placeTo;
+@property (nonatomic) BBMissionCategory category;
+@property (nonatomic) BOOL breakable;
+@property (nonatomic) CGFloat price;
+@property (nonatomic) CGFloat tripPrice;
 
 
 @end
 
 @implementation BBCreateMissionVC
+
+- (CGFloat)computePrice {
+    CGFloat fPrice = 2.30;
+    fPrice += self.tripPrice;
+    switch (self.category) {
+        case BBMissionCategoryLight: {
+            fPrice += 0;
+            break;
+        }
+        case BBMissionCategoryStandard: {
+            fPrice += 0.80;
+            break;
+        }
+        case BBMissionCategoryHeavy: {
+            fPrice += 2.0;
+            break;
+        }
+    }
+    
+    if (self.breakable) {
+        fPrice += 2.0;
+    }
+    return fPrice;
+}
+
+- (CGFloat)generateTripPrice {
+    if (self.placeFrom && self.placeTo) {
+        int random = arc4random_uniform(200);
+        return random/100.0;
+    }
+    return 0;
+}
 
 #pragma mark - View life cycle
 
@@ -68,7 +117,34 @@
     self.titleLabelTo.text = NSLocalizedString(@"Drop off", @"Create mission title");
     self.valueLabelTo.text = @"";
     
-    self.doneButton.enabled = NO;
+//    Breakable
+    self.titleLabelBreakable.text = NSLocalizedString(@"Breakable", @"");
+    [self.switchBreakable setOn:NO animated:NO];
+    
+//    DoneButton
+    [self.doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.doneButton.layer.cornerRadius = 5.0;
+    NSString *doneTitle = NSLocalizedString(@"Create mission", @"");
+    [self.doneButton setTitle:doneTitle forState:UIControlStateNormal];
+    
+//    Category
+    NSString *lightTitle = [BBParseMission localizedCategoryNameForCategory:BBMissionCategoryLight];
+    [self.categorySegmentedControl setTitle:lightTitle forSegmentAtIndex:BBMissionCategoryLight];
+    
+    NSString *standardTitle = [BBParseMission localizedCategoryNameForCategory:BBMissionCategoryStandard];
+    [self.categorySegmentedControl setTitle:standardTitle forSegmentAtIndex:BBMissionCategoryStandard];
+    
+    NSString *heavyTitle = [BBParseMission localizedCategoryNameForCategory:BBMissionCategoryHeavy];
+    [self.categorySegmentedControl setTitle:heavyTitle forSegmentAtIndex:BBMissionCategoryHeavy];
+    
+    self.category = BBMissionCategoryStandard;
+    self.categorySegmentedControl.selectedSegmentIndex = self.category;
+    
+//    Reward
+    self.titleLabelReward.text = NSLocalizedString(@"Price", @"");
+    
+    [self updateDoneButtonEnabled];
+    
 }
 
 - (void)gestureInitialization {
@@ -84,6 +160,18 @@
                                                                                    action:@selector(toViewTapHandler)];
     [self.viewTo addGestureRecognizer:toTapGesture];
     self.viewTo.userInteractionEnabled = YES;
+    
+    [self.categorySegmentedControl addTarget:self
+                                      action:@selector(categorySegmentedControlHandler)
+                            forControlEvents:UIControlEventValueChanged];
+    
+    [self.switchBreakable addTarget:self
+                             action:@selector(breakableSwitchHandler)
+                   forControlEvents:UIControlEventValueChanged];
+    
+    [self.doneButton addTarget:self
+                        action:@selector(doneButtonHandler)
+              forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - View methods
@@ -96,37 +184,62 @@
     self.valueLabelTo.text = self.placeTo.title;
 }
 
+- (void)updateViewReward {
+    self.price = [self computePrice];
+    self.valueLabelReward.text = [NSString stringWithFormat:@"%.2f€", self.price];
+}
+
 - (void)updateDoneButtonEnabled {
     if (!self.placeFrom
         || ! self.placeTo) {
+        self.doneBarButton.enabled = NO;
         self.doneButton.enabled = NO;
+        UIColor *gray = [UIColor lightGrayColor];
+        self.doneButton.backgroundColor = gray;
     } else {
+        self.doneBarButton.enabled = YES;
         self.doneButton.enabled = YES;
+        UIColor *green = [UIColor colorWithRed:0.24f green:0.65f blue:0.31f alpha:1.00f];
+        self.doneButton.backgroundColor = green;
     }
 }
 
 #pragma mark - Getters & Setters
 
-- (UIBarButtonItem *)doneButton {
-    if (!_doneButton) {
-        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+- (UIBarButtonItem *)doneBarButton {
+    if (!_doneBarButton) {
+        _doneBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                     target:self
                                                                     action:@selector(doneButtonHandler)];
-        self.navigationItem.rightBarButtonItem = _doneButton;
+        self.navigationItem.rightBarButtonItem = _doneBarButton;
     }
-    return _doneButton;
+    return _doneBarButton;
 }
 
 - (void)setPlaceFrom:(BBGeoPoint *)placeFrom {
     _placeFrom = placeFrom;
+    self.tripPrice = [self generateTripPrice];
     [self updateViewFrom];
     [self updateDoneButtonEnabled];
+    [self updateViewReward];
 }
 
 - (void)setPlaceTo:(BBGeoPoint *)placeTo {
     _placeTo = placeTo;
+    self.tripPrice = [self generateTripPrice];
     [self updateViewTo];
     [self updateDoneButtonEnabled];
+    [self updateViewReward];
+}
+
+- (void)setCategory:(BBMissionCategory)category {
+    _category = category;
+    [self updateViewReward];
+}
+
+- (void)setBreakable:(BOOL)breakable {
+    _breakable = breakable;
+    [self updateViewReward];
 }
 
 #pragma mark - Handlers
@@ -154,15 +267,25 @@
 - (void)doneButtonHandler {
     BBParseMission *mission = [BBParseMission missionFrom:self.placeFrom
                                                        to:self.placeTo];
-    
+    mission.breakable = self.breakable;
+    mission.category = self.category;
+    mission.reward = [NSNumber numberWithFloat:self.price - 0.2];
     [self saveMission:mission];
+}
+
+- (void)categorySegmentedControlHandler {
+    self.category = self.categorySegmentedControl.selectedSegmentIndex;
+}
+
+- (void)breakableSwitchHandler {
+    self.breakable = self.switchBreakable.isOn;
 }
 
 #pragma mark - API
 
 - (void)saveMission:(BBParseMission *)mission {
     [self startLoading];
-    self.doneButton.enabled = NO;
+    self.doneBarButton.enabled = NO;
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             [BBInstallationManager setUserActiveMission:mission];
@@ -174,7 +297,7 @@
             [self.navigationController pushViewController:destination animated:YES];
         }
         [self stopLoading];
-        self.doneButton.enabled = YES;
+        self.doneBarButton.enabled = YES;
     }];
 }
 
