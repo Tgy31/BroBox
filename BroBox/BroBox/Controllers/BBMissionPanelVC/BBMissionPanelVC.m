@@ -8,6 +8,9 @@
 
 #import "BBMissionPanelVC.h"
 
+// Controllers
+#import "BBCarrierPickerVC.h"
+
 
 typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     BBMissionPanelSectionMission,
@@ -104,7 +107,9 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
             break;
         }
         case BBMissionPanelSectionCarriers: {
-            
+            BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
+            destination.mission = self.mission;
+            [self.navigationController pushViewController:destination animated:YES];
             break;
         }
         case BBMissionPanelSectionDelete: {

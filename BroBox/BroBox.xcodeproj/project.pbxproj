@@ -46,6 +46,8 @@
 		5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */; };
 		5A75320D1A909E7A0045D9AF /* BBMissionPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75320B1A909E7A0045D9AF /* BBMissionPanelVC.m */; };
 		5A75320E1A909E7A0045D9AF /* BBMissionPanelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75320C1A909E7A0045D9AF /* BBMissionPanelVC.xib */; };
+		5A7532141A90A7160045D9AF /* BBCarrierPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7532121A90A7160045D9AF /* BBCarrierPickerVC.m */; };
+		5A7532151A90A7160045D9AF /* BBCarrierPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7532131A90A7160045D9AF /* BBCarrierPickerVC.xib */; };
 		5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */; };
 		5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */; };
 		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
@@ -186,6 +188,9 @@
 		5A75320A1A909E7A0045D9AF /* BBMissionPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionPanelVC.h; path = BBMissionPanelVC/BBMissionPanelVC.h; sourceTree = "<group>"; };
 		5A75320B1A909E7A0045D9AF /* BBMissionPanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionPanelVC.m; path = BBMissionPanelVC/BBMissionPanelVC.m; sourceTree = "<group>"; };
 		5A75320C1A909E7A0045D9AF /* BBMissionPanelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionPanelVC.xib; path = BBMissionPanelVC/BBMissionPanelVC.xib; sourceTree = "<group>"; };
+		5A7532111A90A7160045D9AF /* BBCarrierPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCarrierPickerVC.h; path = BBCarrierPickerVC/BBCarrierPickerVC.h; sourceTree = "<group>"; };
+		5A7532121A90A7160045D9AF /* BBCarrierPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCarrierPickerVC.m; path = BBCarrierPickerVC/BBCarrierPickerVC.m; sourceTree = "<group>"; };
+		5A7532131A90A7160045D9AF /* BBCarrierPickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCarrierPickerVC.xib; path = BBCarrierPickerVC/BBCarrierPickerVC.xib; sourceTree = "<group>"; };
 		5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionOverviewVC.h; path = BBMissionRequestVC/BBMissionOverviewVC.h; sourceTree = "<group>"; };
 		5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionOverviewVC.m; path = BBMissionRequestVC/BBMissionOverviewVC.m; sourceTree = "<group>"; };
 		5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionOverviewVC.xib; path = BBMissionRequestVC/BBMissionOverviewVC.xib; sourceTree = "<group>"; };
@@ -444,6 +449,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A7532161A90A71A0045D9AF /* BBCarrierPickerVC */,
 				5A75320F1A909E7D0045D9AF /* BBMissionPanelVC */,
 				5A8C325C1A85203900F03821 /* BBSignUpVC */,
 				5A8C32501A85028F00F03821 /* BBMissionOverviewVC */,
@@ -565,6 +571,16 @@
 				5A75320C1A909E7A0045D9AF /* BBMissionPanelVC.xib */,
 			);
 			name = BBMissionPanelVC;
+			sourceTree = "<group>";
+		};
+		5A7532161A90A71A0045D9AF /* BBCarrierPickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A7532111A90A7160045D9AF /* BBCarrierPickerVC.h */,
+				5A7532121A90A7160045D9AF /* BBCarrierPickerVC.m */,
+				5A7532131A90A7160045D9AF /* BBCarrierPickerVC.xib */,
+			);
+			name = BBCarrierPickerVC;
 			sourceTree = "<group>";
 		};
 		5A8C32501A85028F00F03821 /* BBMissionOverviewVC */ = {
@@ -828,6 +844,7 @@
 				5A75320E1A909E7A0045D9AF /* BBMissionPanelVC.xib in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */,
+				5A7532151A90A7160045D9AF /* BBCarrierPickerVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
@@ -895,6 +912,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */,
+				5A7532141A90A7160045D9AF /* BBCarrierPickerVC.m in Sources */,
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
 				5A8C32621A85277000F03821 /* BBParseUser.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,

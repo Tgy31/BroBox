@@ -18,6 +18,10 @@
 @dynamic firstName;
 @dynamic lastName;
 
+- (NSString *)fullName {
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
+
 #pragma mark - Parse subclassing
 
 + (BBParseUser *)currentUser {

@@ -49,6 +49,7 @@
 + (BBViewController *)rootViewControllerForUserActiveMission:(BBParseMission *)mission {
     if (mission) {
         BBMissionPanelVC *rootVC = [BBMissionPanelVC new];
+        rootVC.mission = mission;
         rootVC.title = NSLocalizedString(@"My mission", @"");
         return rootVC;
     } else {

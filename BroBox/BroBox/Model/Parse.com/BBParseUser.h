@@ -17,4 +17,6 @@
 
 + (BBParseUser *)currentUser;
 
+- (NSString *)fullName;
+
 @end

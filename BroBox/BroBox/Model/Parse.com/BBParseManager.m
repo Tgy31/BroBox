@@ -66,4 +66,14 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     }];
 }
 
++ (void)fetchCarriersForMission:(BBParseMission *)mission
+                      withBlock:(BBArrayResultBlock)block {
+    PFQuery *query = [[mission carriersAwaitingRelation] query];
+    query = [BBParseUser query];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        block(objects, error);
+    }];
+    
+}
+
 @end
