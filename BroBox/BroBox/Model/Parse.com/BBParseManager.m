@@ -22,6 +22,7 @@
     [query includeKey:@"from"];
     [query includeKey:@"to"];
     [query includeKey:@"creator"];
+    [query includeKey:@"carrier"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects, error);
     }];
@@ -52,6 +53,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query includeKey:@"from"];
     [query includeKey:@"to"];
     [query includeKey:@"creator"];
+    [query includeKey:@"carrier"];
     [query whereKey:@"creator" equalTo:user];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -69,6 +71,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
 + (void)fetchCarriersForMission:(BBParseMission *)mission
                       withBlock:(BBArrayResultBlock)block {
     PFQuery *query = [[mission carriersAwaitingRelation] query];
+    query = [BBParseUser query];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects, error);
     }];

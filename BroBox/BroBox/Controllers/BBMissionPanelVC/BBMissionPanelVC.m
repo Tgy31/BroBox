@@ -132,7 +132,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 - (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier {
     [self.navigationController popViewControllerAnimated:YES];
-    
+    self.mission.carrier = carrier;
     [AppDelegate presentClientScreenForMission:self.mission];
 }
 

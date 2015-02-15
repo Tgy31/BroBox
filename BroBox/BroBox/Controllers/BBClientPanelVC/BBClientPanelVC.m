@@ -153,7 +153,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
         case BBClientPanelInformationRowCarrier: {
             NSString *identifier = [BBUserProfileCell reusableIdentifier];
             BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            cell.user = [BBParseUser currentUser];
+            cell.user = self.mission.carrier;
             return cell;
         }
             
@@ -174,6 +174,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.textLabel.text = NSLocalizedString(@"Abort mission", @"");
+    cell.textLabel.textColor = [UIColor redColor];
     
     return cell;
 }
@@ -220,11 +221,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)pickUpCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
+    destination.title = NSLocalizedString(@"Pick up", @"");
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)dropOffCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
+    destination.title = NSLocalizedString(@"Drop off", @"");
     [self.navigationController pushViewController:destination animated:YES];
 }
 

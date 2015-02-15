@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
 @end
 
@@ -25,6 +26,8 @@
     
     NSString *title = NSLocalizedString(@"Scan QR code", @"");
     [self.scanButton setTitle:title forState:UIControlStateNormal];
+    
+    self.commentLabel.text = NSLocalizedString(@"Click on the button below to scan the QR code on your carrier watch", @"");
     
     self.textLabel.text = nil;
 }

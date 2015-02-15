@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBQRReaderVC">
             <connections>
+                <outlet property="commentLabel" destination="QLP-r2-msO" id="i6l-nY-8Z6"/>
                 <outlet property="scanButton" destination="ggG-hN-obY" id="VZh-j2-xzv"/>
                 <outlet property="textLabel" destination="sMx-tt-AMm" id="fRa-1b-pWa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -16,8 +17,23 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-tt-AMm">
+                    <rect key="frame" x="279" y="289" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLP-r2-msO">
+                    <rect key="frame" x="8" y="492" width="584" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Tjk-va-QXp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggG-hN-obY">
-                    <rect key="frame" x="277" y="285" width="46" height="30"/>
+                    <rect key="frame" x="277" y="550" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -25,19 +41,16 @@
                         <action selector="scanButtonHandler:" destination="-1" eventType="touchUpInside" id="zOV-FM-cmK"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-tt-AMm">
-                    <rect key="frame" x="279" y="323" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="ggG-hN-obY" secondAttribute="centerX" id="4Fi-jD-3Lz"/>
+                <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="QLP-r2-msO" secondAttribute="bottom" constant="8" id="4yv-rk-PK3"/>
                 <constraint firstAttribute="centerX" secondItem="sMx-tt-AMm" secondAttribute="centerX" id="APF-pm-qaP"/>
-                <constraint firstAttribute="centerY" secondItem="ggG-hN-obY" secondAttribute="centerY" id="MnJ-88-FWL"/>
-                <constraint firstItem="sMx-tt-AMm" firstAttribute="top" secondItem="ggG-hN-obY" secondAttribute="bottom" constant="8" id="rl2-Io-AcM"/>
+                <constraint firstAttribute="trailing" secondItem="QLP-r2-msO" secondAttribute="trailing" constant="8" id="C9D-bW-7Hu"/>
+                <constraint firstAttribute="bottom" secondItem="ggG-hN-obY" secondAttribute="bottom" constant="20" id="dCo-6j-nA5"/>
+                <constraint firstItem="QLP-r2-msO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gs7-7Y-cCB"/>
+                <constraint firstAttribute="centerY" secondItem="sMx-tt-AMm" secondAttribute="centerY" id="kPk-QT-jk0"/>
             </constraints>
         </view>
     </objects>
