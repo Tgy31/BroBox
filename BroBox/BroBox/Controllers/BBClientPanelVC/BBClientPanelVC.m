@@ -8,6 +8,9 @@
 
 #import "BBClientPanelVC.h"
 
+// Controllers
+#import "BBQRReaderVC.h"
+
 
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
     BBClientPanelSectionInformations,
@@ -150,6 +153,64 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
     cell.textLabel.text = NSLocalizedString(@"Abort mission", @"");
     
     return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    switch (indexPath.section) {
+        case BBClientPanelSectionInformations: {
+            [self missionDetailsHandler];
+            break;
+        }
+            
+        case BBClientPanelSectionCheckins: {
+            switch (indexPath.row) {
+                case BBClientPanelCheckinRowPickUp:
+                    [self pickUpCheckinHandler];
+                    break;
+                case BBClientPanelCheckinRowDropOff:
+                    [self dropOffCheckinHandler];
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+        }
+            
+        case BBClientPanelSectionOptions: {
+            [self abortMissionHandler];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Handlers
+
+- (void)pickUpCheckinHandler {
+    BBQRReaderVC *destination = [BBQRReaderVC new];
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (void)dropOffCheckinHandler {
+    BBQRReaderVC *destination = [BBQRReaderVC new];
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (void)missionDetailsHandler {
+    
+}
+
+- (void)abortMissionHandler {
+    
 }
 
 @end
