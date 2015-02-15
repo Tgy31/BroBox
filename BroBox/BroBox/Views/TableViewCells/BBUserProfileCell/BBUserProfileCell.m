@@ -11,6 +11,9 @@
 // Frameworks
 #import <FacebookSDK/FacebookSDK.h>
 
+#define NIB_NAME @"BBUserProfileCell"
+#define PREFERED_HEIGHT 70.0
+
 @interface BBUserProfileCell()
 
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
@@ -43,6 +46,21 @@
     _user = user;
     
     [self updateViews];
+}
+
+#pragma mark - Helpers
+
++ (NSString *)reusableIdentifier {
+    return NIB_NAME;
+}
+
++ (void)registerToTableView:(UITableView *)tableView {
+    UINib *nib = [UINib nibWithNibName:NIB_NAME bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:[BBUserProfileCell reusableIdentifier]];
+}
+
++ (CGFloat)preferedHeight {
+    return PREFERED_HEIGHT;
 }
 
 @end

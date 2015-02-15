@@ -10,4 +10,8 @@
 
 @interface BBTableViewCell : UITableViewCell
 
++ (NSString *)reusableIdentifier;
++ (void)registerToTableView:(UITableView *)tableView;
++ (CGFloat)preferedHeight;
+
 @end

@@ -10,14 +10,15 @@
 
 @implementation BBTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
++ (NSString *)reusableIdentifier {
+    return nil;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
++ (void)registerToTableView:(UITableView *)tableView {
+}
 
-    // Configure the view for the selected state
++ (CGFloat)preferedHeight {
+    return 44.0;
 }
 
 @end
