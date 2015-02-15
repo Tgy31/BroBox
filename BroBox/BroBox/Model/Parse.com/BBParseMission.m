@@ -8,11 +8,46 @@
 
 #import "BBParseMission.h"
 
+@interface BBParseMission()
+
+@property (strong, nonatomic) NSString *categoryName;
+
+@end
+
 @implementation BBParseMission
 
 @dynamic creator;
 @dynamic from;
 @dynamic to;
+@dynamic categoryName;
+
+#pragma mark - Category
+
++ (NSString *)categoryNameForCategory:(BBMissionCategory)category {
+    switch (category) {
+        case BBMissionCategoryLight:
+            return @"Light";
+        case BBMissionCategoryStandard:
+            return @"Standard";
+        case BBMissionCategoryHeavy:
+            return @"Heavy";
+    }
+}
+
++ (NSString *)localizedCategoryNameForCategory:(BBMissionCategory)category {
+    return  NSLocalizedString([BBParseMission categoryNameForCategory:category], @"");
+}
+
+- (NSString *)localizedCategory {
+    return [BBParseMission localizedCategoryNameForCategory:self.category];
+}
+
+@synthesize category = _category;
+
+- (void)setCategory:(BBMissionCategory)category {
+    _category = category;
+    self.categoryName = [BBParseMission categoryNameForCategory:category];
+}
 
 #pragma mark - Factory
 

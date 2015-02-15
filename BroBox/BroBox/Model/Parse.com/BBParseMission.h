@@ -12,16 +12,27 @@
 #import "BBGeoPoint.h"
 #import "BBParseUser.h"
 
+typedef NS_ENUM(NSInteger, BBMissionCategory) {
+    BBMissionCategoryLight,
+    BBMissionCategoryStandard,
+    BBMissionCategoryHeavy
+};
+
 @interface BBParseMission : PFObject
 
 @property (strong, nonatomic) BBParseUser *creator;
 @property (strong, nonatomic) BBGeoPoint *from;
 @property (strong, nonatomic) BBGeoPoint *to;
+@property (nonatomic) BBMissionCategory category;
 
 
 + (BBParseMission *)missionFrom:(BBGeoPoint *)from
                              to:(BBGeoPoint *)to;
 
 - (PFRelation *)carriersAwaitingRelation;
+
+- (NSString *)localizedCategory;
++ (NSString *)localizedCategoryNameForCategory:(BBMissionCategory)category;
++ (NSString *)categoryNameForCategory:(BBMissionCategory)category;
 
 @end
