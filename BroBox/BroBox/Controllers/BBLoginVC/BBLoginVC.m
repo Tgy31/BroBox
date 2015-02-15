@@ -63,7 +63,7 @@
         if (error) {
             self.errorLabel.text = [error localizedDescription];
         } else if (!user) {
-        } else if (user.isNew) {
+        } else if (user.isNew || !user.facebookID) {
             [self mustSignUp];
         } else {
             [self openApplication];
@@ -78,7 +78,7 @@
         if (error) {
             self.errorLabel.text = [error localizedDescription];
         } else if (!user) {
-        } else if (user.isNew) {
+        } else if (user.isNew || !user.facebookID) {
             [self mustSignUp];
         } else {
             [self openApplication];
