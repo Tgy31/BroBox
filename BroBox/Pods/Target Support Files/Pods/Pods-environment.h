@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// QRCodeReaderViewController
+#define COCOAPODS_POD_AVAILABLE_QRCodeReaderViewController
+#define COCOAPODS_VERSION_MAJOR_QRCodeReaderViewController 2
+#define COCOAPODS_VERSION_MINOR_QRCodeReaderViewController 0
+#define COCOAPODS_VERSION_PATCH_QRCodeReaderViewController 0
+
 // UIViewController+KeyboardAnimation
 #define COCOAPODS_POD_AVAILABLE_UIViewController_KeyboardAnimation
 #define COCOAPODS_VERSION_MAJOR_UIViewController_KeyboardAnimation 1

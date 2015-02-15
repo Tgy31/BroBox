@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-QRCodeReaderViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UIViewController+KeyboardAnimation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>098221C8E04D8DB7ED082C4F</key>
+		<key>671964D9E231B4754D49719D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C874A80E26EDAB2FBBDFAFD2</key>
+		<key>75839B602E623774ED460DC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D494F58E2E2B390C5BDABE21</key>
+		<key>77DD43B35616A5AB43DECC4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9DD08A4498B1F95D01678DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
