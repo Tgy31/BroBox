@@ -36,6 +36,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabelBreakable;
 @property (weak, nonatomic) IBOutlet UISwitch *switchBreakable;
 
+// Rewards view
+@property (weak, nonatomic) IBOutlet UIView *viewReward;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabelReward;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabelReward;
+
+
 // Other views
 @property (weak, nonatomic) IBOutlet UISegmentedControl *categorySegmentedControl;
 @property (strong, nonatomic) UIBarButtonItem *doneBarButton;
@@ -46,11 +52,39 @@
 @property (strong, nonatomic) BBGeoPoint *placeTo;
 @property (nonatomic) BBMissionCategory category;
 @property (nonatomic) BOOL breakable;
+@property (nonatomic) CGFloat price;
 
 
 @end
 
 @implementation BBCreateMissionVC
+
+- (CGFloat)computePrice {
+    CGFloat fPrice = 2.30;
+    
+    if (self.placeFrom && self.placeTo) {
+        fPrice += arc4random_uniform(100)/100;
+    }
+    switch (self.category) {
+        case BBMissionCategoryLight: {
+            fPrice += 0;
+            break;
+        }
+        case BBMissionCategoryStandard: {
+            fPrice += 0.80;
+            break;
+        }
+        case BBMissionCategoryHeavy: {
+            fPrice += 2.0;
+            break;
+        }
+    }
+    
+    if (self.breakable) {
+        fPrice += 2.0;
+    }
+    return fPrice;
+}
 
 #pragma mark - View life cycle
 
@@ -79,6 +113,7 @@
     
 //    Breakable
     self.titleLabelBreakable.text = NSLocalizedString(@"Breakable", @"");
+    [self.switchBreakable setOn:NO animated:NO];
     
 //    DoneButton
     [self.doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -86,7 +121,7 @@
     NSString *doneTitle = NSLocalizedString(@"Create mission", @"");
     [self.doneButton setTitle:doneTitle forState:UIControlStateNormal];
     
-    //    Category
+//    Category
     NSString *lightTitle = [BBParseMission localizedCategoryNameForCategory:BBMissionCategoryLight];
     [self.categorySegmentedControl setTitle:lightTitle forSegmentAtIndex:BBMissionCategoryLight];
     
@@ -96,7 +131,11 @@
     NSString *heavyTitle = [BBParseMission localizedCategoryNameForCategory:BBMissionCategoryHeavy];
     [self.categorySegmentedControl setTitle:heavyTitle forSegmentAtIndex:BBMissionCategoryHeavy];
     
-    self.categorySegmentedControl.selectedSegmentIndex = BBMissionCategoryStandard;
+    self.category = BBMissionCategoryStandard;
+    self.categorySegmentedControl.selectedSegmentIndex = self.category;
+    
+//    Reward
+    self.titleLabelReward.text = NSLocalizedString(@"Price", @"");
     
     [self updateDoneButtonEnabled];
     
@@ -115,6 +154,14 @@
                                                                                    action:@selector(toViewTapHandler)];
     [self.viewTo addGestureRecognizer:toTapGesture];
     self.viewTo.userInteractionEnabled = YES;
+    
+    [self.categorySegmentedControl addTarget:self
+                                      action:@selector(categorySegmentedControlHandler)
+                            forControlEvents:UIControlEventValueChanged];
+    
+    [self.switchBreakable addTarget:self
+                             action:@selector(breakableSwitchHandler)
+                   forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - View methods
@@ -125,6 +172,11 @@
 
 - (void)updateViewTo {
     self.valueLabelTo.text = self.placeTo.title;
+}
+
+- (void)updateViewReward {
+    self.price = [self computePrice];
+    self.valueLabelReward.text = [NSString stringWithFormat:@"%.2f€", self.price];
 }
 
 - (void)updateDoneButtonEnabled {
@@ -158,12 +210,24 @@
     _placeFrom = placeFrom;
     [self updateViewFrom];
     [self updateDoneButtonEnabled];
+    [self updateViewReward];
 }
 
 - (void)setPlaceTo:(BBGeoPoint *)placeTo {
     _placeTo = placeTo;
     [self updateViewTo];
     [self updateDoneButtonEnabled];
+    [self updateViewReward];
+}
+
+- (void)setCategory:(BBMissionCategory)category {
+    _category = category;
+    [self updateViewReward];
+}
+
+- (void)setBreakable:(BOOL)breakable {
+    _breakable = breakable;
+    [self updateViewReward];
 }
 
 #pragma mark - Handlers
@@ -193,6 +257,14 @@
                                                        to:self.placeTo];
     
     [self saveMission:mission];
+}
+
+- (void)categorySegmentedControlHandler {
+    self.category = self.categorySegmentedControl.selectedSegmentIndex;
+}
+
+- (void)breakableSwitchHandler {
+    self.breakable = self.switchBreakable.isOn;
 }
 
 #pragma mark - API
