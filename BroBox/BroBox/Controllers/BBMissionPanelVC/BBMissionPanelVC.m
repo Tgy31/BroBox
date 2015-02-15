@@ -27,7 +27,17 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"BBMissionPanelSectionMission"];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"BBMissionPanelSectionCarriers"];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"BBMissionPanelSectionDelete"];
+    self.tableView.estimatedRowHeight = 44;
 }
 
 #pragma mark - UITableViewDataSource
@@ -51,7 +61,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                                               reuseIdentifier:identifier];
             }
             cell.textLabel.text = NSLocalizedString(@"Edit mission", @"");
-            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }
             
@@ -63,8 +73,8 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:identifier];
             }
-            cell.textLabel.text = NSLocalizedString(@"3 carriers available", @"");
-            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            cell.textLabel.text = NSLocalizedString(@"Carriers", @"");
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }
             
@@ -77,7 +87,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                                               reuseIdentifier:identifier];
             }
             cell.textLabel.text = NSLocalizedString(@"Delete", @"");
-            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            cell.accessoryType = UITableViewCellAccessoryNone;
             return cell;
         }
             default:
@@ -87,6 +97,22 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 #pragma mark - UITableViewDelegate
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case BBMissionPanelSectionMission: {
+            
+            break;
+        }
+        case BBMissionPanelSectionCarriers: {
+            
+            break;
+        }
+        case BBMissionPanelSectionDelete: {
+            
+            break;
+        }
+    }
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end
