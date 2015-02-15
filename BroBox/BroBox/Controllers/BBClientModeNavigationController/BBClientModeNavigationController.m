@@ -10,7 +10,7 @@
 
 
 // Controllers
-#import "BBClientModeVC.h"
+#import "BBClientPanelVC.h"
 
 @interface BBClientModeNavigationController ()
 
@@ -22,7 +22,7 @@
 
 + (instancetype)new
 {
-    BBClientModeVC *rootVC = [BBClientModeVC new];
+    BBClientPanelVC *rootVC = [BBClientPanelVC new];
     BBClientModeNavigationController *navigationController = [[BBClientModeNavigationController alloc] initWithRootViewController:rootVC];
     
     rootVC.title = NSLocalizedString(@"Carrier on his way", @"");

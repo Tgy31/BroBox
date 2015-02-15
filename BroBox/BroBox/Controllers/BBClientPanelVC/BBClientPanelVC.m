@@ -6,28 +6,28 @@
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBClientModeVC.h"
+#import "BBClientPanelVC.h"
 
 
-typedef NS_ENUM(NSInteger, BBClientModeSection) {
-    BBClientModeSectionInformations,
-    BBClientModeSectionCheckins,
-    BBClientModeSectionOptions,
+typedef NS_ENUM(NSInteger, BBClientPanelSection) {
+    BBClientPanelSectionInformations,
+    BBClientPanelSectionCheckins,
+    BBClientPanelSectionOptions,
 };
 
 
-typedef NS_ENUM(NSInteger, BBClientModeCheckinRow) {
-    BBClientModeCheckinRowPickUp,
-    BBClientModeCheckinRowDropOff,
+typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
+    BBClientPanelCheckinRowPickUp,
+    BBClientPanelCheckinRowDropOff,
 };
 
-@interface BBClientModeVC () <UITableViewDataSource, UITableViewDelegate>
+@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation BBClientModeVC
+@implementation BBClientPanelVC
 
 #pragma mark - View life cycle
 
@@ -54,16 +54,16 @@ typedef NS_ENUM(NSInteger, BBClientModeCheckinRow) {
 #pragma mark UITableviewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return BBClientModeSectionOptions + 1;
+    return BBClientPanelSectionOptions + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
-        case BBClientModeSectionInformations:
+        case BBClientPanelSectionInformations:
             return 1;
-        case BBClientModeSectionCheckins:
+        case BBClientPanelSectionCheckins:
             return 2;
-        case BBClientModeSectionOptions:
+        case BBClientPanelSectionOptions:
             return 1;
             
         default:
@@ -75,13 +75,13 @@ typedef NS_ENUM(NSInteger, BBClientModeCheckinRow) {
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.section) {
-        case BBClientModeSectionInformations:
+        case BBClientPanelSectionInformations:
             return [self tableView:tableView informationCellForIndexPath:indexPath];
             
-        case BBClientModeSectionCheckins:
+        case BBClientPanelSectionCheckins:
             return [self tableView:tableView checkinCellForIndexPath:indexPath];
             
-        case BBClientModeSectionOptions:
+        case BBClientPanelSectionOptions:
             return [self tableView:tableView optionCellForIndexPath:indexPath];
             
         default:
@@ -103,11 +103,11 @@ typedef NS_ENUM(NSInteger, BBClientModeCheckinRow) {
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     switch (indexPath.row) {
-        case BBClientModeCheckinRowPickUp:
+        case BBClientPanelCheckinRowPickUp:
             cell.textLabel.text = NSLocalizedString(@"Check Pick up", @"");
             break;
             
-        case BBClientModeCheckinRowDropOff:
+        case BBClientPanelCheckinRowDropOff:
             cell.textLabel.text = NSLocalizedString(@"Check Drop off", @"");
             break;
             

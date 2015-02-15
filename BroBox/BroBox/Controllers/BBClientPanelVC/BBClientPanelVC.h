@@ -8,6 +8,6 @@
 
 #import "BBViewController.h"
 
-@interface BBClientModeVC : BBViewController
+@interface BBClientPanelVC : BBViewController
 
 @end
