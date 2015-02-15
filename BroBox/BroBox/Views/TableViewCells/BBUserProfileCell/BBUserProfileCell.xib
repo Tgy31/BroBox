@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="vrn-B3-fBN" customClass="BBUserProfileCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vrn-B3-fBN" id="T9Q-ZM-3ex">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-3c-p5Q" customClass="FBProfilePictureView">
+                        <rect key="frame" x="15" y="19" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="bD4-65-qro"/>
+                            <constraint firstAttribute="height" constant="50" id="qQa-fb-UFP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDn-sL-1A3">
+                        <rect key="frame" x="73" y="20" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-Oh-3ez">
+                        <rect key="frame" x="73" y="46" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="wjc-3c-p5Q" secondAttribute="centerY" id="763-AX-c57"/>
+                    <constraint firstItem="e9p-Oh-3ez" firstAttribute="leading" secondItem="kDn-sL-1A3" secondAttribute="leading" id="C3a-tb-heW"/>
+                    <constraint firstAttribute="centerY" secondItem="kDn-sL-1A3" secondAttribute="centerY" constant="13" id="Xpc-jZ-8nH"/>
+                    <constraint firstItem="kDn-sL-1A3" firstAttribute="leading" secondItem="wjc-3c-p5Q" secondAttribute="trailing" constant="8" id="mQZ-sc-wlj"/>
+                    <constraint firstItem="wjc-3c-p5Q" firstAttribute="leading" secondItem="T9Q-ZM-3ex" secondAttribute="leading" constant="15" id="uZE-iL-PFp"/>
+                    <constraint firstItem="e9p-Oh-3ez" firstAttribute="top" secondItem="kDn-sL-1A3" secondAttribute="bottom" constant="5" id="vn0-C6-0X6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstNameLabel" destination="kDn-sL-1A3" id="lOe-9A-hWI"/>
+                <outlet property="lastNameLabel" destination="e9p-Oh-3ez" id="GWn-aU-bMC"/>
+                <outlet property="profilePictureView" destination="wjc-3c-p5Q" id="8iv-up-6dq"/>
+            </connections>
+            <point key="canvasLocation" x="166" y="242"/>
+        </tableViewCell>
+    </objects>
+</document>
