@@ -53,6 +53,7 @@
 @property (nonatomic) BBMissionCategory category;
 @property (nonatomic) BOOL breakable;
 @property (nonatomic) CGFloat price;
+@property (nonatomic) CGFloat tripPrice;
 
 
 @end
@@ -61,10 +62,7 @@
 
 - (CGFloat)computePrice {
     CGFloat fPrice = 2.30;
-    
-    if (self.placeFrom && self.placeTo) {
-        fPrice += arc4random_uniform(100)/100;
-    }
+    fPrice += self.tripPrice;
     switch (self.category) {
         case BBMissionCategoryLight: {
             fPrice += 0;
@@ -84,6 +82,14 @@
         fPrice += 2.0;
     }
     return fPrice;
+}
+
+- (CGFloat)generateTripPrice {
+    if (self.placeFrom && self.placeTo) {
+        int random = arc4random_uniform(200);
+        return random/100.0;
+    }
+    return 0;
 }
 
 #pragma mark - View life cycle
@@ -162,6 +168,10 @@
     [self.switchBreakable addTarget:self
                              action:@selector(breakableSwitchHandler)
                    forControlEvents:UIControlEventValueChanged];
+    
+    [self.doneButton addTarget:self
+                        action:@selector(doneButtonHandler)
+              forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - View methods
@@ -208,6 +218,7 @@
 
 - (void)setPlaceFrom:(BBGeoPoint *)placeFrom {
     _placeFrom = placeFrom;
+    self.tripPrice = [self generateTripPrice];
     [self updateViewFrom];
     [self updateDoneButtonEnabled];
     [self updateViewReward];
@@ -215,6 +226,7 @@
 
 - (void)setPlaceTo:(BBGeoPoint *)placeTo {
     _placeTo = placeTo;
+    self.tripPrice = [self generateTripPrice];
     [self updateViewTo];
     [self updateDoneButtonEnabled];
     [self updateViewReward];
@@ -255,7 +267,9 @@
 - (void)doneButtonHandler {
     BBParseMission *mission = [BBParseMission missionFrom:self.placeFrom
                                                        to:self.placeTo];
-    
+    mission.breakable = self.breakable;
+    mission.category = self.category;
+    mission.reward = [NSNumber numberWithFloat:self.price - 0.2];
     [self saveMission:mission];
 }
 

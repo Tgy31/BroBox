@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, BBMissionCategory) {
 @property (strong, nonatomic) BBGeoPoint *from;
 @property (strong, nonatomic) BBGeoPoint *to;
 @property (nonatomic) BBMissionCategory category;
+@property (nonatomic) BOOL breakable;
+@property (strong, nonatomic) NSNumber *reward;
 
 
 + (BBParseMission *)missionFrom:(BBGeoPoint *)from

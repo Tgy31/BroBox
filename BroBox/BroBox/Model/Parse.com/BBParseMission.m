@@ -20,6 +20,8 @@
 @dynamic from;
 @dynamic to;
 @dynamic categoryName;
+@dynamic breakable;
+@dynamic reward;
 
 #pragma mark - Category
 
