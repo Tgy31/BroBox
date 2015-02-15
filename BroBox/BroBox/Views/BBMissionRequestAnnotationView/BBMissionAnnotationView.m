@@ -11,7 +11,8 @@
 // Others
 #import "UIImage+Resize.h"
 
-#define IMAGE_NAME @"pin.png"
+#define IMAGE_NAME_STANDARD @"pin.png"
+#define IMAGE_NAME_ARRIVAL @"pin_black.png"
 #define IMAGE_SIZE 25
 
 @implementation BBMissionAnnotationView
@@ -38,7 +39,7 @@
 - (void)setViewForType:(BBMissionAnnotationType)type {
     switch (type) {
         case BBMissionAnnotationTypeFrom: {
-            self.image = [[UIImage imageNamed:IMAGE_NAME] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
+            self.image = [[UIImage imageNamed:IMAGE_NAME_STANDARD] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
             self.centerOffset = CGPointMake(0, -IMAGE_SIZE / 2);
             
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -47,7 +48,7 @@
         }
             
         case BBMissionAnnotationTypeTo: {
-            self.image = [[UIImage imageNamed:IMAGE_NAME] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
+            self.image = [[UIImage imageNamed:IMAGE_NAME_ARRIVAL] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
             self.centerOffset = CGPointMake(0, -IMAGE_SIZE / 2);
             
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];

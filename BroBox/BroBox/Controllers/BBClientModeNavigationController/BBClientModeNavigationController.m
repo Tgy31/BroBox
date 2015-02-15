@@ -20,10 +20,13 @@
 
 #pragma mark - Initialization
 
-+ (instancetype)new
++ (instancetype)newWithMission:(BBParseMission *)mission
 {
     BBClientPanelVC *rootVC = [BBClientPanelVC new];
     BBClientModeNavigationController *navigationController = [[BBClientModeNavigationController alloc] initWithRootViewController:rootVC];
+    
+    rootVC.mission = mission;
+    navigationController.mission = mission;
     
     rootVC.title = NSLocalizedString(@"Mission in progress", @"");
     

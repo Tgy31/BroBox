@@ -15,6 +15,8 @@
 // Managers
 #import "AppDelegate.h"
 
+// Views
+#import "BBUserProfileCell.h"
 
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
     BBClientPanelSectionInformations,
@@ -26,6 +28,12 @@ typedef NS_ENUM(NSInteger, BBClientPanelSection) {
 typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
     BBClientPanelCheckinRowPickUp,
     BBClientPanelCheckinRowDropOff,
+};
+
+
+typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
+    BBClientPanelInformationRowCarrier,
+    BBClientPanelInformationRowMission,
 };
 
 @interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
@@ -52,10 +60,10 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:CELL_IDENTIFIER];
     self.tableView.estimatedRowHeight = 44.0;
+    
+    [BBUserProfileCell registerToTableView:self.tableView];
+    
 }
 
 #pragma mark UITableviewDataSource
@@ -67,7 +75,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case BBClientPanelSectionInformations:
-            return 1;
+            return 2;
         case BBClientPanelSectionCheckins:
             return 2;
         case BBClientPanelSectionOptions:
@@ -99,8 +107,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 - (UITableViewCell *)tableView:(UITableView *)tableView
        checkinCellForIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                            forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
@@ -128,33 +135,46 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 - (UITableViewCell *)tableView:(UITableView *)tableView
    informationCellForIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                            forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:CELL_IDENTIFIER];
+    switch (indexPath.row) {
+        case BBClientPanelInformationRowMission: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
+            
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                              reuseIdentifier:CELL_IDENTIFIER];
+            }
+            
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.textLabel.text = NSLocalizedString(@"Mission details", @"");
+            
+            return cell;
+        }
+            
+        case BBClientPanelInformationRowCarrier: {
+            NSString *identifier = [BBUserProfileCell reusableIdentifier];
+            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.user = self.mission.carrier;
+            return cell;
+        }
+            
+        default:
+            return nil;
     }
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = NSLocalizedString(@"Mission details", @"");
-    
-    return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
         optionCellForIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                            forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CELL_IDENTIFIER];
     }
     
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.textLabel.text = NSLocalizedString(@"Abort mission", @"");
+    cell.textLabel.textColor = [UIColor redColor];
     
     return cell;
 }
@@ -201,16 +221,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)pickUpCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
+    destination.title = NSLocalizedString(@"Pick up", @"");
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)dropOffCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
+    destination.title = NSLocalizedString(@"Drop off", @"");
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)missionDetailsHandler {
     BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+    destination.mission = self.mission;
+    destination.actionType = BBMissionOverviewActionTypeNone;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
@@ -240,6 +264,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             
         default:
             break;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == BBClientPanelSectionInformations && indexPath.row == BBClientPanelInformationRowCarrier) {
+        return [BBUserProfileCell preferedHeight];
+    } else {
+        return 44.0;
     }
 }
 

@@ -54,6 +54,10 @@
 		5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75321F1A90B2310045D9AF /* BBQRReaderVC.xib */; };
 		5A75322F1A910C3F0045D9AF /* BBClientPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75322D1A910C3F0045D9AF /* BBClientPanelVC.m */; };
 		5A7532301A910C3F0045D9AF /* BBClientPanelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75322E1A910C3F0045D9AF /* BBClientPanelVC.xib */; };
+		5A7532321A9112590045D9AF /* pin_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7532311A9112590045D9AF /* pin_black.png */; };
+		5A7532391A9114CE0045D9AF /* BBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7532381A9114CE0045D9AF /* BBTableViewCell.m */; };
+		5A75323C1A9115050045D9AF /* BBUserProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75323B1A9115050045D9AF /* BBUserProfileCell.m */; };
+		5A75323F1A9115170045D9AF /* BBUserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75323E1A9115170045D9AF /* BBUserProfileCell.xib */; };
 		5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */; };
 		5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */; };
 		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
@@ -206,6 +210,12 @@
 		5A75322C1A910C3F0045D9AF /* BBClientPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBClientPanelVC.h; sourceTree = "<group>"; };
 		5A75322D1A910C3F0045D9AF /* BBClientPanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBClientPanelVC.m; sourceTree = "<group>"; };
 		5A75322E1A910C3F0045D9AF /* BBClientPanelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBClientPanelVC.xib; sourceTree = "<group>"; };
+		5A7532311A9112590045D9AF /* pin_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_black.png; sourceTree = "<group>"; };
+		5A7532371A9114CE0045D9AF /* BBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTableViewCell.h; sourceTree = "<group>"; };
+		5A7532381A9114CE0045D9AF /* BBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTableViewCell.m; sourceTree = "<group>"; };
+		5A75323A1A9115050045D9AF /* BBUserProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBUserProfileCell.h; path = BBUserProfileCell/BBUserProfileCell.h; sourceTree = "<group>"; };
+		5A75323B1A9115050045D9AF /* BBUserProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBUserProfileCell.m; path = BBUserProfileCell/BBUserProfileCell.m; sourceTree = "<group>"; };
+		5A75323E1A9115170045D9AF /* BBUserProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBUserProfileCell.xib; path = BBUserProfileCell/BBUserProfileCell.xib; sourceTree = "<group>"; };
 		5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionOverviewVC.h; path = BBMissionRequestVC/BBMissionOverviewVC.h; sourceTree = "<group>"; };
 		5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionOverviewVC.m; path = BBMissionRequestVC/BBMissionOverviewVC.m; sourceTree = "<group>"; };
 		5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionOverviewVC.xib; path = BBMissionRequestVC/BBMissionOverviewVC.xib; sourceTree = "<group>"; };
@@ -361,6 +371,7 @@
 		5A0E1EF61A7AAC18002B314E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5A7532311A9112590045D9AF /* pin_black.png */,
 				5A0E1EF71A7AAC18002B314E /* pin.png */,
 			);
 			path = images;
@@ -499,6 +510,7 @@
 			children = (
 				5A1B0C521A710DD000425431 /* BBView.h */,
 				5A1B0C531A710DD000425431 /* BBView.m */,
+				5A7532361A9114CE0045D9AF /* TableViewCells */,
 				5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */,
 			);
 			path = Views;
@@ -628,6 +640,26 @@
 				5A75322E1A910C3F0045D9AF /* BBClientPanelVC.xib */,
 			);
 			path = BBClientPanelVC;
+			sourceTree = "<group>";
+		};
+		5A7532361A9114CE0045D9AF /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5A7532371A9114CE0045D9AF /* BBTableViewCell.h */,
+				5A7532381A9114CE0045D9AF /* BBTableViewCell.m */,
+				5A75323D1A9115080045D9AF /* BBUserProfileCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5A75323D1A9115080045D9AF /* BBUserProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A75323A1A9115050045D9AF /* BBUserProfileCell.h */,
+				5A75323B1A9115050045D9AF /* BBUserProfileCell.m */,
+				5A75323E1A9115170045D9AF /* BBUserProfileCell.xib */,
+			);
+			name = BBUserProfileCell;
 			sourceTree = "<group>";
 		};
 		5A8C32501A85028F00F03821 /* BBMissionOverviewVC */ = {
@@ -896,12 +928,14 @@
 				5A7532151A90A7160045D9AF /* BBCarrierPickerVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
+				5A75323F1A9115170045D9AF /* BBUserProfileCell.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A0E999B1A85B5F5000956AF /* Info.plist in Resources */,
 				5A7532301A910C3F0045D9AF /* BBClientPanelVC.xib in Resources */,
 				5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
+				5A7532321A9112590045D9AF /* pin_black.png in Resources */,
 				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
@@ -985,6 +1019,7 @@
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A75320D1A909E7A0045D9AF /* BBMissionPanelVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
+				5A7532391A9114CE0045D9AF /* BBTableViewCell.m in Sources */,
 				5A8C32651A85361200F03821 /* BBInstallationManager.m in Sources */,
 				5A0E999D1A85B5F5000956AF /* LNNotificationAppSettings.m in Sources */,
 				5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */,
@@ -998,6 +1033,7 @@
 				5A7532201A90B2310045D9AF /* BBQRReaderVC.m in Sources */,
 				5A1B0C541A710DD000425431 /* BBView.m in Sources */,
 				5A1B0C1F1A710CA500425431 /* AppDelegate.m in Sources */,
+				5A75323C1A9115050045D9AF /* BBUserProfileCell.m in Sources */,
 				5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */,
 				5A1B0C1C1A710CA500425431 /* main.m in Sources */,
 				5A0E99A21A85B5F5000956AF /* LNNotificationSettingsController.m in Sources */,

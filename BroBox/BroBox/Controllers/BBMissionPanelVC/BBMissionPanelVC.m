@@ -10,6 +10,7 @@
 
 // Controllers
 #import "BBCarrierPickerVC.h"
+#import "BBMissionOverviewVC.h"
 
 // Managers
 #import "AppDelegate.h"
@@ -106,7 +107,10 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case BBMissionPanelSectionMission: {
-            
+            BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+            destination.mission = self.mission;
+            destination.actionType = BBMissionOverviewActionTypeNone;
+            [self.navigationController pushViewController:destination animated:YES];
             break;
         }
         case BBMissionPanelSectionCarriers: {
@@ -128,8 +132,8 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 - (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier {
     [self.navigationController popViewControllerAnimated:YES];
-    
-    [AppDelegate presentClientScreen];
+    self.mission.carrier = carrier;
+    [AppDelegate presentClientScreenForMission:self.mission];
 }
 
 @end

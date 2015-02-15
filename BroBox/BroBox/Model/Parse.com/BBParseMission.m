@@ -22,6 +22,7 @@
 @dynamic categoryName;
 @dynamic breakable;
 @dynamic reward;
+@dynamic carrier;
 
 #pragma mark - Category
 

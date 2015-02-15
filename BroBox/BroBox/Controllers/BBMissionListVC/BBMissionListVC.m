@@ -11,6 +11,9 @@
 // Managers
 #import "BBParseManager.h"
 
+// Controllers
+#import "BBMissionOverviewVC.h"
+
 @interface BBMissionListVC ()
 
 // Views
@@ -96,6 +99,18 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BBParseMission *mission = [self.data objectAtIndex:indexPath.row];
+    
+    BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+    destination.mission = mission;
+    destination.actionType = BBMissionOverviewActionTypeAccept;
+    [self.navigationController pushViewController:destination animated:YES];
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 
 @end

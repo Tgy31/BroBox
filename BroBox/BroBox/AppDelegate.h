@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// Model
+#import "BBParseMission.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -15,8 +18,8 @@
 + (void)presentRootScreen;
 + (void)presentLoginScreen;
 + (void)presentSignUpScreen;
-+ (void)presentClientScreen;
-+ (void)presentCarrierScreen;
++ (void)presentClientScreenForMission:(BBParseMission *)mission;
++ (void)presentCarrierScreenForMission:(BBParseMission *)mission;
 
 @end
 
