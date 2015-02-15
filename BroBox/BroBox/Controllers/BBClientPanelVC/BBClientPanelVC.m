@@ -60,9 +60,6 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:CELL_IDENTIFIER];
     self.tableView.estimatedRowHeight = 44.0;
     
     [BBUserProfileCell registerToTableView:self.tableView];
@@ -110,8 +107,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 - (UITableViewCell *)tableView:(UITableView *)tableView
        checkinCellForIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                            forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
@@ -141,11 +137,10 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     
     switch (indexPath.row) {
         case BBClientPanelInformationRowMission: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                                    forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
             
             if (!cell) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                               reuseIdentifier:CELL_IDENTIFIER];
             }
             
@@ -170,11 +165,10 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 - (UITableViewCell *)tableView:(UITableView *)tableView
         optionCellForIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER
-                                                            forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CELL_IDENTIFIER];
     }
     
