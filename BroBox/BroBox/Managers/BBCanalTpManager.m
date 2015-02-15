@@ -85,10 +85,14 @@ static BBCanalTpManager *sharedManager;
 - (void)getJourneyFrom:(CLLocationCoordinate2D)from
                     to:(CLLocationCoordinate2D)to
              withBlock:(BBJourneyResultBlock)block {
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyyMMdd'T'hhmm"];
+    
     NSDictionary *parameters = @{
                                  @"from": [self stringFromCoordinate:from],
                                  @"to": [self stringFromCoordinate:to],
-                                 @"datetime": @"20150118T0800"
+                                 @"datetime": [dateFormat stringFromDate:[NSDate date]]
                                  };
     
     [self GET:@"journeys" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
