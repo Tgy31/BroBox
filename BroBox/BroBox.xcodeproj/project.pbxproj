@@ -54,6 +54,7 @@
 		5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75321F1A90B2310045D9AF /* BBQRReaderVC.xib */; };
 		5A75322F1A910C3F0045D9AF /* BBClientPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75322D1A910C3F0045D9AF /* BBClientPanelVC.m */; };
 		5A7532301A910C3F0045D9AF /* BBClientPanelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75322E1A910C3F0045D9AF /* BBClientPanelVC.xib */; };
+		5A7532321A9112590045D9AF /* pin_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7532311A9112590045D9AF /* pin_black.png */; };
 		5A8C324E1A85028A00F03821 /* BBMissionOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */; };
 		5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */; };
 		5A8C32541A85200C00F03821 /* BBSignUpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C32521A85200C00F03821 /* BBSignUpNavigationController.m */; };
@@ -206,6 +207,7 @@
 		5A75322C1A910C3F0045D9AF /* BBClientPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBClientPanelVC.h; sourceTree = "<group>"; };
 		5A75322D1A910C3F0045D9AF /* BBClientPanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBClientPanelVC.m; sourceTree = "<group>"; };
 		5A75322E1A910C3F0045D9AF /* BBClientPanelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBClientPanelVC.xib; sourceTree = "<group>"; };
+		5A7532311A9112590045D9AF /* pin_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_black.png; sourceTree = "<group>"; };
 		5A8C324B1A85028A00F03821 /* BBMissionOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionOverviewVC.h; path = BBMissionRequestVC/BBMissionOverviewVC.h; sourceTree = "<group>"; };
 		5A8C324C1A85028A00F03821 /* BBMissionOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionOverviewVC.m; path = BBMissionRequestVC/BBMissionOverviewVC.m; sourceTree = "<group>"; };
 		5A8C324D1A85028A00F03821 /* BBMissionOverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionOverviewVC.xib; path = BBMissionRequestVC/BBMissionOverviewVC.xib; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		5A0E1EF61A7AAC18002B314E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5A7532311A9112590045D9AF /* pin_black.png */,
 				5A0E1EF71A7AAC18002B314E /* pin.png */,
 			);
 			path = images;
@@ -902,6 +905,7 @@
 				5A7532301A910C3F0045D9AF /* BBClientPanelVC.xib in Resources */,
 				5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
+				5A7532321A9112590045D9AF /* pin_black.png in Resources */,
 				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
