@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBLoginVC">
             <connections>
+                <outlet property="errorLabel" destination="Mb7-UC-RaO" id="Yu5-Te-hfB"/>
                 <outlet property="facebookLoginButton" destination="vYt-0T-Bwb" id="jze-Ee-uDy"/>
+                <outlet property="loadingIndicator" destination="ez0-hZ-oPN" id="5Pp-DN-fcL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYt-0T-Bwb">
-                    <rect key="frame" x="20" y="285" width="560" height="30"/>
+                    <rect key="frame" x="20" y="516" width="560" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="teL-Y1-qFg"/>
+                    </constraints>
                     <state key="normal" title="Login with Facebook">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -24,14 +29,45 @@
                         <action selector="loginButtonHandler" destination="-1" eventType="touchUpInside" id="qRv-0A-1P1"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-qC-C52">
+                    <rect key="frame" x="175" y="155" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="aYf-qo-Hx2"/>
+                        <constraint firstAttribute="height" constant="250" id="u3T-RK-NKx"/>
+                    </constraints>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-hZ-oPN">
+                    <rect key="frame" x="282" y="519" width="37" height="37"/>
+                    <color key="color" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb7-UC-RaO">
+                    <rect key="frame" x="8" y="452" width="584" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="G17-aa-THq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="vYt-0T-Bwb" secondAttribute="trailing" constant="20" id="DTa-RH-URl"/>
+                <constraint firstItem="Mb7-UC-RaO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Ioo-ze-kSh"/>
+                <constraint firstItem="ez0-hZ-oPN" firstAttribute="centerY" secondItem="vYt-0T-Bwb" secondAttribute="centerY" id="Nu0-CJ-X8l"/>
+                <constraint firstAttribute="trailing" secondItem="Mb7-UC-RaO" secondAttribute="trailing" constant="8" id="YTT-4q-3Xp"/>
+                <constraint firstAttribute="bottom" secondItem="vYt-0T-Bwb" secondAttribute="bottom" constant="40" id="YUb-hY-27f"/>
+                <constraint firstAttribute="centerY" secondItem="Nj7-qC-C52" secondAttribute="centerY" constant="20" id="ZDg-yg-aQp"/>
+                <constraint firstItem="vYt-0T-Bwb" firstAttribute="top" secondItem="Mb7-UC-RaO" secondAttribute="bottom" constant="20" id="gLM-u5-vTR"/>
+                <constraint firstAttribute="centerX" secondItem="Mb7-UC-RaO" secondAttribute="centerX" id="lUx-ki-CgG"/>
                 <constraint firstItem="vYt-0T-Bwb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="o0W-qC-NUN"/>
-                <constraint firstAttribute="centerY" secondItem="vYt-0T-Bwb" secondAttribute="centerY" id="slI-0K-Cka"/>
+                <constraint firstItem="ez0-hZ-oPN" firstAttribute="centerX" secondItem="vYt-0T-Bwb" secondAttribute="centerX" id="tmg-tW-NvR"/>
                 <constraint firstAttribute="centerX" secondItem="vYt-0T-Bwb" secondAttribute="centerX" id="wjT-cz-joN"/>
+                <constraint firstAttribute="centerX" secondItem="Nj7-qC-C52" secondAttribute="centerX" id="xmE-CS-KBP"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="pin.png" width="497" height="497"/>
+    </resources>
 </document>

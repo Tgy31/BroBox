@@ -109,7 +109,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
         case BBMissionPanelSectionMission: {
             BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
             destination.mission = self.mission;
-            destination.actionType = BBMissionOverviewActionTypeAccept;
+            destination.actionType = BBMissionOverviewActionTypeNone;
             [self.navigationController pushViewController:destination animated:YES];
             break;
         }

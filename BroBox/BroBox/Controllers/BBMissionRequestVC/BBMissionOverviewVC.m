@@ -101,15 +101,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
                           action:@selector(actionButtonHandler)
                 forControlEvents:UIControlEventTouchUpInside];
     
-    switch (self.actionType) {
-        case BBMissionOverviewActionTypeNone:
-            self.tableview.tableFooterView.hidden = YES;
-            break;
-        
-        case BBMissionOverviewActionTypeAccept:
-            self.tableview.tableFooterView.hidden = NO;
-            break;
-    }
+    [self updateFooterView];
 }
 
 - (void)setViewForMission:(BBParseMission *)mission {
@@ -126,6 +118,11 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     [self setViewForMission:mission];
 }
 
+- (void)setActionType:(BBMissionOverviewActionType)actionType {
+    _actionType = actionType;
+    [self updateFooterView];
+}
+
 #pragma marl - View Methods
 
 - (void)showAcceptMissionSuccess {
@@ -138,6 +135,20 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     NSString *title = NSLocalizedString(@"Error", @"");
     NSString *subtitle = [error localizedFailureReason];
     [self showPlaceHolderWithtitle:title subtitle:subtitle];
+}
+
+- (void)updateFooterView {
+    switch (self.actionType) {
+        case BBMissionOverviewActionTypeNone:
+            self.tableview.tableFooterView.hidden = YES;
+            self.actionButton.hidden = YES;
+            break;
+            
+        case BBMissionOverviewActionTypeAccept:
+            self.tableview.tableFooterView.hidden = NO;
+            self.actionButton.hidden = NO;
+            break;
+    }
 }
 
 #pragma mark - Handlers
