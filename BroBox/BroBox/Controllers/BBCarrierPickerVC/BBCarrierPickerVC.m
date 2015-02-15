@@ -17,6 +17,9 @@
 // Managers
 #import "BBParseManager.h"
 
+// Views
+#import "BBUserProfileCell.h"
+
 @interface BBCarrierPickerVC () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) GFPlaceholderView *placeHolderView;
@@ -30,9 +33,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"carrierCell"];
-    self.tableView.estimatedRowHeight = 44;
+    
+    self.title = NSLocalizedString(@"Select carrier", @"");
+    
+    [BBUserProfileCell registerToTableView:self.tableView];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self
@@ -119,10 +123,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"carrierCell" forIndexPath:indexPath];
+    NSString *identifier = [BBUserProfileCell reusableIdentifier];
+    BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
-    BBParseUser *carrier = [self.carriers objectAtIndex:indexPath.row];
-    cell.textLabel.text = [carrier fullName];
+    cell.user = [self.carriers objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -144,6 +148,10 @@
                                               otherButtonTitles:confirmButtonTitle, nil];
     
     [alertView show];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [BBUserProfileCell preferedHeight];
 }
 
 #pragma mark - UIAlertViewDelegate
