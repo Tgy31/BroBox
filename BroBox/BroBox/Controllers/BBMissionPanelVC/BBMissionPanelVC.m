@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     BBMissionPanelSectionDelete
 };
 
-@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate>
+@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBCarrierPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -109,6 +109,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
         case BBMissionPanelSectionCarriers: {
             BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
             destination.mission = self.mission;
+            destination.delegate = self;
             [self.navigationController pushViewController:destination animated:YES];
             break;
         }
@@ -118,6 +119,12 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
         }
     }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - BBCarrierPickerDelegate
+
+- (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
