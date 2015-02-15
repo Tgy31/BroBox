@@ -10,6 +10,10 @@
 
 // Controllers
 #import "BBQRReaderVC.h"
+#import "BBMissionOverviewVC.h"
+
+// Managers
+#import "AppDelegate.h"
 
 
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
@@ -24,7 +28,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
     BBClientPanelCheckinRowDropOff,
 };
 
-@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate>
+@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -99,7 +103,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
                                                             forIndexPath:indexPath];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CELL_IDENTIFIER];
     }
     
@@ -206,11 +210,37 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (void)missionDetailsHandler {
-    
+    BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
+    [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)abortMissionHandler {
     
+    NSString *title = NSLocalizedString(@"Abort mission", @"");
+    NSString *message = NSLocalizedString(@"If you abort the mission now, you will not get your money back. Do you wish to abort mission ?", @"");
+    NSString *cancelButtonTitle = NSLocalizedString(@"No", @"");
+    NSString *confirmButtonTitle = NSLocalizedString(@"Yes and lose money", @"");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:cancelButtonTitle
+                                              otherButtonTitles:confirmButtonTitle, nil];
+    
+    [alertView show];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 1: {
+            [AppDelegate presentRootScreen];
+            break;
+        }
+            
+        default:
+            break;
+    }
 }
 
 @end

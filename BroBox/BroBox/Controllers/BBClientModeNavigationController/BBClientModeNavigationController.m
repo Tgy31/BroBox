@@ -25,7 +25,7 @@
     BBClientPanelVC *rootVC = [BBClientPanelVC new];
     BBClientModeNavigationController *navigationController = [[BBClientModeNavigationController alloc] initWithRootViewController:rootVC];
     
-    rootVC.title = NSLocalizedString(@"Carrier on his way", @"");
+    rootVC.title = NSLocalizedString(@"Mission in progress", @"");
     
     return navigationController;
 }
