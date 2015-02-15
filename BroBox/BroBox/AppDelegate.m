@@ -16,6 +16,7 @@
 #import "BBLoginVC.h"
 #import "BBRootVC.h"
 #import "BBSignUpNavigationController.h"
+#import "BBClientModeNavigationController.h"
 
 // Managers
 #import "BBLoginManager.h"
@@ -128,6 +129,15 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     self.window.rootViewController = [BBSignUpNavigationController new];
 }
 
+- (void)presentClientScreen {
+    self.window.rootViewController = [BBClientModeNavigationController new];
+}
+
+- (void)presentCarrierScreen
+{
+    
+}
+
 + (void)presentLoginScreen
 {
     [[self sharedDelegate] presentLoginScreen];
@@ -140,6 +150,14 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 
 + (void)presentSignUpScreen {
     [[self sharedDelegate] presentSignUpScreen];
+}
+
++ (void)presentClientScreen {
+    [[self sharedDelegate] presentClientScreen];
+}
+
++ (void)presentCarrierScreen {
+    [[self sharedDelegate] presentCarrierScreen];
 }
 
 #pragma mark - Helpers

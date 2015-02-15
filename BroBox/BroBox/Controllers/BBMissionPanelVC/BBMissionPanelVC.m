@@ -11,6 +11,9 @@
 // Controllers
 #import "BBCarrierPickerVC.h"
 
+// Managers
+#import "AppDelegate.h"
+
 
 typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     BBMissionPanelSectionMission,
@@ -125,6 +128,8 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 - (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier {
     [self.navigationController popViewControllerAnimated:YES];
+    
+    [AppDelegate presentClientScreen];
 }
 
 @end
