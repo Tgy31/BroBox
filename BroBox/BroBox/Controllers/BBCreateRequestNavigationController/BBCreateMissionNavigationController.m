@@ -13,6 +13,7 @@
 
 // Controllers
 #import "BBCreateMissionVC.h"
+#import "BBMissionPanelVC.h"
 
 @interface BBCreateMissionNavigationController ()
 
@@ -47,8 +48,8 @@
 
 + (BBViewController *)rootViewControllerForUserActiveMission:(BBParseMission *)mission {
     if (mission) {
-        BBViewController *rootVC = [BBViewController new];
-        [rootVC showPlaceHolderWithtitle:@"existing mission" subtitle:@""];
+        BBMissionPanelVC *rootVC = [BBMissionPanelVC new];
+        rootVC.mission = mission;
         rootVC.title = NSLocalizedString(@"My mission", @"");
         return rootVC;
     } else {

@@ -15,6 +15,8 @@
 + (void)presentRootScreen;
 + (void)presentLoginScreen;
 + (void)presentSignUpScreen;
++ (void)presentClientScreen;
++ (void)presentCarrierScreen;
 
 @end
 

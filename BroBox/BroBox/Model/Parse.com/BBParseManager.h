@@ -30,5 +30,7 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 + (void)user:(BBParseUser *)user confirmSignUpWithBlock:(BBBooleanResultBlock)block;
 + (void)fetchUserActiveMission:(BBParseUser *)user
                      withBlock:(BBObjectResultBlock)block;
++ (void)fetchCarriersForMission:(BBParseMission *)mission
+                      withBlock:(BBArrayResultBlock)block;
 
 @end
