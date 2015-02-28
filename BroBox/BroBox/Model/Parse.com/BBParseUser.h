@@ -8,16 +8,13 @@
 
 #import <Parse/Parse.h>
 
-// Model
-#import "BBGeoPoint.h"
-
 @interface BBParseUser : PFUser
 
 @property (strong, nonatomic) NSString *facebookID;
 @property (strong, nonatomic) NSString *birthday;
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *lastName;
-@property (strong, nonatomic) BBGeoPoint *location;
+@property (strong, nonatomic) PFGeoPoint *location;
 
 + (BBParseUser *)currentUser;
 

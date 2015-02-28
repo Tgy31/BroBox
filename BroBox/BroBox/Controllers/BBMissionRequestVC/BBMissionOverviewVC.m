@@ -165,7 +165,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     
 //    Update user location is possible
     BBParseUser *user = [BBParseUser currentUser];
-    user.location = [BBGeoPoint geoPointWithLocation:[BBLocationManager userLocation]];
+    user.location = [PFGeoPoint geoPointWithLocation:[BBLocationManager userLocation]];
     [user saveInBackground];
     
     [BBParseManager mission:self.mission

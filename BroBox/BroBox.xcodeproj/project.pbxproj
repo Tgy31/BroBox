@@ -108,6 +108,7 @@
 		5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */; };
 		5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */; };
 		5AAC27921A72E07200ECF6FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAC27911A72E07200ECF6FA /* MapKit.framework */; };
+		5AB9904A1AA1FAF800FCB32E /* BBCarrierAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB990491AA1FAF800FCB32E /* BBCarrierAnnotation.m */; };
 		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
 /* End PBXBuildFile section */
 
@@ -286,6 +287,8 @@
 		5AAC278C1A72DF5900ECF6FA /* BBMissionsMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionsMapVC.m; path = BBMapVC/BBMissionsMapVC.m; sourceTree = "<group>"; };
 		5AAC278D1A72DF5900ECF6FA /* BBMissionsMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBMissionsMapVC.xib; path = BBMapVC/BBMissionsMapVC.xib; sourceTree = "<group>"; };
 		5AAC27911A72E07200ECF6FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5AB990481AA1FAF800FCB32E /* BBCarrierAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCarrierAnnotation.h; path = BBCarrierAnnotation/BBCarrierAnnotation.h; sourceTree = "<group>"; };
+		5AB990491AA1FAF800FCB32E /* BBCarrierAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCarrierAnnotation.m; path = BBCarrierAnnotation/BBCarrierAnnotation.m; sourceTree = "<group>"; };
 		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
 		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -500,6 +503,8 @@
 				5A1B0C4C1A710D9400425431 /* BBObject.m */,
 				5A714CD31A839FCD00B20FC7 /* BBMissionAnnotation.h */,
 				5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */,
+				5AB990481AA1FAF800FCB32E /* BBCarrierAnnotation.h */,
+				5AB990491AA1FAF800FCB32E /* BBCarrierAnnotation.m */,
 				5AA60D401A755830001C07F6 /* Parse.com */,
 			);
 			path = Model;
@@ -1043,6 +1048,7 @@
 				5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */,
 				5A0E1EF11A7AA79C002B314E /* BBMissionAnnotationView.m in Sources */,
 				5A0E999E1A85B5F5000956AF /* LNNotificationBannerView.m in Sources */,
+				5AB9904A1AA1FAF800FCB32E /* BBCarrierAnnotation.m in Sources */,
 				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,
