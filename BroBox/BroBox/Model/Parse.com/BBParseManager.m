@@ -45,6 +45,7 @@ setSelectedCarrier:(BBParseUser *)carrier
     
     BBParseUser *tempCarrier = mission.carrier;
     mission.carrier = carrier;
+    mission.pebbleAuthToken = carrier.objectId;
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {
             mission.carrier = tempCarrier;

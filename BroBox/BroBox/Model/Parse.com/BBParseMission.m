@@ -23,6 +23,7 @@
 @dynamic breakable;
 @dynamic reward;
 @dynamic carrier;
+@dynamic pebbleAuthToken;
 
 #pragma mark - Category
 
