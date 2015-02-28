@@ -94,6 +94,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                                               reuseIdentifier:identifier];
             }
             cell.textLabel.text = NSLocalizedString(@"Delete", @"");
+            cell.textLabel.textColor = [UIColor redColor];
             cell.accessoryType = UITableViewCellAccessoryNone;
             return cell;
         }
