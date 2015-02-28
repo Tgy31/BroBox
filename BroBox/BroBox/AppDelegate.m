@@ -7,10 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "BBConstants.h"
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <PayPal-iOS-SDK/PayPalMobile.h>
 
 // Controllers
 #import "BBLoginVC.h"
@@ -40,6 +42,10 @@
     [PFFacebookUtils initializeFacebook];
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [PayPalMobile initializeWithClientIdsForEnvironments:@{
+                                                           PayPalEnvironmentSandbox : PAYPAL_CLIENTKEY_SANDBOX
+                                                           }];
     
     [self applicationRegisterToParsePushNotifications:application];
     
