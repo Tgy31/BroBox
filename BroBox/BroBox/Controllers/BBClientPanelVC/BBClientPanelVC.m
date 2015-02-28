@@ -25,6 +25,8 @@
 #import "BBMissionAnnotationView.h"
 #import "BBCarrierAnnotation.h"
 
+#define CARRIER_REFRESH_TIMEINTERVAL 10 // in seconds
+
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
     BBClientPanelSectionInformations,
     BBClientPanelSectionCheckins,
@@ -49,6 +51,8 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (strong, nonatomic) BBCarrierAnnotation *carrierAnnotation;
+
 
 @end
 
@@ -61,6 +65,15 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     
     [self initializeTableView];
     [self initializeMapView];
+}
+
+#pragma mark - Getters & Setters
+
+- (void)setCarrierAnnotation:(BBCarrierAnnotation *)carrierAnnotation {
+    [self.mapView removeAnnotation:_carrierAnnotation];
+    [self.mapView addAnnotation:carrierAnnotation];
+    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
+    _carrierAnnotation = carrierAnnotation;
 }
 
 #pragma mark - TableView
@@ -81,6 +94,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     self.mapView.delegate = self;
     
     [self showMissionDetails:self.mission];
+    [self pollCarrierLocationWithTimeInterval:CARRIER_REFRESH_TIMEINTERVAL];
 }
 
 #pragma mark UITableviewDataSource
@@ -314,15 +328,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)fetchCarrierLocationForMission:(BBParseMission *)mission {
     [BBParseManager fetchActiveCarrierAndLocationForMission:mission withBlock:^(PFObject *object, NSError *error) {
-        BBCarrierAnnotation *carrierAnnotation = [BBCarrierAnnotation annotationForCarrier:self.mission.carrier];
-        [self.mapView addAnnotation:carrierAnnotation];
-        [self.mapView showAnnotations:self.mapView.annotations animated:YES];
+        self.mission.carrier = (BBParseUser *)object;
+        self.carrierAnnotation = [BBCarrierAnnotation annotationForCarrier:self.mission.carrier];
     }];
 }
 
 - (void)showMissionDetails:(BBParseMission *)mission {
     [self fetchJourneyForMission:mission];
-    [self fetchCarrierLocationForMission:mission];
     
     //    Add drop off annotation and move camera
     BBMissionAnnotation *pickUpAnnotation = [BBMissionAnnotation annotationForMission:mission
@@ -371,6 +383,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     }
     annotationView.annotation = annotation;
     return annotationView;
+}
+
+- (void)pollCarrierLocationWithTimeInterval:(NSInteger)time {
+    [self fetchCarrierLocationForMission:self.mission];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self pollCarrierLocationWithTimeInterval:time];
+    });
 }
 
 
