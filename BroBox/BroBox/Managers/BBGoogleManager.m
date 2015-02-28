@@ -11,7 +11,7 @@
 #import "BBConstants.h" 
 
 #define PLACE_TYPE @"address"
-#define PLACE_RADIUS 500000
+#define PLACE_RADIUS @50000
 
 #define GOOGLE_KEY_PREDICTIONS @"predictions"
 #define GOOGLE_KEY_PREDICTION_DESCRIPTION @"description"
@@ -46,7 +46,8 @@ static BBGoogleManager *sharedManager;
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                       @"key": GOOGLE_PLACE_API_KEY,
                                                                                       @"input": string,
-                                                                                      @"types": PLACE_TYPE
+                                                                                      @"types": PLACE_TYPE,
+                                                                                      @"radius": PLACE_RADIUS
                                                                                       }];
     
     if (location) {
