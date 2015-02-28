@@ -94,7 +94,12 @@
     BBParseMission *mission = [self.data objectAtIndex:indexPath.row];
     
     cell.textLabel.text = mission.from.title;
-    cell.detailTextLabel.text = mission.from.subtitle;
+    
+    NSString *category = [mission localizedCategory];
+    NSString *breakable = (mission.breakable) ? NSLocalizedString(@"Breakable", @"") : NSLocalizedString(@"Safe", @"");
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@€", category, breakable, mission.reward];
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
