@@ -22,6 +22,7 @@
 #import "BBLoginManager.h"
 #import "BBInstallationManager.h"
 #import "BBNotificationManager.h"
+#import "BBLocationManager.h"
 
 @interface AppDelegate ()
 
@@ -44,6 +45,7 @@
     
     [BBInstallationManager initialize];
     [BBNotificationManager initialize];
+    [BBLocationManager startUpdatingLocation];
     
     [self initializeWindow];
     [self presentLoginScreen];
