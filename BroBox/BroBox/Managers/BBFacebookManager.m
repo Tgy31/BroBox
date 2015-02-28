@@ -10,6 +10,9 @@
 
 // Frameworks
 #import <FacebookSDK/FacebookSDK.h>
+#import <AFNetworking/AFNetworking.h>
+
+#define FACEBOOK_PROFILEPICTURE_URL_PATTERN @"http://graph.facebook.com/%@/picture?type=large"
 
 @implementation BBFacebookManager
 
@@ -20,6 +23,19 @@
     [meRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         block(result, error);
     }];
+}
+
++ (void)fetchUserProfilePicture:(NSString *)userID withBlock:(BBFacebookImageBlock)block {
+    NSString *url = [NSString stringWithFormat:FACEBOOK_PROFILEPICTURE_URL_PATTERN, userID];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+    [requestOperation start];
 }
 
 #pragma mark - Helpers

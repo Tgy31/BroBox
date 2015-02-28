@@ -23,6 +23,9 @@
 // Views
 #import "BBUserProfileCell.h"
 #import "BBMissionAnnotationView.h"
+#import "BBCarrierAnnotationView.h"
+
+// Model
 #import "BBCarrierAnnotation.h"
 
 #define CARRIER_REFRESH_TIMEINTERVAL 10 // in seconds
@@ -374,11 +377,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return annotationView;
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView
+- (BBCarrierAnnotationView *)mapView:(MKMapView *)mapView
             viewForCarrierAnnotation:(BBCarrierAnnotation *)annotation {
-    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_CARRIER_IDENTIFIER];
+    BBCarrierAnnotationView *annotationView = (BBCarrierAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_CARRIER_IDENTIFIER];
     if (!annotationView) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+        annotationView = [[BBCarrierAnnotationView alloc] initWithAnnotation:annotation
                                                              reuseIdentifier:ANNOTATIONVIEW_CARRIER_IDENTIFIER];
     }
     annotationView.annotation = annotation;
