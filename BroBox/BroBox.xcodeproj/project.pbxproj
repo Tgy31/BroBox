@@ -367,13 +367,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */ = {
+		5A0E1EF21A7AA7A0002B314E /* BBMissionAnnotationView */ = {
 			isa = PBXGroup;
 			children = (
 				5A0E1EEF1A7AA79B002B314E /* BBMissionAnnotationView.h */,
 				5A0E1EF01A7AA79B002B314E /* BBMissionAnnotationView.m */,
 			);
-			name = BBMissionRequestAnnotationView;
+			name = BBMissionAnnotationView;
 			sourceTree = "<group>";
 		};
 		5A0E1EF61A7AAC18002B314E /* images */ = {
@@ -523,7 +523,7 @@
 				5A1B0C531A710DD000425431 /* BBView.m */,
 				5A7532361A9114CE0045D9AF /* TableViewCells */,
 				5AB9904E1AA2075400FCB32E /* BBCarrierAnnotationView */,
-				5A0E1EF21A7AA7A0002B314E /* BBMissionRequestAnnotationView */,
+				5A0E1EF21A7AA7A0002B314E /* BBMissionAnnotationView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

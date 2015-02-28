@@ -130,7 +130,6 @@
 }
 
 #pragma mark - Mapview -
-
 - (void)initializeMapView {
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
@@ -149,8 +148,6 @@
                                                                                   withType:BBMissionAnnotationTypeFrom];
         [self.mapView addAnnotation:missionAnnotation];
     }
-    
-    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 
 - (void)showMissionDetails:(BBParseMission *)mission {

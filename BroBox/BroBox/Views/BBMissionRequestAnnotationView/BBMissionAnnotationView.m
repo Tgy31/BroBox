@@ -11,6 +11,9 @@
 // Others
 #import "UIImage+Resize.h"
 
+// Frameworks
+#import <FacebookSDK/FacebookSDK.h>
+
 #define IMAGE_NAME_STANDARD @"pin.png"
 #define IMAGE_NAME_ARRIVAL @"pin_black.png"
 #define IMAGE_SIZE 25
@@ -41,21 +44,23 @@
         case BBMissionAnnotationTypeFrom: {
             self.image = [[UIImage imageNamed:IMAGE_NAME_STANDARD] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
             self.centerOffset = CGPointMake(0, -IMAGE_SIZE / 2);
-            
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            self.rightCalloutAccessoryView = rightButton;
             break;
         }
             
         case BBMissionAnnotationTypeTo: {
             self.image = [[UIImage imageNamed:IMAGE_NAME_ARRIVAL] imageScaledToSize:CGSizeMake(IMAGE_SIZE, IMAGE_SIZE)];
             self.centerOffset = CGPointMake(0, -IMAGE_SIZE / 2);
-            
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            self.rightCalloutAccessoryView = rightButton;
             break;
         }
     }
+    
+    FBProfilePictureView *profileView = [[FBProfilePictureView alloc] initWithProfileID:self.missionAnnotation.mission.creator.facebookID
+                                                                        pictureCropping:FBProfilePictureCroppingSquare];
+    profileView.frame = CGRectMake(0, 0, 52, 52);
+    self.leftCalloutAccessoryView = profileView;
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    self.rightCalloutAccessoryView = rightButton;
 }
 
 - (void)setDefaultView {
