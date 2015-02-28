@@ -8,6 +8,9 @@
 
 #import "BBLocationManager.h"
 
+// Managers
+#import "BBParseManager.h"
+
 static BBLocationManager *sharedManager;
 
 @interface BBLocationManager () <CLLocationManagerDelegate>
@@ -57,7 +60,7 @@ static BBLocationManager *sharedManager;
             
         case kCLAuthorizationStatusAuthorizedWhenInUse:
         case kCLAuthorizationStatusAuthorizedAlways: {
-            [sharedManager.locationManager startUpdatingLocation];
+            [sharedManager.locationManager startMonitoringSignificantLocationChanges];
             break;
         }
     }
@@ -77,6 +80,12 @@ static BBLocationManager *sharedManager;
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     [self initializeManager];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    BBParseUser *user = [BBParseUser currentUser];
+    user.location =[PFGeoPoint geoPointWithLocation:manager.location];
+    [user saveEventually];
 }
 
 @end
