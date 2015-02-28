@@ -14,6 +14,8 @@
 
 // Managers
 #import "AppDelegate.h"
+#import "BBParseManager.h"
+#import "BBInstallationManager.h"
 
 
 typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
@@ -22,7 +24,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     BBMissionPanelSectionDelete
 };
 
-@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBCarrierPickerDelegate>
+@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBCarrierPickerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -122,7 +124,16 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
             break;
         }
         case BBMissionPanelSectionDelete: {
-            
+            NSString *title = NSLocalizedString(@"Delete mission", @"");
+            NSString *message = NSLocalizedString(@"You are about to delete your mission. This won't cost you anything. Do you confirm ?", @"");
+            NSString *cancel = NSLocalizedString(@"No", @"");
+            NSString *confirm = NSLocalizedString(@"Yes", @"");
+            UIAlertView *deleteAlert = [[UIAlertView alloc] initWithTitle:title
+                                                                  message:message
+                                                                 delegate:self
+                                                        cancelButtonTitle:cancel
+                                                        otherButtonTitles:confirm, nil];
+            [deleteAlert show];
             break;
         }
     }
@@ -135,6 +146,26 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     [self.navigationController popViewControllerAnimated:YES];
     self.mission.carrier = carrier;
     [AppDelegate presentClientScreenForMission:self.mission];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self deleteMission];
+    }
+}
+
+- (void)deleteMission {
+    [self startLoading];
+    [BBParseManager deleteMission:self.mission
+                        withBlock:^(BOOL succeeded, NSError *error) {
+                            if (succeeded) {
+                                [BBInstallationManager setUserActiveMission:nil];
+                            } else {
+                                
+                            }
+    }];
 }
 
 @end

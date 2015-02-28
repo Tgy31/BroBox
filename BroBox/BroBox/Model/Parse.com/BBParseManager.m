@@ -77,4 +77,12 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     
 }
 
++ (void)deleteMission:(BBParseMission *)mission
+            withBlock:(BBBooleanResultBlock)block {
+    
+    [mission deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        block(succeeded, error);
+    }];
+}
+
 @end
