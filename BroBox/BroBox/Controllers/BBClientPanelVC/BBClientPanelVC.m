@@ -18,6 +18,7 @@
 // Managers
 #import "AppDelegate.h"
 #import "BBCanalTpManager.h"
+#import "BBParseManager.h"
 
 // Views
 #import "BBUserProfileCell.h"
@@ -310,8 +311,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
+- (void)fetchCarrierLocationForMission:(BBParseMission *)mission {
+    [BBParseManager fetchActiveCarrierAndLocationForMission:mission withBlock:^(PFObject *object, NSError *error) {
+        
+    }];
+}
+
 - (void)showMissionDetails:(BBParseMission *)mission {
     [self fetchJourneyForMission:mission];
+    [self fetchCarrierLocationForMission:mission];
     
     //    Add drop off annotation and move camera
     BBMissionAnnotation *pickUpAnnotation = [BBMissionAnnotation annotationForMission:mission

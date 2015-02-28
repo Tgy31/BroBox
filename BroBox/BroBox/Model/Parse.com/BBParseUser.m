@@ -17,6 +17,7 @@
 @dynamic birthday;
 @dynamic firstName;
 @dynamic lastName;
+@dynamic location;
 
 - (NSString *)fullName {
     return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];

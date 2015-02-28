@@ -25,13 +25,25 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
 @interface BBParseManager : NSObject
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block;
+
 + (void)fetchMissionsAwaitingWithBlock:(BBArrayResultBlock)block;
-+ (void)mission:(BBParseMission *)mission addCarrier:(BBParseUser *)carrier withBlock:(BBBooleanResultBlock)block;
-+ (void)user:(BBParseUser *)user confirmSignUpWithBlock:(BBBooleanResultBlock)block;
+
++ (void)mission:(BBParseMission *)mission
+     addCarrier:(BBParseUser *)carrier
+      withBlock:(BBBooleanResultBlock)block;
+
++ (void)user:(BBParseUser *)user
+confirmSignUpWithBlock:(BBBooleanResultBlock)block;
+
 + (void)fetchUserActiveMission:(BBParseUser *)user
                      withBlock:(BBObjectResultBlock)block;
+
 + (void)fetchCarriersForMission:(BBParseMission *)mission
                       withBlock:(BBArrayResultBlock)block;
+
++ (void)fetchActiveCarrierAndLocationForMission:(BBParseMission *)mission
+                                      withBlock:(BBObjectResultBlock)block;
+
 + (void)deleteMission:(BBParseMission *)mission
             withBlock:(BBBooleanResultBlock)block;
 

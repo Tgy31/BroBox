@@ -77,6 +77,21 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     
 }
 
++ (void)fetchActiveCarrierAndLocationForMission:(BBParseMission *)mission
+                                      withBlock:(BBObjectResultBlock)block {
+    
+    PFQuery *query = [BBParseUser query];
+    [query includeKey:@"location"];
+    [query whereKey:@"objectId" equalTo:mission.carrier.objectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 1) {
+            block([objects firstObject], error);
+        } else {
+            block(nil, error);
+        }
+    }];
+}
+
 + (void)deleteMission:(BBParseMission *)mission
             withBlock:(BBBooleanResultBlock)block {
     
