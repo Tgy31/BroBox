@@ -45,8 +45,6 @@
     self.searchBar.delegate = self;
     
     [self viewInitialisation];
-    
-    [BBLocationManager startUpdatingLocation];
 }
 
 - (void)dealloc {

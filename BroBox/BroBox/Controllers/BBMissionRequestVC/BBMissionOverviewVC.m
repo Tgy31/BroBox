@@ -10,6 +10,7 @@
 
 // Managers
 #import "BBParseManager.h"
+#import "BBLocationManager.h"
 
 // Model
 #import "BBParseUser.h"
@@ -161,8 +162,16 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 
 - (void)acceptMission {
     [self startLoading];
+    
+//    Update user location is possible
+    BBParseUser *user = [BBParseUser currentUser];
+    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+        user.location = geoPoint;
+        [user saveEventually];
+    }];
+    
     [BBParseManager mission:self.mission
-                 addCarrier:[BBParseUser currentUser]
+                 addCarrier:user
                   withBlock:^(BOOL succeeded, NSError *error) {
                       if (!error ) {
                           [self showAcceptMissionSuccess];
