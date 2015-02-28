@@ -8,9 +8,12 @@
 
 #import "BBObject.h"
 
+// Frameworks
+#import <MapKit/MapKit.h>
+
 #import "BBParseUser.h"
 
-@interface BBCarrierAnnotation : BBObject
+@interface BBCarrierAnnotation : BBObject <MKAnnotation>
 
 @property (strong, nonatomic) BBParseUser *carrier;
 

@@ -81,7 +81,6 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
                                       withBlock:(BBObjectResultBlock)block {
     
     PFQuery *query = [BBParseUser query];
-    [query includeKey:@"location"];
     [query whereKey:@"objectId" equalTo:mission.carrier.objectId];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count == 1) {

@@ -23,6 +23,7 @@
 // Views
 #import "BBUserProfileCell.h"
 #import "BBMissionAnnotationView.h"
+#import "BBCarrierAnnotation.h"
 
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
     BBClientPanelSectionInformations,
@@ -313,7 +314,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)fetchCarrierLocationForMission:(BBParseMission *)mission {
     [BBParseManager fetchActiveCarrierAndLocationForMission:mission withBlock:^(PFObject *object, NSError *error) {
-        
+        BBCarrierAnnotation *carrierAnnotation = [BBCarrierAnnotation annotationForCarrier:self.mission.carrier];
+        [self.mapView addAnnotation:carrierAnnotation];
+        [self.mapView showAnnotations:self.mapView.annotations animated:YES];
     }];
 }
 
@@ -324,23 +327,47 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //    Add drop off annotation and move camera
     BBMissionAnnotation *pickUpAnnotation = [BBMissionAnnotation annotationForMission:mission
                                                                              withType:BBMissionAnnotationTypeFrom];
+    [self.mapView addAnnotation:pickUpAnnotation];
     BBMissionAnnotation *dropOffAnnotation = [BBMissionAnnotation annotationForMission:mission
                                                                               withType:BBMissionAnnotationTypeTo];
     [self.mapView addAnnotation:dropOffAnnotation];
     
-    [self.mapView showAnnotations:@[pickUpAnnotation, dropOffAnnotation] animated:YES];
+    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 
 #pragma mark AnnotationViews
 
-#define ANNOTATIONVIEW_IDENTIFIER @"missionAnnotationView"
+#define ANNOTATIONVIEW_MISSION_IDENTIFIER @"missionAnnotationView"
+#define ANNOTATIONVIEW_CARRIER_IDENTIFIER @"carrierAnnotationView"
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
             viewForAnnotation:(id<MKAnnotation>)annotation {
-    BBMissionAnnotationView *annotationView = (BBMissionAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+    if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        return [self mapView:mapView viewForMissionAnnotation:annotation];
+    } else if ([annotation isKindOfClass:[BBCarrierAnnotation class]]) {
+        return [self mapView:mapView viewForCarrierAnnotation:annotation];
+    } else {
+        return nil;
+    }
+}
+
+- (BBMissionAnnotationView *)mapView:(MKMapView *)mapView
+            viewForMissionAnnotation:(BBMissionAnnotation *)annotation {
+    BBMissionAnnotationView *annotationView = (BBMissionAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_MISSION_IDENTIFIER];
     if (!annotationView) {
         annotationView = [[BBMissionAnnotationView alloc] initWithAnnotation:annotation
-                                                             reuseIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+                                                             reuseIdentifier:ANNOTATIONVIEW_MISSION_IDENTIFIER];
+    }
+    annotationView.annotation = annotation;
+    return annotationView;
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForCarrierAnnotation:(BBCarrierAnnotation *)annotation {
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_CARRIER_IDENTIFIER];
+    if (!annotationView) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                             reuseIdentifier:ANNOTATIONVIEW_CARRIER_IDENTIFIER];
     }
     annotationView.annotation = annotation;
     return annotationView;

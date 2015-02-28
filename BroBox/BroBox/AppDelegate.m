@@ -45,7 +45,6 @@
     
     [BBInstallationManager initialize];
     [BBNotificationManager initialize];
-    [BBLocationManager startUpdatingLocation];
     
     [self initializeWindow];
     [self presentLoginScreen];
