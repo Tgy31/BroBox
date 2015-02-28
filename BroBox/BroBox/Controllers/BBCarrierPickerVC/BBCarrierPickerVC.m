@@ -154,6 +154,10 @@
     return [BBUserProfileCell preferedHeight];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return NSLocalizedString(@"Available carriers", @"");
+}
+
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
