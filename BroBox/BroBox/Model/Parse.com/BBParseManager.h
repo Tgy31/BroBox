@@ -32,5 +32,7 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
                      withBlock:(BBObjectResultBlock)block;
 + (void)fetchCarriersForMission:(BBParseMission *)mission
                       withBlock:(BBArrayResultBlock)block;
++ (void)deleteMission:(BBParseMission *)mission
+            withBlock:(BBBooleanResultBlock)block;
 
 @end
