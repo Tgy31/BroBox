@@ -143,9 +143,16 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 #pragma mark - BBCarrierPickerDelegate
 
 - (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier {
+    [self startLoading];
     [self.navigationController popViewControllerAnimated:YES];
-    self.mission.carrier = carrier;
-    [AppDelegate presentClientScreenForMission:self.mission];
+    [BBParseManager mission:self.mission setSelectedCarrier:carrier withBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [AppDelegate presentClientScreenForMission:self.mission];
+            [self stopLoading];
+        } else {
+            
+        }
+    }];
 }
 
 #pragma mark - UIAlertViewDelegate

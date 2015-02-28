@@ -32,6 +32,10 @@ typedef void (^BBBooleanResultBlock)(BOOL succeeded, NSError *error);
      addCarrier:(BBParseUser *)carrier
       withBlock:(BBBooleanResultBlock)block;
 
++ (void)mission:(BBParseMission *)mission
+setSelectedCarrier:(BBParseUser *)carrier
+      withBlock:(BBBooleanResultBlock)block;
+
 + (void)user:(BBParseUser *)user
 confirmSignUpWithBlock:(BBBooleanResultBlock)block;
 

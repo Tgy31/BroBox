@@ -39,6 +39,20 @@
     }];
 }
 
++ (void)mission:(BBParseMission *)mission
+setSelectedCarrier:(BBParseUser *)carrier
+      withBlock:(BBBooleanResultBlock)block {
+    
+    BBParseUser *tempCarrier = mission.carrier;
+    mission.carrier = carrier;
+    [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            mission.carrier = tempCarrier;
+        }
+        block(succeeded, error);
+    }];
+}
+
 + (void)user:(BBParseUser *)user
 confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     
