@@ -41,13 +41,9 @@
 }
 
 - (NSString *)subtitle {
-    switch (self.type) {
-        case BBMissionAnnotationTypeFrom:
-            return self.mission.from.subtitle;
-            
-        case BBMissionAnnotationTypeTo:
-            return self.mission.to.subtitle;
-    }
+    NSString *category = [self.mission localizedCategory];
+    NSString *breakable = (self.mission.breakable) ? NSLocalizedString(@"Breakable", @"") : NSLocalizedString(@"Safe", @"");
+    return [NSString stringWithFormat:@"%@ - %@ - %@€", category, breakable, self.mission.reward];
 }
 
 #pragma mark - Helpers

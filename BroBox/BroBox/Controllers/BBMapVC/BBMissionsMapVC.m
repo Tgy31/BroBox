@@ -110,8 +110,10 @@
 
 - (BBMissionAnnotation *)annotationForMission:(BBParseMission *)mission {
     for (BBMissionAnnotation *annotation in self.mapView.annotations) {
-        if ([annotation.mission isEqual:mission]) {
-            return annotation;
+        if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
+            if ([annotation.mission isEqual:mission]) {
+                return annotation;
+            }
         }
     }
     return nil;
@@ -131,6 +133,9 @@
 
 - (void)initializeMapView {
     self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
+    self.mapView.showsPointsOfInterest = NO;
+    self.mapView.showsBuildings = NO;
 }
 
 #pragma mark Annotations
@@ -144,6 +149,8 @@
                                                                                   withType:BBMissionAnnotationTypeFrom];
         [self.mapView addAnnotation:missionAnnotation];
     }
+    
+    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 
 - (void)showMissionDetails:(BBParseMission *)mission {
@@ -164,10 +171,20 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
             viewForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
+        return [self mapView:mapView viewForMissionAnnotation:annotation];
+    } else {
+        return nil;
+    }
+}
+
+
+- (BBMissionAnnotationView *)mapView:(MKMapView *)mapView
+            viewForMissionAnnotation:(BBMissionAnnotation *)annotation {
     BBMissionAnnotationView *annotationView = (BBMissionAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ANNOTATIONVIEW_IDENTIFIER];
     if (!annotationView) {
         annotationView = [[BBMissionAnnotationView alloc] initWithAnnotation:annotation
-                                                                    reuseIdentifier:ANNOTATIONVIEW_IDENTIFIER];
+                                                             reuseIdentifier:ANNOTATIONVIEW_IDENTIFIER];
     }
     annotationView.annotation = annotation;
     return annotationView;
