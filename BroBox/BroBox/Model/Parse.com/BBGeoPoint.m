@@ -22,6 +22,12 @@
     return geoPoint;
 }
 
++ (instancetype)geoPointWithLocation:(CLLocation *)location {
+    BBGeoPoint *geoPoint = [BBGeoPoint object];
+    geoPoint.coordinate = [PFGeoPoint geoPointWithLocation:location];
+    return geoPoint;
+}
+
 #pragma mark - Parse subclassing
 
 + (void)load {

@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSString *subtitle;
 
 + (instancetype)geoPointWithLatitude:(double)latitude longitude:(double)longitude;
++ (instancetype)geoPointWithLocation:(CLLocation *)location;
 
 @end
