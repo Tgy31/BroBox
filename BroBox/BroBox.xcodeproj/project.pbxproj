@@ -113,6 +113,7 @@
 		5AB990501AA208FC00FCB32E /* user_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AB9904F1AA208FC00FCB32E /* user_pin.png */; };
 		5AB990541AA229E700FCB32E /* BBPaypalPayementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB990521AA229E700FCB32E /* BBPaypalPayementVC.m */; };
 		5AB990551AA229E700FCB32E /* BBPaypalPayementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB990531AA229E700FCB32E /* BBPaypalPayementVC.xib */; };
+		5AB990591AA37A3100FCB32E /* BBChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB990581AA37A3100FCB32E /* BBChatVC.m */; };
 		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +300,8 @@
 		5AB990511AA229E700FCB32E /* BBPaypalPayementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBPaypalPayementVC.h; path = BBPaypalPayementVC/BBPaypalPayementVC.h; sourceTree = "<group>"; };
 		5AB990521AA229E700FCB32E /* BBPaypalPayementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBPaypalPayementVC.m; path = BBPaypalPayementVC/BBPaypalPayementVC.m; sourceTree = "<group>"; };
 		5AB990531AA229E700FCB32E /* BBPaypalPayementVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBPaypalPayementVC.xib; path = BBPaypalPayementVC/BBPaypalPayementVC.xib; sourceTree = "<group>"; };
+		5AB990571AA37A3100FCB32E /* BBChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBChatVC.h; path = BBChatVC/BBChatVC.h; sourceTree = "<group>"; };
+		5AB990581AA37A3100FCB32E /* BBChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBChatVC.m; path = BBChatVC/BBChatVC.m; sourceTree = "<group>"; };
 		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
 		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +492,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5AB9905A1AA37A3500FCB32E /* BBChatVC */,
 				5AB990561AA229EC00FCB32E /* BBPaypalPayementVC */,
 				5A75322B1A910C3F0045D9AF /* BBClientPanelVC */,
 				5A7532221A90B2B10045D9AF /* BBQRReaderVC */,
@@ -858,6 +862,15 @@
 			name = BBPaypalPayementVC;
 			sourceTree = "<group>";
 		};
+		5AB9905A1AA37A3500FCB32E /* BBChatVC */ = {
+			isa = PBXGroup;
+			children = (
+				5AB990571AA37A3100FCB32E /* BBChatVC.h */,
+				5AB990581AA37A3100FCB32E /* BBChatVC.m */,
+			);
+			name = BBChatVC;
+			sourceTree = "<group>";
+		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1056,6 +1069,7 @@
 				5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5A75321A1A90B0640045D9AF /* BBClientModeNavigationController.m in Sources */,
+				5AB990591AA37A3100FCB32E /* BBChatVC.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A75320D1A909E7A0045D9AF /* BBMissionPanelVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
