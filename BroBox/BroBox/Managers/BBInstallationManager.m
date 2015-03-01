@@ -93,6 +93,7 @@ static BBInstallationManager *sharedManager;
 }
 
 - (void)handleLogInNotification {
+    [self setInstallationUser];
     [self fetchUserActiveMission];
 }
 
@@ -115,6 +116,19 @@ static BBInstallationManager *sharedManager;
 }
 
 #pragma mark - API
+
+- (void)setInstallationUser {
+    PFInstallation *installation = [PFInstallation currentInstallation];
+    [installation setObject:[BBParseUser currentUser] forKey:@"user"];
+    [installation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded && !error) {
+            
+        } else {
+            NSString *title = NSLocalizedString(@"Notification disabled", @"");
+            [[[UIAlertView alloc] initWithTitle:title message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
+        }
+    }];
+}
 
 - (void)fetchUserActiveMission {
     self.userActiveMissionIsLoading = YES;
