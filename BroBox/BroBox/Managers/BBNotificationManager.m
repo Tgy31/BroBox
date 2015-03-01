@@ -67,6 +67,18 @@ static BBNotificationManager *sharedManager;
 
 #pragma mark - Handler
 
++ (void)handleRemoteNotification:(NSDictionary *)userInfo {
+    [[BBNotificationManager sharedManager] handleRemoteNotification:userInfo];
+}
+
+- (void)handleRemoteNotification:(NSDictionary *)userInfo {
+    LNNotification *notification = [[LNNotification alloc] initWithTitle:@"Title"
+                                                                 message:@"Message"];
+    [[LNNotificationCenter defaultCenter] presentNotification:notification
+                                     forApplicationIdentifier:APP_IDENTIFIER
+                                                     userInfo:userInfo];
+}
+
 - (void)notificationWasTapped:(NSNotification*)notification {
 //    LNNotification* tappedNotification = notification.object;
     NSLog(@"Tap");

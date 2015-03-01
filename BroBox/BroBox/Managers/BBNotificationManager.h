@@ -12,4 +12,6 @@
 
 + (void)initialize;
 
++ (void)handleRemoteNotification:(NSDictionary *)userInfo;
+
 @end
