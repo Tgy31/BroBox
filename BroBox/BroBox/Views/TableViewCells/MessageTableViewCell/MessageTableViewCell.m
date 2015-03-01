@@ -92,10 +92,10 @@
     return _bodyLabel;
 }
 
-- (UIImageView *)tumbnailView
+- (FBProfilePictureView *)tumbnailView
 {
     if (!_tumbnailView) {
-        _tumbnailView = [UIImageView new];
+        _tumbnailView = [FBProfilePictureView new];
         _tumbnailView.translatesAutoresizingMaskIntoConstraints = NO;
         _tumbnailView.userInteractionEnabled = NO;
         _tumbnailView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
@@ -119,11 +119,6 @@
         _attachmentView.layer.masksToBounds = YES;
     }
     return _attachmentView;
-}
-
-- (BOOL)needsPlaceholder
-{
-    return self.tumbnailView.image ? NO : YES;
 }
 
 @end

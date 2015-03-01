@@ -73,9 +73,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[MessageTableViewCell class] forCellReuseIdentifier:MessengerCellIdentifier];
     
-//    [self.leftButton setImage:[UIImage imageNamed:@"icn_upload"] forState:UIControlStateNormal];
-//    [self.leftButton setTintColor:[UIColor grayColor]];
-    
     [self.rightButton setTitle:NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
     
     [self.textInputbar.editorTitle setTextColor:[UIColor darkGrayColor]];
@@ -336,6 +333,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     
     cell.titleLabel.text = message.author.firstName;
     cell.bodyLabel.text = message.content;
+    cell.tumbnailView.profileID = message.author.facebookID;
     
     if (message.attachment) {
         cell.attachmentView.image = message.attachment;

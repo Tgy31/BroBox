@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <FacebookSDK/FacebookSDK.h>
+
 #define kAvatarSize 30.0
 #define kMinimumHeight 50.0
 
@@ -15,7 +17,7 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *bodyLabel;
-@property (nonatomic, strong) UIImageView *tumbnailView;
+@property (nonatomic, strong) FBProfilePictureView *tumbnailView;
 @property (nonatomic, strong) UIImageView *attachmentView;
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
