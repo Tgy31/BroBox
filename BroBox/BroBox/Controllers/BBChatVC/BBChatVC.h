@@ -8,6 +8,11 @@
 
 #import "SLKTextViewController.h"
 
+// Managers
+#import "BBParseManager.h"
+
 @interface BBChatVC : SLKTextViewController
+
+@property (strong, nonatomic) BBParseMission *mission;
 
 @end

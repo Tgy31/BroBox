@@ -19,8 +19,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 
 @interface BBChatVC ()
 
-@property (nonatomic, strong) NSMutableArray *messages;
-
 @property (nonatomic, strong) NSArray *searchResult;
 
 @end
@@ -46,23 +44,20 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     return UITableViewStylePlain;
 }
 
-- (NSMutableArray *)messages {
-    if (!_messages) {
-        _messages = [[NSMutableArray alloc] init];
-    }
-    return _messages;
-}
-
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-//    NSArray *reversed = [[array reverseObjectEnumerator] allObjects];
-//    
-//    self.messages = [[NSMutableArray alloc] initWithArray:reversed];
+    self.title = NSLocalizedString(@"Messages", @"");
+    
+    if (!self.mission.messages) {
+        self.mission.messages = [[NSMutableArray alloc] init];
+        [BBParseManager fetchMessagesForMission:self.mission withBlock:^(NSArray *objects, NSError *error) {
+            [self.tableView reloadData];
+        }];
+    }
     
     self.bounces = YES;
     self.shakeToClearEnabled = YES;
@@ -164,13 +159,20 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     BBParseMessage *message = [BBParseMessage object];
     message.author = [BBParseUser currentUser];
     message.content = [self.textView.text copy];
+    [BBParseManager addMessage:message toMission:self.mission withBLock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"Message saved");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     UITableViewRowAnimation rowAnimation = self.inverted ? UITableViewRowAnimationBottom : UITableViewRowAnimationTop;
     UITableViewScrollPosition scrollPosition = self.inverted ? UITableViewScrollPositionBottom : UITableViewScrollPositionTop;
     
     [self.tableView beginUpdates];
-    [self.messages insertObject:message atIndex:0];
+    [self.mission.messages insertObject:message atIndex:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:rowAnimation];
     [self.tableView endUpdates];
     
@@ -215,7 +217,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
         UITableViewScrollPosition scrollPosition = self.inverted ? UITableViewScrollPositionBottom : UITableViewScrollPositionTop;
         
         [self.tableView beginUpdates];
-        [self.messages insertObject:message atIndex:0];
+        [self.mission.messages insertObject:message atIndex:0];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:rowAnimation];
         [self.tableView endUpdates];
         
@@ -303,7 +305,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([tableView isEqual:self.tableView]) {
-        return self.messages.count;
+        return self.mission.messages.count;
     }
     else {
         return self.searchResult.count;
@@ -329,7 +331,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 //        [cell addGestureRecognizer:longPress];
 //    }
     
-    BBParseMessage *message = self.messages[indexPath.row];
+    BBParseMessage *message = self.mission.messages[indexPath.row];
     
     cell.titleLabel.text = message.author.firstName;
     cell.bodyLabel.text = message.content;
@@ -375,7 +377,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([tableView isEqual:self.tableView]) {
-        BBParseMessage *message = self.messages[indexPath.row];
+        BBParseMessage *message = self.mission.messages[indexPath.row];
         
         NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
         paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;

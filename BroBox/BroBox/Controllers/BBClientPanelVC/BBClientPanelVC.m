@@ -307,6 +307,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)messagesHandler {
     BBChatVC *destination = [BBChatVC new];
+    destination.mission = self.mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
