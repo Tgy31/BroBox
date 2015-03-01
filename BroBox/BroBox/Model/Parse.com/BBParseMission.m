@@ -25,6 +25,17 @@
 @dynamic carrier;
 @dynamic pebbleAuthToken;
 
+@synthesize messages = _messages;
+
+- (void)setMessages:(NSMutableArray *)messages {
+    NSArray *reversed = [[messages reverseObjectEnumerator] allObjects];
+    _messages = [[NSMutableArray alloc] initWithArray:reversed];
+}
+
+- (NSMutableArray *)messages {
+    return _messages;
+}
+
 #pragma mark - Category
 
 + (NSString *)categoryNameForCategory:(BBMissionCategory)category {
@@ -78,6 +89,10 @@
 
 - (PFRelation *)carriersAwaitingRelation {
     return [self relationForKey:@"carriersAwaiting"];
+}
+
+- (PFRelation *)messagesRelation {
+    return [self relationForKey:@"messagesRelation"];
 }
 
 @end

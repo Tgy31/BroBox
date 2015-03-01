@@ -114,6 +114,9 @@
 		5AB990541AA229E700FCB32E /* BBPaypalPayementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB990521AA229E700FCB32E /* BBPaypalPayementVC.m */; };
 		5AB990551AA229E700FCB32E /* BBPaypalPayementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB990531AA229E700FCB32E /* BBPaypalPayementVC.xib */; };
 		5ACCA3F21A7BC5E0001B6559 /* BBCanalTpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */; };
+		5ACD94661AA385D100F3198F /* BBChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD94651AA385D100F3198F /* BBChatVC.m */; };
+		5ACD946D1AA3878D00F3198F /* BBParseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD946C1AA3878D00F3198F /* BBParseMessage.m */; };
+		5ACD94711AA3889D00F3198F /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +304,12 @@
 		5AB990531AA229E700FCB32E /* BBPaypalPayementVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBPaypalPayementVC.xib; path = BBPaypalPayementVC/BBPaypalPayementVC.xib; sourceTree = "<group>"; };
 		5ACCA3F01A7BC5E0001B6559 /* BBCanalTpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCanalTpManager.h; sourceTree = "<group>"; };
 		5ACCA3F11A7BC5E0001B6559 /* BBCanalTpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCanalTpManager.m; sourceTree = "<group>"; };
+		5ACD94641AA385D100F3198F /* BBChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBChatVC.h; path = BBChatVC/BBChatVC.h; sourceTree = "<group>"; };
+		5ACD94651AA385D100F3198F /* BBChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBChatVC.m; path = BBChatVC/BBChatVC.m; sourceTree = "<group>"; };
+		5ACD946B1AA3878D00F3198F /* BBParseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParseMessage.h; sourceTree = "<group>"; };
+		5ACD946C1AA3878D00F3198F /* BBParseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseMessage.m; sourceTree = "<group>"; };
+		5ACD946F1AA3889D00F3198F /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +498,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5ACD94671AA3867D00F3198F /* BBChatVC */,
 				5AB990561AA229EC00FCB32E /* BBPaypalPayementVC */,
 				5A75322B1A910C3F0045D9AF /* BBClientPanelVC */,
 				5A7532221A90B2B10045D9AF /* BBQRReaderVC */,
@@ -665,6 +675,7 @@
 			children = (
 				5A7532371A9114CE0045D9AF /* BBTableViewCell.h */,
 				5A7532381A9114CE0045D9AF /* BBTableViewCell.m */,
+				5ACD946E1AA3889D00F3198F /* MessageTableViewCell */,
 				5A75323D1A9115080045D9AF /* BBUserProfileCell */,
 			);
 			path = TableViewCells;
@@ -741,6 +752,8 @@
 				5A8C32611A85277000F03821 /* BBParseUser.m */,
 				5AA60D431A755830001C07F6 /* BBParseMission.h */,
 				5AA60D441A755830001C07F6 /* BBParseMission.m */,
+				5ACD946B1AA3878D00F3198F /* BBParseMessage.h */,
+				5ACD946C1AA3878D00F3198F /* BBParseMessage.m */,
 			);
 			path = Parse.com;
 			sourceTree = "<group>";
@@ -856,6 +869,24 @@
 				5AB990531AA229E700FCB32E /* BBPaypalPayementVC.xib */,
 			);
 			name = BBPaypalPayementVC;
+			sourceTree = "<group>";
+		};
+		5ACD94671AA3867D00F3198F /* BBChatVC */ = {
+			isa = PBXGroup;
+			children = (
+				5ACD94641AA385D100F3198F /* BBChatVC.h */,
+				5ACD94651AA385D100F3198F /* BBChatVC.m */,
+			);
+			name = BBChatVC;
+			sourceTree = "<group>";
+		};
+		5ACD946E1AA3889D00F3198F /* MessageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5ACD946F1AA3889D00F3198F /* MessageTableViewCell.h */,
+				5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */,
+			);
+			path = MessageTableViewCell;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -1040,6 +1071,7 @@
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
 				5A8C32621A85277000F03821 /* BBParseUser.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
+				5ACD946D1AA3878D00F3198F /* BBParseMessage.m in Sources */,
 				5AA60D451A755830001C07F6 /* BBGeoPoint.m in Sources */,
 				5A75322F1A910C3F0045D9AF /* BBClientPanelVC.m in Sources */,
 				5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */,
@@ -1056,6 +1088,7 @@
 				5A8C325A1A85203500F03821 /* BBSignUpVC.m in Sources */,
 				5AAC27831A72CFAE00ECF6FA /* BBNavigationController.m in Sources */,
 				5A75321A1A90B0640045D9AF /* BBClientModeNavigationController.m in Sources */,
+				5ACD94661AA385D100F3198F /* BBChatVC.m in Sources */,
 				5AA60D311A7546D9001C07F6 /* BBMissionListVC.m in Sources */,
 				5A75320D1A909E7A0045D9AF /* BBMissionPanelVC.m in Sources */,
 				5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */,
@@ -1085,6 +1118,7 @@
 				5AB9904D1AA2075000FCB32E /* BBCarrierAnnotationView.m in Sources */,
 				5A0E999E1A85B5F5000956AF /* LNNotificationBannerView.m in Sources */,
 				5AB9904A1AA1FAF800FCB32E /* BBCarrierAnnotation.m in Sources */,
+				5ACD94711AA3889D00F3198F /* MessageTableViewCell.m in Sources */,
 				5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */,
 				5A30540F1A826826006E9A95 /* DBPrivacyHelperDataSource.m in Sources */,
 				5A8C325F1A8520F600F03821 /* BBFacebookManager.m in Sources */,

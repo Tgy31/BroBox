@@ -14,6 +14,7 @@
 // Controllers
 #import "BBQRReaderVC.h"
 #import "BBMissionOverviewVC.h"
+#import "BBChatVC.h"
 
 // Managers
 #import "AppDelegate.h"
@@ -46,6 +47,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     BBClientPanelInformationRowCarrier,
     BBClientPanelInformationRowMission,
+    BBClientPanelInformationRowChat,
 };
 
 @interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MKMapViewDelegate>
@@ -109,7 +111,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case BBClientPanelSectionInformations:
-            return 2;
+            return 3;
         case BBClientPanelSectionCheckins:
             return 2;
         case BBClientPanelSectionOptions:
@@ -190,6 +192,19 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
             cell.user = self.mission.carrier;
             return cell;
         }
+        case BBClientPanelInformationRowChat: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
+            
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                              reuseIdentifier:CELL_IDENTIFIER];
+            }
+            
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.textLabel.text = NSLocalizedString(@"Messages", @"");
+            
+            return cell;
+        }
             
         default:
             return nil;
@@ -220,7 +235,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.section) {
         case BBClientPanelSectionInformations: {
-            [self missionDetailsHandler];
+            switch (indexPath.row) {
+                case BBClientPanelInformationRowMission:
+                    [self missionDetailsHandler];
+                    break;
+                case BBClientPanelInformationRowChat:
+                    [self messagesHandler];
+                    break;
+                    
+                default:
+                    break;
+            }
             break;
         }
             
@@ -277,6 +302,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BBMissionOverviewVC *destination = [BBMissionOverviewVC new];
     destination.mission = self.mission;
     destination.actionType = BBMissionOverviewActionTypeNone;
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (void)messagesHandler {
+    BBChatVC *destination = [BBChatVC new];
+    destination.mission = self.mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 

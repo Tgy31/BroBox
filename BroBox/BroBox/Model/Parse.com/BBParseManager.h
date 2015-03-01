@@ -12,6 +12,7 @@
 #import "BBGeoPoint.h"
 #import "BBParseMission.h"
 #import "BBParseUser.h"
+#import "BBParseMessage.h"
 
 ///--------------------------------------
 /// @name Blocks
@@ -47,6 +48,13 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block;
 
 + (void)fetchActiveCarrierAndLocationForMission:(BBParseMission *)mission
                                       withBlock:(BBObjectResultBlock)block;
+
++ (void)fetchMessagesForMission:(BBParseMission *)mission
+                      withBlock:(BBArrayResultBlock)block;
+
++ (void)addMessage:(BBParseMessage *)message
+         toMission:(BBParseMission *)mission
+         withBLock:(BBBooleanResultBlock)block;
 
 + (void)deleteMission:(BBParseMission *)mission
             withBlock:(BBBooleanResultBlock)block;

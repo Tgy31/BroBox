@@ -106,6 +106,33 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     }];
 }
 
++ (void)fetchMessagesForMission:(BBParseMission *)mission
+                      withBlock:(BBArrayResultBlock)block {
+    
+    PFQuery *query = [BBParseMessage query];
+    [query whereKey:@"mission" equalTo:mission];
+    [query includeKey:@"author"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            mission.messages = [objects mutableCopy];
+        }
+        block(objects, error);
+    }];
+}
+
++ (void)addMessage:(BBParseMessage *)message
+         toMission:(BBParseMission *)mission
+         withBLock:(BBBooleanResultBlock)block {
+    
+    message.mission = mission;
+    [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [[mission messagesRelation] addObject:message];
+        [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            block(succeeded, error);
+        }];
+    }];
+}
+
 + (void)deleteMission:(BBParseMission *)mission
             withBlock:(BBBooleanResultBlock)block {
     

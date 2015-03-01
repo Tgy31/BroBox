@@ -29,11 +29,15 @@ typedef NS_ENUM(NSInteger, BBMissionCategory) {
 @property (strong, nonatomic) BBParseUser *carrier;
 @property (strong, nonatomic) NSString *pebbleAuthToken;
 
+// Not synchronized with Parse
+@property (strong, nonatomic) NSMutableArray *messages;
+
 
 + (BBParseMission *)missionFrom:(BBGeoPoint *)from
                              to:(BBGeoPoint *)to;
 
 - (PFRelation *)carriersAwaitingRelation;
+- (PFRelation *)messagesRelation;
 
 - (NSString *)localizedCategory;
 + (NSString *)localizedCategoryNameForCategory:(BBMissionCategory)category;
