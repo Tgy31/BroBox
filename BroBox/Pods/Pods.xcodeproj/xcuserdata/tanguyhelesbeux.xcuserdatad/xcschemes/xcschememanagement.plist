@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SlackTextViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UIViewController+KeyboardAnimation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>542DB366762D4A963161A7C0</key>
+		<key>0E945A26324931CBA381743A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CCFF96D2500D6FDAAD29089</key>
+		<key>74682848B694A7FA7E750B04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A9384217BC3FA7D737009C4</key>
+		<key>8603E0E7087349C05BAA030A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91172D0121EBDCE306663E5E</key>
+		<key>86C3781DB0FD9ED09E026966</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B40E82BC0312EA9488F60124</key>
+		<key>8924D38A9F035FF1DF2FB5E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1B0899D87B1375E3DA63C39</key>
 		<dict>
 			<key>primary</key>
 			<true/>

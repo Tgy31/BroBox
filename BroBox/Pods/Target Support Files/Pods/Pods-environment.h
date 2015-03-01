@@ -60,6 +60,18 @@
 #define COCOAPODS_VERSION_MINOR_QRCodeReaderViewController 0
 #define COCOAPODS_VERSION_PATCH_QRCodeReaderViewController 0
 
+// SlackTextViewController
+#define COCOAPODS_POD_AVAILABLE_SlackTextViewController
+#define COCOAPODS_VERSION_MAJOR_SlackTextViewController 1
+#define COCOAPODS_VERSION_MINOR_SlackTextViewController 4
+#define COCOAPODS_VERSION_PATCH_SlackTextViewController 1
+
+// SlackTextViewController/Additions
+#define COCOAPODS_POD_AVAILABLE_SlackTextViewController_Additions
+#define COCOAPODS_VERSION_MAJOR_SlackTextViewController_Additions 1
+#define COCOAPODS_VERSION_MINOR_SlackTextViewController_Additions 4
+#define COCOAPODS_VERSION_PATCH_SlackTextViewController_Additions 1
+
 // UIViewController+KeyboardAnimation
 #define COCOAPODS_POD_AVAILABLE_UIViewController_KeyboardAnimation
 #define COCOAPODS_VERSION_MAJOR_UIViewController_KeyboardAnimation 1
