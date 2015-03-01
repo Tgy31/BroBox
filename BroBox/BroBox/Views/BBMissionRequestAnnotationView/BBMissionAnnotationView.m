@@ -72,8 +72,10 @@
 - (void)setAnnotation:(id<MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[BBMissionAnnotation class]]) {
         self.missionAnnotation = annotation;
+        [self setViewForType:self.missionAnnotation.type];
     } else {
         self.missionAnnotation = nil;
+        [self setDefaultView];
     }
     [super setAnnotation:annotation];
 }
