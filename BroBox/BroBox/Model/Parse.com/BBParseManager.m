@@ -8,6 +8,9 @@
 
 #import "BBParseManager.h"
 
+// Managers
+#import "BBNotificationManager.h"
+
 @implementation BBParseManager
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block {
@@ -36,6 +39,17 @@
     [carriersAwaitingRelation addObject:carrier];
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         block(succeeded, error);
+        if (!error) {
+            NSString *title = NSLocalizedString(@"Mission starts now", @"");
+            NSString *messageFormat = NSLocalizedString(@"%@ accepted to carry your mission", @"");
+            NSString *message = [NSString stringWithFormat:messageFormat, [carrier fullName]];
+            NSDictionary *info = @{
+                                   @"title": title
+                                   };
+            [BBNotificationManager pushNotificationWithMessage:message
+                                                          info:info
+                                                        toUser:mission.creator];
+        }
     }];
 }
 
@@ -51,6 +65,17 @@ setSelectedCarrier:(BBParseUser *)carrier
             mission.carrier = tempCarrier;
         }
         block(succeeded, error);
+        if (!error) {
+            NSString *title = NSLocalizedString(@"Mission starts now", @"");
+            NSString *messageFormat = NSLocalizedString(@"%@ chosed you as his carrier", @"");
+            NSString *message = [NSString stringWithFormat:messageFormat, [mission.creator fullName]];
+            NSDictionary *info = @{
+                                   @"title": title
+                                   };
+            [BBNotificationManager pushNotificationWithMessage:message
+                                                          info:info
+                                                        toUser:carrier];
+        }
     }];
 }
 
@@ -140,5 +165,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
         block(succeeded, error);
     }];
 }
+
+
 
 @end

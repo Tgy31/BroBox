@@ -8,10 +8,24 @@
 
 #import "BBObject.h"
 
+// Frameworks
+#import <Parse/Parse.h>
+
+// Model
+@class BBParseUser;
+
 @interface BBNotificationManager : BBObject
 
 + (void)initialize;
 
 + (void)handleRemoteNotification:(NSDictionary *)userInfo;
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                               info:(NSDictionary *)info
+                            toQuery:(PFQuery *)query;
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                               info:(NSDictionary *)info
+                             toUser:(BBParseUser *)user;
 
 @end

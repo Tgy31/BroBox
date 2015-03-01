@@ -72,8 +72,15 @@ static BBNotificationManager *sharedManager;
 }
 
 - (void)handleRemoteNotification:(NSDictionary *)userInfo {
-    LNNotification *notification = [[LNNotification alloc] initWithTitle:@"Title"
-                                                                 message:@"Message"];
+//    Default data
+    NSString *title = [userInfo objectForKey:@"title"];
+    
+//    Optional data
+    NSDictionary *aps = [userInfo objectForKey:@"aps"];
+    NSString *message = [aps objectForKey:@"alert"];
+    LNNotification *notification = [[LNNotification alloc] initWithTitle:title
+                                                                 message:message];
+    
     [[LNNotificationCenter defaultCenter] presentNotification:notification
                                      forApplicationIdentifier:APP_IDENTIFIER
                                                      userInfo:userInfo];
@@ -82,6 +89,32 @@ static BBNotificationManager *sharedManager;
 - (void)notificationWasTapped:(NSNotification*)notification {
 //    LNNotification* tappedNotification = notification.object;
     NSLog(@"Tap");
+}
+
+#pragma mark - Send Notifications
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                               info:(NSDictionary *)info
+                            toQuery:(PFQuery *)query {
+    
+    NSMutableDictionary *data = [info mutableCopy];
+    [data setObject:message forKey:@"alert"];
+    
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:query];
+    [push setData:data];
+    [push sendPushInBackground];
+}
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                               info:(NSDictionary *)info
+                             toUser:(BBParseUser *)user {
+    
+    PFQuery *query = [PFInstallation query];
+    [query whereKey:@"user" equalTo:user];
+    
+    [self pushNotificationWithMessage:message info:info toQuery:query];
 }
 
 @end
