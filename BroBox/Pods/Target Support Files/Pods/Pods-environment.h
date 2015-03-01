@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
+// PayPal-iOS-SDK
+#define COCOAPODS_POD_AVAILABLE_PayPal_iOS_SDK
+#define COCOAPODS_VERSION_MAJOR_PayPal_iOS_SDK 2
+#define COCOAPODS_VERSION_MINOR_PayPal_iOS_SDK 8
+#define COCOAPODS_VERSION_PATCH_PayPal_iOS_SDK 4
+
 // QRCodeReaderViewController
 #define COCOAPODS_POD_AVAILABLE_QRCodeReaderViewController
 #define COCOAPODS_VERSION_MAJOR_QRCodeReaderViewController 2

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PayPal-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-QRCodeReaderViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>671964D9E231B4754D49719D</key>
+		<key>542DB366762D4A963161A7C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75839B602E623774ED460DC9</key>
+		<key>6CCFF96D2500D6FDAAD29089</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77DD43B35616A5AB43DECC4D</key>
+		<key>8A9384217BC3FA7D737009C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9DD08A4498B1F95D01678DC</key>
+		<key>91172D0121EBDCE306663E5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B40E82BC0312EA9488F60124</key>
 		<dict>
 			<key>primary</key>
 			<true/>
