@@ -8,6 +8,9 @@
 
 #import "BBParseManager.h"
 
+// Model
+#import "BBParseMessage.h"
+
 // Managers
 #import "BBNotificationManager.h"
 
@@ -40,7 +43,7 @@
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         block(succeeded, error);
         if (!error) {
-            NSString *title = NSLocalizedString(@"Mission starts now", @"");
+            NSString *title = NSLocalizedString(@"New carrier available", @"");
             NSString *messageFormat = NSLocalizedString(@"%@ accepted to carry your mission", @"");
             NSString *message = [NSString stringWithFormat:messageFormat, [carrier fullName]];
             NSDictionary *info = @{
@@ -154,6 +157,20 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
         [[mission messagesRelation] addObject:message];
         [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             block(succeeded, error);
+            if (!error) {
+                NSString *title = NSLocalizedString(@"BroBox", @"");
+                NSString *messageFormat = NSLocalizedString(@"%@: %@", @"");
+                NSString *notifMessage = [NSString stringWithFormat:messageFormat, message.author.firstName, message.content];
+                NSDictionary *info = @{
+                                       @"title": title
+                                       };
+                
+                BBParseUser *receiver = ([message.author.objectId isEqualToString:mission.creator.objectId]) ? mission.carrier : mission.creator;
+                
+                [BBNotificationManager pushNotificationWithMessage:notifMessage
+                                                              info:info
+                                                            toUser:receiver];
+            }
         }];
     }];
 }
