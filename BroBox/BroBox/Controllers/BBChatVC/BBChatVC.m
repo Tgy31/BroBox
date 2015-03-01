@@ -8,22 +8,49 @@
 
 #import "BBChatVC.h"
 
+// Model
+#import "BBParseMessage.h"
+
+// SLKTextViewController
+#import "MessageTableViewCell.h"
+
+static NSString *MessengerCellIdentifier = @"MessengerCell";
+static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
+
 @interface BBChatVC ()
+
+@property (nonatomic, strong) NSMutableArray *messages;
+
+@property (nonatomic, strong) NSArray *searchResult;
 
 @end
 
 @implementation BBChatVC
 
 
-#pragma mark - Initializer
-
-- (id)init
-{
+- (id)init {
     self = [super initWithTableViewStyle:UITableViewStylePlain];
     if (self) {
-        
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+    }
+    return self;
+}
+
++ (UITableViewStyle)tableViewStyleForCoder:(NSCoder *)decoder {
+    return UITableViewStylePlain;
+}
+
+- (NSMutableArray *)messages {
+    if (!_messages) {
+        _messages = [[NSMutableArray alloc] init];
+    }
+    return _messages;
 }
 
 
@@ -33,22 +60,85 @@
 {
     [super viewDidLoad];
     
-    // Do view setup here.
+//    NSArray *reversed = [[array reverseObjectEnumerator] allObjects];
+//    
+//    self.messages = [[NSMutableArray alloc] initWithArray:reversed];
+    
+    self.bounces = YES;
+    self.shakeToClearEnabled = YES;
+    self.keyboardPanningEnabled = YES;
+    self.shouldScrollToBottomAfterKeyboardShows = NO;
+    self.inverted = YES;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[MessageTableViewCell class] forCellReuseIdentifier:MessengerCellIdentifier];
+    
+//    [self.leftButton setImage:[UIImage imageNamed:@"icn_upload"] forState:UIControlStateNormal];
+//    [self.leftButton setTintColor:[UIColor grayColor]];
+    
+    [self.rightButton setTitle:NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
+    
+    [self.textInputbar.editorTitle setTextColor:[UIColor darkGrayColor]];
+    [self.textInputbar.editortLeftButton setTintColor:[UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    [self.textInputbar.editortRightButton setTintColor:[UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    
+    self.textInputbar.autoHideRightButton = YES;
+    self.textInputbar.maxCharCount = 256;
+    self.textInputbar.counterStyle = SLKCounterStyleSplit;
+    
+    self.typingIndicatorView.canResignByTouch = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 
-#pragma mark - SLKTextViewController Events
+#pragma mark - Action Methods
+
+//- (void)editCellMessage:(UIGestureRecognizer *)gesture
+//{
+//    MessageTableViewCell *cell = (MessageTableViewCell *)gesture.view;
+//    Message *message = self.messages[cell.indexPath.row];
+//    
+//    [self editText:message.text];
+//    
+//    [self.tableView scrollToRowAtIndexPath:cell.indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//}
+
+//- (void)editLastMessage:(id)sender
+//{
+//    if (self.textView.text.length > 0) {
+//        return;
+//    }
+//    
+//    NSInteger lastSectionIndex = [self.tableView numberOfSections]-1;
+//    NSInteger lastRowIndex = [self.tableView numberOfRowsInSection:lastSectionIndex]-1;
+//    
+//    Message *lastMessage = [self.messages objectAtIndex:lastRowIndex];
+//    
+//    [self editText:lastMessage.text];
+//    
+//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//}
+
+
+#pragma mark - Overriden Methods
 
 - (void)didChangeKeyboardStatus:(SLKKeyboardStatus)status
 {
     // Notifies the view controller that the keyboard changed status.
-    // Calling super does nothing
 }
 
 - (void)textWillUpdate
 {
     // Notifies the view controller that the text will update.
-    // Calling super does nothing
     
     [super textWillUpdate];
 }
@@ -56,175 +146,332 @@
 - (void)textDidUpdate:(BOOL)animated
 {
     // Notifies the view controller that the text did update.
-    // Must call super
     
     [super textDidUpdate:animated];
 }
 
-- (BOOL)canPressRightButton
+- (void)didPressLeftButton:(id)sender
 {
-    // Asks if the right button can be pressed
+    // Notifies the view controller when the left button's action has been triggered, manually.
     
-    return [super canPressRightButton];
+    [super didPressLeftButton:sender];
 }
 
 - (void)didPressRightButton:(id)sender
 {
     // Notifies the view controller when the right button's action has been triggered, manually or by using the keyboard return key.
-    // Must call super
     
     // This little trick validates any pending auto-correction or auto-spelling just after hitting the 'Send' button
     [self.textView refreshFirstResponder];
     
+    BBParseMessage *message = [BBParseMessage object];
+    message.author = [BBParseUser currentUser];
+    message.content = [self.textView.text copy];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewRowAnimation rowAnimation = self.inverted ? UITableViewRowAnimationBottom : UITableViewRowAnimationTop;
+    UITableViewScrollPosition scrollPosition = self.inverted ? UITableViewScrollPositionBottom : UITableViewScrollPositionTop;
+    
+    [self.tableView beginUpdates];
+    [self.messages insertObject:message atIndex:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:rowAnimation];
+    [self.tableView endUpdates];
+    
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:YES];
+    
+    // Fixes the cell from blinking (because of the transform, when using translucent cells)
+    // See https://github.com/slackhq/SlackTextViewController/issues/94#issuecomment-69929927
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
     [super didPressRightButton:sender];
 }
 
-
-
-/*
-// Uncomment these methods for aditional events
-- (void)didPressLeftButton:(id)sender
+- (void)didPressArrowKey:(id)sender
 {
-    // Notifies the view controller when the left button's action has been triggered, manually.
- 
-    [super didPressLeftButton:sender];
+    [super didPressArrowKey:sender];
 }
- 
-- (id)keyForTextCaching
+
+- (NSString *)keyForTextCaching
 {
-    // Return any valid key object for enabling text caching while composing in the text view.
-    // Calling super does nothing
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
 - (void)didPasteMediaContent:(NSDictionary *)userInfo
 {
-    // Notifies the view controller when a user did paste a media content inside of the text view
-    // Calling super does nothing
+    // Notifies the view controller when the user has pasted a media (image, video, etc) inside of the text view.
+    
+    SLKPastableMediaType mediaType = [userInfo[SLKTextViewPastedItemMediaType] integerValue];
+    NSString *contentType = userInfo[SLKTextViewPastedItemContentType];
+    NSData *contentData = userInfo[SLKTextViewPastedItemData];
+    
+    NSLog(@"%s : %@",__FUNCTION__, contentType);
+    
+    if ((mediaType & SLKPastableMediaTypePNG) || (mediaType & SLKPastableMediaTypeJPEG)) {
+        
+        BBParseMessage *message = [BBParseMessage object];
+        message.author = [BBParseUser currentUser];
+        message.content = @"Attachment";
+        message.attachment = [UIImage imageWithData:contentData scale:[UIScreen mainScreen].scale];
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        UITableViewRowAnimation rowAnimation = self.inverted ? UITableViewRowAnimationBottom : UITableViewRowAnimationTop;
+        UITableViewScrollPosition scrollPosition = self.inverted ? UITableViewScrollPositionBottom : UITableViewScrollPositionTop;
+        
+        [self.tableView beginUpdates];
+        [self.messages insertObject:message atIndex:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:rowAnimation];
+        [self.tableView endUpdates];
+        
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:YES];
+    }
 }
 
 - (void)willRequestUndo
 {
-    // Notification about when a user did shake the device to undo the typed text
- 
+    // Notifies the view controller when a user did shake the device to undo the typed text
+    
     [super willRequestUndo];
 }
-*/
 
-#pragma mark - SLKTextViewController Edition
-
-/*
-// Uncomment these methods to enable edit mode
 - (void)didCommitTextEditing:(id)sender
 {
     // Notifies the view controller when tapped on the right "Accept" button for commiting the edited text
- 
+    
+//    Message *message = [Message new];
+//    message.username = [LoremIpsum name];
+//    message.text = [self.textView.text copy];
+//    
+//    [self.messages removeObjectAtIndex:0];
+//    [self.messages insertObject:message atIndex:0];
+//    [self.tableView reloadData];
+    
     [super didCommitTextEditing:sender];
 }
 
 - (void)didCancelTextEditing:(id)sender
 {
     // Notifies the view controller when tapped on the left "Cancel" button
- 
+    
     [super didCancelTextEditing:sender];
 }
-*/
 
-#pragma mark - SLKTextViewController Autocompletion
+- (BOOL)canPressRightButton
+{
+    return [super canPressRightButton];
+}
 
-/*
-// Uncomment these methods to enable autocompletion mode
 - (BOOL)canShowAutoCompletion
 {
-    // Asks of the autocompletion view should be shown
- 
+//    NSArray *array = nil;
+//    NSString *prefix = self.foundPrefix;
+//    NSString *word = self.foundWord;
+//    
+//    self.searchResult = nil;
+//    
+//    if ([prefix isEqualToString:@"@"] && word.length > 0) {
+//        array = [self.users filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@ AND self !=[c] %@", word, word]];
+//    }
+//    else if ([prefix isEqualToString:@"#"] && word.length > 0) {
+//        array = [self.channels filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", word]];
+//    }
+//    else if ([prefix isEqualToString:@":"] && word.length > 0) {
+//        array = [self.emojis filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", word]];
+//    }
+//    
+//    if (array.count > 0) {
+//        array = [array sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+//    }
+//    
+//    self.searchResult = [[NSMutableArray alloc] initWithArray:array];
+//    
+//    return self.searchResult.count > 0;
+    
     return NO;
 }
 
 - (CGFloat)heightForAutoCompletionView
 {
-    // Asks for the height of the autocompletion view
- 
-    return 0.0;
+    CGFloat cellHeight = [self.autoCompletionView.delegate tableView:self.autoCompletionView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    return cellHeight*self.searchResult.count;
 }
-*/
 
 
-#pragma mark - <UITableViewDataSource>
+#pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Returns the number of sections.
-    
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Returns the number of rows in the section.
-    
-    if ([tableView isEqual:self.autoCompletionView]) {
-        return 0;
+    if ([tableView isEqual:self.tableView]) {
+        return self.messages.count;
     }
-    
-    return 0;
+    else {
+        return self.searchResult.count;
+    }
 }
 
-/*
-// Uncomment these methods to configure the cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if ([tableView isEqual:self.tableView]) {
+        return [self messageCellForRowAtIndexPath:indexPath];
+    }
+    else {
+        return [self autoCompletionCellForRowAtIndexPath:indexPath];
+    }
+}
+
+- (MessageTableViewCell *)messageCellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MessageTableViewCell *cell = (MessageTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:MessengerCellIdentifier];
     
-    if ([tableView isEqual:self.autoCompletionView]) {
-        // Configure the autocompletion cell...
+//    if (!cell.textLabel.text) {
+//        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(editCellMessage:)];
+//        [cell addGestureRecognizer:longPress];
+//    }
+    
+    BBParseMessage *message = self.messages[indexPath.row];
+    
+    cell.titleLabel.text = message.author.firstName;
+    cell.bodyLabel.text = message.content;
+    
+    if (message.attachment) {
+        cell.attachmentView.image = message.attachment;
+        cell.attachmentView.layer.shouldRasterize = YES;
+        cell.attachmentView.layer.rasterizationScale = [UIScreen mainScreen].scale;
     }
-    else if ([tableView isEqual:self.tableView]) {
-        // Configure the message cell...
+    
+    cell.indexPath = indexPath;
+    cell.usedForMessage = YES;
+    
+    // Cells must inherit the table view's transform
+    // This is very important, since the main table view may be inverted
+    cell.transform = self.tableView.transform;
+    
+    return cell;
+}
+
+- (MessageTableViewCell *)autoCompletionCellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MessageTableViewCell *cell = (MessageTableViewCell *)[self.autoCompletionView dequeueReusableCellWithIdentifier:AutoCompletionCellIdentifier];
+    cell.indexPath = indexPath;
+    
+    NSString *item = self.searchResult[indexPath.row];
+    
+    if ([self.foundPrefix isEqualToString:@"#"]) {
+        item = [NSString stringWithFormat:@"# %@", item];
     }
+    else if ([self.foundPrefix isEqualToString:@":"]) {
+        item = [NSString stringWithFormat:@":%@:", item];
+    }
+    
+    cell.titleLabel.text = item;
+    cell.titleLabel.font = [UIFont systemFontOfSize:14.0];
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Returns the height each row
- 
-    if ([tableView isEqual:self.autoCompletionView]) {
-        return 0;
+    if ([tableView isEqual:self.tableView]) {
+        BBParseMessage *message = self.messages[indexPath.row];
+        
+        NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        paragraphStyle.alignment = NSTextAlignmentLeft;
+        
+        NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:16.0],
+                                     NSParagraphStyleAttributeName: paragraphStyle};
+        
+        CGFloat width = CGRectGetWidth(tableView.frame)-kAvatarSize;
+        width -= 25.0;
+        
+        CGRect titleBounds = [message.author.firstName boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:NULL];
+        CGRect bodyBounds = [message.content boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:NULL];
+        
+        if (message.content.length == 0) {
+            return 0.0;
+        }
+        
+        CGFloat height = CGRectGetHeight(titleBounds);
+        height += CGRectGetHeight(bodyBounds);
+        height += 40.0;
+        if (message.attachment) {
+            height += 80.0 + 10.0;
+        }
+        
+        if (height < kMinimumHeight) {
+            height = kMinimumHeight;
+        }
+        
+        return height;
     }
-    
-    return 0;
+    else {
+        return kMinimumHeight;
+    }
 }
-*/
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if ([tableView isEqual:self.autoCompletionView]) {
+        UIView *topView = [UIView new];
+        topView.backgroundColor = self.autoCompletionView.separatorColor;
+        return topView;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if ([tableView isEqual:self.autoCompletionView]) {
+        return 0.5;
+    }
+    return 0.0;
+}
 
 
-#pragma mark - <UITableViewDelegate>
+#pragma mark - UITableViewDelegate Methods
 
-/*
-// Uncomment this method to handle the cell selection
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([tableView isEqual:self.tableView]) {
-
-    }
     if ([tableView isEqual:self.autoCompletionView]) {
-
-        [self acceptAutoCompletionWithString:<#@"any_string"#>];
+        
+        NSMutableString *item = [self.searchResult[indexPath.row] mutableCopy];
+        
+        if ([self.foundPrefix isEqualToString:@"@"] || [self.foundPrefix isEqualToString:@":"]) {
+            [item appendString:@":"];
+        }
+        
+        [item appendString:@" "];
+        
+//        [self acceptAutoCompletionWithString:item keepPrefix:YES];
     }
 }
-*/
 
 
-#pragma mark - View lifeterm
+#pragma mark - UIScrollViewDelegate Methods
 
-- (void)didReceiveMemoryWarning
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [super didReceiveMemoryWarning];
+    // Since SLKTextViewController uses UIScrollViewDelegate to update a few things, it is important that if you ovveride this method, to call super.
+    [super scrollViewDidScroll:scrollView];
 }
 
-- (void)dealloc
+
+#pragma mark - UIScrollViewDelegate Methods
+
+/** UITextViewDelegate */
+- (BOOL)textView:(SLKTextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    
+    return [super textView:textView shouldChangeTextInRange:range replacementText:text];
+}
+
+- (void)textViewDidChangeSelection:(SLKTextView *)textView
+{
+    [super textViewDidChangeSelection:textView];
 }
 
 @end
