@@ -40,8 +40,22 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 + (UITableViewStyle)tableViewStyleForCoder:(NSCoder *)decoder {
     return UITableViewStylePlain;
+}
+
+- (void)registerToNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotificationMissionMessagesFetched)
+                                                 name:BBNotificationFetchedMissionMessages object:self.mission];
+}
+
+- (void)handleNotificationMissionMessagesFetched {
+    [self.tableView reloadData];
 }
 
 #pragma mark - View lifecycle
@@ -79,6 +93,8 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     self.textInputbar.counterStyle = SLKCounterStyleSplit;
     
     self.typingIndicatorView.canResignByTouch = YES;
+    
+    [self registerToNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated

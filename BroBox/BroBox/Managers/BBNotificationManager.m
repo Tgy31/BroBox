@@ -12,6 +12,9 @@
 // Frameworks
 #import "LNNotificationsUI.h"
 
+// Managers
+#import "BBInstallationManager.h"
+
 
 #define APP_NAME @"BroBox"
 #define APP_ICON @"pin.png"
@@ -126,7 +129,7 @@ static BBNotificationManager *sharedManager;
 }
 
 - (void)handleNotificationForNewMessage:(NSNotification *)notification {
-    
+    BBParseMission *mission = [BBInstallationManager userActiveMission];
 }
 
 #pragma mark - Send Notifications

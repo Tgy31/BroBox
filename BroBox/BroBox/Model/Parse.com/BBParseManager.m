@@ -147,6 +147,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             mission.messages = [objects mutableCopy];
+            [self notifyMissionMessagesFetched:mission];
         }
         block(objects, error);
     }];
@@ -187,6 +188,11 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     }];
 }
 
+#pragma mark - Broadcast
 
++ (void)notifyMissionMessagesFetched:(BBParseMission *)mission {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationFetchedMissionMessages
+                                                        object:mission];
+}
 
 @end
