@@ -43,6 +43,7 @@
 		5A3054131A826826006E9A95 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540B1A826826006E9A95 /* UIImage+ImageEffects.m */; };
 		5A3054141A826826006E9A95 /* UIViewController+DBPrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */; };
 		5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3054171A828956006E9A95 /* GFPlaceholderView.m */; };
+		5A6A781A1AA468DB003E57AE /* BBPaypalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A78191AA468DB003E57AE /* BBPaypalManager.m */; };
 		5A714CD51A839FCD00B20FC7 /* BBMissionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */; };
 		5A75320D1A909E7A0045D9AF /* BBMissionPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75320B1A909E7A0045D9AF /* BBMissionPanelVC.m */; };
 		5A75320E1A909E7A0045D9AF /* BBMissionPanelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A75320C1A909E7A0045D9AF /* BBMissionPanelVC.xib */; };
@@ -201,6 +202,8 @@
 		5A30540D1A826826006E9A95 /* UIViewController+DBPrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DBPrivacyHelper.m"; sourceTree = "<group>"; };
 		5A3054161A828956006E9A95 /* GFPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPlaceholderView.h; sourceTree = "<group>"; };
 		5A3054171A828956006E9A95 /* GFPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPlaceholderView.m; sourceTree = "<group>"; };
+		5A6A78181AA468DB003E57AE /* BBPaypalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPaypalManager.h; sourceTree = "<group>"; };
+		5A6A78191AA468DB003E57AE /* BBPaypalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPaypalManager.m; sourceTree = "<group>"; };
 		5A714CD31A839FCD00B20FC7 /* BBMissionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionAnnotation.h; path = BBMissionAnnotation/BBMissionAnnotation.h; sourceTree = "<group>"; };
 		5A714CD41A839FCD00B20FC7 /* BBMissionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBMissionAnnotation.m; path = BBMissionAnnotation/BBMissionAnnotation.m; sourceTree = "<group>"; };
 		5A75320A1A909E7A0045D9AF /* BBMissionPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBMissionPanelVC.h; path = BBMissionPanelVC/BBMissionPanelVC.h; sourceTree = "<group>"; };
@@ -804,6 +807,8 @@
 				5A8C32641A85361200F03821 /* BBInstallationManager.m */,
 				5A8C32701A85849F00F03821 /* BBNotificationManager.h */,
 				5A8C32711A85849F00F03821 /* BBNotificationManager.m */,
+				5A6A78181AA468DB003E57AE /* BBPaypalManager.h */,
+				5A6A78191AA468DB003E57AE /* BBPaypalManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1116,6 +1121,7 @@
 				5A3053F31A825F87006E9A95 /* BBLocationAutocompleteVC.m in Sources */,
 				5A0E1EF11A7AA79C002B314E /* BBMissionAnnotationView.m in Sources */,
 				5AB9904D1AA2075000FCB32E /* BBCarrierAnnotationView.m in Sources */,
+				5A6A781A1AA468DB003E57AE /* BBPaypalManager.m in Sources */,
 				5A0E999E1A85B5F5000956AF /* LNNotificationBannerView.m in Sources */,
 				5AB9904A1AA1FAF800FCB32E /* BBCarrierAnnotation.m in Sources */,
 				5ACD94711AA3889D00F3198F /* MessageTableViewCell.m in Sources */,
