@@ -9,14 +9,16 @@
 #import "BBSettingsVC.h"
 
 // Managers
+#import "AppDelegate.h"
 #import "BBPaypalManager.h"
+#import "BBLoginManager.h"
 
 typedef NS_ENUM(NSInteger, BBSettingsSection) {
     BBSettingsSectionPayPal,
     BBSettingsSectionDisconnect
 };
 
-@interface BBSettingsVC () <UITableViewDataSource, UITableViewDelegate>
+@interface BBSettingsVC () <UITableViewDataSource, UITableViewDelegate, BBPayPalManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -82,8 +84,8 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
     }
     
     if ([BBPaypalManager hasConsentForFuturePayement]) {
-        cell.textLabel.text = NSLocalizedString(@"Connected", @"");
-        cell.textLabel.textColor = [UIColor blueColor];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@@brobox.com", [BBParseUser currentUser].firstName.lowercaseString];
+        cell.textLabel.textColor = [UIColor colorWithRed:0.00f green:0.18f blue:0.53f alpha:1.00f];
     } else {
         cell.textLabel.text = NSLocalizedString(@"Connect PayPal account...", @"");
         cell.textLabel.textColor = [UIColor grayColor];
@@ -139,16 +141,32 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
     
     switch (indexPath.section) {
         case BBSettingsSectionPayPal: {
+            if (![BBPaypalManager hasConsentForFuturePayement]) {
+                [BBPaypalManager obtainConsentFromViewController:self];
+            }
             break;
         }
             
         case BBSettingsSectionDisconnect: {
+            [BBLoginManager logout];
+            [AppDelegate presentLoginScreen];
             break;
         }
             
         default:
             break;
     }
+}
+
+#pragma mark - BBPayPalManagerDelegate
+
+- (void)futurePaymentAuthorizationDidCancel {
+    
+}
+
+- (void)futurePaymentAuthorizationDidSucced:(NSDictionary *)futurePaymentAuthorization {
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:BBSettingsSectionPayPal];
+    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

@@ -18,6 +18,7 @@
 
 + (BOOL)hasConsentForFuturePayement;
 
++ (void)obtainConsentFromViewController:(UIViewController<BBPayPalManagerDelegate> *)viewController;
 + (void)payWithPaypal:(CGFloat)price
    fromViewController:(UIViewController<BBPayPalManagerDelegate> *)viewController;
 

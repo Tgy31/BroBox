@@ -76,6 +76,8 @@ static BBPaypalManager *sharedManager;
 
 - (void)payWithPaypal:(CGFloat)price fromViewController:(UIViewController<BBPayPalManagerDelegate> *)viewController {
     
+    self.delegate = viewController;
+    
     if (self.hasConsentForFuturePayement) {
         if ([viewController respondsToSelector:@selector(singlePaymentDidSucceed:)]) {
             [viewController singlePaymentDidSucceed:nil];
@@ -91,6 +93,9 @@ static BBPaypalManager *sharedManager;
 }
 
 - (void)obtainConsentFromViewController:(UIViewController<BBPayPalManagerDelegate> *)viewController {
+    
+    self.delegate = viewController;
+    
     PayPalFuturePaymentViewController *fpViewController;
     fpViewController = [[PayPalFuturePaymentViewController alloc] initWithConfiguration:self.payPalConfiguration
                                                                                delegate:self];
@@ -100,8 +105,6 @@ static BBPaypalManager *sharedManager;
 }
 
 - (void)presentActionSheetWithPrice:(CGFloat)price andViewController:(UIViewController<BBPayPalManagerDelegate> *)viewController {
-    
-    self.delegate = viewController;
     
     NSString *titleFormat = NSLocalizedString(@"Pay %.2f€ with PayPal", @"");
     NSString *title = [NSString stringWithFormat:titleFormat, price];
