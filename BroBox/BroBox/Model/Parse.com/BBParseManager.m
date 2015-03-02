@@ -51,6 +51,7 @@
                                    };
             [BBNotificationManager pushNotificationWithMessage:message
                                                           info:info
+                                                          type:BBNotificationTypeNewCarrier
                                                         toUser:mission.creator];
         }
     }];
@@ -77,6 +78,7 @@ setSelectedCarrier:(BBParseUser *)carrier
                                    };
             [BBNotificationManager pushNotificationWithMessage:message
                                                           info:info
+                                                          type:BBNotificationTypeSelectedCarrier
                                                         toUser:carrier];
         }
     }];
@@ -169,6 +171,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
                 
                 [BBNotificationManager pushNotificationWithMessage:notifMessage
                                                               info:info
+                                                              type:BBNotificationTypeNewMessage
                                                             toUser:receiver];
             }
         }];

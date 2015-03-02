@@ -14,6 +14,13 @@
 // Model
 @class BBParseUser;
 
+typedef NS_ENUM(NSInteger, BBNotificationType) {
+    BBNotificationTypeNewCarrier,
+    BBNotificationTypeSelectedCarrier,
+    BBNotificationTypeNewMessage
+};
+
+
 @interface BBNotificationManager : BBObject
 
 + (void)initialize;
@@ -22,10 +29,12 @@
 
 + (void)pushNotificationWithMessage:(NSString *)message
                                info:(NSDictionary *)info
+                               type:(BBNotificationType)type
                             toQuery:(PFQuery *)query;
 
 + (void)pushNotificationWithMessage:(NSString *)message
                                info:(NSDictionary *)info
+                               type:(BBNotificationType)type
                              toUser:(BBParseUser *)user;
 
 @end

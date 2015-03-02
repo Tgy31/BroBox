@@ -16,6 +16,12 @@
 #define APP_NAME @"BroBox"
 #define APP_ICON @"pin.png"
 
+
+
+static NSString *BBNotificationKeyNewCarrier = @"BBNotificationKeyNewCarrier";
+static NSString *BBNotificationKeySelectedCarrier = @"BBNotificationKeySelectedCarrier";
+static NSString *BBNotificationKeyNewMessage = @"BBNotificationKeyNewMessage";
+
 static BBNotificationManager *sharedManager;
 
 @interface BBNotificationManager()
@@ -72,12 +78,13 @@ static BBNotificationManager *sharedManager;
 }
 
 - (void)handleRemoteNotification:(NSDictionary *)userInfo {
-//    Default data
-    NSString *title = [userInfo objectForKey:@"title"];
-    
-//    Optional data
+    //    Default data
     NSDictionary *aps = [userInfo objectForKey:@"aps"];
     NSString *message = [aps objectForKey:@"alert"];
+    
+    //    Optional data
+    NSString *title = [userInfo objectForKey:@"title"];
+    
     LNNotification *notification = [[LNNotification alloc] initWithTitle:title
                                                                  message:message];
     
@@ -88,17 +95,47 @@ static BBNotificationManager *sharedManager;
 
 - (void)notificationWasTapped:(NSNotification*)notification {
 //    LNNotification* tappedNotification = notification.object;
-    NSLog(@"Tap");
+    
+    BBNotificationType type = [BBNotificationManager typeFromNotificationData:notification.userInfo];
+    
+    switch (type) {
+        case BBNotificationTypeNewCarrier:
+            [self handleNotificationForNewCarrier:notification];
+            break;
+        case BBNotificationTypeSelectedCarrier:
+            [self handleNotificationForSelectedCarrier:notification];
+            break;
+        case BBNotificationTypeNewMessage:
+            [self handleNotificationForNewMessage:notification];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)handleNotificationForNewCarrier:(NSNotification *)notification {
+    
+}
+
+- (void)handleNotificationForSelectedCarrier:(NSNotification *)notification {
+    
+}
+
+- (void)handleNotificationForNewMessage:(NSNotification *)notification {
+    
 }
 
 #pragma mark - Send Notifications
 
 + (void)pushNotificationWithMessage:(NSString *)message
                                info:(NSDictionary *)info
+                               type:(BBNotificationType)type
                             toQuery:(PFQuery *)query {
     
     NSMutableDictionary *data = [info mutableCopy];
     [data setObject:message forKey:@"alert"];
+    [data setObject:[self keyForNotificationType:type] forKey:@"type"];
     
     // Send push notification to query
     PFPush *push = [[PFPush alloc] init];
@@ -109,12 +146,45 @@ static BBNotificationManager *sharedManager;
 
 + (void)pushNotificationWithMessage:(NSString *)message
                                info:(NSDictionary *)info
+                               type:(BBNotificationType)type
                              toUser:(BBParseUser *)user {
     
     PFQuery *query = [PFInstallation query];
     [query whereKey:@"user" equalTo:user];
     
-    [self pushNotificationWithMessage:message info:info toQuery:query];
+    [self pushNotificationWithMessage:message
+                                 info:info
+                                 type:type
+                              toQuery:query];
+}
+
+#pragma mark - Helpers
+
++ (NSString *)keyForNotificationType:(BBNotificationType)type {
+    switch (type) {
+        case BBNotificationTypeNewCarrier:
+            return BBNotificationKeyNewCarrier;
+        case BBNotificationTypeSelectedCarrier:
+            return BBNotificationKeySelectedCarrier;
+        case BBNotificationTypeNewMessage:
+            return BBNotificationKeyNewMessage;
+            
+        default:
+            return nil;
+    }
+}
+
++ (BBNotificationType)typeFromNotificationData:(NSDictionary *)data {
+    NSString *typeKey = [data objectForKey:@"type"];
+    
+    if ([typeKey isEqualToString:BBNotificationKeyNewCarrier]) {
+        return BBNotificationTypeNewCarrier;
+    } else if ([typeKey isEqualToString:BBNotificationKeySelectedCarrier]) {
+        return BBNotificationTypeSelectedCarrier;
+    } else if ([typeKey isEqualToString:BBNotificationKeyNewMessage]) {
+        return BBNotificationTypeNewMessage;
+    }
+    return -1;
 }
 
 @end
