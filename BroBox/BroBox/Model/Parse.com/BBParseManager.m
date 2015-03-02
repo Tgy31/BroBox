@@ -149,7 +149,9 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
             mission.messages = [objects mutableCopy];
             [self notifyMissionMessagesFetched:mission];
         }
-        block(objects, error);
+        if (block) {
+            block(objects, error);
+        }
     }];
 }
 
@@ -169,7 +171,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
                                        };
                 
                 BBParseUser *receiver = ([message.author.objectId isEqualToString:mission.creator.objectId]) ? mission.carrier : mission.creator;
-                
+                receiver = mission.creator;
                 [BBNotificationManager pushNotificationWithMessage:alert
                                                              title:[message.author fullName]
                                                           subtitle:message.content

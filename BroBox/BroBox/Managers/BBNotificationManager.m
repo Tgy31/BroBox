@@ -125,8 +125,6 @@ static BBNotificationManager *sharedManager;
     switch (type) {
         case BBNotificationTypeNewCarrier: {
             [self presentNotification:userInfo];
-            BBParseMission *mission = [BBInstallationManager userActiveMission];
-            [self refreshMissionMessages:mission];
             break;
         }
             
@@ -140,6 +138,8 @@ static BBNotificationManager *sharedManager;
         }
             
         case BBNotificationTypeNewMessage: {
+            BBParseMission *mission = [BBInstallationManager userActiveMission];
+            [self refreshMissionMessages:mission];
             [self presentNotification:userInfo];
             break;
         }
@@ -153,13 +153,14 @@ static BBNotificationManager *sharedManager;
     
     //    Default data
     NSDictionary *aps = [userInfo objectForKey:@"aps"];
-    NSString *message = [aps objectForKey:@"alert"];
+    NSString *message = [aps objectForKey:NOTIFICATION_KEY_MESSAGE];
     
     //    Optional data
-    NSString *title = [userInfo objectForKey:@"title"];
+    NSString *title = [userInfo objectForKey:NOTIFICATION_KEY_TITLE];
+    NSString *subtitle = [userInfo objectForKey:NOTIFICATION_KEY_SUBTITLE];
     
-    LNNotification *notification = [[LNNotification alloc] initWithTitle:title
-                                                                 message:message];
+    LNNotification *notification = [[LNNotification alloc] initWithTitle:title ? title : @"BroBox"
+                                                                 message:subtitle ? subtitle : message];
     
     [[LNNotificationCenter defaultCenter] presentNotification:notification
                                      forApplicationIdentifier:APP_IDENTIFIER
