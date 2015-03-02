@@ -31,6 +31,8 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = NSLocalizedString(@"Settings", @"");
+    
     [self initializeTableView];
 }
 
