@@ -15,6 +15,7 @@
 
 // Controllers
 #import "BBLogoutVC.h"
+#import "BBSettingsVC.h"
 
 @interface BBRootVC ()
 
@@ -43,7 +44,7 @@
         self.notificationVC.view.backgroundColor = [UIColor redColor];
         self.notificationVC.title = @"Notifs";
         
-        self.settingsVC = [BBLogoutVC new];
+        self.settingsVC = [[UINavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
         self.settingsVC.title = @"Settings";
         
         [self setViewControllers:@[

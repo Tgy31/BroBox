@@ -8,11 +8,9 @@
 
 #import "BBCreateMissionVC.h"
 
-// Frameworks
-#import <PayPal-iOS-SDK/PayPalMobile.h>
-
 // Managers
 #import "BBInstallationManager.h"
+#import "BBPaypalManager.h"
 
 // Controllers
 #import "BBLocationAutocompleteVC.h"
@@ -23,7 +21,7 @@
 #import "BBGeoPoint.h"
 #import "BBParseMission.h"
 
-@interface BBCreateMissionVC () <PayPalPaymentDelegate>
+@interface BBCreateMissionVC () <BBPayPalManagerDelegate>
 
 @property (nonatomic, strong, readwrite) PayPalConfiguration *payPalConfiguration;
 
@@ -278,7 +276,7 @@
     self.mission.category = self.category;
     self.mission.reward = [NSNumber numberWithFloat:self.price - 0.2];
     
-    [self payWithPaypal:self.price];
+    [self pay:self.price];
 }
 
 - (void)categorySegmentedControlHandler {
@@ -309,86 +307,31 @@
     }];
 }
 
-#pragma mark - PayPalPaymentDelegate methods
+#pragma mark - Paypal -
 
-- (PayPalConfiguration *)payPalConfiguration {
-    if (!_payPalConfiguration) {
-        _payPalConfiguration = [[PayPalConfiguration alloc] init];
-        
-        // See PayPalConfiguration.h for details and default values.
-        // Should you wish to change any of the values, you can do so here.
-        // For example, if you wish to accept PayPal but not payment card payments, then add:
-        _payPalConfiguration.acceptCreditCards = YES;
-        // Or if you wish to have the user choose a Shipping Address from those already
-        // associated with the user's PayPal account, then add:
-        _payPalConfiguration.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
-        
-        _payPalConfiguration.forceDefaultsInSandbox = YES;
-    }
-    return _payPalConfiguration;
+- (void)pay:(CGFloat)price {
+    [BBPaypalManager payWithPaypal:self.price fromViewController:self];
 }
 
-- (void)payWithPaypal:(CGFloat)price {
-    
-    // Create a PayPalPayment
-    PayPalPayment *payment = [[PayPalPayment alloc] init];
-    
-    // Amount, currency, and description
-    payment.amount = [[NSDecimalNumber alloc] initWithString:[NSString stringWithFormat:@"%.2f", price]];
-    payment.currencyCode = @"EUR";
-    payment.shortDescription = @"BroBox delivery request";
-    
-    // Use the intent property to indicate that this is a "sale" payment,
-    // meaning combined Authorization + Capture.
-    // To perform Authorization only, and defer Capture to your server,
-    // use PayPalPaymentIntentAuthorize.
-    // To place an Order, and defer both Authorization and Capture to
-    // your server, use PayPalPaymentIntentOrder.
-    // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
-    payment.intent = PayPalPaymentIntentSale;
-    
-    // Several other optional fields that you can set here are documented in PayPalPayment.h,
-    // including paymentDetails, items, invoiceNumber, custom, softDescriptor, etc.
-    
-    // Check whether payment is processable.
-    if (!payment.processable) {
-        // If, for example, the amount was negative or the shortDescription was empty, then
-        // this payment would not be processable. You would want to handle that here.
-    }
-    
-    // Create a PayPalPaymentViewController.
-    PayPalPaymentViewController *paymentViewController;
-    paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
-                                                                   configuration:self.payPalConfiguration
-                                                                        delegate:self];
-    
-    // Present the PayPalPaymentViewController.
-    [self presentViewController:paymentViewController animated:YES completion:nil];
-}
+#pragma mark - BBPayPalManagerDelegate
 
-- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
-                 didCompletePayment:(PayPalPayment *)completedPayment {
-    // Payment was processed successfully; send to server for verification and fulfillment.
-    [self verifyCompletedPayment:completedPayment];
-    
-    // Dismiss the PayPalPaymentViewController.
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
-    // The payment was canceled; dismiss the PayPalPaymentViewController.
+- (void)singlePaymentDidCancel {
     self.mission = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
-    
-    // Send confirmation to your server; your server should verify the proof of payment
-    // and give the user their goods or services. If the server is not reachable, save
-    // the confirmation and try again later.
-    
+- (void)singlePaymentDidSucceed:(PayPalPayment *)payment {
     [self saveMission:self.mission];
 }
+
+- (void)futurePaymentAuthorizationDidCancel {
+    self.mission = nil;
+}
+
+- (void)futurePaymentAuthorizationDidSucced:(NSDictionary *)futurePaymentAuthorization {
+    [self singlePaymentDidSucceed:nil];
+}
+
+
 
 
 @end

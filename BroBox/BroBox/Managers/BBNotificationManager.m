@@ -98,7 +98,8 @@ static BBNotificationManager *sharedManager;
         case BBNotificationTypeSelectedCarrier: {
             BBParseMission *mission = [BBInstallationManager userActiveMission];
             [BBAlertManager presentAlertForMissionStart:mission withBlock:^{
-                [self notificationForSelectedCarrierTapHandler:userInfo];
+                NSNotification *notification = [NSNotification notificationWithName:nil object:userInfo];
+                [self notificationForSelectedCarrierTapHandler:notification];
             }];
             break;
         }
@@ -132,7 +133,8 @@ static BBNotificationManager *sharedManager;
         case BBNotificationTypeSelectedCarrier: {
             BBParseMission *mission = [BBInstallationManager userActiveMission];
             [BBAlertManager presentAlertForMissionStart:mission withBlock:^{
-                [self notificationForSelectedCarrierTapHandler:userInfo];
+                NSNotification *notification = [NSNotification notificationWithName:nil object:userInfo];
+                [self notificationForSelectedCarrierTapHandler:notification];
             }];
             break;
         }
