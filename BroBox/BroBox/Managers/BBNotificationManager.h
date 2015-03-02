@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, BBNotificationType) {
 
 + (void)initialize;
 
++ (void)openApplicationWithRemoteNotification:(NSDictionary *)userInfo;
 + (void)handleRemoteNotification:(NSDictionary *)userInfo;
 
 + (void)pushNotificationWithMessage:(NSString *)message
