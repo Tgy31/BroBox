@@ -8,8 +8,37 @@
 
 #import "BBObject.h"
 
+// Frameworks
+#import <Parse/Parse.h>
+
+// Model
+@class BBParseUser;
+
+typedef NS_ENUM(NSInteger, BBNotificationType) {
+    BBNotificationTypeNewCarrier,
+    BBNotificationTypeSelectedCarrier,
+    BBNotificationTypeNewMessage
+};
+
+
 @interface BBNotificationManager : BBObject
 
 + (void)initialize;
+
++ (void)handleRemoteNotification:(NSDictionary *)userInfo;
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
+                               type:(BBNotificationType)type
+                               info:(NSDictionary *)info
+                            toQuery:(PFQuery *)query;
+
++ (void)pushNotificationWithMessage:(NSString *)message
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
+                               type:(BBNotificationType)type
+                               info:(NSDictionary *)info
+                             toUser:(BBParseUser *)user;
 
 @end

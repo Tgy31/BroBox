@@ -8,6 +8,12 @@
 
 #import "BBParseManager.h"
 
+// Model
+#import "BBParseMessage.h"
+
+// Managers
+#import "BBNotificationManager.h"
+
 @implementation BBParseManager
 
 + (void)fetchGeoPointsWithBlock:(BBArrayResultBlock)block {
@@ -36,6 +42,19 @@
     [carriersAwaitingRelation addObject:carrier];
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         block(succeeded, error);
+        if (!error) {
+            NSString *title = NSLocalizedString(@"New carrier available", @"");
+            NSString *alertFormat = NSLocalizedString(@"%@ accepted to carry your mission", @"");
+            NSString *alert = [NSString stringWithFormat:alertFormat, [carrier fullName]];
+            NSDictionary *info = @{
+                                   };
+            [BBNotificationManager pushNotificationWithMessage:alert
+                                                         title:title
+                                                      subtitle:alert
+                                                          type:BBNotificationTypeNewCarrier
+                                                          info:info
+                                                        toUser:mission.creator];
+        }
     }];
 }
 
@@ -51,6 +70,19 @@ setSelectedCarrier:(BBParseUser *)carrier
             mission.carrier = tempCarrier;
         }
         block(succeeded, error);
+        if (!error) {
+            NSString *title = NSLocalizedString(@"Mission starts now", @"");
+            NSString *alertFormat = NSLocalizedString(@"%@ chosed you as his carrier", @"");
+            NSString *alert = [NSString stringWithFormat:alertFormat, [mission.creator fullName]];
+            NSDictionary *info = @{
+                                   };
+            [BBNotificationManager pushNotificationWithMessage:alert
+                                                         title:title
+                                                      subtitle:alert
+                                                          type:BBNotificationTypeSelectedCarrier
+                                                          info:info
+                                                        toUser:carrier];
+        }
     }];
 }
 
@@ -115,6 +147,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             mission.messages = [objects mutableCopy];
+            [self notifyMissionMessagesFetched:mission];
         }
         block(objects, error);
     }];
@@ -129,6 +162,20 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
         [[mission messagesRelation] addObject:message];
         [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             block(succeeded, error);
+            if (!error) {
+                NSString *alertFormat = NSLocalizedString(@"%@: %@", @"");
+                NSString *alert = [NSString stringWithFormat:alertFormat, message.author.firstName, message.content];
+                NSDictionary *info = @{
+                                       };
+                
+                BBParseUser *receiver = ([message.author.objectId isEqualToString:mission.creator.objectId]) ? mission.carrier : mission.creator;
+                
+                [BBNotificationManager pushNotificationWithMessage:alert
+                                                             title:[message.author fullName]
+                                                          subtitle:message.content
+                                                              type:BBNotificationTypeNewMessage
+                                                              info:info toUser:receiver];
+            }
         }];
     }];
 }
@@ -139,6 +186,13 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [mission deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         block(succeeded, error);
     }];
+}
+
+#pragma mark - Broadcast
+
++ (void)notifyMissionMessagesFetched:(BBParseMission *)mission {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationFetchedMissionMessages
+                                                        object:mission];
 }
 
 @end

@@ -14,6 +14,8 @@
 #import "BBParseUser.h"
 #import "BBParseMessage.h"
 
+static NSString *BBNotificationFetchedMissionMessages = @"BBNotificationFetchedMissionMessages";
+
 ///--------------------------------------
 /// @name Blocks
 ///--------------------------------------
