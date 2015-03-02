@@ -28,13 +28,17 @@ typedef NS_ENUM(NSInteger, BBNotificationType) {
 + (void)handleRemoteNotification:(NSDictionary *)userInfo;
 
 + (void)pushNotificationWithMessage:(NSString *)message
-                               info:(NSDictionary *)info
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
                                type:(BBNotificationType)type
+                               info:(NSDictionary *)info
                             toQuery:(PFQuery *)query;
 
 + (void)pushNotificationWithMessage:(NSString *)message
-                               info:(NSDictionary *)info
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
                                type:(BBNotificationType)type
+                               info:(NSDictionary *)info
                              toUser:(BBParseUser *)user;
 
 @end

@@ -44,14 +44,15 @@
         block(succeeded, error);
         if (!error) {
             NSString *title = NSLocalizedString(@"New carrier available", @"");
-            NSString *messageFormat = NSLocalizedString(@"%@ accepted to carry your mission", @"");
-            NSString *message = [NSString stringWithFormat:messageFormat, [carrier fullName]];
+            NSString *alertFormat = NSLocalizedString(@"%@ accepted to carry your mission", @"");
+            NSString *alert = [NSString stringWithFormat:alertFormat, [carrier fullName]];
             NSDictionary *info = @{
-                                   @"title": title
                                    };
-            [BBNotificationManager pushNotificationWithMessage:message
-                                                          info:info
+            [BBNotificationManager pushNotificationWithMessage:alert
+                                                         title:title
+                                                      subtitle:alert
                                                           type:BBNotificationTypeNewCarrier
+                                                          info:info
                                                         toUser:mission.creator];
         }
     }];
@@ -71,14 +72,15 @@ setSelectedCarrier:(BBParseUser *)carrier
         block(succeeded, error);
         if (!error) {
             NSString *title = NSLocalizedString(@"Mission starts now", @"");
-            NSString *messageFormat = NSLocalizedString(@"%@ chosed you as his carrier", @"");
-            NSString *message = [NSString stringWithFormat:messageFormat, [mission.creator fullName]];
+            NSString *alertFormat = NSLocalizedString(@"%@ chosed you as his carrier", @"");
+            NSString *alert = [NSString stringWithFormat:alertFormat, [mission.creator fullName]];
             NSDictionary *info = @{
-                                   @"title": title
                                    };
-            [BBNotificationManager pushNotificationWithMessage:message
-                                                          info:info
+            [BBNotificationManager pushNotificationWithMessage:alert
+                                                         title:title
+                                                      subtitle:alert
                                                           type:BBNotificationTypeSelectedCarrier
+                                                          info:info
                                                         toUser:carrier];
         }
     }];
@@ -160,19 +162,18 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
         [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             block(succeeded, error);
             if (!error) {
-                NSString *title = NSLocalizedString(@"BroBox", @"");
-                NSString *messageFormat = NSLocalizedString(@"%@: %@", @"");
-                NSString *notifMessage = [NSString stringWithFormat:messageFormat, message.author.firstName, message.content];
+                NSString *alertFormat = NSLocalizedString(@"%@: %@", @"");
+                NSString *alert = [NSString stringWithFormat:alertFormat, message.author.firstName, message.content];
                 NSDictionary *info = @{
-                                       @"title": title
                                        };
                 
                 BBParseUser *receiver = ([message.author.objectId isEqualToString:mission.creator.objectId]) ? mission.carrier : mission.creator;
                 
-                [BBNotificationManager pushNotificationWithMessage:notifMessage
-                                                              info:info
+                [BBNotificationManager pushNotificationWithMessage:alert
+                                                             title:[message.author fullName]
+                                                          subtitle:message.content
                                                               type:BBNotificationTypeNewMessage
-                                                            toUser:receiver];
+                                                              info:info toUser:receiver];
             }
         }];
     }];

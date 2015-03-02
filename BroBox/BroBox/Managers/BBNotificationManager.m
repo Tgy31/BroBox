@@ -16,7 +16,10 @@
 #define APP_NAME @"BroBox"
 #define APP_ICON @"pin.png"
 
-
+#define NOTIFICATION_KEY_TITLE @"title"
+#define NOTIFICATION_KEY_SUBTITLE @"subtitle"
+#define NOTIFICATION_KEY_TYPE @"type"
+#define NOTIFICATION_KEY_MESSAGE @"alert"
 
 static NSString *BBNotificationKeyNewCarrier = @"BBNotificationKeyNewCarrier";
 static NSString *BBNotificationKeySelectedCarrier = @"BBNotificationKeySelectedCarrier";
@@ -129,13 +132,17 @@ static BBNotificationManager *sharedManager;
 #pragma mark - Send Notifications
 
 + (void)pushNotificationWithMessage:(NSString *)message
-                               info:(NSDictionary *)info
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
                                type:(BBNotificationType)type
+                               info:(NSDictionary *)info
                             toQuery:(PFQuery *)query {
     
     NSMutableDictionary *data = [info mutableCopy];
-    [data setObject:message forKey:@"alert"];
-    [data setObject:[self keyForNotificationType:type] forKey:@"type"];
+    [data setObject:message forKey:NOTIFICATION_KEY_MESSAGE];
+    [data setObject:title forKey:NOTIFICATION_KEY_TITLE];
+    [data setObject:subtitle forKey:NOTIFICATION_KEY_SUBTITLE];
+    [data setObject:[self keyForNotificationType:type] forKey:NOTIFICATION_KEY_TYPE];
     
     // Send push notification to query
     PFPush *push = [[PFPush alloc] init];
@@ -145,16 +152,20 @@ static BBNotificationManager *sharedManager;
 }
 
 + (void)pushNotificationWithMessage:(NSString *)message
-                               info:(NSDictionary *)info
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
                                type:(BBNotificationType)type
+                               info:(NSDictionary *)info
                              toUser:(BBParseUser *)user {
     
     PFQuery *query = [PFInstallation query];
     [query whereKey:@"user" equalTo:user];
     
     [self pushNotificationWithMessage:message
-                                 info:info
+                                title:title
+                             subtitle:subtitle
                                  type:type
+                                 info:info
                               toQuery:query];
 }
 
@@ -175,7 +186,7 @@ static BBNotificationManager *sharedManager;
 }
 
 + (BBNotificationType)typeFromNotificationData:(NSDictionary *)data {
-    NSString *typeKey = [data objectForKey:@"type"];
+    NSString *typeKey = [data objectForKey:NOTIFICATION_KEY_TYPE];
     
     if ([typeKey isEqualToString:BBNotificationKeyNewCarrier]) {
         return BBNotificationTypeNewCarrier;
