@@ -14,6 +14,7 @@
 
 // Managers
 #import "BBInstallationManager.h"
+#import "BBParseManager.h"
 
 
 #define APP_NAME @"BroBox"
@@ -97,6 +98,23 @@ static BBNotificationManager *sharedManager;
     [[LNNotificationCenter defaultCenter] presentNotification:notification
                                      forApplicationIdentifier:APP_IDENTIFIER
                                                      userInfo:userInfo];
+    
+    BBNotificationType type = [BBNotificationManager typeFromNotificationData:userInfo];
+    
+    switch (type) {
+        case BBNotificationTypeNewCarrier: {
+            BBParseMission *mission = [BBInstallationManager userActiveMission];
+            [self refreshMissionMessages:mission];
+            break;
+        }
+        case BBNotificationTypeSelectedCarrier:
+            break;
+        case BBNotificationTypeNewMessage:
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)notificationWasTapped:(NSNotification*)notification {
@@ -106,13 +124,13 @@ static BBNotificationManager *sharedManager;
     
     switch (type) {
         case BBNotificationTypeNewCarrier:
-            [self handleNotificationForNewCarrier:notification];
+            [self handleNotificationForNewCarrierTapped:notification];
             break;
         case BBNotificationTypeSelectedCarrier:
-            [self handleNotificationForSelectedCarrier:notification];
+            [self handleNotificationForSelectedCarrierTapped:notification];
             break;
         case BBNotificationTypeNewMessage:
-            [self handleNotificationForNewMessage:notification];
+            [self handleNotificationForNewMessageTapped:notification];
             break;
             
         default:
@@ -120,16 +138,21 @@ static BBNotificationManager *sharedManager;
     }
 }
 
-- (void)handleNotificationForNewCarrier:(NSNotification *)notification {
+- (void)handleNotificationForNewCarrierTapped:(NSNotification *)notification {
     
 }
 
-- (void)handleNotificationForSelectedCarrier:(NSNotification *)notification {
+- (void)handleNotificationForSelectedCarrierTapped:(NSNotification *)notification {
     
 }
 
-- (void)handleNotificationForNewMessage:(NSNotification *)notification {
-    BBParseMission *mission = [BBInstallationManager userActiveMission];
+- (void)handleNotificationForNewMessageTapped:(NSNotification *)notification {
+}
+
+- (void)refreshMissionMessages:(BBParseMission *)mission {
+    if (mission) {
+        [BBParseManager fetchMessagesForMission:mission withBlock:nil];
+    }
 }
 
 #pragma mark - Send Notifications
