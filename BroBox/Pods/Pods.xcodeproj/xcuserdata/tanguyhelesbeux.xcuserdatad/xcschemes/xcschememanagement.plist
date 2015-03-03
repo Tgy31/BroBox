@@ -2,39 +2,77 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PayPal-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-QRCodeReaderViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SIAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SlackTextViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UIViewController+KeyboardAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0AB802B899A69C2078CE4161</key>
+		<key>1CA69CD8C6F7CE4E26FF55AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>11C96A290E7D9B89DF3E2096</key>
+		<key>4C5841EF03AF3664A18ECF1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>161DBEF81AEDB6D800362FB0</key>
+		<key>593BB8A6CB6B0BC0BE1B105B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FA063C18B4A0A3FB9B7299D</key>
+		<key>6420405F2FA4F2BC60C72893</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D637AAD4793900E478896FE</key>
+		<key>6EB6E856FF1D71778E00A858</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9856DFAB7AB246515994F78F</key>
+		<key>DEE636EA1BCD6803FB20823D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8B825A3E115A2629F7358BC</key>
+		<key>F44FA061E254D4AAC4632D91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
