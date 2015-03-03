@@ -11,6 +11,8 @@
 // Managers
 #import "BBParseManager.h"
 #import "BBLocationManager.h"
+#import "AppDelegate.h"
+#import "BBInstallationManager.h"
 
 // Model
 #import "BBParseUser.h"
@@ -48,7 +50,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 @property (weak, nonatomic) IBOutlet UILabel *labelFrom;
 @property (weak, nonatomic) IBOutlet UILabel *labelTo;
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
-
+@property (strong, nonatomic) UIBarButtonItem *testButton;
 @end
 
 @implementation BBMissionOverviewVC
@@ -103,6 +105,10 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
                 forControlEvents:UIControlEventTouchUpInside];
     
     [self updateFooterView];
+    
+    if ([self.mission.carrier.objectId isEqualToString:[BBParseUser currentUser].objectId]) {
+        self.navigationItem.rightBarButtonItem = self.testButton;
+    }
 }
 
 - (void)setViewForMission:(BBParseMission *)mission {
@@ -122,6 +128,16 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 - (void)setActionType:(BBMissionOverviewActionType)actionType {
     _actionType = actionType;
     [self updateFooterView];
+}
+
+- (UIBarButtonItem *)testButton {
+    if (!_testButton) {
+        _testButton = [[UIBarButtonItem alloc] initWithTitle:@"Carrier screens"
+                                                       style:UIBarButtonItemStylePlain
+                                                      target:self
+                                                      action:@selector(testButtonHandler)];
+    }
+    return _testButton;
 }
 
 #pragma marl - View Methods
@@ -156,6 +172,11 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 
 - (void)actionButtonHandler {
     [self acceptMission];
+}
+
+- (void)testButtonHandler {
+    [BBInstallationManager setCarriedMission:self.mission];
+    [AppDelegate presentCarrierScreenForMission:self.mission];
 }
 
 #pragma mark - API
