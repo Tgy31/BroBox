@@ -7,837 +7,837 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01DB7DBA0AE5A92E65A5FEB4 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 378BE76AD547928D272417D1 /* UIAlertView+AFNetworking.m */; };
-		051C7FBBED87BDDDC125FF36 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445868D55CADE5FECDC8617 /* AFURLConnectionOperation.m */; };
-		0B60CA208D30D3B54D2E8C7C /* SLKUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = CAC5E0AEA1DBD3A70B174EC3 /* SLKUIConstants.h */; };
-		0BC257DFFDF023517A9E0F68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C27BEC89EF7AF3403ACEED3 /* CoreLocation.framework */; };
-		0F86F3E04A8F6CF1C273F580 /* UIScrollView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFB6832AD7413FB72BDA32C /* UIScrollView+SLKAdditions.h */; };
-		216E551A989BBA0A27A2CDF8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE95CC06C7F2A3128A36A4 /* SystemConfiguration.framework */; };
-		26C7B5769A6130FECD0BDF08 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE99962F0E94600A1D26864 /* CoreMedia.framework */; };
-		29F36EDD928CDDCCFEDDFBDF /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 114E8FD1DDDF5DBE62E103F6 /* UIWebView+AFNetworking.h */; };
-		2B1605AA58D12D862CD62BB0 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 044839573B3A91BE6875FEC9 /* AFURLResponseSerialization.m */; };
-		3154714A2011D5ECA22EE64D /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D28C71D9AA327203ACEBD9 /* AFHTTPRequestOperation.h */; };
-		363AB5611AC297C1A7C357C2 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B761620B6BFF224498857 /* AFNetworkActivityIndicatorManager.m */; };
-		3686FD35461BA599FBC05124 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9956130CD886734A295722C0 /* AFHTTPRequestOperation.m */; };
-		392AB10C8D7D3CD695DCE5AA /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6140A9AA6D270E2831D51B6F /* AFSecurityPolicy.h */; };
-		3A57A4024FA4CAA47A05E7BF /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 432A0DA07A1979C2009F09A4 /* SLKTextView.m */; };
-		3E30BFA8F396CD627756C87E /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7635FBF2B8D268B9684BA140 /* AFHTTPSessionManager.h */; };
-		40458692AF21F66BE3FD124F /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22824C61A2AC560E9F902927 /* UIView+SLKAdditions.m */; };
-		4244F64A47C71F1E84B538A1 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CAFFDE513D7841C676083FEA /* UIKit+AFNetworking.h */; };
-		46A3C89D6AC82D14780EA62D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D65847D7984EA57E00B5A /* AFURLSessionManager.m */; };
-		473B8B1F94788A99FE3807FD /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D7F20409F7EB3541B9F8FF0 /* UIButton+AFNetworking.h */; };
-		48164C5ADB1D0753202FBC51 /* Pods-UIViewController+KeyboardAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF2A4FF6E8BC3F89B25CC02 /* Pods-UIViewController+KeyboardAnimation-dummy.m */; };
-		486AA5C68D87A4A4D191C6DC /* UIViewController+KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35617C1E00CB2B82B7E37DCB /* UIViewController+KeyboardAnimation.m */; };
-		486BD5088AAD0F0FC2C9BF99 /* SLKInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0EA8A28A5C8CBBE9D5161F /* SLKInputAccessoryView.h */; };
-		48767390A5BE1DFA8D0376E7 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 988D07AD385A4D571164F1E6 /* AFNetworkActivityIndicatorManager.h */; };
-		493E386DD02881ECD6A36138 /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B0CA4FDC48E37DCF69FE8C /* QRCodeReaderViewController.h */; };
-		4D00B916ADF5C015507D8530 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38643DEC30F76F797A301F76 /* AVFoundation.framework */; };
-		4E05A9139F352125812F77D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B098EAD629DB3FF8E8929C59 /* Security.framework */; };
-		53270B9A98B04A281EE42812 /* SLKTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE30132E59BF5F52567452D /* SLKTextViewController.h */; };
-		54E044B96CADC2BDDFC4E440 /* CardIOPaymentViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A105C85183B2E775EC663B2C /* CardIOPaymentViewControllerDelegate.h */; };
-		5752DADEAF5C30C41DEDFEAB /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B062F13F0CD95E01C35E2A3B /* AFURLRequestSerialization.m */; };
-		57DDB0C85750D8BD4D9247F8 /* UIViewController+KeyboardAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5B3E32F524D409121415C /* UIViewController+KeyboardAnimation.h */; };
-		583D617BF24D78F7E8DC3979 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE95CC06C7F2A3128A36A4 /* SystemConfiguration.framework */; };
-		588D0C33DB81BAD13D1FF0AF /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F593C0494851DEE74DCEE5E1 /* Pods-dummy.m */; };
-		59578CFC71EA913DCB60D296 /* SLKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A319C51987FD5A09C2380512 /* SLKTextView.h */; };
-		59C668D3C855C63026B9CC63 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0B23AC4FB8E03C0D717BEA /* MessageUI.framework */; };
-		5C1B99E5A6F8E74325B11088 /* Pods-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E453C0FD20B2ACAFC86C2 /* Pods-AFNetworking-dummy.m */; };
-		5F63E5F4E5F7C58C8C2958AD /* SLKTypingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = E20241CD78187E29DA06D79F /* SLKTypingIndicatorView.h */; };
-		644CBBDAB5B122F7D9FF2DEA /* PayPalPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEFAD5A930469ACD1E5F546 /* PayPalPayment.h */; };
-		6AC39224DFDE3C306FC1CC53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		6FBD5C71FD43B94B98A87817 /* PayPalConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A148CBB0A092152012A1252 /* PayPalConfiguration.h */; };
-		777FF521B293388CB4C3073E /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBE3F9C1DDE277D57662E0E /* UIActivityIndicatorView+AFNetworking.h */; };
-		781CEDDC3F324C42B7A563A3 /* Pods-QRCodeReaderViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 820967F32A91104A2F6CBF7F /* Pods-QRCodeReaderViewController-dummy.m */; };
-		7AFB954067336C0A0283E185 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DEC8A4A5CDEDC77297FD62 /* AFHTTPRequestOperationManager.h */; };
-		7F3E672263605583640425AD /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 44CF1B0297BF0438185B8ECB /* CardIOViewDelegate.h */; };
-		7FE76EF30B25150E863B04AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		8BDBF054EFD806CD8CE52D20 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C0A9F2B17077974FDE0D8175 /* UIImageView+AFNetworking.h */; };
-		8CA5878DA440BC0853026EE7 /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D03BB0BD3F6AE7E6B257453 /* CardIOView.h */; };
-		92F49264D64B4EFC9C86040A /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A118DFFD994DB520DD04C91C /* UIRefreshControl+AFNetworking.h */; };
-		93418D4B25B2C2629A6EC318 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04495D9C67676157A4D61B5 /* AFHTTPSessionManager.m */; };
-		939C5BCBE599E0C1A8C67DC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38643DEC30F76F797A301F76 /* AVFoundation.framework */; };
-		97CCEC0F4A37957AE3DEA9AC /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E981876BDC6784AFDDF72E /* UIWebView+AFNetworking.m */; };
-		9DC9AB5C2796F9C932042F71 /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D972CF2EFF20E463C4051D /* SLKTextView+SLKAdditions.m */; };
-		9EE1EBB86F0C11A624CE8263 /* PayPalMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = F9B7C8556B7C46FEDD31D372 /* PayPalMobile.h */; };
-		9F2B9A9E0CA6ED9AF57D9107 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477217CE5150464C38A721E2 /* MobileCoreServices.framework */; };
-		A3B9155B04551D0D96BA8804 /* CardIOPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A108CD869D0F1D0DCBF1F24 /* CardIOPaymentViewController.h */; };
-		A3E0542E454081ED0B0F5523 /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B08B220AA06991954273 /* SLKTypingIndicatorView.m */; };
-		A8F6A49DA53F78F942196764 /* CardIOCreditCardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A33D703C29717C0D90CA2ECF /* CardIOCreditCardInfo.h */; };
-		A9EBC9A8F964A09BADDBDEA4 /* PayPalOAuthScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 23AB873E7423438EACC21EAE /* PayPalOAuthScopes.h */; };
-		AC6FE2199265C3FA2359D0B0 /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 955B05B2608323200E9D92CD /* UIScrollView+SLKAdditions.m */; };
-		ADD63E36C30DD75D4498EB5C /* Pods-PayPal-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDA17D1A109B5159555403 /* Pods-PayPal-iOS-SDK-dummy.m */; };
-		B26B9B4F8A93C78E659D45A7 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EFBAACD518615C57305C3DD /* QRCodeReaderView.h */; };
-		B27E014B24AF024DFEA1C94D /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F98364EB774CF012AE4C3 /* SLKInputAccessoryView.m */; };
-		B45FC7BA87FC65BE0BF6ABF1 /* SLKTextInputbar.h in Headers */ = {isa = PBXBuildFile; fileRef = C570977D46B11F214FC8E52F /* SLKTextInputbar.h */; };
-		B5F5924347A90CD11B63FCDD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F001290D1D47F60D25F752 /* UIRefreshControl+AFNetworking.m */; };
-		B77B3FB584ACA25C2FDD92A7 /* SLKTextView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 690F66470EA18A9E920326B3 /* SLKTextView+SLKAdditions.h */; };
-		BCCAAB86AB3E8D8EF30C4288 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 735F05DACD154439022F38A7 /* AFURLResponseSerialization.h */; };
-		C121874B62E98145EC597822 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F95AE0AAC04BFC1808160FD3 /* UIProgressView+AFNetworking.h */; };
-		C130376523F3F92A0E31830D /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 437F264A421B979D55D8FBC4 /* UIAlertView+AFNetworking.h */; };
-		C52802A3FDE09E2C2A95F4C9 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD79A9831D0F2041BB453EE /* QRCodeReaderView.m */; };
-		C7522760054489831956C2D2 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 041889C95854BA6D6C65973B /* UIButton+AFNetworking.m */; };
-		CA79A67684A14A9FE61CD634 /* UIView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB1EA9F6128CF0A5DEB5685 /* UIView+SLKAdditions.h */; };
-		CF75896B73DED04D5CF24AC2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477217CE5150464C38A721E2 /* MobileCoreServices.framework */; };
-		D0615DA4C181D813AAD26FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		D06D2329EE7929DF085E30D5 /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F3C84801F5E43186910BC0 /* SLKTextViewController.m */; };
-		D0A6BE0738475A16E6A92824 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E5817AE5D7FD7831C66E4ED /* AFNetworking.h */; };
-		D25D57F593D6C19895B4046D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7A7E77B92D08E2AA84E9D1 /* CoreGraphics.framework */; };
-		D28477B2C1F242106DF871EF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8070D703CCA145F9E5C61686 /* AudioToolbox.framework */; };
-		D3CA6CD6FCDD146025C24F4E /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 674339B9BAC413C17FC61D0D /* SLKTextInputbar.m */; };
-		D5F25B10E41B2FBF5B3A277B /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D21AEC83837A8F299C82B90C /* UIProgressView+AFNetworking.m */; };
-		D6FF8C907BA4AC1DB7C945FB /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 281AC29AAB22EF21FA67B029 /* QRCameraSwitchButton.m */; };
-		D8318B81D4C4FEDF8C9E6A65 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F273E80C1952B88DB1BF5A10 /* UIImageView+AFNetworking.m */; };
-		D8B7AABC2FC8B22311F3307E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5856D22D1EB92D232E6B60 /* AFNetworkReachabilityManager.m */; };
-		DB87502926F763D77F9E42E1 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 03226260A6D7F9BFC90D75CC /* AFURLSessionManager.h */; };
-		DE4B4789A446A0AD227CE7C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		DF696C3F6973136F81729CA4 /* PayPalProfileSharingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C197A9684D4A85DE733F24 /* PayPalProfileSharingViewController.h */; };
-		DFB13B99996B135A6FA30B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		E1A021E100F3C5E7CFF1BF64 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EFF71DA5CFA419DFC0D681 /* QRCodeReaderViewController.m */; };
-		E1DFECB542C8C4C95DABA4D0 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D68A749163822CC84D4C90A /* AFURLConnectionOperation.h */; };
-		E46FDD85343642070BA5E647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E4B84B664C863C04E2ED1 /* Foundation.framework */; };
-		E47482EB8456FFCEA4F5EAEF /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C684D72F8F271B290A97B2 /* QRCodeReaderDelegate.h */; };
-		E71F4383325DC839B5939461 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 567B2DF4DE4277C61F4E71FA /* AFNetworkReachabilityManager.h */; };
-		E813D58D63EF10B6468BF928 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A766A6D8450218BB9CE9196 /* AFSecurityPolicy.m */; };
-		EAA53A3452F95D2006B54DF2 /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FCFB243645D50FDEBACE0304 /* QRCameraSwitchButton.h */; };
-		EBF3E2495636CBADAB740B4C /* Pods-SlackTextViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B654802FE3EAEDA5825E4F7 /* Pods-SlackTextViewController-dummy.m */; };
-		EC6F4A6AB2B3CD0438C660EC /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA611E0A46E8E0146452B91 /* UIActivityIndicatorView+AFNetworking.m */; };
-		EC9A5562291DA1EF318E001A /* PayPalFuturePaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC856750A6DFDABDC9F4E7B /* PayPalFuturePaymentViewController.h */; };
-		ECCF3431EFF37DB5445DF356 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A8774438696E32ACE931DB2 /* AFURLRequestSerialization.h */; };
-		EEE6DDDDE104CC7C72902CEA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2C27801894ADE6439339E /* AFHTTPRequestOperationManager.m */; };
-		EF6E42799158B31543B9D835 /* PayPalPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E19CB33976FBD33EB4E4A76 /* PayPalPaymentViewController.h */; };
-		F1E0BBA874DF44044CDBADEA /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 759D0334E4650458EC0669E6 /* CardIO.h */; };
-		F27CC6C2942892219168D56C /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = C818EEED3BB4B8C6A10E1592 /* CardIODetectionMode.h */; };
-		F85A850473AF9AA0FD8A8FC8 /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = E1589196A8021BC635471418 /* CardIOUtilities.h */; };
+		00AE5A598C2B40E99C6E1421 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AA9F944B110A59116EF92 /* SIAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		00C32B53E8D124A8F795E7DC /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BD8F391BEC82F581B2D74C /* UIAlertView+AFNetworking.m */; };
+		050B05E8777A66A77BB4F44F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789495B679DA8D1B6450CA67 /* Security.framework */; };
+		092DD6B0F5F6AC6754BF9703 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1797E11E5271A00D1952BB6B /* UIKit+AFNetworking.h */; };
+		0C6F010D5E04B066F8BB2C0A /* PayPalFuturePaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A9019121772F46275EA677A7 /* PayPalFuturePaymentViewController.h */; };
+		0D0CD3076563BC4165FE8CB9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A33798D33C420271B9FB63 /* UIWebView+AFNetworking.m */; };
+		1339F26937F4C1BAEC1122F0 /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B370766B23E91CE87F03D9 /* UIScrollView+SLKAdditions.m */; };
+		142B9A90D8B23166D27C2DE3 /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = C417DC003403BBAEBD963D99 /* CardIOView.h */; };
+		1717CC0E0AA97ED4FCFBD086 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 01EB5FBA81DC125DCEE9A81F /* AFURLConnectionOperation.h */; };
+		175FFA10AA4823D7BBC27235 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC96FE27CCA3566A5FF7816 /* AFHTTPRequestOperation.m */; };
+		194E780A55958F27F964009E /* UIViewController+KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A6B2727AD31216A58DF73A /* UIViewController+KeyboardAnimation.m */; };
+		1B8764FBFE282B5666B7DD22 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ED06F87C98C40F489368710B /* AFNetworkReachabilityManager.h */; };
+		1CE43CB3CB8FA2D2C2697E4B /* SLKTypingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = BCEF1539D5FEF44D40CDDBD6 /* SLKTypingIndicatorView.h */; };
+		1E13BB40C9028E7CEC48BFBA /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D9FDC0B7552C86080D031A /* UIActivityIndicatorView+AFNetworking.m */; };
+		1ECEEDD603F64E4F7C89730B /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D1729BAEA85E74C65CCE3E0D /* UIImageView+AFNetworking.h */; };
+		1EEAC5CCFD3D842E1990F000 /* SIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D076B82B518FE5EF53FC55F /* SIAlertView.h */; };
+		20579331827FCCF873111154 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CFD690DDC8DCFFCEF9CAB3 /* AFHTTPSessionManager.m */; };
+		21E8ECDEB137B3EDCF89FC5F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015092391DD0AF5E3D346D4A /* MobileCoreServices.framework */; };
+		22E224391FE18F31281BDCFC /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DF2681E05C2122173C4FCE /* QRCameraSwitchButton.h */; };
+		2529C23B2EDDD9E3C47C651D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCF4EED8F956F59B000A05 /* CoreGraphics.framework */; };
+		2F0F1C1A9A19AEFD2AE7DFB9 /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8257C9C0FF3C5ACBD5C5AD8 /* SLKTextView.m */; };
+		2F58FFA401050B015FFC0077 /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 19FDAC7B73DDCF45FB009B62 /* CardIOViewDelegate.h */; };
+		30B03A03157D7D0EBF629C82 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6634DF9AF59928053E65632 /* AFURLConnectionOperation.m */; };
+		368BE829783C4712199FD608 /* SLKTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C7E300918E1B64CA773242 /* SLKTextViewController.h */; };
+		4066907BB53881F56C69C635 /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC688E39E59EAF92FBC6EF2A /* SLKInputAccessoryView.m */; };
+		4158426ADECC1C608F5038FE /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 009349AE45254157A44DDB4F /* CardIOUtilities.h */; };
+		41EB1A0B5010174E530427B4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C81D3622D48570D4D793E0C5 /* UIProgressView+AFNetworking.m */; };
+		4204688F35A6AE84ED3D35F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3162EBFC04721FDD28A99E /* CoreLocation.framework */; };
+		446399B1600154B131C64CC2 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = FBE41E0F4812F5E2027FF113 /* UIProgressView+AFNetworking.h */; };
+		4610ED031A18D197C16D1519 /* CardIOPaymentViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AE7FB42A198037DAC88ABD /* CardIOPaymentViewControllerDelegate.h */; };
+		49434F8A574A111E4F94AF71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		4A63228FD57C5FA022452E33 /* PayPalOAuthScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = B1FADF753EE670BAE6DBABBD /* PayPalOAuthScopes.h */; };
+		517710F87F78AA11487FBB60 /* CardIOCreditCardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 977614A42660855D45428DD6 /* CardIOCreditCardInfo.h */; };
+		5428460CC8048CC8E5CE6DC2 /* SLKTextInputbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 038402A9EB4A605A211FCC42 /* SLKTextInputbar.h */; };
+		5813F3A2131236E4AFA17CE9 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B254BF73100F2AEF08F1DAB /* UIButton+AFNetworking.m */; };
+		5CD584D85F4B72FDBEB5EE13 /* SLKInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4A25474520A3B464ED6EAF /* SLKInputAccessoryView.h */; };
+		5DA0A97F5C7C388EB8F86620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		6215A9D47430DBD2FE323C66 /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF7BF5927014A9ECE925F4F /* CardIO.h */; };
+		625A4C62E4269A7CFAB9B1D9 /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A56752285B09E798C0340B /* UIView+SLKAdditions.m */; };
+		646B4B1ED7B53256DE295636 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BEDDC331BD83FBACD67DF5 /* CoreMedia.framework */; };
+		64B2DBBB39B46BD7DB8F0381 /* PayPalConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = D66BF9949787B833AF7E42AA /* PayPalConfiguration.h */; };
+		6869ED998032195A53534D67 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DFC0940B3BB49740D397380 /* UIWebView+AFNetworking.h */; };
+		699C3288CEAD5037523E5B15 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D04B6ECF0D59364E9F2627 /* Pods-dummy.m */; };
+		6CAE7711BD61DAD590A6BA2B /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D30C86A387399B335069F68 /* AFNetworkActivityIndicatorManager.h */; };
+		71071FA43636F6B1296CAF58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		734AEFB964C4441D9D2EA898 /* PayPalPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CEF317F831BE5E5EA4A678D /* PayPalPayment.h */; };
+		7539FA920A4803AF0D0E4A9C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C79A6F37D2BD7A86CED13E /* AFURLSessionManager.m */; };
+		7D5AA931A3DF88EFEADB5B11 /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7EAB8E4B07E85C8A4372F1 /* SLKTextInputbar.m */; };
+		7D6DBDD3D5768B1E262D6413 /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E241BDF6A8D2552A1CDD964 /* UIAlertView+AFNetworking.h */; };
+		7EDD90937A70666747299F74 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = A86F2D1E63BD31C68A2F46AD /* QRCodeReaderView.h */; };
+		8ADDB4CD7031F11C67CCE4FA /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D632614263674D4523D0071 /* SLKTextView+SLKAdditions.m */; };
+		8CD6296D457AD322F32F7717 /* Pods-SlackTextViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F587CFDAEA0F5600F4F97AE0 /* Pods-SlackTextViewController-dummy.m */; };
+		8D236950ACA516BAFDF6CB68 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4825B3E2E217D58431307AB0 /* UIRefreshControl+AFNetworking.h */; };
+		8F5B93B3A49C528DEC91E6FB /* UIView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B87744BEDB101D6DAD0B49 /* UIView+SLKAdditions.h */; };
+		913C486D85AA6F5BC7441B61 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1C39D83C192F8CD34C06B /* QRCodeReaderView.m */; };
+		95324D76364592DE8FCD79C0 /* SLKUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D69E142FF895FB6D7453A8C5 /* SLKUIConstants.h */; };
+		95E95CAFD80EB4BD9FFEEC0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		97727EBF9B6EEA0C5CB07FEB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B9556EC04CE258A77B70F /* AFHTTPRequestOperationManager.m */; };
+		9A1A1A72966133972E2A7E8B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECD7FC33FDD7EE6D588B135 /* MessageUI.framework */; };
+		9D4D44DD5E7480B5BD70B542 /* Pods-QRCodeReaderViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880FCC233F10E48CDE339E34 /* Pods-QRCodeReaderViewController-dummy.m */; };
+		9E451C5FB9C61EB1FDF1C592 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F162D3B402A92214FFABE /* AFNetworkReachabilityManager.m */; };
+		9FB49C6A98ACDBA5088E9635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		A4DC506FDEED63078A700762 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797F0CB04FFBC9B38C75E18 /* AVFoundation.framework */; };
+		A664CD50D8C7751D04CE64D3 /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 489D7AA8A9F21BAE48F5D2B6 /* CardIODetectionMode.h */; };
+		A88B20737E44DEBE395742EE /* Pods-PayPal-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB19885EBDA86BE749BF84 /* Pods-PayPal-iOS-SDK-dummy.m */; };
+		A9706C87F7FB9439C8FED0D9 /* PayPalPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BED76C94C1F41ADB64F4A3C1 /* PayPalPaymentViewController.h */; };
+		A9C418958A57728B018F72D0 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 48728544F3137F09E130432D /* UIActivityIndicatorView+AFNetworking.h */; };
+		AA3DCA3918CEE0E4FBF5D12C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		B1BB9ED7161C941D8AAA736B /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A35C0B86DD309BFE7937DF1 /* UIButton+AFNetworking.h */; };
+		B683A288F1DB2E2F8BCA598B /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E430BF18F7B4A48C0B04989 /* AFSecurityPolicy.h */; };
+		BADB94C8572FEC9911B27578 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B576AD77A59F6C4F39E2DA5 /* UIRefreshControl+AFNetworking.m */; };
+		BD71CDAB77F7B66F11C3859E /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC68EEBA52310A2A3D8CE3 /* AFNetworkActivityIndicatorManager.m */; };
+		C0E1A82E51A92E5DCD85A8B0 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A8014587C9368C743FC69D3C /* UIImageView+AFNetworking.m */; };
+		C15BF5ACEE8B84D1E25A497C /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A558611C15436E104E10EF /* SLKTextViewController.m */; };
+		C5922AF768094A56E8DCAE19 /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FE0E554F6E00DC6F1D4A4C /* QRCodeReaderViewController.h */; };
+		C6F7F130A3F68D8996C53CBA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172ABA11838B67E56CBCB307 /* SystemConfiguration.framework */; };
+		C7E1AA03F9ECEDE36C9C5741 /* PayPalMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C798CB52856642517169A5B /* PayPalMobile.h */; };
+		D027EEB835D45016FAC8DE60 /* SLKTextView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C5358A2C5C33FA8AD7FC6F /* SLKTextView+SLKAdditions.h */; };
+		D02897333596E7C5D53E8234 /* UIViewController+KeyboardAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C0FC3C5556D02035B43027 /* UIViewController+KeyboardAnimation.h */; };
+		D11F12C5506F89873746BBB6 /* CardIOPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3AAAE62696E768CB3ECAD8E /* CardIOPaymentViewController.h */; };
+		D65D46926180C9E6D2742677 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D47FF2ADF93D4BB2E2F81BE3 /* AFHTTPSessionManager.h */; };
+		D7157EC060D6606E422E2157 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821D0389F59A0CF3FF19EB0 /* AFURLRequestSerialization.m */; };
+		D737040548D663B31B3EC2C6 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = BBDF41847BA40D9611316685 /* AFURLRequestSerialization.h */; };
+		D7DBAD5B597C5AEF8BE7C5AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797F0CB04FFBC9B38C75E18 /* AVFoundation.framework */; };
+		D82C4E23E2DDCB212493E1EE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542327B6A7765D8E650EA8DE /* AudioToolbox.framework */; };
+		D82F7B80551F8DFD8ADD2905 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ECB23984DA139A901E5577E /* AFURLSessionManager.h */; };
+		D94F30DE56F6B30FBDD3736D /* PayPalProfileSharingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6084BFA334529D546E809410 /* PayPalProfileSharingViewController.h */; };
+		DC8818E6EDBFFA86F5149F35 /* SLKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = D04C665CDE8F55456965203E /* SLKTextView.h */; };
+		DE7D96AABE82EBC5C607985C /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 45154482B41F4577A9F72B60 /* AFURLResponseSerialization.h */; };
+		DF6CF7D75C79014FCAB66EE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C96F1F2D5CAC3C0C5EE7FC /* QuartzCore.framework */; };
+		DFE92C23E6DD396AA7698903 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015092391DD0AF5E3D346D4A /* MobileCoreServices.framework */; };
+		E204FB6FA76B758AB700F80D /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54776C907E7FDFE507ED36 /* AFSecurityPolicy.m */; };
+		E4036B9595338FAD64314DC2 /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E1565624F22C648BCF91A733 /* QRCodeReaderDelegate.h */; };
+		E8C75FD2BDD0B7589CD72BC3 /* Pods-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F219BCE00A5EC9DC0E87D3 /* Pods-AFNetworking-dummy.m */; };
+		EA2E9F0B4A537138BFD0FD08 /* Pods-SIAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA8C8D8D135C2E10060EBD /* Pods-SIAlertView-dummy.m */; };
+		EAD45DF774FDE22C0957632D /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6CF2C01D694B590DC1DEE2 /* AFHTTPRequestOperationManager.h */; };
+		EB02A264E2FBD6495FF1191C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172ABA11838B67E56CBCB307 /* SystemConfiguration.framework */; };
+		ECDDFFA3F39E415FC4E952FB /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9DE9C3E7444C3BBBD747D8 /* AFHTTPRequestOperation.h */; };
+		EF6D0BFF2FCB312711F4CE72 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 051EE8F866A107033ECA7F02 /* AFNetworking.h */; };
+		F4630263D3A5F31E9AC4BF0E /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D4556BBB664A135706F17D /* QRCodeReaderViewController.m */; };
+		F5CEF2AA4968B2BAD701D11C /* UIScrollView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D2DB16388D10291711B965 /* UIScrollView+SLKAdditions.h */; };
+		F66595301816C193DDBA97BB /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C56E571C856300C33DE77876 /* QRCameraSwitchButton.m */; };
+		F6DB17B4A6267E1509EE5263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */; };
+		F82D1B234D27922D85D8C3DB /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 672056F87A8BBF7191367E92 /* AFURLResponseSerialization.m */; };
+		FBDE94FCCD1D9720B9D7949C /* Pods-UIViewController+KeyboardAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B80EDF58AA6ABE129BD41608 /* Pods-UIViewController+KeyboardAnimation-dummy.m */; };
+		FD0869EBB7B97F46BF5C7E01 /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BCCF414765A1B699FFEDCD /* SLKTypingIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0FCB7CEB5C8DCC9F69BE8D4E /* PBXContainerItemProxy */ = {
+		22DF0D22D243A286450A70B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0112B09BCD3193F0DA84C017 /* Project object */;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8924D38A9F035FF1DF2FB5E8;
-			remoteInfo = "Pods-QRCodeReaderViewController";
-		};
-		3E564DD215324903D8399425 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0112B09BCD3193F0DA84C017 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74682848B694A7FA7E750B04;
-			remoteInfo = "Pods-UIViewController+KeyboardAnimation";
-		};
-		5AEF77110A6B0EC0B0D012F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0112B09BCD3193F0DA84C017 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E945A26324931CBA381743A;
-			remoteInfo = "Pods-PayPal-iOS-SDK";
-		};
-		738CEA416CC19AE600F0AD2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0112B09BCD3193F0DA84C017 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8603E0E7087349C05BAA030A;
+			remoteGlobalIDString = 1FA063C18B4A0A3FB9B7299D;
 			remoteInfo = "Pods-SlackTextViewController";
 		};
-		D0912BB4AC7D91A9C2690BDA /* PBXContainerItemProxy */ = {
+		4449A44070AD2F2F020828B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0112B09BCD3193F0DA84C017 /* Project object */;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C1B0899D87B1375E3DA63C39;
+			remoteGlobalIDString = 4D637AAD4793900E478896FE;
+			remoteInfo = "Pods-UIViewController+KeyboardAnimation";
+		};
+		541A6C60F385E6864422E240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9856DFAB7AB246515994F78F;
+			remoteInfo = "Pods-QRCodeReaderViewController";
+		};
+		5F853EC1EDD096795003AC49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B825A3E115A2629F7358BC;
+			remoteInfo = "Pods-PayPal-iOS-SDK";
+		};
+		ABBAEFEA1AD68D4EE34959AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11C96A290E7D9B89DF3E2096;
 			remoteInfo = "Pods-AFNetworking";
+		};
+		FBE840315B625B3988DC2C58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD2DD1E7DE73366D737FCD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB802B899A69C2078CE4161;
+			remoteInfo = "Pods-SIAlertView";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03226260A6D7F9BFC90D75CC /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
-		0334F21B326BF3C1083736AD /* libPods-SlackTextViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlackTextViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		041889C95854BA6D6C65973B /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		044839573B3A91BE6875FEC9 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		0EE30132E59BF5F52567452D /* SLKTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextViewController.h; path = Source/Classes/SLKTextViewController.h; sourceTree = "<group>"; };
-		114E8FD1DDDF5DBE62E103F6 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		129E453C0FD20B2ACAFC86C2 /* Pods-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFNetworking-dummy.m"; sourceTree = "<group>"; };
-		14F3C84801F5E43186910BC0 /* SLKTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextViewController.m; path = Source/Classes/SLKTextViewController.m; sourceTree = "<group>"; };
-		18BE95CC06C7F2A3128A36A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		18DEC8A4A5CDEDC77297FD62 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		22824C61A2AC560E9F902927 /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SLKAdditions.m"; path = "Source/Additions/UIView+SLKAdditions.m"; sourceTree = "<group>"; };
-		23AB873E7423438EACC21EAE /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
-		281AC29AAB22EF21FA67B029 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
-		284201E8872D4312609F6570 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		2CDDA17D1A109B5159555403 /* Pods-PayPal-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PayPal-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
-		2E5817AE5D7FD7831C66E4ED /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
-		2EFBAACD518615C57305C3DD /* QRCodeReaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderView.h; path = QRCodeReaderViewController/QRCodeReaderView.h; sourceTree = "<group>"; };
-		3133000FFBD4158CD0883379 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		33B99996C684C82344BD3C13 /* Pods-QRCodeReaderViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeReaderViewController.xcconfig"; sourceTree = "<group>"; };
-		3445868D55CADE5FECDC8617 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		35617C1E00CB2B82B7E37DCB /* UIViewController+KeyboardAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardAnimation.m"; sourceTree = "<group>"; };
-		378BE76AD547928D272417D1 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
-		37A2C27801894ADE6439339E /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		38643DEC30F76F797A301F76 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		38CBE34A382475357A1027F6 /* Pods-PayPal-iOS-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayPal-iOS-SDK-Private.xcconfig"; sourceTree = "<group>"; };
-		3DAF646D2792DBC156C711ED /* Pods-SlackTextViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlackTextViewController-prefix.pch"; sourceTree = "<group>"; };
-		3FA1B0EF19C790833FA39DA8 /* Pods-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
-		432A0DA07A1979C2009F09A4 /* SLKTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextView.m; path = Source/Classes/SLKTextView.m; sourceTree = "<group>"; };
-		437F264A421B979D55D8FBC4 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
-		44C684D72F8F271B290A97B2 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
-		44CF1B0297BF0438185B8ECB /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
-		477217CE5150464C38A721E2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		48B0CA4FDC48E37DCF69FE8C /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderViewController.h; path = QRCodeReaderViewController/QRCodeReaderViewController.h; sourceTree = "<group>"; };
-		4C27BEC89EF7AF3403ACEED3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		4D5856D22D1EB92D232E6B60 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		4F0B23AC4FB8E03C0D717BEA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
-		55F001290D1D47F60D25F752 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		567B2DF4DE4277C61F4E71FA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		5A8774438696E32ACE931DB2 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		5E9CFB86B23920AD9CDB4257 /* Pods-SlackTextViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlackTextViewController.xcconfig"; sourceTree = "<group>"; };
-		6140A9AA6D270E2831D51B6F /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
-		61764E9A9457F0AED4DFE5C1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		61D972CF2EFF20E463C4051D /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SLKTextView+SLKAdditions.m"; path = "Source/Additions/SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
-		674339B9BAC413C17FC61D0D /* SLKTextInputbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextInputbar.m; path = Source/Classes/SLKTextInputbar.m; sourceTree = "<group>"; };
-		690F66470EA18A9E920326B3 /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SLKTextView+SLKAdditions.h"; path = "Source/Additions/SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
-		6B654802FE3EAEDA5825E4F7 /* Pods-SlackTextViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlackTextViewController-dummy.m"; sourceTree = "<group>"; };
-		6D68A749163822CC84D4C90A /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		71D5BF69E6666FCF485BECC9 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIViewController+KeyboardAnimation-Private.xcconfig"; sourceTree = "<group>"; };
-		735F05DACD154439022F38A7 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		759D0334E4650458EC0669E6 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
-		7635FBF2B8D268B9684BA140 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		7A766A6D8450218BB9CE9196 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
-		7CBE3F9C1DDE277D57662E0E /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		7D03BB0BD3F6AE7E6B257453 /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
-		7E19CB33976FBD33EB4E4A76 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
-		8070D703CCA145F9E5C61686 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		810E5EC50756E7005FA3241B /* Pods-QRCodeReaderViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QRCodeReaderViewController-prefix.pch"; sourceTree = "<group>"; };
-		820967F32A91104A2F6CBF7F /* Pods-QRCodeReaderViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QRCodeReaderViewController-dummy.m"; sourceTree = "<group>"; };
-		82790A3E450EFE267C5BB9F1 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83926A9EF860D35F948EDC62 /* Pods-PayPal-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayPal-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
-		8A148CBB0A092152012A1252 /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
-		8B0EA8A28A5C8CBBE9D5161F /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKInputAccessoryView.h; path = Source/Classes/SLKInputAccessoryView.h; sourceTree = "<group>"; };
-		8D7F20409F7EB3541B9F8FF0 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		8DD79A9831D0F2041BB453EE /* QRCodeReaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderView.m; path = QRCodeReaderViewController/QRCodeReaderView.m; sourceTree = "<group>"; };
-		8F915892BE0A4DFD82C693A8 /* Pods-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking.xcconfig"; sourceTree = "<group>"; };
-		910D65847D7984EA57E00B5A /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
-		955B05B2608323200E9D92CD /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SLKAdditions.m"; path = "Source/Additions/UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
-		988D07AD385A4D571164F1E6 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
-		9956130CD886734A295722C0 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		9A108CD869D0F1D0DCBF1F24 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		9AEFAD5A930469ACD1E5F546 /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
-		9DB1EA9F6128CF0A5DEB5685 /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SLKAdditions.h"; path = "Source/Additions/UIView+SLKAdditions.h"; sourceTree = "<group>"; };
-		A105C85183B2E775EC663B2C /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		A118DFFD994DB520DD04C91C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		A319C51987FD5A09C2380512 /* SLKTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextView.h; path = Source/Classes/SLKTextView.h; sourceTree = "<group>"; };
-		A33D703C29717C0D90CA2ECF /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		A4D2D3422AC500BE1E446E89 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A54B761620B6BFF224498857 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
-		A9D28C71D9AA327203ACEBD9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		AEBD76C40761FE1BC9BB31EF /* libPods-UIViewController+KeyboardAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIViewController+KeyboardAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF7A7E77B92D08E2AA84E9D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		AF7E4B84B664C863C04E2ED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B062F13F0CD95E01C35E2A3B /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		B098EAD629DB3FF8E8929C59 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		B23E277E3C2E6EFE80353F80 /* Pods-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
-		B6C197A9684D4A85DE733F24 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
-		B8B2D96BB78509CB879B4278 /* Pods-SlackTextViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlackTextViewController-Private.xcconfig"; sourceTree = "<group>"; };
-		BAC856750A6DFDABDC9F4E7B /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
-		BDF2A4FF6E8BC3F89B25CC02 /* Pods-UIViewController+KeyboardAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIViewController+KeyboardAnimation-dummy.m"; sourceTree = "<group>"; };
-		BEF2F0C5295C8073686B5A7F /* Pods-QRCodeReaderViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeReaderViewController-Private.xcconfig"; sourceTree = "<group>"; };
-		BFA611E0A46E8E0146452B91 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		C0A9F2B17077974FDE0D8175 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		C29A9FBE4AD5950A2E472FC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		C54FC72AEF76642A50A204B2 /* Pods-UIViewController+KeyboardAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIViewController+KeyboardAnimation.xcconfig"; sourceTree = "<group>"; };
-		C570977D46B11F214FC8E52F /* SLKTextInputbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextInputbar.h; path = Source/Classes/SLKTextInputbar.h; sourceTree = "<group>"; };
-		C818EEED3BB4B8C6A10E1592 /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
-		CAC5E0AEA1DBD3A70B174EC3 /* SLKUIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKUIConstants.h; path = Source/Additions/SLKUIConstants.h; sourceTree = "<group>"; };
-		CAFFDE513D7841C676083FEA /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		CCA7C77A382640AE09461B0A /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		CD4B8B0FD33471584FE3B8B5 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CD5F9A1A280C60F23A5F5F9F /* libPods-QRCodeReaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCodeReaderViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D21AEC83837A8F299C82B90C /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		D24F98364EB774CF012AE4C3 /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKInputAccessoryView.m; path = Source/Classes/SLKInputAccessoryView.m; sourceTree = "<group>"; };
-		D7EFF71DA5CFA419DFC0D681 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
-		DFFB6832AD7413FB72BDA32C /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SLKAdditions.h"; path = "Source/Additions/UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
-		E1589196A8021BC635471418 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
-		E20241CD78187E29DA06D79F /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTypingIndicatorView.h; path = Source/Classes/SLKTypingIndicatorView.h; sourceTree = "<group>"; };
-		E2A7B08B220AA06991954273 /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTypingIndicatorView.m; path = Source/Classes/SLKTypingIndicatorView.m; sourceTree = "<group>"; };
-		E2D5B3E32F524D409121415C /* UIViewController+KeyboardAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardAnimation.h"; sourceTree = "<group>"; };
-		F04495D9C67676157A4D61B5 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		F086C2C63889370FA7B84291 /* libPods-PayPal-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PayPal-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F273E80C1952B88DB1BF5A10 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		F2E981876BDC6784AFDDF72E /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		F5092053EB700844F7707FB4 /* Pods-PayPal-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayPal-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
-		F57C2F46301F95B76EC5D398 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F593C0494851DEE74DCEE5E1 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		F7502FBDFD2896A923AD6AE9 /* Pods-UIViewController+KeyboardAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIViewController+KeyboardAnimation-prefix.pch"; sourceTree = "<group>"; };
-		F95AE0AAC04BFC1808160FD3 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		F9B7C8556B7C46FEDD31D372 /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
-		FBE99962F0E94600A1D26864 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
-		FCFB243645D50FDEBACE0304 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCameraSwitchButton.h; path = QRCodeReaderViewController/QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		009349AE45254157A44DDB4F /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
+		015092391DD0AF5E3D346D4A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		01EB5FBA81DC125DCEE9A81F /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		034BBC6C8845EEECE4DD8925 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		038402A9EB4A605A211FCC42 /* SLKTextInputbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextInputbar.h; path = Source/Classes/SLKTextInputbar.h; sourceTree = "<group>"; };
+		051EE8F866A107033ECA7F02 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		0675497F0DF5A05DC95A40E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E9FD0A9239930367F5754D /* Pods-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		07BEDDC331BD83FBACD67DF5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		0D28191BDBBD98084CE2677F /* Pods-SlackTextViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlackTextViewController-prefix.pch"; sourceTree = "<group>"; };
+		125BEF726097143D697D14CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		12D4556BBB664A135706F17D /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		14A1C39D83C192F8CD34C06B /* QRCodeReaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderView.m; path = QRCodeReaderViewController/QRCodeReaderView.m; sourceTree = "<group>"; };
+		14EE9B70584E8CCCF75F7467 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIViewController+KeyboardAnimation-Private.xcconfig"; sourceTree = "<group>"; };
+		172ABA11838B67E56CBCB307 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		1797E11E5271A00D1952BB6B /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		1821D0389F59A0CF3FF19EB0 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		19CF4D39112C2FC314BAA436 /* Pods-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		19FDAC7B73DDCF45FB009B62 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
+		1C4A25474520A3B464ED6EAF /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKInputAccessoryView.h; path = Source/Classes/SLKInputAccessoryView.h; sourceTree = "<group>"; };
+		1C6F401D0AE86A25FFE1D8F8 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		1CEF317F831BE5E5EA4A678D /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		23CCF4EED8F956F59B000A05 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		24FE0E554F6E00DC6F1D4A4C /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderViewController.h; path = QRCodeReaderViewController/QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		2797F0CB04FFBC9B38C75E18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		2D076B82B518FE5EF53FC55F /* SIAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SIAlertView.h; path = SIAlertView/SIAlertView.h; sourceTree = "<group>"; };
+		2D11A37626A9529DE60A91F3 /* Pods-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		2E241BDF6A8D2552A1CDD964 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		342690D91342545C4E4EBA73 /* Pods-SIAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIAlertView.xcconfig"; sourceTree = "<group>"; };
+		356F162D3B402A92214FFABE /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		36C79A6F37D2BD7A86CED13E /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		3A35C0B86DD309BFE7937DF1 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		3AEC68EEBA52310A2A3D8CE3 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		3C9DE9C3E7444C3BBBD747D8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		3D30C86A387399B335069F68 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		3DF5B9DC6B6156E1AAF1E441 /* SIAlertView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SIAlertView.bundle; path = SIAlertView/SIAlertView.bundle; sourceTree = "<group>"; };
+		45154482B41F4577A9F72B60 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		4825B3E2E217D58431307AB0 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		48728544F3137F09E130432D /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		489D7AA8A9F21BAE48F5D2B6 /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
+		48A558611C15436E104E10EF /* SLKTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextViewController.m; path = Source/Classes/SLKTextViewController.m; sourceTree = "<group>"; };
+		4A6CF2C01D694B590DC1DEE2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		4C798CB52856642517169A5B /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		4DC96FE27CCA3566A5FF7816 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		4DFC0940B3BB49740D397380 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		4FFE0D178066B9CC27893441 /* libPods-UIViewController+KeyboardAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIViewController+KeyboardAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		542327B6A7765D8E650EA8DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		56AE7FB42A198037DAC88ABD /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		57A33798D33C420271B9FB63 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		57C0FC3C5556D02035B43027 /* UIViewController+KeyboardAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardAnimation.h"; sourceTree = "<group>"; };
+		59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5B254BF73100F2AEF08F1DAB /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		5FF7BF5927014A9ECE925F4F /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
+		6084BFA334529D546E809410 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		61D0E2784001D2F115657F21 /* Pods-PayPal-iOS-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayPal-iOS-SDK-Private.xcconfig"; sourceTree = "<group>"; };
+		64C5358A2C5C33FA8AD7FC6F /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SLKTextView+SLKAdditions.h"; path = "Source/Additions/SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		672056F87A8BBF7191367E92 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		6B54776C907E7FDFE507ED36 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		6DEB19885EBDA86BE749BF84 /* Pods-PayPal-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PayPal-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		6DF3956FFF4966A4EB78A84C /* Pods-QRCodeReaderViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeReaderViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		6ECB23984DA139A901E5577E /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		70A79BBEE4B5B5ED97ACF9D5 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BFD1717A96B3622C6C2C88 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		74CFD690DDC8DCFFCEF9CAB3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		75AB06FF8AD0EF0407E07F51 /* Pods-PayPal-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayPal-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		789495B679DA8D1B6450CA67 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7B3162EBFC04721FDD28A99E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		7B576AD77A59F6C4F39E2DA5 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		7BCA8C8D8D135C2E10060EBD /* Pods-SIAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SIAlertView-dummy.m"; sourceTree = "<group>"; };
+		7D632614263674D4523D0071 /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SLKTextView+SLKAdditions.m"; path = "Source/Additions/SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		7E430BF18F7B4A48C0B04989 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		7E4FFA51266833ADFDC79E3E /* Pods-QRCodeReaderViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeReaderViewController.xcconfig"; sourceTree = "<group>"; };
+		7ECD7FC33FDD7EE6D588B135 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		880FCC233F10E48CDE339E34 /* Pods-QRCodeReaderViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QRCodeReaderViewController-dummy.m"; sourceTree = "<group>"; };
+		88E6A82C07F1D7B9B004D8E3 /* libPods-SIAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SIAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A6B2727AD31216A58DF73A /* UIViewController+KeyboardAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardAnimation.m"; sourceTree = "<group>"; };
+		92BCCF414765A1B699FFEDCD /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTypingIndicatorView.m; path = Source/Classes/SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		93DF2681E05C2122173C4FCE /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCameraSwitchButton.h; path = QRCodeReaderViewController/QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		977614A42660855D45428DD6 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		A308ADDF3710C8737CA3B59A /* Pods-SlackTextViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlackTextViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		A8014587C9368C743FC69D3C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		A86F2D1E63BD31C68A2F46AD /* QRCodeReaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderView.h; path = QRCodeReaderViewController/QRCodeReaderView.h; sourceTree = "<group>"; };
+		A9019121772F46275EA677A7 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		ABD5334455A3AB29152E90A6 /* Pods-SlackTextViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlackTextViewController.xcconfig"; sourceTree = "<group>"; };
+		B1A56752285B09E798C0340B /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SLKAdditions.m"; path = "Source/Additions/UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		B1FADF753EE670BAE6DBABBD /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		B80EDF58AA6ABE129BD41608 /* Pods-UIViewController+KeyboardAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIViewController+KeyboardAnimation-dummy.m"; sourceTree = "<group>"; };
+		B8838AC7A706400BDDF5112F /* Pods-SIAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SIAlertView-prefix.pch"; sourceTree = "<group>"; };
+		B8C96F1F2D5CAC3C0C5EE7FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B9C7E300918E1B64CA773242 /* SLKTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextViewController.h; path = Source/Classes/SLKTextViewController.h; sourceTree = "<group>"; };
+		BA7EAB8E4B07E85C8A4372F1 /* SLKTextInputbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextInputbar.m; path = Source/Classes/SLKTextInputbar.m; sourceTree = "<group>"; };
+		BBDF41847BA40D9611316685 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		BCEF1539D5FEF44D40CDDBD6 /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTypingIndicatorView.h; path = Source/Classes/SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		BED76C94C1F41ADB64F4A3C1 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		C0D2DB16388D10291711B965 /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SLKAdditions.h"; path = "Source/Additions/UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		C200A6BC71FDA826675BADB6 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C3AAAE62696E768CB3ECAD8E /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		C3EBFCF0E16D3988A49005EE /* libPods-SlackTextViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlackTextViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F219BCE00A5EC9DC0E87D3 /* Pods-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		C417DC003403BBAEBD963D99 /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
+		C4B370766B23E91CE87F03D9 /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SLKAdditions.m"; path = "Source/Additions/UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		C56E571C856300C33DE77876 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		C81D3622D48570D4D793E0C5 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		CC688E39E59EAF92FBC6EF2A /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKInputAccessoryView.m; path = Source/Classes/SLKInputAccessoryView.m; sourceTree = "<group>"; };
+		CCE7AF48F85805E284E13EAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		CF6AAB9B19686CE80F9B2490 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		D04C665CDE8F55456965203E /* SLKTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKTextView.h; path = Source/Classes/SLKTextView.h; sourceTree = "<group>"; };
+		D1729BAEA85E74C65CCE3E0D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		D47FF2ADF93D4BB2E2F81BE3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		D51AA9F944B110A59116EF92 /* SIAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SIAlertView.m; path = SIAlertView/SIAlertView.m; sourceTree = "<group>"; };
+		D63B9556EC04CE258A77B70F /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		D6634DF9AF59928053E65632 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		D66BF9949787B833AF7E42AA /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		D69E142FF895FB6D7453A8C5 /* SLKUIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLKUIConstants.h; path = Source/Additions/SLKUIConstants.h; sourceTree = "<group>"; };
+		D9B87744BEDB101D6DAD0B49 /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SLKAdditions.h"; path = "Source/Additions/UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		E1565624F22C648BCF91A733 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		E7BD8F391BEC82F581B2D74C /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		E7D04B6ECF0D59364E9F2627 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		E8257C9C0FF3C5ACBD5C5AD8 /* SLKTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextView.m; path = Source/Classes/SLKTextView.m; sourceTree = "<group>"; };
+		ECDA9CD9246825371E8D8212 /* libPods-PayPal-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PayPal-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED06F87C98C40F489368710B /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		EEBBAAD8174A7B374EA90E32 /* Pods-UIViewController+KeyboardAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIViewController+KeyboardAnimation.xcconfig"; sourceTree = "<group>"; };
+		F05C89A9D5FA991DF19946BF /* Pods-QRCodeReaderViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QRCodeReaderViewController-prefix.pch"; sourceTree = "<group>"; };
+		F0D9FDC0B7552C86080D031A /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		F300B5024533F3C01FE0AFDE /* Pods-PayPal-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayPal-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		F3DD3405027097DB890DA9A8 /* Pods-UIViewController+KeyboardAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIViewController+KeyboardAnimation-prefix.pch"; sourceTree = "<group>"; };
+		F5356B605D45ED1AA9C1CC5A /* libPods-QRCodeReaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCodeReaderViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F587CFDAEA0F5600F4F97AE0 /* Pods-SlackTextViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlackTextViewController-dummy.m"; sourceTree = "<group>"; };
+		F98A9363615DBB63F59F0C19 /* Pods-SIAlertView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIAlertView-Private.xcconfig"; sourceTree = "<group>"; };
+		FBE41E0F4812F5E2027FF113 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20B05CF8720E40BA0DF835F4 /* Frameworks */ = {
+		17678D6698F0A132C75300E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB13B99996B135A6FA30B25 /* Foundation.framework in Frameworks */,
+				49434F8A574A111E4F94AF71 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F72392AD9B0025C3687C9FD /* Frameworks */ = {
+		3777A2D38DB8B43F5427AC6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E46FDD85343642070BA5E647 /* Foundation.framework in Frameworks */,
+				A4DC506FDEED63078A700762 /* AVFoundation.framework in Frameworks */,
+				D82C4E23E2DDCB212493E1EE /* AudioToolbox.framework in Frameworks */,
+				4204688F35A6AE84ED3D35F4 /* CoreLocation.framework in Frameworks */,
+				646B4B1ED7B53256DE295636 /* CoreMedia.framework in Frameworks */,
+				5DA0A97F5C7C388EB8F86620 /* Foundation.framework in Frameworks */,
+				9A1A1A72966133972E2A7E8B /* MessageUI.framework in Frameworks */,
+				21E8ECDEB137B3EDCF89FC5F /* MobileCoreServices.framework in Frameworks */,
+				C6F7F130A3F68D8996C53CBA /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF64F88BD7E497C815C911C2 /* Frameworks */ = {
+		3E7CB93E6D1C68E5D0B42981 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4B4789A446A0AD227CE7C6 /* Foundation.framework in Frameworks */,
+				95E95CAFD80EB4BD9FFEEC0C /* Foundation.framework in Frameworks */,
+				DF6CF7D75C79014FCAB66EE2 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD4F323126DC3E4FE5A23CBC /* Frameworks */ = {
+		7322DCFE717566C28EE0C608 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D00B916ADF5C015507D8530 /* AVFoundation.framework in Frameworks */,
-				D28477B2C1F242106DF871EF /* AudioToolbox.framework in Frameworks */,
-				0BC257DFFDF023517A9E0F68 /* CoreLocation.framework in Frameworks */,
-				26C7B5769A6130FECD0BDF08 /* CoreMedia.framework in Frameworks */,
-				7FE76EF30B25150E863B04AB /* Foundation.framework in Frameworks */,
-				59C668D3C855C63026B9CC63 /* MessageUI.framework in Frameworks */,
-				9F2B9A9E0CA6ED9AF57D9107 /* MobileCoreServices.framework in Frameworks */,
-				216E551A989BBA0A27A2CDF8 /* SystemConfiguration.framework in Frameworks */,
+				AA3DCA3918CEE0E4FBF5D12C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4D546927E3F3334C159C2B1 /* Frameworks */ = {
+		AFAC2435162451E2F4E289D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939C5BCBE599E0C1A8C67DC2 /* AVFoundation.framework in Frameworks */,
-				D0615DA4C181D813AAD26FD0 /* Foundation.framework in Frameworks */,
+				9FB49C6A98ACDBA5088E9635 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E25E24CE138737F8AF6BF756 /* Frameworks */ = {
+		AFB9FADCEECC1B5A93D66547 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25D57F593D6C19895B4046D /* CoreGraphics.framework in Frameworks */,
-				6AC39224DFDE3C306FC1CC53 /* Foundation.framework in Frameworks */,
-				CF75896B73DED04D5CF24AC2 /* MobileCoreServices.framework in Frameworks */,
-				4E05A9139F352125812F77D7 /* Security.framework in Frameworks */,
-				583D617BF24D78F7E8DC3979 /* SystemConfiguration.framework in Frameworks */,
+				D7DBAD5B597C5AEF8BE7C5AC /* AVFoundation.framework in Frameworks */,
+				F6DB17B4A6267E1509EE5263 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE94FA73D5E116B217DCC320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2529C23B2EDDD9E3C47C651D /* CoreGraphics.framework in Frameworks */,
+				71071FA43636F6B1296CAF58 /* Foundation.framework in Frameworks */,
+				DFE92C23E6DD396AA7698903 /* MobileCoreServices.framework in Frameworks */,
+				050B05E8777A66A77BB4F44F /* Security.framework in Frameworks */,
+				EB02A264E2FBD6495FF1191C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06F3D6E8D62907EC3F90541E /* NSURLConnection */ = {
+		09FCD42D5BB1CD9AAD0A7404 /* PayPal-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				A9D28C71D9AA327203ACEBD9 /* AFHTTPRequestOperation.h */,
-				9956130CD886734A295722C0 /* AFHTTPRequestOperation.m */,
-				18DEC8A4A5CDEDC77297FD62 /* AFHTTPRequestOperationManager.h */,
-				37A2C27801894ADE6439339E /* AFHTTPRequestOperationManager.m */,
-				6D68A749163822CC84D4C90A /* AFURLConnectionOperation.h */,
-				3445868D55CADE5FECDC8617 /* AFURLConnectionOperation.m */,
-			);
-			name = NSURLConnection;
-			sourceTree = "<group>";
-		};
-		082ECDB4BE6073461BA6C78E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F5092053EB700844F7707FB4 /* Pods-PayPal-iOS-SDK.xcconfig */,
-				38CBE34A382475357A1027F6 /* Pods-PayPal-iOS-SDK-Private.xcconfig */,
-				2CDDA17D1A109B5159555403 /* Pods-PayPal-iOS-SDK-dummy.m */,
-				83926A9EF860D35F948EDC62 /* Pods-PayPal-iOS-SDK-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-PayPal-iOS-SDK";
-			sourceTree = "<group>";
-		};
-		0EF035FB8DDED2820CFA4146 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				2E5817AE5D7FD7831C66E4ED /* AFNetworking.h */,
-				06F3D6E8D62907EC3F90541E /* NSURLConnection */,
-				6F93EEDD48EBF1889078731F /* NSURLSession */,
-				6DBE9B03D4DF11D46EBB703A /* Reachability */,
-				9C684958C7BFF50CD3E3A619 /* Security */,
-				D79FFA6CF94B135E87FE1BED /* Serialization */,
-				789C8B890E346622AB3B2D00 /* Support Files */,
-				42E0DE4C1550B3BA7282891D /* UIKit */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		1AC5F364AD27E94A524150C8 /* SlackTextViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8B0EA8A28A5C8CBBE9D5161F /* SLKInputAccessoryView.h */,
-				D24F98364EB774CF012AE4C3 /* SLKInputAccessoryView.m */,
-				C570977D46B11F214FC8E52F /* SLKTextInputbar.h */,
-				674339B9BAC413C17FC61D0D /* SLKTextInputbar.m */,
-				A319C51987FD5A09C2380512 /* SLKTextView.h */,
-				432A0DA07A1979C2009F09A4 /* SLKTextView.m */,
-				0EE30132E59BF5F52567452D /* SLKTextViewController.h */,
-				14F3C84801F5E43186910BC0 /* SLKTextViewController.m */,
-				E20241CD78187E29DA06D79F /* SLKTypingIndicatorView.h */,
-				E2A7B08B220AA06991954273 /* SLKTypingIndicatorView.m */,
-				B6B0F8794D5CAF4041858C5C /* Additions */,
-				E553FD979A2FE9F5DAE6E201 /* Support Files */,
-			);
-			path = SlackTextViewController;
-			sourceTree = "<group>";
-		};
-		1BFF7DA8542E4EE8EFEB219C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0EF035FB8DDED2820CFA4146 /* AFNetworking */,
-				302A8BFEF50E9AA2D84FAAD0 /* PayPal-iOS-SDK */,
-				96BF51527D60682A8BE2F242 /* QRCodeReaderViewController */,
-				1AC5F364AD27E94A524150C8 /* SlackTextViewController */,
-				BB79A866C73508F17C98ACC3 /* UIViewController+KeyboardAnimation */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		233B13920FA75B8E78BB8E6B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5714FACD19CF639AFD3E81C3 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		302A8BFEF50E9AA2D84FAAD0 /* PayPal-iOS-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				759D0334E4650458EC0669E6 /* CardIO.h */,
-				A33D703C29717C0D90CA2ECF /* CardIOCreditCardInfo.h */,
-				C818EEED3BB4B8C6A10E1592 /* CardIODetectionMode.h */,
-				9A108CD869D0F1D0DCBF1F24 /* CardIOPaymentViewController.h */,
-				A105C85183B2E775EC663B2C /* CardIOPaymentViewControllerDelegate.h */,
-				E1589196A8021BC635471418 /* CardIOUtilities.h */,
-				7D03BB0BD3F6AE7E6B257453 /* CardIOView.h */,
-				44CF1B0297BF0438185B8ECB /* CardIOViewDelegate.h */,
-				8A148CBB0A092152012A1252 /* PayPalConfiguration.h */,
-				BAC856750A6DFDABDC9F4E7B /* PayPalFuturePaymentViewController.h */,
-				F9B7C8556B7C46FEDD31D372 /* PayPalMobile.h */,
-				23AB873E7423438EACC21EAE /* PayPalOAuthScopes.h */,
-				9AEFAD5A930469ACD1E5F546 /* PayPalPayment.h */,
-				7E19CB33976FBD33EB4E4A76 /* PayPalPaymentViewController.h */,
-				B6C197A9684D4A85DE733F24 /* PayPalProfileSharingViewController.h */,
-				082ECDB4BE6073461BA6C78E /* Support Files */,
+				5FF7BF5927014A9ECE925F4F /* CardIO.h */,
+				977614A42660855D45428DD6 /* CardIOCreditCardInfo.h */,
+				489D7AA8A9F21BAE48F5D2B6 /* CardIODetectionMode.h */,
+				C3AAAE62696E768CB3ECAD8E /* CardIOPaymentViewController.h */,
+				56AE7FB42A198037DAC88ABD /* CardIOPaymentViewControllerDelegate.h */,
+				009349AE45254157A44DDB4F /* CardIOUtilities.h */,
+				C417DC003403BBAEBD963D99 /* CardIOView.h */,
+				19FDAC7B73DDCF45FB009B62 /* CardIOViewDelegate.h */,
+				D66BF9949787B833AF7E42AA /* PayPalConfiguration.h */,
+				A9019121772F46275EA677A7 /* PayPalFuturePaymentViewController.h */,
+				4C798CB52856642517169A5B /* PayPalMobile.h */,
+				B1FADF753EE670BAE6DBABBD /* PayPalOAuthScopes.h */,
+				1CEF317F831BE5E5EA4A678D /* PayPalPayment.h */,
+				BED76C94C1F41ADB64F4A3C1 /* PayPalPaymentViewController.h */,
+				6084BFA334529D546E809410 /* PayPalProfileSharingViewController.h */,
+				2ECC44ECAF447ECFCB375734 /* Support Files */,
 			);
 			path = "PayPal-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		42E0DE4C1550B3BA7282891D /* UIKit */ = {
+		22A7231249BDCE906EF554BE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				988D07AD385A4D571164F1E6 /* AFNetworkActivityIndicatorManager.h */,
-				A54B761620B6BFF224498857 /* AFNetworkActivityIndicatorManager.m */,
-				7CBE3F9C1DDE277D57662E0E /* UIActivityIndicatorView+AFNetworking.h */,
-				BFA611E0A46E8E0146452B91 /* UIActivityIndicatorView+AFNetworking.m */,
-				437F264A421B979D55D8FBC4 /* UIAlertView+AFNetworking.h */,
-				378BE76AD547928D272417D1 /* UIAlertView+AFNetworking.m */,
-				8D7F20409F7EB3541B9F8FF0 /* UIButton+AFNetworking.h */,
-				041889C95854BA6D6C65973B /* UIButton+AFNetworking.m */,
-				C0A9F2B17077974FDE0D8175 /* UIImageView+AFNetworking.h */,
-				F273E80C1952B88DB1BF5A10 /* UIImageView+AFNetworking.m */,
-				CAFFDE513D7841C676083FEA /* UIKit+AFNetworking.h */,
-				F95AE0AAC04BFC1808160FD3 /* UIProgressView+AFNetworking.h */,
-				D21AEC83837A8F299C82B90C /* UIProgressView+AFNetworking.m */,
-				A118DFFD994DB520DD04C91C /* UIRefreshControl+AFNetworking.h */,
-				55F001290D1D47F60D25F752 /* UIRefreshControl+AFNetworking.m */,
-				114E8FD1DDDF5DBE62E103F6 /* UIWebView+AFNetworking.h */,
-				F2E981876BDC6784AFDDF72E /* UIWebView+AFNetworking.m */,
-			);
-			name = UIKit;
-			sourceTree = "<group>";
-		};
-		4F10F107F80588B2DF268BC0 = {
-			isa = PBXGroup;
-			children = (
-				A4D2D3422AC500BE1E446E89 /* Podfile */,
-				233B13920FA75B8E78BB8E6B /* Frameworks */,
-				1BFF7DA8542E4EE8EFEB219C /* Pods */,
-				FF247C5AFCA589DE11ECF413 /* Products */,
-				E236280830F2B5CF1B37FD32 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		5714FACD19CF639AFD3E81C3 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				38643DEC30F76F797A301F76 /* AVFoundation.framework */,
-				8070D703CCA145F9E5C61686 /* AudioToolbox.framework */,
-				AF7A7E77B92D08E2AA84E9D1 /* CoreGraphics.framework */,
-				4C27BEC89EF7AF3403ACEED3 /* CoreLocation.framework */,
-				FBE99962F0E94600A1D26864 /* CoreMedia.framework */,
-				AF7E4B84B664C863C04E2ED1 /* Foundation.framework */,
-				4F0B23AC4FB8E03C0D717BEA /* MessageUI.framework */,
-				477217CE5150464C38A721E2 /* MobileCoreServices.framework */,
-				B098EAD629DB3FF8E8929C59 /* Security.framework */,
-				18BE95CC06C7F2A3128A36A4 /* SystemConfiguration.framework */,
+				2797F0CB04FFBC9B38C75E18 /* AVFoundation.framework */,
+				542327B6A7765D8E650EA8DE /* AudioToolbox.framework */,
+				23CCF4EED8F956F59B000A05 /* CoreGraphics.framework */,
+				7B3162EBFC04721FDD28A99E /* CoreLocation.framework */,
+				07BEDDC331BD83FBACD67DF5 /* CoreMedia.framework */,
+				59A3DA2951EEF7466AAFA8A2 /* Foundation.framework */,
+				7ECD7FC33FDD7EE6D588B135 /* MessageUI.framework */,
+				015092391DD0AF5E3D346D4A /* MobileCoreServices.framework */,
+				B8C96F1F2D5CAC3C0C5EE7FC /* QuartzCore.framework */,
+				789495B679DA8D1B6450CA67 /* Security.framework */,
+				172ABA11838B67E56CBCB307 /* SystemConfiguration.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6DBE9B03D4DF11D46EBB703A /* Reachability */ = {
+		276D4B3B6B11AADFE0BE75B7 /* NSURLConnection */ = {
 			isa = PBXGroup;
 			children = (
-				567B2DF4DE4277C61F4E71FA /* AFNetworkReachabilityManager.h */,
-				4D5856D22D1EB92D232E6B60 /* AFNetworkReachabilityManager.m */,
+				3C9DE9C3E7444C3BBBD747D8 /* AFHTTPRequestOperation.h */,
+				4DC96FE27CCA3566A5FF7816 /* AFHTTPRequestOperation.m */,
+				4A6CF2C01D694B590DC1DEE2 /* AFHTTPRequestOperationManager.h */,
+				D63B9556EC04CE258A77B70F /* AFHTTPRequestOperationManager.m */,
+				01EB5FBA81DC125DCEE9A81F /* AFURLConnectionOperation.h */,
+				D6634DF9AF59928053E65632 /* AFURLConnectionOperation.m */,
 			);
-			name = Reachability;
+			name = NSURLConnection;
 			sourceTree = "<group>";
 		};
-		6F93EEDD48EBF1889078731F /* NSURLSession */ = {
+		27EA234D7048394D9AA8B3E7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7635FBF2B8D268B9684BA140 /* AFHTTPSessionManager.h */,
-				F04495D9C67676157A4D61B5 /* AFHTTPSessionManager.m */,
-				03226260A6D7F9BFC90D75CC /* AFURLSessionManager.h */,
-				910D65847D7984EA57E00B5A /* AFURLSessionManager.m */,
-			);
-			name = NSURLSession;
-			sourceTree = "<group>";
-		};
-		789C8B890E346622AB3B2D00 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8F915892BE0A4DFD82C693A8 /* Pods-AFNetworking.xcconfig */,
-				B23E277E3C2E6EFE80353F80 /* Pods-AFNetworking-Private.xcconfig */,
-				129E453C0FD20B2ACAFC86C2 /* Pods-AFNetworking-dummy.m */,
-				3FA1B0EF19C790833FA39DA8 /* Pods-AFNetworking-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-AFNetworking";
-			sourceTree = "<group>";
-		};
-		96BF51527D60682A8BE2F242 /* QRCodeReaderViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FCFB243645D50FDEBACE0304 /* QRCameraSwitchButton.h */,
-				281AC29AAB22EF21FA67B029 /* QRCameraSwitchButton.m */,
-				44C684D72F8F271B290A97B2 /* QRCodeReaderDelegate.h */,
-				2EFBAACD518615C57305C3DD /* QRCodeReaderView.h */,
-				8DD79A9831D0F2041BB453EE /* QRCodeReaderView.m */,
-				48B0CA4FDC48E37DCF69FE8C /* QRCodeReaderViewController.h */,
-				D7EFF71DA5CFA419DFC0D681 /* QRCodeReaderViewController.m */,
-				E4FCE91BB81FC5EDC2D498E2 /* Support Files */,
-			);
-			path = QRCodeReaderViewController;
-			sourceTree = "<group>";
-		};
-		9C684958C7BFF50CD3E3A619 /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				6140A9AA6D270E2831D51B6F /* AFSecurityPolicy.h */,
-				7A766A6D8450218BB9CE9196 /* AFSecurityPolicy.m */,
-			);
-			name = Security;
-			sourceTree = "<group>";
-		};
-		B470C14DDFFE6D752111FC31 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C54FC72AEF76642A50A204B2 /* Pods-UIViewController+KeyboardAnimation.xcconfig */,
-				71D5BF69E6666FCF485BECC9 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */,
-				BDF2A4FF6E8BC3F89B25CC02 /* Pods-UIViewController+KeyboardAnimation-dummy.m */,
-				F7502FBDFD2896A923AD6AE9 /* Pods-UIViewController+KeyboardAnimation-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-UIViewController+KeyboardAnimation";
-			sourceTree = "<group>";
-		};
-		B6B0F8794D5CAF4041858C5C /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				690F66470EA18A9E920326B3 /* SLKTextView+SLKAdditions.h */,
-				61D972CF2EFF20E463C4051D /* SLKTextView+SLKAdditions.m */,
-				CAC5E0AEA1DBD3A70B174EC3 /* SLKUIConstants.h */,
-				DFFB6832AD7413FB72BDA32C /* UIScrollView+SLKAdditions.h */,
-				955B05B2608323200E9D92CD /* UIScrollView+SLKAdditions.m */,
-				9DB1EA9F6128CF0A5DEB5685 /* UIView+SLKAdditions.h */,
-				22824C61A2AC560E9F902927 /* UIView+SLKAdditions.m */,
-			);
-			name = Additions;
-			sourceTree = "<group>";
-		};
-		BB79A866C73508F17C98ACC3 /* UIViewController+KeyboardAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E2D5B3E32F524D409121415C /* UIViewController+KeyboardAnimation.h */,
-				35617C1E00CB2B82B7E37DCB /* UIViewController+KeyboardAnimation.m */,
-				B470C14DDFFE6D752111FC31 /* Support Files */,
-			);
-			path = "UIViewController+KeyboardAnimation";
-			sourceTree = "<group>";
-		};
-		D79FFA6CF94B135E87FE1BED /* Serialization */ = {
-			isa = PBXGroup;
-			children = (
-				5A8774438696E32ACE931DB2 /* AFURLRequestSerialization.h */,
-				B062F13F0CD95E01C35E2A3B /* AFURLRequestSerialization.m */,
-				735F05DACD154439022F38A7 /* AFURLResponseSerialization.h */,
-				044839573B3A91BE6875FEC9 /* AFURLResponseSerialization.m */,
-			);
-			name = Serialization;
-			sourceTree = "<group>";
-		};
-		E236280830F2B5CF1B37FD32 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7559739F29F1AA768CF6148 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		E4FCE91BB81FC5EDC2D498E2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				33B99996C684C82344BD3C13 /* Pods-QRCodeReaderViewController.xcconfig */,
-				BEF2F0C5295C8073686B5A7F /* Pods-QRCodeReaderViewController-Private.xcconfig */,
-				820967F32A91104A2F6CBF7F /* Pods-QRCodeReaderViewController-dummy.m */,
-				810E5EC50756E7005FA3241B /* Pods-QRCodeReaderViewController-prefix.pch */,
+				7E4FFA51266833ADFDC79E3E /* Pods-QRCodeReaderViewController.xcconfig */,
+				6DF3956FFF4966A4EB78A84C /* Pods-QRCodeReaderViewController-Private.xcconfig */,
+				880FCC233F10E48CDE339E34 /* Pods-QRCodeReaderViewController-dummy.m */,
+				F05C89A9D5FA991DF19946BF /* Pods-QRCodeReaderViewController-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-QRCodeReaderViewController";
 			sourceTree = "<group>";
 		};
-		E553FD979A2FE9F5DAE6E201 /* Support Files */ = {
+		285238F20BDC9FA0DA2F7040 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				5E9CFB86B23920AD9CDB4257 /* Pods-SlackTextViewController.xcconfig */,
-				B8B2D96BB78509CB879B4278 /* Pods-SlackTextViewController-Private.xcconfig */,
-				6B654802FE3EAEDA5825E4F7 /* Pods-SlackTextViewController-dummy.m */,
-				3DAF646D2792DBC156C711ED /* Pods-SlackTextViewController-prefix.pch */,
+				7E430BF18F7B4A48C0B04989 /* AFSecurityPolicy.h */,
+				6B54776C907E7FDFE507ED36 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		2C62468A897EF354A68B8B51 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				342690D91342545C4E4EBA73 /* Pods-SIAlertView.xcconfig */,
+				F98A9363615DBB63F59F0C19 /* Pods-SIAlertView-Private.xcconfig */,
+				7BCA8C8D8D135C2E10060EBD /* Pods-SIAlertView-dummy.m */,
+				B8838AC7A706400BDDF5112F /* Pods-SIAlertView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SIAlertView";
+			sourceTree = "<group>";
+		};
+		2ECC44ECAF447ECFCB375734 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75AB06FF8AD0EF0407E07F51 /* Pods-PayPal-iOS-SDK.xcconfig */,
+				61D0E2784001D2F115657F21 /* Pods-PayPal-iOS-SDK-Private.xcconfig */,
+				6DEB19885EBDA86BE749BF84 /* Pods-PayPal-iOS-SDK-dummy.m */,
+				F300B5024533F3C01FE0AFDE /* Pods-PayPal-iOS-SDK-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PayPal-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		4872243B5470D1AAE1C9F15A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				051EE8F866A107033ECA7F02 /* AFNetworking.h */,
+				276D4B3B6B11AADFE0BE75B7 /* NSURLConnection */,
+				5846DA5521A5A6FAA52C2FAA /* NSURLSession */,
+				FB10C84DFEEF01CB402F5819 /* Reachability */,
+				285238F20BDC9FA0DA2F7040 /* Security */,
+				E6A23ED2A5E4A67010F9FA80 /* Serialization */,
+				A2C7031519E108DB889569E5 /* Support Files */,
+				B4A3B5C90ED7BB8738DFA0DE /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		495EEA2166279F85B68F861A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABD5334455A3AB29152E90A6 /* Pods-SlackTextViewController.xcconfig */,
+				A308ADDF3710C8737CA3B59A /* Pods-SlackTextViewController-Private.xcconfig */,
+				F587CFDAEA0F5600F4F97AE0 /* Pods-SlackTextViewController-dummy.m */,
+				0D28191BDBBD98084CE2677F /* Pods-SlackTextViewController-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-SlackTextViewController";
 			sourceTree = "<group>";
 		};
-		E7559739F29F1AA768CF6148 /* Pods */ = {
+		53460DFB141A1D95AD5087A6 /* SIAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				CD4B8B0FD33471584FE3B8B5 /* Pods-acknowledgements.markdown */,
-				284201E8872D4312609F6570 /* Pods-acknowledgements.plist */,
-				F593C0494851DEE74DCEE5E1 /* Pods-dummy.m */,
-				CCA7C77A382640AE09461B0A /* Pods-environment.h */,
-				3133000FFBD4158CD0883379 /* Pods-resources.sh */,
-				61764E9A9457F0AED4DFE5C1 /* Pods.debug.xcconfig */,
-				C29A9FBE4AD5950A2E472FC7 /* Pods.release.xcconfig */,
+				2D076B82B518FE5EF53FC55F /* SIAlertView.h */,
+				D51AA9F944B110A59116EF92 /* SIAlertView.m */,
+				54FC30AB05EE8FCBCF1C2454 /* Resources */,
+				2C62468A897EF354A68B8B51 /* Support Files */,
+			);
+			path = SIAlertView;
+			sourceTree = "<group>";
+		};
+		54FC30AB05EE8FCBCF1C2454 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DF5B9DC6B6156E1AAF1E441 /* SIAlertView.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5846DA5521A5A6FAA52C2FAA /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				D47FF2ADF93D4BB2E2F81BE3 /* AFHTTPSessionManager.h */,
+				74CFD690DDC8DCFFCEF9CAB3 /* AFHTTPSessionManager.m */,
+				6ECB23984DA139A901E5577E /* AFURLSessionManager.h */,
+				36C79A6F37D2BD7A86CED13E /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		58E5773636F6F6D0240B1412 /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93DF2681E05C2122173C4FCE /* QRCameraSwitchButton.h */,
+				C56E571C856300C33DE77876 /* QRCameraSwitchButton.m */,
+				E1565624F22C648BCF91A733 /* QRCodeReaderDelegate.h */,
+				A86F2D1E63BD31C68A2F46AD /* QRCodeReaderView.h */,
+				14A1C39D83C192F8CD34C06B /* QRCodeReaderView.m */,
+				24FE0E554F6E00DC6F1D4A4C /* QRCodeReaderViewController.h */,
+				12D4556BBB664A135706F17D /* QRCodeReaderViewController.m */,
+				27EA234D7048394D9AA8B3E7 /* Support Files */,
+			);
+			path = QRCodeReaderViewController;
+			sourceTree = "<group>";
+		};
+		6DD5EF52E43FBA9A8BF872AC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEBBAAD8174A7B374EA90E32 /* Pods-UIViewController+KeyboardAnimation.xcconfig */,
+				14EE9B70584E8CCCF75F7467 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */,
+				B80EDF58AA6ABE129BD41608 /* Pods-UIViewController+KeyboardAnimation-dummy.m */,
+				F3DD3405027097DB890DA9A8 /* Pods-UIViewController+KeyboardAnimation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-UIViewController+KeyboardAnimation";
+			sourceTree = "<group>";
+		};
+		7D40ECAED462BE4785F9ADF8 = {
+			isa = PBXGroup;
+			children = (
+				74BFD1717A96B3622C6C2C88 /* Podfile */,
+				DB25CE530513A1CC9FF53AC0 /* Frameworks */,
+				EA41F2028B13BAFE25B9E85C /* Pods */,
+				DA0261035D6364E2D5418BAA /* Products */,
+				E63227B35445506FA2E4B6EA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC6078B6D941E3BB6E490B6 /* UIViewController+KeyboardAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				57C0FC3C5556D02035B43027 /* UIViewController+KeyboardAnimation.h */,
+				91A6B2727AD31216A58DF73A /* UIViewController+KeyboardAnimation.m */,
+				6DD5EF52E43FBA9A8BF872AC /* Support Files */,
+			);
+			path = "UIViewController+KeyboardAnimation";
+			sourceTree = "<group>";
+		};
+		89A596DC2B40F390226D7947 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				64C5358A2C5C33FA8AD7FC6F /* SLKTextView+SLKAdditions.h */,
+				7D632614263674D4523D0071 /* SLKTextView+SLKAdditions.m */,
+				D69E142FF895FB6D7453A8C5 /* SLKUIConstants.h */,
+				C0D2DB16388D10291711B965 /* UIScrollView+SLKAdditions.h */,
+				C4B370766B23E91CE87F03D9 /* UIScrollView+SLKAdditions.m */,
+				D9B87744BEDB101D6DAD0B49 /* UIView+SLKAdditions.h */,
+				B1A56752285B09E798C0340B /* UIView+SLKAdditions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		A2C7031519E108DB889569E5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19CF4D39112C2FC314BAA436 /* Pods-AFNetworking.xcconfig */,
+				06E9FD0A9239930367F5754D /* Pods-AFNetworking-Private.xcconfig */,
+				C3F219BCE00A5EC9DC0E87D3 /* Pods-AFNetworking-dummy.m */,
+				2D11A37626A9529DE60A91F3 /* Pods-AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-AFNetworking";
+			sourceTree = "<group>";
+		};
+		B4A3B5C90ED7BB8738DFA0DE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3D30C86A387399B335069F68 /* AFNetworkActivityIndicatorManager.h */,
+				3AEC68EEBA52310A2A3D8CE3 /* AFNetworkActivityIndicatorManager.m */,
+				48728544F3137F09E130432D /* UIActivityIndicatorView+AFNetworking.h */,
+				F0D9FDC0B7552C86080D031A /* UIActivityIndicatorView+AFNetworking.m */,
+				2E241BDF6A8D2552A1CDD964 /* UIAlertView+AFNetworking.h */,
+				E7BD8F391BEC82F581B2D74C /* UIAlertView+AFNetworking.m */,
+				3A35C0B86DD309BFE7937DF1 /* UIButton+AFNetworking.h */,
+				5B254BF73100F2AEF08F1DAB /* UIButton+AFNetworking.m */,
+				D1729BAEA85E74C65CCE3E0D /* UIImageView+AFNetworking.h */,
+				A8014587C9368C743FC69D3C /* UIImageView+AFNetworking.m */,
+				1797E11E5271A00D1952BB6B /* UIKit+AFNetworking.h */,
+				FBE41E0F4812F5E2027FF113 /* UIProgressView+AFNetworking.h */,
+				C81D3622D48570D4D793E0C5 /* UIProgressView+AFNetworking.m */,
+				4825B3E2E217D58431307AB0 /* UIRefreshControl+AFNetworking.h */,
+				7B576AD77A59F6C4F39E2DA5 /* UIRefreshControl+AFNetworking.m */,
+				4DFC0940B3BB49740D397380 /* UIWebView+AFNetworking.h */,
+				57A33798D33C420271B9FB63 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		DA0261035D6364E2D5418BAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0675497F0DF5A05DC95A40E8 /* libPods.a */,
+				70A79BBEE4B5B5ED97ACF9D5 /* libPods-AFNetworking.a */,
+				ECDA9CD9246825371E8D8212 /* libPods-PayPal-iOS-SDK.a */,
+				F5356B605D45ED1AA9C1CC5A /* libPods-QRCodeReaderViewController.a */,
+				88E6A82C07F1D7B9B004D8E3 /* libPods-SIAlertView.a */,
+				C3EBFCF0E16D3988A49005EE /* libPods-SlackTextViewController.a */,
+				4FFE0D178066B9CC27893441 /* libPods-UIViewController+KeyboardAnimation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB25CE530513A1CC9FF53AC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22A7231249BDCE906EF554BE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC32EEFACB30DB675EE63B4D /* SlackTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C4A25474520A3B464ED6EAF /* SLKInputAccessoryView.h */,
+				CC688E39E59EAF92FBC6EF2A /* SLKInputAccessoryView.m */,
+				038402A9EB4A605A211FCC42 /* SLKTextInputbar.h */,
+				BA7EAB8E4B07E85C8A4372F1 /* SLKTextInputbar.m */,
+				D04C665CDE8F55456965203E /* SLKTextView.h */,
+				E8257C9C0FF3C5ACBD5C5AD8 /* SLKTextView.m */,
+				B9C7E300918E1B64CA773242 /* SLKTextViewController.h */,
+				48A558611C15436E104E10EF /* SLKTextViewController.m */,
+				BCEF1539D5FEF44D40CDDBD6 /* SLKTypingIndicatorView.h */,
+				92BCCF414765A1B699FFEDCD /* SLKTypingIndicatorView.m */,
+				89A596DC2B40F390226D7947 /* Additions */,
+				495EEA2166279F85B68F861A /* Support Files */,
+			);
+			path = SlackTextViewController;
+			sourceTree = "<group>";
+		};
+		DFDDABCD0F3C528EBA344647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C200A6BC71FDA826675BADB6 /* Pods-acknowledgements.markdown */,
+				CF6AAB9B19686CE80F9B2490 /* Pods-acknowledgements.plist */,
+				E7D04B6ECF0D59364E9F2627 /* Pods-dummy.m */,
+				034BBC6C8845EEECE4DD8925 /* Pods-environment.h */,
+				1C6F401D0AE86A25FFE1D8F8 /* Pods-resources.sh */,
+				125BEF726097143D697D14CD /* Pods.debug.xcconfig */,
+				CCE7AF48F85805E284E13EAC /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		FF247C5AFCA589DE11ECF413 /* Products */ = {
+		E63227B35445506FA2E4B6EA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F57C2F46301F95B76EC5D398 /* libPods.a */,
-				82790A3E450EFE267C5BB9F1 /* libPods-AFNetworking.a */,
-				F086C2C63889370FA7B84291 /* libPods-PayPal-iOS-SDK.a */,
-				CD5F9A1A280C60F23A5F5F9F /* libPods-QRCodeReaderViewController.a */,
-				0334F21B326BF3C1083736AD /* libPods-SlackTextViewController.a */,
-				AEBD76C40761FE1BC9BB31EF /* libPods-UIViewController+KeyboardAnimation.a */,
+				DFDDABCD0F3C528EBA344647 /* Pods */,
 			);
-			name = Products;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E6A23ED2A5E4A67010F9FA80 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				BBDF41847BA40D9611316685 /* AFURLRequestSerialization.h */,
+				1821D0389F59A0CF3FF19EB0 /* AFURLRequestSerialization.m */,
+				45154482B41F4577A9F72B60 /* AFURLResponseSerialization.h */,
+				672056F87A8BBF7191367E92 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		EA41F2028B13BAFE25B9E85C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4872243B5470D1AAE1C9F15A /* AFNetworking */,
+				09FCD42D5BB1CD9AAD0A7404 /* PayPal-iOS-SDK */,
+				58E5773636F6F6D0240B1412 /* QRCodeReaderViewController */,
+				53460DFB141A1D95AD5087A6 /* SIAlertView */,
+				DC32EEFACB30DB675EE63B4D /* SlackTextViewController */,
+				7EC6078B6D941E3BB6E490B6 /* UIViewController+KeyboardAnimation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB10C84DFEEF01CB402F5819 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				ED06F87C98C40F489368710B /* AFNetworkReachabilityManager.h */,
+				356F162D3B402A92214FFABE /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A11A33FE3BDA06FAFE29E22 /* Headers */ = {
+		4DF5F77373115C90CA46D3EF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				486BD5088AAD0F0FC2C9BF99 /* SLKInputAccessoryView.h in Headers */,
-				B45FC7BA87FC65BE0BF6ABF1 /* SLKTextInputbar.h in Headers */,
-				B77B3FB584ACA25C2FDD92A7 /* SLKTextView+SLKAdditions.h in Headers */,
-				59578CFC71EA913DCB60D296 /* SLKTextView.h in Headers */,
-				53270B9A98B04A281EE42812 /* SLKTextViewController.h in Headers */,
-				5F63E5F4E5F7C58C8C2958AD /* SLKTypingIndicatorView.h in Headers */,
-				0B60CA208D30D3B54D2E8C7C /* SLKUIConstants.h in Headers */,
-				0F86F3E04A8F6CF1C273F580 /* UIScrollView+SLKAdditions.h in Headers */,
-				CA79A67684A14A9FE61CD634 /* UIView+SLKAdditions.h in Headers */,
+				D02897333596E7C5D53E8234 /* UIViewController+KeyboardAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13C235B2C42356A46FC1135B /* Headers */ = {
+		92BDF1CADB9CEEE354879E8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57DDB0C85750D8BD4D9247F8 /* UIViewController+KeyboardAnimation.h in Headers */,
+				5CD584D85F4B72FDBEB5EE13 /* SLKInputAccessoryView.h in Headers */,
+				5428460CC8048CC8E5CE6DC2 /* SLKTextInputbar.h in Headers */,
+				D027EEB835D45016FAC8DE60 /* SLKTextView+SLKAdditions.h in Headers */,
+				DC8818E6EDBFFA86F5149F35 /* SLKTextView.h in Headers */,
+				368BE829783C4712199FD608 /* SLKTextViewController.h in Headers */,
+				1CE43CB3CB8FA2D2C2697E4B /* SLKTypingIndicatorView.h in Headers */,
+				95324D76364592DE8FCD79C0 /* SLKUIConstants.h in Headers */,
+				F5CEF2AA4968B2BAD701D11C /* UIScrollView+SLKAdditions.h in Headers */,
+				8F5B93B3A49C528DEC91E6FB /* UIView+SLKAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9173A608DAA8BA8B10F5498 /* Headers */ = {
+		97BEB1BD323EE50CCD57A969 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA53A3452F95D2006B54DF2 /* QRCameraSwitchButton.h in Headers */,
-				E47482EB8456FFCEA4F5EAEF /* QRCodeReaderDelegate.h in Headers */,
-				B26B9B4F8A93C78E659D45A7 /* QRCodeReaderView.h in Headers */,
-				493E386DD02881ECD6A36138 /* QRCodeReaderViewController.h in Headers */,
+				22E224391FE18F31281BDCFC /* QRCameraSwitchButton.h in Headers */,
+				E4036B9595338FAD64314DC2 /* QRCodeReaderDelegate.h in Headers */,
+				7EDD90937A70666747299F74 /* QRCodeReaderView.h in Headers */,
+				C5922AF768094A56E8DCAE19 /* QRCodeReaderViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDA7B84D0ED4A261DBE002AB /* Headers */ = {
+		A0E1A95E7DD0AD7E2A16AD5A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3154714A2011D5ECA22EE64D /* AFHTTPRequestOperation.h in Headers */,
-				7AFB954067336C0A0283E185 /* AFHTTPRequestOperationManager.h in Headers */,
-				3E30BFA8F396CD627756C87E /* AFHTTPSessionManager.h in Headers */,
-				48767390A5BE1DFA8D0376E7 /* AFNetworkActivityIndicatorManager.h in Headers */,
-				E71F4383325DC839B5939461 /* AFNetworkReachabilityManager.h in Headers */,
-				D0A6BE0738475A16E6A92824 /* AFNetworking.h in Headers */,
-				392AB10C8D7D3CD695DCE5AA /* AFSecurityPolicy.h in Headers */,
-				E1DFECB542C8C4C95DABA4D0 /* AFURLConnectionOperation.h in Headers */,
-				ECCF3431EFF37DB5445DF356 /* AFURLRequestSerialization.h in Headers */,
-				BCCAAB86AB3E8D8EF30C4288 /* AFURLResponseSerialization.h in Headers */,
-				DB87502926F763D77F9E42E1 /* AFURLSessionManager.h in Headers */,
-				777FF521B293388CB4C3073E /* UIActivityIndicatorView+AFNetworking.h in Headers */,
-				C130376523F3F92A0E31830D /* UIAlertView+AFNetworking.h in Headers */,
-				473B8B1F94788A99FE3807FD /* UIButton+AFNetworking.h in Headers */,
-				8BDBF054EFD806CD8CE52D20 /* UIImageView+AFNetworking.h in Headers */,
-				4244F64A47C71F1E84B538A1 /* UIKit+AFNetworking.h in Headers */,
-				C121874B62E98145EC597822 /* UIProgressView+AFNetworking.h in Headers */,
-				92F49264D64B4EFC9C86040A /* UIRefreshControl+AFNetworking.h in Headers */,
-				29F36EDD928CDDCCFEDDFBDF /* UIWebView+AFNetworking.h in Headers */,
+				1EEAC5CCFD3D842E1990F000 /* SIAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB83D928DA9B9EF366DC6C0F /* Headers */ = {
+		AADF3D9131F98F8BD93B1330 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E0BBA874DF44044CDBADEA /* CardIO.h in Headers */,
-				A8F6A49DA53F78F942196764 /* CardIOCreditCardInfo.h in Headers */,
-				F27CC6C2942892219168D56C /* CardIODetectionMode.h in Headers */,
-				A3B9155B04551D0D96BA8804 /* CardIOPaymentViewController.h in Headers */,
-				54E044B96CADC2BDDFC4E440 /* CardIOPaymentViewControllerDelegate.h in Headers */,
-				F85A850473AF9AA0FD8A8FC8 /* CardIOUtilities.h in Headers */,
-				8CA5878DA440BC0853026EE7 /* CardIOView.h in Headers */,
-				7F3E672263605583640425AD /* CardIOViewDelegate.h in Headers */,
-				6FBD5C71FD43B94B98A87817 /* PayPalConfiguration.h in Headers */,
-				EC9A5562291DA1EF318E001A /* PayPalFuturePaymentViewController.h in Headers */,
-				9EE1EBB86F0C11A624CE8263 /* PayPalMobile.h in Headers */,
-				A9EBC9A8F964A09BADDBDEA4 /* PayPalOAuthScopes.h in Headers */,
-				644CBBDAB5B122F7D9FF2DEA /* PayPalPayment.h in Headers */,
-				EF6E42799158B31543B9D835 /* PayPalPaymentViewController.h in Headers */,
-				DF696C3F6973136F81729CA4 /* PayPalProfileSharingViewController.h in Headers */,
+				6215A9D47430DBD2FE323C66 /* CardIO.h in Headers */,
+				517710F87F78AA11487FBB60 /* CardIOCreditCardInfo.h in Headers */,
+				A664CD50D8C7751D04CE64D3 /* CardIODetectionMode.h in Headers */,
+				D11F12C5506F89873746BBB6 /* CardIOPaymentViewController.h in Headers */,
+				4610ED031A18D197C16D1519 /* CardIOPaymentViewControllerDelegate.h in Headers */,
+				4158426ADECC1C608F5038FE /* CardIOUtilities.h in Headers */,
+				142B9A90D8B23166D27C2DE3 /* CardIOView.h in Headers */,
+				2F58FFA401050B015FFC0077 /* CardIOViewDelegate.h in Headers */,
+				64B2DBBB39B46BD7DB8F0381 /* PayPalConfiguration.h in Headers */,
+				0C6F010D5E04B066F8BB2C0A /* PayPalFuturePaymentViewController.h in Headers */,
+				C7E1AA03F9ECEDE36C9C5741 /* PayPalMobile.h in Headers */,
+				4A63228FD57C5FA022452E33 /* PayPalOAuthScopes.h in Headers */,
+				734AEFB964C4441D9D2EA898 /* PayPalPayment.h in Headers */,
+				A9706C87F7FB9439C8FED0D9 /* PayPalPaymentViewController.h in Headers */,
+				D94F30DE56F6B30FBDD3736D /* PayPalProfileSharingViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E69195BD38719F36BCA479DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECDDFFA3F39E415FC4E952FB /* AFHTTPRequestOperation.h in Headers */,
+				EAD45DF774FDE22C0957632D /* AFHTTPRequestOperationManager.h in Headers */,
+				D65D46926180C9E6D2742677 /* AFHTTPSessionManager.h in Headers */,
+				6CAE7711BD61DAD590A6BA2B /* AFNetworkActivityIndicatorManager.h in Headers */,
+				1B8764FBFE282B5666B7DD22 /* AFNetworkReachabilityManager.h in Headers */,
+				EF6D0BFF2FCB312711F4CE72 /* AFNetworking.h in Headers */,
+				B683A288F1DB2E2F8BCA598B /* AFSecurityPolicy.h in Headers */,
+				1717CC0E0AA97ED4FCFBD086 /* AFURLConnectionOperation.h in Headers */,
+				D737040548D663B31B3EC2C6 /* AFURLRequestSerialization.h in Headers */,
+				DE7D96AABE82EBC5C607985C /* AFURLResponseSerialization.h in Headers */,
+				D82F7B80551F8DFD8ADD2905 /* AFURLSessionManager.h in Headers */,
+				A9C418958A57728B018F72D0 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				7D6DBDD3D5768B1E262D6413 /* UIAlertView+AFNetworking.h in Headers */,
+				B1BB9ED7161C941D8AAA736B /* UIButton+AFNetworking.h in Headers */,
+				1ECEEDD603F64E4F7C89730B /* UIImageView+AFNetworking.h in Headers */,
+				092DD6B0F5F6AC6754BF9703 /* UIKit+AFNetworking.h in Headers */,
+				446399B1600154B131C64CC2 /* UIProgressView+AFNetworking.h in Headers */,
+				8D236950ACA516BAFDF6CB68 /* UIRefreshControl+AFNetworking.h in Headers */,
+				6869ED998032195A53534D67 /* UIWebView+AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0E945A26324931CBA381743A /* Pods-PayPal-iOS-SDK */ = {
+		0AB802B899A69C2078CE4161 /* Pods-SIAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57FD48BA1A5E76C357E8D2BF /* Build configuration list for PBXNativeTarget "Pods-PayPal-iOS-SDK" */;
+			buildConfigurationList = A4341B1274A65CA0B3F12785 /* Build configuration list for PBXNativeTarget "Pods-SIAlertView" */;
 			buildPhases = (
-				7905C9309C87FF1819E9873E /* Sources */,
-				BD4F323126DC3E4FE5A23CBC /* Frameworks */,
-				CB83D928DA9B9EF366DC6C0F /* Headers */,
+				0C959A5510F358CC3DC51602 /* Sources */,
+				3E7CB93E6D1C68E5D0B42981 /* Frameworks */,
+				A0E1A95E7DD0AD7E2A16AD5A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-PayPal-iOS-SDK";
-			productName = "Pods-PayPal-iOS-SDK";
-			productReference = F086C2C63889370FA7B84291 /* libPods-PayPal-iOS-SDK.a */;
+			name = "Pods-SIAlertView";
+			productName = "Pods-SIAlertView";
+			productReference = 88E6A82C07F1D7B9B004D8E3 /* libPods-SIAlertView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		74682848B694A7FA7E750B04 /* Pods-UIViewController+KeyboardAnimation */ = {
+		11C96A290E7D9B89DF3E2096 /* Pods-AFNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E9958444D5B6AAE2C8AA078 /* Build configuration list for PBXNativeTarget "Pods-UIViewController+KeyboardAnimation" */;
+			buildConfigurationList = 6C56D42B9D8171D7B002C726 /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */;
 			buildPhases = (
-				403EECC39ACFFCA8656A53CB /* Sources */,
-				7F72392AD9B0025C3687C9FD /* Frameworks */,
-				13C235B2C42356A46FC1135B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-UIViewController+KeyboardAnimation";
-			productName = "Pods-UIViewController+KeyboardAnimation";
-			productReference = AEBD76C40761FE1BC9BB31EF /* libPods-UIViewController+KeyboardAnimation.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8603E0E7087349C05BAA030A /* Pods-SlackTextViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 468B0CB2A92B47BC49E8CE3C /* Build configuration list for PBXNativeTarget "Pods-SlackTextViewController" */;
-			buildPhases = (
-				BFB1A51EA9687526BF86DF12 /* Sources */,
-				20B05CF8720E40BA0DF835F4 /* Frameworks */,
-				0A11A33FE3BDA06FAFE29E22 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-SlackTextViewController";
-			productName = "Pods-SlackTextViewController";
-			productReference = 0334F21B326BF3C1083736AD /* libPods-SlackTextViewController.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		86C3781DB0FD9ED09E026966 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54B10223CCDC96795714543A /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				56FC0AC8207129856A056957 /* Sources */,
-				AF64F88BD7E497C815C911C2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BA8E7EFB7755E9C575F9D8F /* PBXTargetDependency */,
-				C6EC0C7C8CACF58CEBF641E5 /* PBXTargetDependency */,
-				539812FF4DDA5408005E1B07 /* PBXTargetDependency */,
-				FE8B280F8C6FBC82789BA271 /* PBXTargetDependency */,
-				B2B66B03373F590B6AF80D52 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = F57C2F46301F95B76EC5D398 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8924D38A9F035FF1DF2FB5E8 /* Pods-QRCodeReaderViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B84614CE1BC21B26B0E840D1 /* Build configuration list for PBXNativeTarget "Pods-QRCodeReaderViewController" */;
-			buildPhases = (
-				8B1DD417A066C2298712FF6B /* Sources */,
-				C4D546927E3F3334C159C2B1 /* Frameworks */,
-				B9173A608DAA8BA8B10F5498 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-QRCodeReaderViewController";
-			productName = "Pods-QRCodeReaderViewController";
-			productReference = CD5F9A1A280C60F23A5F5F9F /* libPods-QRCodeReaderViewController.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C1B0899D87B1375E3DA63C39 /* Pods-AFNetworking */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B7285F4A8C6E2AEDE0B0D91 /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */;
-			buildPhases = (
-				11B4201EC66C214C650F381E /* Sources */,
-				E25E24CE138737F8AF6BF756 /* Frameworks */,
-				BDA7B84D0ED4A261DBE002AB /* Headers */,
+				A68537CE3EE06E17290257A1 /* Sources */,
+				CE94FA73D5E116B217DCC320 /* Frameworks */,
+				E69195BD38719F36BCA479DB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -845,156 +845,290 @@
 			);
 			name = "Pods-AFNetworking";
 			productName = "Pods-AFNetworking";
-			productReference = 82790A3E450EFE267C5BB9F1 /* libPods-AFNetworking.a */;
+			productReference = 70A79BBEE4B5B5ED97ACF9D5 /* libPods-AFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		161DBEF81AEDB6D800362FB0 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A076300CF86483D02302A59A /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				644E17FFF5FC1EB619AA15E7 /* Sources */,
+				17678D6698F0A132C75300E0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				270173D26F053FFD807DCB31 /* PBXTargetDependency */,
+				5884224EBF39737CB63A800A /* PBXTargetDependency */,
+				A19D9C2CED0D010680812556 /* PBXTargetDependency */,
+				A62EF2053541368800EE73EC /* PBXTargetDependency */,
+				2697F246B88A7780A24ABFC8 /* PBXTargetDependency */,
+				EB902D5309A5AE17F6C2517C /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 0675497F0DF5A05DC95A40E8 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1FA063C18B4A0A3FB9B7299D /* Pods-SlackTextViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6804BAE6420FAE642B3FA526 /* Build configuration list for PBXNativeTarget "Pods-SlackTextViewController" */;
+			buildPhases = (
+				6726F7F7555940781A1308F9 /* Sources */,
+				7322DCFE717566C28EE0C608 /* Frameworks */,
+				92BDF1CADB9CEEE354879E8D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SlackTextViewController";
+			productName = "Pods-SlackTextViewController";
+			productReference = C3EBFCF0E16D3988A49005EE /* libPods-SlackTextViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4D637AAD4793900E478896FE /* Pods-UIViewController+KeyboardAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DDE0C61489670A4BD5CC61E /* Build configuration list for PBXNativeTarget "Pods-UIViewController+KeyboardAnimation" */;
+			buildPhases = (
+				B8A44D7043255EB0B409080D /* Sources */,
+				AFAC2435162451E2F4E289D6 /* Frameworks */,
+				4DF5F77373115C90CA46D3EF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-UIViewController+KeyboardAnimation";
+			productName = "Pods-UIViewController+KeyboardAnimation";
+			productReference = 4FFE0D178066B9CC27893441 /* libPods-UIViewController+KeyboardAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9856DFAB7AB246515994F78F /* Pods-QRCodeReaderViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87C3CBAD90680C954E62FEA3 /* Build configuration list for PBXNativeTarget "Pods-QRCodeReaderViewController" */;
+			buildPhases = (
+				AB65A033DB7C46DC4B998D2B /* Sources */,
+				AFB9FADCEECC1B5A93D66547 /* Frameworks */,
+				97BEB1BD323EE50CCD57A969 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-QRCodeReaderViewController";
+			productName = "Pods-QRCodeReaderViewController";
+			productReference = F5356B605D45ED1AA9C1CC5A /* libPods-QRCodeReaderViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A8B825A3E115A2629F7358BC /* Pods-PayPal-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BBEFAC617B1ACCDC0B17419 /* Build configuration list for PBXNativeTarget "Pods-PayPal-iOS-SDK" */;
+			buildPhases = (
+				81AB7BA26836059C1945F81A /* Sources */,
+				3777A2D38DB8B43F5427AC6C /* Frameworks */,
+				AADF3D9131F98F8BD93B1330 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PayPal-iOS-SDK";
+			productName = "Pods-PayPal-iOS-SDK";
+			productReference = ECDA9CD9246825371E8D8212 /* libPods-PayPal-iOS-SDK.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0112B09BCD3193F0DA84C017 /* Project object */ = {
+		FD2DD1E7DE73366D737FCD88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 			};
-			buildConfigurationList = 4305550BCBAD06B340DE27A4 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = BAAC81EAB7C52657F5348662 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4F10F107F80588B2DF268BC0;
-			productRefGroup = FF247C5AFCA589DE11ECF413 /* Products */;
+			mainGroup = 7D40ECAED462BE4785F9ADF8;
+			productRefGroup = DA0261035D6364E2D5418BAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86C3781DB0FD9ED09E026966 /* Pods */,
-				C1B0899D87B1375E3DA63C39 /* Pods-AFNetworking */,
-				0E945A26324931CBA381743A /* Pods-PayPal-iOS-SDK */,
-				8924D38A9F035FF1DF2FB5E8 /* Pods-QRCodeReaderViewController */,
-				8603E0E7087349C05BAA030A /* Pods-SlackTextViewController */,
-				74682848B694A7FA7E750B04 /* Pods-UIViewController+KeyboardAnimation */,
+				161DBEF81AEDB6D800362FB0 /* Pods */,
+				11C96A290E7D9B89DF3E2096 /* Pods-AFNetworking */,
+				A8B825A3E115A2629F7358BC /* Pods-PayPal-iOS-SDK */,
+				9856DFAB7AB246515994F78F /* Pods-QRCodeReaderViewController */,
+				0AB802B899A69C2078CE4161 /* Pods-SIAlertView */,
+				1FA063C18B4A0A3FB9B7299D /* Pods-SlackTextViewController */,
+				4D637AAD4793900E478896FE /* Pods-UIViewController+KeyboardAnimation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11B4201EC66C214C650F381E /* Sources */ = {
+		0C959A5510F358CC3DC51602 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3686FD35461BA599FBC05124 /* AFHTTPRequestOperation.m in Sources */,
-				EEE6DDDDE104CC7C72902CEA /* AFHTTPRequestOperationManager.m in Sources */,
-				93418D4B25B2C2629A6EC318 /* AFHTTPSessionManager.m in Sources */,
-				363AB5611AC297C1A7C357C2 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				D8B7AABC2FC8B22311F3307E /* AFNetworkReachabilityManager.m in Sources */,
-				E813D58D63EF10B6468BF928 /* AFSecurityPolicy.m in Sources */,
-				051C7FBBED87BDDDC125FF36 /* AFURLConnectionOperation.m in Sources */,
-				5752DADEAF5C30C41DEDFEAB /* AFURLRequestSerialization.m in Sources */,
-				2B1605AA58D12D862CD62BB0 /* AFURLResponseSerialization.m in Sources */,
-				46A3C89D6AC82D14780EA62D /* AFURLSessionManager.m in Sources */,
-				5C1B99E5A6F8E74325B11088 /* Pods-AFNetworking-dummy.m in Sources */,
-				EC6F4A6AB2B3CD0438C660EC /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				01DB7DBA0AE5A92E65A5FEB4 /* UIAlertView+AFNetworking.m in Sources */,
-				C7522760054489831956C2D2 /* UIButton+AFNetworking.m in Sources */,
-				D8318B81D4C4FEDF8C9E6A65 /* UIImageView+AFNetworking.m in Sources */,
-				D5F25B10E41B2FBF5B3A277B /* UIProgressView+AFNetworking.m in Sources */,
-				B5F5924347A90CD11B63FCDD /* UIRefreshControl+AFNetworking.m in Sources */,
-				97CCEC0F4A37957AE3DEA9AC /* UIWebView+AFNetworking.m in Sources */,
+				EA2E9F0B4A537138BFD0FD08 /* Pods-SIAlertView-dummy.m in Sources */,
+				00AE5A598C2B40E99C6E1421 /* SIAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		403EECC39ACFFCA8656A53CB /* Sources */ = {
+		644E17FFF5FC1EB619AA15E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48164C5ADB1D0753202FBC51 /* Pods-UIViewController+KeyboardAnimation-dummy.m in Sources */,
-				486AA5C68D87A4A4D191C6DC /* UIViewController+KeyboardAnimation.m in Sources */,
+				699C3288CEAD5037523E5B15 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56FC0AC8207129856A056957 /* Sources */ = {
+		6726F7F7555940781A1308F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				588D0C33DB81BAD13D1FF0AF /* Pods-dummy.m in Sources */,
+				8CD6296D457AD322F32F7717 /* Pods-SlackTextViewController-dummy.m in Sources */,
+				4066907BB53881F56C69C635 /* SLKInputAccessoryView.m in Sources */,
+				7D5AA931A3DF88EFEADB5B11 /* SLKTextInputbar.m in Sources */,
+				8ADDB4CD7031F11C67CCE4FA /* SLKTextView+SLKAdditions.m in Sources */,
+				2F0F1C1A9A19AEFD2AE7DFB9 /* SLKTextView.m in Sources */,
+				C15BF5ACEE8B84D1E25A497C /* SLKTextViewController.m in Sources */,
+				FD0869EBB7B97F46BF5C7E01 /* SLKTypingIndicatorView.m in Sources */,
+				1339F26937F4C1BAEC1122F0 /* UIScrollView+SLKAdditions.m in Sources */,
+				625A4C62E4269A7CFAB9B1D9 /* UIView+SLKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7905C9309C87FF1819E9873E /* Sources */ = {
+		81AB7BA26836059C1945F81A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD63E36C30DD75D4498EB5C /* Pods-PayPal-iOS-SDK-dummy.m in Sources */,
+				A88B20737E44DEBE395742EE /* Pods-PayPal-iOS-SDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B1DD417A066C2298712FF6B /* Sources */ = {
+		A68537CE3EE06E17290257A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781CEDDC3F324C42B7A563A3 /* Pods-QRCodeReaderViewController-dummy.m in Sources */,
-				D6FF8C907BA4AC1DB7C945FB /* QRCameraSwitchButton.m in Sources */,
-				C52802A3FDE09E2C2A95F4C9 /* QRCodeReaderView.m in Sources */,
-				E1A021E100F3C5E7CFF1BF64 /* QRCodeReaderViewController.m in Sources */,
+				175FFA10AA4823D7BBC27235 /* AFHTTPRequestOperation.m in Sources */,
+				97727EBF9B6EEA0C5CB07FEB /* AFHTTPRequestOperationManager.m in Sources */,
+				20579331827FCCF873111154 /* AFHTTPSessionManager.m in Sources */,
+				BD71CDAB77F7B66F11C3859E /* AFNetworkActivityIndicatorManager.m in Sources */,
+				9E451C5FB9C61EB1FDF1C592 /* AFNetworkReachabilityManager.m in Sources */,
+				E204FB6FA76B758AB700F80D /* AFSecurityPolicy.m in Sources */,
+				30B03A03157D7D0EBF629C82 /* AFURLConnectionOperation.m in Sources */,
+				D7157EC060D6606E422E2157 /* AFURLRequestSerialization.m in Sources */,
+				F82D1B234D27922D85D8C3DB /* AFURLResponseSerialization.m in Sources */,
+				7539FA920A4803AF0D0E4A9C /* AFURLSessionManager.m in Sources */,
+				E8C75FD2BDD0B7589CD72BC3 /* Pods-AFNetworking-dummy.m in Sources */,
+				1E13BB40C9028E7CEC48BFBA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				00C32B53E8D124A8F795E7DC /* UIAlertView+AFNetworking.m in Sources */,
+				5813F3A2131236E4AFA17CE9 /* UIButton+AFNetworking.m in Sources */,
+				C0E1A82E51A92E5DCD85A8B0 /* UIImageView+AFNetworking.m in Sources */,
+				41EB1A0B5010174E530427B4 /* UIProgressView+AFNetworking.m in Sources */,
+				BADB94C8572FEC9911B27578 /* UIRefreshControl+AFNetworking.m in Sources */,
+				0D0CD3076563BC4165FE8CB9 /* UIWebView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFB1A51EA9687526BF86DF12 /* Sources */ = {
+		AB65A033DB7C46DC4B998D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF3E2495636CBADAB740B4C /* Pods-SlackTextViewController-dummy.m in Sources */,
-				B27E014B24AF024DFEA1C94D /* SLKInputAccessoryView.m in Sources */,
-				D3CA6CD6FCDD146025C24F4E /* SLKTextInputbar.m in Sources */,
-				9DC9AB5C2796F9C932042F71 /* SLKTextView+SLKAdditions.m in Sources */,
-				3A57A4024FA4CAA47A05E7BF /* SLKTextView.m in Sources */,
-				D06D2329EE7929DF085E30D5 /* SLKTextViewController.m in Sources */,
-				A3E0542E454081ED0B0F5523 /* SLKTypingIndicatorView.m in Sources */,
-				AC6FE2199265C3FA2359D0B0 /* UIScrollView+SLKAdditions.m in Sources */,
-				40458692AF21F66BE3FD124F /* UIView+SLKAdditions.m in Sources */,
+				9D4D44DD5E7480B5BD70B542 /* Pods-QRCodeReaderViewController-dummy.m in Sources */,
+				F66595301816C193DDBA97BB /* QRCameraSwitchButton.m in Sources */,
+				913C486D85AA6F5BC7441B61 /* QRCodeReaderView.m in Sources */,
+				F4630263D3A5F31E9AC4BF0E /* QRCodeReaderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A44D7043255EB0B409080D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBDE94FCCD1D9720B9D7949C /* Pods-UIViewController+KeyboardAnimation-dummy.m in Sources */,
+				194E780A55958F27F964009E /* UIViewController+KeyboardAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BA8E7EFB7755E9C575F9D8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AFNetworking";
-			target = C1B0899D87B1375E3DA63C39 /* Pods-AFNetworking */;
-			targetProxy = D0912BB4AC7D91A9C2690BDA /* PBXContainerItemProxy */;
-		};
-		539812FF4DDA5408005E1B07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-QRCodeReaderViewController";
-			target = 8924D38A9F035FF1DF2FB5E8 /* Pods-QRCodeReaderViewController */;
-			targetProxy = 0FCB7CEB5C8DCC9F69BE8D4E /* PBXContainerItemProxy */;
-		};
-		B2B66B03373F590B6AF80D52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-UIViewController+KeyboardAnimation";
-			target = 74682848B694A7FA7E750B04 /* Pods-UIViewController+KeyboardAnimation */;
-			targetProxy = 3E564DD215324903D8399425 /* PBXContainerItemProxy */;
-		};
-		C6EC0C7C8CACF58CEBF641E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PayPal-iOS-SDK";
-			target = 0E945A26324931CBA381743A /* Pods-PayPal-iOS-SDK */;
-			targetProxy = 5AEF77110A6B0EC0B0D012F7 /* PBXContainerItemProxy */;
-		};
-		FE8B280F8C6FBC82789BA271 /* PBXTargetDependency */ = {
+		2697F246B88A7780A24ABFC8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SlackTextViewController";
-			target = 8603E0E7087349C05BAA030A /* Pods-SlackTextViewController */;
-			targetProxy = 738CEA416CC19AE600F0AD2A /* PBXContainerItemProxy */;
+			target = 1FA063C18B4A0A3FB9B7299D /* Pods-SlackTextViewController */;
+			targetProxy = 22DF0D22D243A286450A70B1 /* PBXContainerItemProxy */;
+		};
+		270173D26F053FFD807DCB31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AFNetworking";
+			target = 11C96A290E7D9B89DF3E2096 /* Pods-AFNetworking */;
+			targetProxy = ABBAEFEA1AD68D4EE34959AA /* PBXContainerItemProxy */;
+		};
+		5884224EBF39737CB63A800A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PayPal-iOS-SDK";
+			target = A8B825A3E115A2629F7358BC /* Pods-PayPal-iOS-SDK */;
+			targetProxy = 5F853EC1EDD096795003AC49 /* PBXContainerItemProxy */;
+		};
+		A19D9C2CED0D010680812556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-QRCodeReaderViewController";
+			target = 9856DFAB7AB246515994F78F /* Pods-QRCodeReaderViewController */;
+			targetProxy = 541A6C60F385E6864422E240 /* PBXContainerItemProxy */;
+		};
+		A62EF2053541368800EE73EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SIAlertView";
+			target = 0AB802B899A69C2078CE4161 /* Pods-SIAlertView */;
+			targetProxy = FBE840315B625B3988DC2C58 /* PBXContainerItemProxy */;
+		};
+		EB902D5309A5AE17F6C2517C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-UIViewController+KeyboardAnimation";
+			target = 4D637AAD4793900E478896FE /* Pods-UIViewController+KeyboardAnimation */;
+			targetProxy = 4449A44070AD2F2F020828B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14172FC359627C88104EB136 /* Release */ = {
+		06DEE7663881E3EDBDD4FB2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CBE34A382475357A1027F6 /* Pods-PayPal-iOS-SDK-Private.xcconfig */;
+			baseConfigurationReference = CCE7AF48F85805E284E13EAC /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D375346EC8C2B27DB545854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61D0E2784001D2F115657F21 /* Pods-PayPal-iOS-SDK-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -1021,62 +1155,38 @@
 			};
 			name = Release;
 		};
-		1B251863F3E5B4509F5426DA /* Debug */ = {
+		2394D3DDEAFBFCDDF9DC79E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71D5BF69E6666FCF485BECC9 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */;
+			baseConfigurationReference = 6DF3956FFF4966A4EB78A84C /* Pods-QRCodeReaderViewController-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIViewController+KeyboardAnimation/Pods-UIViewController+KeyboardAnimation-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-QRCodeReaderViewController/Pods-QRCodeReaderViewController-prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		24BC478CD735ED403BFCA337 /* Debug */ = {
+		3C8E56718600E4BCC83D96DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61764E9A9457F0AED4DFE5C1 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		2B932F9974FF5B870AF32711 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8B2D96BB78509CB879B4278 /* Pods-SlackTextViewController-Private.xcconfig */;
+			baseConfigurationReference = A308ADDF3710C8737CA3B59A /* Pods-SlackTextViewController-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -1103,9 +1213,9 @@
 			};
 			name = Release;
 		};
-		2D179037928D81FD725DC736 /* Debug */ = {
+		3E90E3204DCCC79D621DCA4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CBE34A382475357A1027F6 /* Pods-PayPal-iOS-SDK-Private.xcconfig */;
+			baseConfigurationReference = 06E9FD0A9239930367F5754D /* Pods-AFNetworking-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1113,7 +1223,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PayPal-iOS-SDK/Pods-PayPal-iOS-SDK-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1130,34 +1240,7 @@
 			};
 			name = Debug;
 		};
-		457BC2E730CABC787866857D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEF2F0C5295C8073686B5A7F /* Pods-QRCodeReaderViewController-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-QRCodeReaderViewController/Pods-QRCodeReaderViewController-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8FF304B09C3DEA10F8B641E9 /* Debug */ = {
+		437310526AB4FE034A001FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1193,9 +1276,38 @@
 			};
 			name = Debug;
 		};
-		9576FD0EA6F61D4548DECE8F /* Debug */ = {
+		52CC06FEB1BB2BCE468C11A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B23E277E3C2E6EFE80353F80 /* Pods-AFNetworking-Private.xcconfig */;
+			baseConfigurationReference = 06E9FD0A9239930367F5754D /* Pods-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		688A8965811DED1366578022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EE9B70584E8CCCF75F7467 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1203,7 +1315,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIViewController+KeyboardAnimation/Pods-UIViewController+KeyboardAnimation-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1220,9 +1332,9 @@
 			};
 			name = Debug;
 		};
-		9FDD933FB25FF4DD394419CD /* Release */ = {
+		898D3E21A5A68B1D33772F70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71D5BF69E6666FCF485BECC9 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */;
+			baseConfigurationReference = 14EE9B70584E8CCCF75F7467 /* Pods-UIViewController+KeyboardAnimation-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -1249,38 +1361,9 @@
 			};
 			name = Release;
 		};
-		B5A19B1C0BD26FE7FFECF1C1 /* Release */ = {
+		913EC46F2B9BD6AB170FCBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B23E277E3C2E6EFE80353F80 /* Pods-AFNetworking-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BBD0D80FD2D8D899163F6337 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8B2D96BB78509CB879B4278 /* Pods-SlackTextViewController-Private.xcconfig */;
+			baseConfigurationReference = 6DF3956FFF4966A4EB78A84C /* Pods-QRCodeReaderViewController-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1288,7 +1371,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SlackTextViewController/Pods-SlackTextViewController-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-QRCodeReaderViewController/Pods-QRCodeReaderViewController-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1305,64 +1388,87 @@
 			};
 			name = Debug;
 		};
-		BC9FB1593D3BEB665495B7E8 /* Release */ = {
+		91E3312230FDB333D62DC82D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEF2F0C5295C8073686B5A7F /* Pods-QRCodeReaderViewController-Private.xcconfig */;
+			baseConfigurationReference = 61D0E2784001D2F115657F21 /* Pods-PayPal-iOS-SDK-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-QRCodeReaderViewController/Pods-QRCodeReaderViewController-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PayPal-iOS-SDK/Pods-PayPal-iOS-SDK-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		CE87C2D2359FB87C8D359BA4 /* Release */ = {
+		9E0FB54E3EFEF06D84836F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C29A9FBE4AD5950A2E472FC7 /* Pods.release.xcconfig */;
+			baseConfigurationReference = F98A9363615DBB63F59F0C19 /* Pods-SIAlertView-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SIAlertView/Pods-SIAlertView-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		F13BD198B60A541BDF97023D /* Release */ = {
+		A5D62B5FAE000874E4F57AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 125BEF726097143D697D14CD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A69658704E4E9F151B335EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1393,73 +1499,138 @@
 			};
 			name = Release;
 		};
+		B0AC1E2CE39D8E1F76DE4FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A308ADDF3710C8737CA3B59A /* Pods-SlackTextViewController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SlackTextViewController/Pods-SlackTextViewController-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FC8B13F2F8E8BFB7AB1B2C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F98A9363615DBB63F59F0C19 /* Pods-SIAlertView-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SIAlertView/Pods-SIAlertView-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B7285F4A8C6E2AEDE0B0D91 /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */ = {
+		1BBEFAC617B1ACCDC0B17419 /* Build configuration list for PBXNativeTarget "Pods-PayPal-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9576FD0EA6F61D4548DECE8F /* Debug */,
-				B5A19B1C0BD26FE7FFECF1C1 /* Release */,
+				91E3312230FDB333D62DC82D /* Debug */,
+				0D375346EC8C2B27DB545854 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4305550BCBAD06B340DE27A4 /* Build configuration list for PBXProject "Pods" */ = {
+		2DDE0C61489670A4BD5CC61E /* Build configuration list for PBXNativeTarget "Pods-UIViewController+KeyboardAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8FF304B09C3DEA10F8B641E9 /* Debug */,
-				F13BD198B60A541BDF97023D /* Release */,
+				688A8965811DED1366578022 /* Debug */,
+				898D3E21A5A68B1D33772F70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		468B0CB2A92B47BC49E8CE3C /* Build configuration list for PBXNativeTarget "Pods-SlackTextViewController" */ = {
+		6804BAE6420FAE642B3FA526 /* Build configuration list for PBXNativeTarget "Pods-SlackTextViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BBD0D80FD2D8D899163F6337 /* Debug */,
-				2B932F9974FF5B870AF32711 /* Release */,
+				B0AC1E2CE39D8E1F76DE4FCE /* Debug */,
+				3C8E56718600E4BCC83D96DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54B10223CCDC96795714543A /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		6C56D42B9D8171D7B002C726 /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				24BC478CD735ED403BFCA337 /* Debug */,
-				CE87C2D2359FB87C8D359BA4 /* Release */,
+				3E90E3204DCCC79D621DCA4A /* Debug */,
+				52CC06FEB1BB2BCE468C11A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57FD48BA1A5E76C357E8D2BF /* Build configuration list for PBXNativeTarget "Pods-PayPal-iOS-SDK" */ = {
+		87C3CBAD90680C954E62FEA3 /* Build configuration list for PBXNativeTarget "Pods-QRCodeReaderViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D179037928D81FD725DC736 /* Debug */,
-				14172FC359627C88104EB136 /* Release */,
+				913EC46F2B9BD6AB170FCBE1 /* Debug */,
+				2394D3DDEAFBFCDDF9DC79E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E9958444D5B6AAE2C8AA078 /* Build configuration list for PBXNativeTarget "Pods-UIViewController+KeyboardAnimation" */ = {
+		A076300CF86483D02302A59A /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B251863F3E5B4509F5426DA /* Debug */,
-				9FDD933FB25FF4DD394419CD /* Release */,
+				A5D62B5FAE000874E4F57AED /* Debug */,
+				06DEE7663881E3EDBDD4FB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B84614CE1BC21B26B0E840D1 /* Build configuration list for PBXNativeTarget "Pods-QRCodeReaderViewController" */ = {
+		A4341B1274A65CA0B3F12785 /* Build configuration list for PBXNativeTarget "Pods-SIAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				457BC2E730CABC787866857D /* Debug */,
-				BC9FB1593D3BEB665495B7E8 /* Release */,
+				9E0FB54E3EFEF06D84836F93 /* Debug */,
+				FC8B13F2F8E8BFB7AB1B2C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAAC81EAB7C52657F5348662 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437310526AB4FE034A001FCC /* Debug */,
+				A69658704E4E9F151B335EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0112B09BCD3193F0DA84C017 /* Project object */;
+	rootObject = FD2DD1E7DE73366D737FCD88 /* Project object */;
 }

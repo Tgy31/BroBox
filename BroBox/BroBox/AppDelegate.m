@@ -19,6 +19,7 @@
 #import "BBRootVC.h"
 #import "BBSignUpNavigationController.h"
 #import "BBClientModeNavigationController.h"
+#import "BBCarrierModeNavigationController.h"
 
 // Managers
 #import "BBLoginManager.h"
@@ -147,7 +148,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 
 - (void)presentCarrierScreenForMission:(BBParseMission *)mission
 {
-    
+    self.window.rootViewController = [BBCarrierModeNavigationController newWithMission:mission];
 }
 
 + (void)presentLoginScreen

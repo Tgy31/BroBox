@@ -11,18 +11,29 @@
 // Model
 #import "BBParseMission.h"
 
-static NSString *BBNotificationUserActiveMissionIsLoading = @"BBNotificationUserActiveMissionIsLoading";
-static NSString *BBNotificationUserActiveMissionDidChange = @"BBNotificationUserActiveMissionDidChange";
+static NSString *BBNotificationUserMissionIsLoading = @"BBNotificationUserActiveMissionIsLoading";
+static NSString *BBNotificationUserMissionDidChange = @"BBNotificationUserActiveMissionDidChange";
 
 @interface BBInstallationManager : BBObject
 
-@property (strong, nonatomic) BBParseMission *userActiveMission;
-@property (nonatomic) BOOL userActiveMissionIsLoading;
+@property (strong, nonatomic) BBParseMission *userMission;
+@property (strong, nonatomic) BBParseMission *carriedMission;
+@property (nonatomic) BOOL userMissionIsLoading;
+
+@property (nonatomic) BOOL debugMode;
 
 + (void)initialize;
 
-+ (void)setUserActiveMission:(BBParseMission *)userActiveMission;
-+ (BBParseMission *)userActiveMission;
-+ (BOOL)userActiveMissionIsLoading;
++ (void)setUserMission:(BBParseMission *)userMission;
++ (BBParseMission *)userMission;
++ (BOOL)userMissionIsLoading;
+
++ (void)setCarriedMission:(BBParseMission *)carriedMission;
++ (BBParseMission *)carriedMission;
+
++ (BBParseMission *)activeMission;
+
++ (BOOL)debugMode;
++ (void)setDebugMode:(BOOL)debugMode;
 
 @end

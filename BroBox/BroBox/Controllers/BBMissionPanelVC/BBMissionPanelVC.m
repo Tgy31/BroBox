@@ -49,6 +49,21 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     self.tableView.estimatedRowHeight = 44;
 }
 
+#pragma mark - DEBUG
+
+- (BOOL)shouldShowDebugBarbutton {
+    return (self.mission.carrier != nil);
+}
+
+#pragma mark - Getters & Setters
+
+#pragma mark - Handlers
+
+- (void)debugButtonHandler {
+    [BBInstallationManager setCarriedMission:self.mission];
+    [AppDelegate presentCarrierScreenForMission:self.mission];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -168,7 +183,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     [BBParseManager deleteMission:self.mission
                         withBlock:^(BOOL succeeded, NSError *error) {
                             if (succeeded) {
-                                [BBInstallationManager setUserActiveMission:nil];
+                                [BBInstallationManager setUserMission:nil];
                             } else {
                                 
                             }

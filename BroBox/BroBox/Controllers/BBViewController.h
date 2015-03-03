@@ -19,4 +19,7 @@
                         subtitle:(NSString *)subtitle;
 - (void)hidePlaceHolder;
 
+- (BOOL)shouldShowDebugBarbutton;
+- (void)debugButtonHandler;
+
 @end

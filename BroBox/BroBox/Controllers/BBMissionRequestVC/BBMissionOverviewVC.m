@@ -11,6 +11,8 @@
 // Managers
 #import "BBParseManager.h"
 #import "BBLocationManager.h"
+#import "AppDelegate.h"
+#import "BBInstallationManager.h"
 
 // Model
 #import "BBParseUser.h"
@@ -48,7 +50,6 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 @property (weak, nonatomic) IBOutlet UILabel *labelFrom;
 @property (weak, nonatomic) IBOutlet UILabel *labelTo;
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
-
 @end
 
 @implementation BBMissionOverviewVC
@@ -112,6 +113,12 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     }
 }
 
+#pragma mark - DEBUG
+
+- (BOOL)shouldShowDebugBarbutton {
+    return [self.mission.carrier.objectId isEqualToString:[BBParseUser currentUser].objectId];
+}
+
 #pragma mark - Getters & Setters
 
 - (void)setMission:(BBParseMission *)mission {
@@ -156,6 +163,11 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 
 - (void)actionButtonHandler {
     [self acceptMission];
+}
+
+- (void)debugButtonHandler {
+    [BBInstallationManager setCarriedMission:self.mission];
+    [AppDelegate presentCarrierScreenForMission:self.mission];
 }
 
 #pragma mark - API

@@ -11,9 +11,14 @@
 // Libraries
 #import "GFPlaceHolderView.h"
 
+// Managers
+#import "AppDelegate.h"
+#import "BBInstallationManager.h"
+
 @interface BBViewController ()
 
 @property (strong, nonatomic) GFPlaceholderView *placeHolderView;
+@property (strong, nonatomic) UIBarButtonItem *debugButton;
 
 @end
 
@@ -30,6 +35,16 @@
     [super viewDidLoad];
     
     self.navigationBarShouldCoverViewController = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if ([BBInstallationManager debugMode] && [self shouldShowDebugBarbutton]) {
+        self.navigationItem.rightBarButtonItem = self.debugButton;
+    } else {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (void)viewDidLayoutSubviews {
@@ -58,12 +73,33 @@
 
 #pragma mark - Getters & Setters
 
+- (BOOL)shouldShowDebugBarbutton {
+    return NO;
+}
+
 - (GFPlaceholderView *)placeHolderView {
     if (!_placeHolderView) {
         _placeHolderView = [[GFPlaceholderView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:_placeHolderView];
     }
     return _placeHolderView;
+}
+
+- (UIBarButtonItem *)debugButton {
+    if (!_debugButton) {
+        _debugButton = [[UIBarButtonItem alloc] initWithTitle:@"[DEBUG]"
+                                                       style:UIBarButtonItemStylePlain
+                                                      target:self
+                                                      action:@selector(debugButtonHandler)];
+        _debugButton.tintColor = [UIColor orangeColor];
+    }
+    return _debugButton;
+}
+
+#pragma mark - Handlers
+
+- (void)debugButtonHandler {
+    NSLog(@"Debug button not handle");
 }
 
 @end

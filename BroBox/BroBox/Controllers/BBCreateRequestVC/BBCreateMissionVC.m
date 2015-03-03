@@ -294,7 +294,7 @@
     self.doneBarButton.enabled = NO;
     [mission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            [BBInstallationManager setUserActiveMission:mission];
+            [BBInstallationManager setUserMission:mission];
         } else {
             NSString *title = NSLocalizedString(@"Mission save failed", @"");
             NSString *subtitle = [error localizedDescription];

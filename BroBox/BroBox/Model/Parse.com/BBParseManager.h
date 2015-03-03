@@ -51,6 +51,9 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block;
 + (void)fetchActiveCarrierAndLocationForMission:(BBParseMission *)mission
                                       withBlock:(BBObjectResultBlock)block;
 
++ (void)fetchMissionWithID:(NSString *)missionID
+                 withBlock:(BBObjectResultBlock)block;
+
 + (void)fetchMessagesForMission:(BBParseMission *)mission
                       withBlock:(BBArrayResultBlock)block;
 

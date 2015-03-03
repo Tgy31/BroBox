@@ -12,9 +12,11 @@
 #import "AppDelegate.h"
 #import "BBPaypalManager.h"
 #import "BBLoginManager.h"
+#import "BBInstallationManager.h"
 
 typedef NS_ENUM(NSInteger, BBSettingsSection) {
     BBSettingsSectionPayPal,
+    BBSettingsSectionDebug,
     BBSettingsSectionDisconnect
 };
 
@@ -43,6 +45,12 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
     self.tableView.delegate = self;
 }
 
+#pragma mark - Handlers 
+
+- (void)debugSwitchHandler:(UISwitch *)sender {
+    [BBInstallationManager setDebugMode:sender.isOn];
+}
+
 #pragma mark - UITableViewDatasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -52,6 +60,9 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case BBSettingsSectionPayPal:
+            return 1;
+            
+        case BBSettingsSectionDebug:
             return 1;
             
         case BBSettingsSectionDisconnect:
@@ -66,6 +77,9 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
     switch (indexPath.section) {
         case BBSettingsSectionPayPal:
             return [self tableView:tableView paypalCellForRowAtIndexPath:indexPath];
+            
+        case BBSettingsSectionDebug:
+            return [self tableView:tableView debugCellForRowAtIndexPath:indexPath];
             
         case BBSettingsSectionDisconnect:
             return [self tableView:tableView disconnectCellForRowAtIndexPath:indexPath];
@@ -110,6 +124,28 @@ typedef NS_ENUM(NSInteger, BBSettingsSection) {
     
     cell.textLabel.text = NSLocalizedString(@"Disconnect", @"");
     cell.textLabel.textColor = [UIColor redColor];
+    
+    return cell;
+}
+
+#define DEBUG_CELL_IDENTIFIER @"debugCell"
+
+- (UITableViewCell *)tableView:(UITableView *)tableView debugCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DEBUG_CELL_IDENTIFIER];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DEBUG_CELL_IDENTIFIER];
+        UISwitch *debugSwitch = [[UISwitch alloc] init];
+        debugSwitch.on = [BBInstallationManager debugMode];
+        [debugSwitch addTarget:self
+                        action:@selector(debugSwitchHandler:)
+              forControlEvents:UIControlEventValueChanged];
+        cell.accessoryView = debugSwitch;
+    }
+    
+    cell.textLabel.text = NSLocalizedString(@"Debug", @"");
+    cell.textLabel.textColor = [UIColor orangeColor];
     
     return cell;
 }

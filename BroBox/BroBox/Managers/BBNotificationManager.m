@@ -13,8 +13,10 @@
 #import "LNNotificationsUI.h"
 
 // Managers
+#import "AppDelegate.h"
 #import "BBInstallationManager.h"
 #import "BBParseManager.h"
+#import "BBAlertManager.h"
 
 
 #define APP_NAME @"BroBox"
@@ -24,6 +26,7 @@
 #define NOTIFICATION_KEY_SUBTITLE @"subtitle"
 #define NOTIFICATION_KEY_TYPE @"type"
 #define NOTIFICATION_KEY_MESSAGE @"alert"
+#define NOTIFICATION_KEY_MISSION @"mission"
 
 static NSString *BBNotificationKeyNewCarrier = @"BBNotificationKeyNewCarrier";
 static NSString *BBNotificationKeySelectedCarrier = @"BBNotificationKeySelectedCarrier";
@@ -80,41 +83,96 @@ static BBNotificationManager *sharedManager;
 
 #pragma mark - Handler
 
-+ (void)handleRemoteNotification:(NSDictionary *)userInfo {
-    [[BBNotificationManager sharedManager] handleRemoteNotification:userInfo];
++ (void)openApplicationWithRemoteNotification:(NSDictionary *)userInfo {
+    [[BBNotificationManager sharedManager] openApplicationWithRemoteNotification:userInfo];
 }
 
-- (void)handleRemoteNotification:(NSDictionary *)userInfo {
-    //    Default data
-    NSDictionary *aps = [userInfo objectForKey:@"aps"];
-    NSString *message = [aps objectForKey:@"alert"];
-    
-    //    Optional data
-    NSString *title = [userInfo objectForKey:@"title"];
-    
-    LNNotification *notification = [[LNNotification alloc] initWithTitle:title
-                                                                 message:message];
-    
-    [[LNNotificationCenter defaultCenter] presentNotification:notification
-                                     forApplicationIdentifier:APP_IDENTIFIER
-                                                     userInfo:userInfo];
+- (void)openApplicationWithRemoteNotification:(NSDictionary *)userInfo {
     
     BBNotificationType type = [BBNotificationManager typeFromNotificationData:userInfo];
     
     switch (type) {
         case BBNotificationTypeNewCarrier: {
-            BBParseMission *mission = [BBInstallationManager userActiveMission];
-            [self refreshMissionMessages:mission];
+            [self presentNotification:userInfo];
             break;
         }
-        case BBNotificationTypeSelectedCarrier:
+            
+        case BBNotificationTypeSelectedCarrier: {
+            [self handleSelectedCarrierNotification:userInfo];
             break;
-        case BBNotificationTypeNewMessage:
+        }
+            
+        case BBNotificationTypeNewMessage: {
+            [self presentNotification:userInfo];
             break;
+        }
             
         default:
             break;
     }
+}
+
++ (void)handleRemoteNotification:(NSDictionary *)userInfo {
+    [[BBNotificationManager sharedManager] handleRemoteNotification:userInfo];
+}
+
+- (void)handleRemoteNotification:(NSDictionary *)userInfo {
+    
+    BBNotificationType type = [BBNotificationManager typeFromNotificationData:userInfo];
+    
+    switch (type) {
+        case BBNotificationTypeNewCarrier: {
+            [self presentNotification:userInfo];
+            break;
+        }
+            
+        case BBNotificationTypeSelectedCarrier: {
+            [self handleSelectedCarrierNotification:userInfo];
+            break;
+        }
+            
+        case BBNotificationTypeNewMessage: {
+            BBParseMission *mission = [BBInstallationManager activeMission];
+            [self refreshMissionMessages:mission];
+            [self presentNotification:userInfo];
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
+
+- (void)handleSelectedCarrierNotification:(NSDictionary *)userInfo {
+    
+    NSString *missionID = [userInfo objectForKey:NOTIFICATION_KEY_MISSION];
+    [BBParseManager fetchMissionWithID:missionID withBlock:^(PFObject *object, NSError *error) {
+        
+        BBParseMission *mission = (BBParseMission *)object;
+        [BBAlertManager presentAlertForMissionStart:mission withBlock:^(BBParseMission *mission) {
+            NSNotification *notification = [NSNotification notificationWithName:@"notification" object:mission];
+            [self notificationForSelectedCarrierTapHandler:notification];
+        }];
+        
+    }];
+}
+
+- (void)presentNotification:(NSDictionary *)userInfo {
+    
+    //    Default data
+    NSDictionary *aps = [userInfo objectForKey:@"aps"];
+    NSString *message = [aps objectForKey:NOTIFICATION_KEY_MESSAGE];
+    
+    //    Optional data
+    NSString *title = [userInfo objectForKey:NOTIFICATION_KEY_TITLE];
+    NSString *subtitle = [userInfo objectForKey:NOTIFICATION_KEY_SUBTITLE];
+    
+    LNNotification *notification = [[LNNotification alloc] initWithTitle:title ? title : @"BroBox"
+                                                                 message:subtitle ? subtitle : message];
+    
+    [[LNNotificationCenter defaultCenter] presentNotification:notification
+                                     forApplicationIdentifier:APP_IDENTIFIER
+                                                     userInfo:userInfo];
 }
 
 - (void)notificationWasTapped:(NSNotification*)notification {
@@ -124,13 +182,13 @@ static BBNotificationManager *sharedManager;
     
     switch (type) {
         case BBNotificationTypeNewCarrier:
-            [self handleNotificationForNewCarrierTapped:notification];
+            [self notificationForNewCarrierTapHandler:notification];
             break;
         case BBNotificationTypeSelectedCarrier:
-            [self handleNotificationForSelectedCarrierTapped:notification];
+            [self notificationForSelectedCarrierTapHandler:notification];
             break;
         case BBNotificationTypeNewMessage:
-            [self handleNotificationForNewMessageTapped:notification];
+            [self notificationForNewMessageTapHandler:notification];
             break;
             
         default:
@@ -138,15 +196,18 @@ static BBNotificationManager *sharedManager;
     }
 }
 
-- (void)handleNotificationForNewCarrierTapped:(NSNotification *)notification {
+- (void)notificationForNewCarrierTapHandler:(NSNotification *)notification {
     
 }
 
-- (void)handleNotificationForSelectedCarrierTapped:(NSNotification *)notification {
+- (void)notificationForSelectedCarrierTapHandler:(NSNotification *)notification {
     
+    BBParseMission *mission = (BBParseMission *)notification.object;
+    [BBInstallationManager setCarriedMission:mission];
+    [AppDelegate presentCarrierScreenForMission:mission];
 }
 
-- (void)handleNotificationForNewMessageTapped:(NSNotification *)notification {
+- (void)notificationForNewMessageTapHandler:(NSNotification *)notification {
 }
 
 - (void)refreshMissionMessages:(BBParseMission *)mission {
