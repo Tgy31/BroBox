@@ -25,7 +25,7 @@ static BBAlertManager *sharedManager;
 #pragma mark - Alert views
 
 + (void)presentAlertForMissionStart:(BBParseMission *)mission
-                          withBlock:(BBAlertButtonHandlerBlock)block {
+                          withBlock:(BBAlertButtonHandlerMissionBlock)block {
     
     [[BBAlertManager sharedManager] presentAlertForMissionStart:mission
                                                       withBlock:block];
@@ -33,7 +33,7 @@ static BBAlertManager *sharedManager;
 
 
 - (void)presentAlertForMissionStart:(BBParseMission *)mission
-                          withBlock:(BBAlertButtonHandlerBlock)block {
+                          withBlock:(BBAlertButtonHandlerMissionBlock)block {
     
     NSString *title = NSLocalizedString(@"Mission accepted", @"");
     NSString *messageFormat = NSLocalizedString(@"You have been selected to carry %@'s mission", @"");
@@ -45,8 +45,8 @@ static BBAlertManager *sharedManager;
     
     [alertView addButtonWithTitle:buttonTitle
                              type:SIAlertViewButtonTypeDestructive
-                          handler:^(SIAlertView *alert) {
-                              block();
+                          handler:^(SIAlertView *alertView) {
+                              block(mission);
                           }];
     
     alertView.transitionStyle = SIAlertViewTransitionStyleBounce;

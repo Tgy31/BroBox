@@ -13,6 +13,7 @@
 #import "LNNotificationsUI.h"
 
 // Managers
+#import "AppDelegate.h"
 #import "BBInstallationManager.h"
 #import "BBParseManager.h"
 #import "BBAlertManager.h"
@@ -25,6 +26,7 @@
 #define NOTIFICATION_KEY_SUBTITLE @"subtitle"
 #define NOTIFICATION_KEY_TYPE @"type"
 #define NOTIFICATION_KEY_MESSAGE @"alert"
+#define NOTIFICATION_KEY_MISSION @"mission"
 
 static NSString *BBNotificationKeyNewCarrier = @"BBNotificationKeyNewCarrier";
 static NSString *BBNotificationKeySelectedCarrier = @"BBNotificationKeySelectedCarrier";
@@ -96,11 +98,7 @@ static BBNotificationManager *sharedManager;
         }
             
         case BBNotificationTypeSelectedCarrier: {
-            BBParseMission *mission = [BBInstallationManager userActiveMission];
-            [BBAlertManager presentAlertForMissionStart:mission withBlock:^{
-                NSNotification *notification = [NSNotification notificationWithName:nil object:userInfo];
-                [self notificationForSelectedCarrierTapHandler:notification];
-            }];
+            [self handleSelectedCarrierNotification:userInfo];
             break;
         }
             
@@ -129,11 +127,7 @@ static BBNotificationManager *sharedManager;
         }
             
         case BBNotificationTypeSelectedCarrier: {
-            BBParseMission *mission = [BBInstallationManager userActiveMission];
-            [BBAlertManager presentAlertForMissionStart:mission withBlock:^{
-                NSNotification *notification = [NSNotification notificationWithName:nil object:userInfo];
-                [self notificationForSelectedCarrierTapHandler:notification];
-            }];
+            [self handleSelectedCarrierNotification:userInfo];
             break;
         }
             
@@ -147,6 +141,20 @@ static BBNotificationManager *sharedManager;
         default:
             break;
     }
+}
+
+- (void)handleSelectedCarrierNotification:(NSDictionary *)userInfo {
+    
+    NSString *missionID = [userInfo objectForKey:NOTIFICATION_KEY_MISSION];
+    [BBParseManager fetchMissionWithID:missionID withBlock:^(PFObject *object, NSError *error) {
+        
+        BBParseMission *mission = (BBParseMission *)object;
+        [BBAlertManager presentAlertForMissionStart:mission withBlock:^(BBParseMission *mission) {
+            NSNotification *notification = [NSNotification notificationWithName:@"notification" object:mission];
+            [self notificationForSelectedCarrierTapHandler:notification];
+        }];
+        
+    }];
 }
 
 - (void)presentNotification:(NSDictionary *)userInfo {
@@ -194,6 +202,8 @@ static BBNotificationManager *sharedManager;
 
 - (void)notificationForSelectedCarrierTapHandler:(NSNotification *)notification {
     
+    BBParseMission *mission = (BBParseMission *)notification.object;
+    [AppDelegate presentCarrierScreenForMission:mission];
 }
 
 - (void)notificationForNewMessageTapHandler:(NSNotification *)notification {

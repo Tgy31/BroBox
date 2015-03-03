@@ -75,6 +75,7 @@ setSelectedCarrier:(BBParseUser *)carrier
             NSString *alertFormat = NSLocalizedString(@"%@ chosed you as his carrier", @"");
             NSString *alert = [NSString stringWithFormat:alertFormat, [mission.creator fullName]];
             NSDictionary *info = @{
+                                   @"mission": mission.objectId
                                    };
             [BBNotificationManager pushNotificationWithMessage:alert
                                                          title:title
@@ -129,6 +130,23 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     
     PFQuery *query = [BBParseUser query];
     [query whereKey:@"objectId" equalTo:mission.carrier.objectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 1) {
+            block([objects firstObject], error);
+        } else {
+            block(nil, error);
+        }
+    }];
+}
+
++ (void)fetchMissionWithID:(NSString *)missionID withBlock:(BBObjectResultBlock)block {
+    
+    PFQuery *query = [BBParseMission query];
+    [query whereKey:@"objectId" equalTo:missionID];
+    [query includeKey:@"creator"];
+    [query includeKey:@"carrier"];
+    [query includeKey:@"from"];
+    [query includeKey:@"to"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count == 1) {
             block([objects firstObject], error);

@@ -16,10 +16,11 @@
 ///--------------------------------------
 
 typedef void (^BBAlertButtonHandlerBlock)();
+typedef void (^BBAlertButtonHandlerMissionBlock)(BBParseMission *mission);
 
 @interface BBAlertManager : BBObject
 
 + (void)presentAlertForMissionStart:(BBParseMission *)mission
-                          withBlock:(BBAlertButtonHandlerBlock)block;
+                          withBlock:(BBAlertButtonHandlerMissionBlock)block;
 
 @end
