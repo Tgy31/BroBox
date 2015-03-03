@@ -26,11 +26,11 @@
 + (instancetype)new
 {
     BBViewController *rootVC = nil;
-    if ([BBInstallationManager userActiveMissionIsLoading]) {
+    if ([BBInstallationManager userMissionIsLoading]) {
         rootVC = [BBViewController new];
         [rootVC startLoading];
     } else {
-        BBParseMission *mission = [BBInstallationManager userActiveMission];
+        BBParseMission *mission = [BBInstallationManager userMission];
         rootVC = [BBCreateMissionNavigationController rootViewControllerForUserActiveMission:mission];
     }
     BBCreateMissionNavigationController *navigationController = [[BBCreateMissionNavigationController alloc] initWithRootViewController:rootVC];
@@ -81,16 +81,16 @@
 - (void)registerToUserActiveMissionNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserActiveMissionStateDidChange)
-                                                 name:BBNotificationUserActiveMissionDidChange
+                                                 name:BBNotificationUserMissionDidChange
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserActiveMissionStateDidChange)
-                                                 name:BBNotificationUserActiveMissionIsLoading
+                                                 name:BBNotificationUserMissionIsLoading
                                                object:nil];
 }
 
 - (void)handleUserActiveMissionStateDidChange {
-    [self setViewControllersForUserActiveMission:[BBInstallationManager userActiveMission]
+    [self setViewControllersForUserActiveMission:[BBInstallationManager userMission]
                                         animated:YES];
 }
 

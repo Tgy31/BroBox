@@ -132,7 +132,7 @@ static BBNotificationManager *sharedManager;
         }
             
         case BBNotificationTypeNewMessage: {
-            BBParseMission *mission = [BBInstallationManager userActiveMission];
+            BBParseMission *mission = [BBInstallationManager activeMission];
             [self refreshMissionMessages:mission];
             [self presentNotification:userInfo];
             break;
@@ -203,6 +203,7 @@ static BBNotificationManager *sharedManager;
 - (void)notificationForSelectedCarrierTapHandler:(NSNotification *)notification {
     
     BBParseMission *mission = (BBParseMission *)notification.object;
+    [BBInstallationManager setCarriedMission:mission];
     [AppDelegate presentCarrierScreenForMission:mission];
 }
 

@@ -47,33 +47,49 @@ static BBInstallationManager *sharedManager;
 
 #pragma mark - Getters & Setters
 
-+ (BBParseMission *)userActiveMission {
-    return [BBInstallationManager sharedManager].userActiveMission;
++ (BBParseMission *)userMission {
+    return [BBInstallationManager sharedManager].userMission;
 }
 
-+ (BOOL)userActiveMissionIsLoading {
-    return [BBInstallationManager sharedManager].userActiveMissionIsLoading;
++ (BOOL)userMissionIsLoading {
+    return [BBInstallationManager sharedManager].userMissionIsLoading;
 }
 
-+ (void)setUserActiveMission:(BBParseMission *)userActiveMission {
-    [[BBInstallationManager sharedManager] setUserActiveMission:userActiveMission];
++ (void)setUserMission:(BBParseMission *)userMission {
+    [[BBInstallationManager sharedManager] setUserMission:userMission];
 }
 
-- (void)setUserActiveMission:(BBParseMission *)userActiveMission {
-    BOOL shouldNotify = ![_userActiveMission isEqual:userActiveMission];
-    _userActiveMission = userActiveMission;
+- (void)setUserMission:(BBParseMission *)userMission {
+    BOOL shouldNotify = ![_userMission isEqual:userMission];
+    _userMission = userMission;
     
     if (shouldNotify) {
-        [self notifiUserActiveMissionDidChange];
+        [self notifiUserMissionDidChange];
     }
 }
 
-- (void)setUserActiveMissionIsLoading:(BOOL)userActiveMissionIsLoading {
-    _userActiveMissionIsLoading = userActiveMissionIsLoading;
+- (void)setUserActiveMissionIsLoading:(BOOL)userMissionIsLoading {
+    _userMissionIsLoading = userMissionIsLoading;
     
-    if (userActiveMissionIsLoading) {
-        [self notifyUserActiveMisssionIsLoading];
+    if (userMissionIsLoading) {
+        [self notifyUserMisssionIsLoading];
     }
+}
+
++ (void)setCarriedMission:(BBParseMission *)carriedMission {
+    [[BBInstallationManager sharedManager] setCarriedMission:carriedMission];
+}
+
++ (BBParseMission *)carriedMission {
+    return [BBInstallationManager sharedManager].carriedMission;
+}
+
++ (BBParseMission *)activeMission {
+    return [[BBInstallationManager sharedManager] activeMision];
+}
+
+- (BBParseMission *)activeMision {
+    return self.carriedMission ? self.carriedMission : self.userMission;
 }
 
 #pragma mark - Braodcast
@@ -94,24 +110,24 @@ static BBInstallationManager *sharedManager;
 
 - (void)handleLogInNotification {
     [self setInstallationUser];
-    [self fetchUserActiveMission];
+    [self fetchUserMission];
 }
 
 - (void)handleSignUpNotification {
-    [self fetchUserActiveMission];
+    [self fetchUserMission];
 }
 
 - (void)handleLogOutNotification {
     [self clearUserProperties];
 }
 
-- (void)notifyUserActiveMisssionIsLoading {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionIsLoading
+- (void)notifyUserMisssionIsLoading {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserMissionIsLoading
                                                         object:nil];
 }
 
-- (void)notifiUserActiveMissionDidChange {
-    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserActiveMissionDidChange
+- (void)notifiUserMissionDidChange {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationUserMissionDidChange
                                                         object:nil];
 }
 
@@ -130,14 +146,14 @@ static BBInstallationManager *sharedManager;
     }];
 }
 
-- (void)fetchUserActiveMission {
+- (void)fetchUserMission {
     self.userActiveMissionIsLoading = YES;
     [BBParseManager fetchUserActiveMission:[BBParseUser currentUser]
                                  withBlock:^(PFObject *object, NSError *error) {
                                      if (!error) {
-                                         self.userActiveMission = (BBParseMission *)object;
+                                         self.userMission = (BBParseMission *)object;
                                      } else {
-                                         self.userActiveMission = nil;
+                                         self.userMission = nil;
                                      }
                                      self.userActiveMissionIsLoading = NO;
     }];
@@ -146,7 +162,7 @@ static BBInstallationManager *sharedManager;
 #pragma mark - User properties
 
 - (void)clearUserProperties {
-    self.userActiveMission = nil;
+    self.userMission = nil;
 }
 
 @end

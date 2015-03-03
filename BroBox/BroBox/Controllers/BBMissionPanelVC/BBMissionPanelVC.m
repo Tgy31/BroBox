@@ -168,7 +168,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     [BBParseManager deleteMission:self.mission
                         withBlock:^(BOOL succeeded, NSError *error) {
                             if (succeeded) {
-                                [BBInstallationManager setUserActiveMission:nil];
+                                [BBInstallationManager setUserMission:nil];
                             } else {
                                 
                             }
