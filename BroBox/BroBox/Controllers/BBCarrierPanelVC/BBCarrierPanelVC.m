@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 
 
 typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
-    BBClientPanelInformationRowCarrier,
+    BBClientPanelInformationRowCreator,
     BBClientPanelInformationRowMission,
     BBClientPanelInformationRowChat,
 };
@@ -113,7 +113,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
         case BBClientPanelSectionInformations:
             return 3;
         case BBClientPanelSectionCheckins:
-            return 2;
+            return 0;
         case BBClientPanelSectionOptions:
             return 1;
             
@@ -186,10 +186,10 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
             return cell;
         }
             
-        case BBClientPanelInformationRowCarrier: {
+        case BBClientPanelInformationRowCreator: {
             NSString *identifier = [BBUserProfileCell reusableIdentifier];
             BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            cell.user = self.mission.carrier;
+            cell.user = self.mission.creator;
             return cell;
         }
         case BBClientPanelInformationRowChat: {
@@ -277,7 +277,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == BBClientPanelSectionInformations && indexPath.row == BBClientPanelInformationRowCarrier) {
+    if (indexPath.section == BBClientPanelSectionInformations && indexPath.row == BBClientPanelInformationRowCreator) {
         return [BBUserProfileCell preferedHeight];
     } else {
         return 44.0;
