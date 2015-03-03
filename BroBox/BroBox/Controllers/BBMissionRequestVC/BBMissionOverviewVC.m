@@ -132,10 +132,11 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 
 - (UIBarButtonItem *)testButton {
     if (!_testButton) {
-        _testButton = [[UIBarButtonItem alloc] initWithTitle:@"Carrier screens"
+        _testButton = [[UIBarButtonItem alloc] initWithTitle:@"[DEBUG]"
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(testButtonHandler)];
+        _testButton.tintColor = [UIColor orangeColor];
     }
     return _testButton;
 }
