@@ -92,6 +92,27 @@ static BBInstallationManager *sharedManager;
     return self.carriedMission ? self.carriedMission : self.userMission;
 }
 
++ (BOOL)debugMode {
+    return [BBInstallationManager sharedManager].debugMode;
+}
+
++ (void)setDebugMode:(BOOL)debugMode {
+    [BBInstallationManager sharedManager].debugMode = debugMode;
+}
+
+@synthesize debugMode = _debugMode;
+
+#define DEBUG_MODE_KEY @"debug"
+
+- (BOOL)debugMode {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:DEBUG_MODE_KEY];
+}
+
+- (void)setDebugMode:(BOOL)debugMode {
+    [[NSUserDefaults standardUserDefaults] setBool:debugMode forKey:DEBUG_MODE_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 #pragma mark - Braodcast
 
 - (void)registerToUserSessionStateChanges {

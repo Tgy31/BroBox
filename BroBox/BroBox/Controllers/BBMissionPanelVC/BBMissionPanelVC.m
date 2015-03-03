@@ -28,8 +28,6 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) UIBarButtonItem *testButton;
-
 @end
 
 @implementation BBMissionPanelVC
@@ -49,28 +47,19 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"BBMissionPanelSectionDelete"];
     self.tableView.estimatedRowHeight = 44;
-    
-    if (self.mission.carrier) {
-        self.navigationItem.rightBarButtonItem = self.testButton;
-    }
+}
+
+#pragma mark - DEBUG
+
+- (BOOL)shouldShowDebugBarbutton {
+    return (self.mission.carrier != nil);
 }
 
 #pragma mark - Getters & Setters
 
-- (UIBarButtonItem *)testButton {
-    if (!_testButton) {
-        _testButton = [[UIBarButtonItem alloc] initWithTitle:@"[DEBUG]"
-                                                       style:UIBarButtonItemStyleDone
-                                                      target:self
-                                                      action:@selector(testButtonHandler)];
-        _testButton.tintColor = [UIColor orangeColor];
-    }
-    return _testButton;
-}
-
 #pragma mark - Handlers
 
-- (void)testButtonHandler {
+- (void)debugButtonHandler {
     [BBInstallationManager setCarriedMission:self.mission];
     [AppDelegate presentCarrierScreenForMission:self.mission];
 }

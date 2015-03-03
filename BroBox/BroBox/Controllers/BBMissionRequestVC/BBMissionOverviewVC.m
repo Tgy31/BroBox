@@ -50,7 +50,6 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 @property (weak, nonatomic) IBOutlet UILabel *labelFrom;
 @property (weak, nonatomic) IBOutlet UILabel *labelTo;
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
-@property (strong, nonatomic) UIBarButtonItem *testButton;
 @end
 
 @implementation BBMissionOverviewVC
@@ -105,10 +104,6 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
                 forControlEvents:UIControlEventTouchUpInside];
     
     [self updateFooterView];
-    
-    if ([self.mission.carrier.objectId isEqualToString:[BBParseUser currentUser].objectId]) {
-        self.navigationItem.rightBarButtonItem = self.testButton;
-    }
 }
 
 - (void)setViewForMission:(BBParseMission *)mission {
@@ -116,6 +111,12 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
         self.labelFrom.text = mission.from.title;
         self.labelTo.text = mission.to.title;
     }
+}
+
+#pragma mark - DEBUG
+
+- (BOOL)shouldShowDebugBarbutton {
+    return [self.mission.carrier.objectId isEqualToString:[BBParseUser currentUser].objectId];
 }
 
 #pragma mark - Getters & Setters
@@ -128,17 +129,6 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 - (void)setActionType:(BBMissionOverviewActionType)actionType {
     _actionType = actionType;
     [self updateFooterView];
-}
-
-- (UIBarButtonItem *)testButton {
-    if (!_testButton) {
-        _testButton = [[UIBarButtonItem alloc] initWithTitle:@"[DEBUG]"
-                                                       style:UIBarButtonItemStylePlain
-                                                      target:self
-                                                      action:@selector(testButtonHandler)];
-        _testButton.tintColor = [UIColor orangeColor];
-    }
-    return _testButton;
 }
 
 #pragma marl - View Methods
@@ -175,7 +165,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     [self acceptMission];
 }
 
-- (void)testButtonHandler {
+- (void)debugButtonHandler {
     [BBInstallationManager setCarriedMission:self.mission];
     [AppDelegate presentCarrierScreenForMission:self.mission];
 }
