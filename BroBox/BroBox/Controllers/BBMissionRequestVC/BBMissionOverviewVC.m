@@ -237,6 +237,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
                                       reuseIdentifier:CELL_IDENTIFIER];
+        cell.textLabel.textColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
     }
     
     cell.accessoryType = UITableViewCellAccessoryNone;
@@ -267,6 +268,7 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
                                       reuseIdentifier:CELL_IDENTIFIER];
+        cell.textLabel.textColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
     }
     
     cell.accessoryType = UITableViewCellAccessoryNone;
