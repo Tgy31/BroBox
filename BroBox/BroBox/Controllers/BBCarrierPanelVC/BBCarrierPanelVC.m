@@ -146,7 +146,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = NSLocalizedString(@"Directions", @"");
+    cell.textLabel.text = NSLocalizedString(@"CanalTp", @"");
     
     return cell;
 }
@@ -212,6 +212,16 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 }
 
 #pragma mark UITableViewDelegate
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case BBClientPanelSectionCanalTp:
+            return NSLocalizedString(@"Directions", @"");
+            
+        default:
+            return nil;
+    }
+}
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
