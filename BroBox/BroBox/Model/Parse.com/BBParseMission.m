@@ -23,6 +23,7 @@
 @dynamic breakable;
 @dynamic reward;
 @dynamic carrier;
+@dynamic receiver;
 @dynamic pebbleAuthToken;
 
 @synthesize messages = _messages;

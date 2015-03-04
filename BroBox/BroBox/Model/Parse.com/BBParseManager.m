@@ -29,6 +29,7 @@
     [query includeKey:@"to"];
     [query includeKey:@"creator"];
     [query includeKey:@"carrier"];
+    [query includeKey:@"receiver"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects, error);
     }];
@@ -102,6 +103,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query includeKey:@"to"];
     [query includeKey:@"creator"];
     [query includeKey:@"carrier"];
+    [query includeKey:@"receiver"];
     [query whereKey:@"creator" equalTo:user];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -152,6 +154,7 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
     [query whereKey:@"objectId" equalTo:missionID];
     [query includeKey:@"creator"];
     [query includeKey:@"carrier"];
+    [query includeKey:@"receiver"];
     [query includeKey:@"from"];
     [query includeKey:@"to"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

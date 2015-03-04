@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, BBMissionCategory) {
 @property (nonatomic) BOOL breakable;
 @property (strong, nonatomic) NSNumber *reward;
 @property (strong, nonatomic) BBParseUser *carrier;
+@property (strong, nonatomic) BBParseUser *receiver;
 @property (strong, nonatomic) NSString *pebbleAuthToken;
 
 // Not synchronized with Parse
