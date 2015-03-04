@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 
 - (void)debugButtonHandler {
     [BBInstallationManager setCarriedMission:self.mission];
-    [AppDelegate presentCarrierScreenForMission:self.mission];
+    [AppDelegate presentClientScreenForMission:self.mission];
 }
 
 #pragma mark - UITableViewDataSource
