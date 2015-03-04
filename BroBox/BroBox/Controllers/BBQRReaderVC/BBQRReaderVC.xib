@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -7,8 +7,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBQRReaderVC">
             <connections>
                 <outlet property="commentLabel" destination="QLP-r2-msO" id="i6l-nY-8Z6"/>
+                <outlet property="imageView" destination="ozd-ok-JeF" id="Eo8-hd-WO3"/>
+                <outlet property="profileLabel" destination="zbV-8y-FIQ" id="69i-XL-yku"/>
+                <outlet property="profilePictureView" destination="eBd-2q-N3M" id="fo5-5g-xA0"/>
                 <outlet property="scanButton" destination="ggG-hN-obY" id="VZh-j2-xzv"/>
-                <outlet property="textLabel" destination="sMx-tt-AMm" id="fRa-1b-pWa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-tt-AMm">
-                    <rect key="frame" x="279" y="289" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLP-r2-msO">
-                    <rect key="frame" x="8" y="492" width="584" height="50"/>
+                    <rect key="frame" x="8" y="482" width="584" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Tjk-va-QXp"/>
                     </constraints>
@@ -33,7 +29,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggG-hN-obY">
-                    <rect key="frame" x="277" y="550" width="46" height="30"/>
+                    <rect key="frame" x="20" y="540" width="560" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ybx-k7-6ue"/>
+                    </constraints>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,17 +40,47 @@
                         <action selector="scanButtonHandler:" destination="-1" eventType="touchUpInside" id="zOV-FM-cmK"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pebble-qr.png" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-ok-JeF">
+                    <rect key="frame" x="150" y="90" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="NWT-Ie-2Bc"/>
+                        <constraint firstAttribute="width" constant="300" id="inJ-vu-nQJ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-2q-N3M" customClass="FBProfilePictureView">
+                    <rect key="frame" x="250" y="350" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="4FL-y8-HYK"/>
+                        <constraint firstAttribute="height" constant="100" id="wce-Hq-Tu8"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-8y-FIQ">
+                    <rect key="frame" x="273" y="458" width="53" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerX" secondItem="zbV-8y-FIQ" secondAttribute="centerX" id="4Dp-Mb-goa"/>
                 <constraint firstAttribute="centerX" secondItem="ggG-hN-obY" secondAttribute="centerX" id="4Fi-jD-3Lz"/>
                 <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="QLP-r2-msO" secondAttribute="bottom" constant="8" id="4yv-rk-PK3"/>
-                <constraint firstAttribute="centerX" secondItem="sMx-tt-AMm" secondAttribute="centerX" id="APF-pm-qaP"/>
+                <constraint firstAttribute="centerY" secondItem="ozd-ok-JeF" secondAttribute="centerY" constant="60" id="8va-ux-rM1"/>
                 <constraint firstAttribute="trailing" secondItem="QLP-r2-msO" secondAttribute="trailing" constant="8" id="C9D-bW-7Hu"/>
+                <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="zbV-8y-FIQ" secondAttribute="bottom" constant="55.5" id="NES-SH-HuQ"/>
+                <constraint firstAttribute="centerX" secondItem="ozd-ok-JeF" secondAttribute="centerX" id="RFJ-8u-7c1"/>
                 <constraint firstAttribute="bottom" secondItem="ggG-hN-obY" secondAttribute="bottom" constant="20" id="dCo-6j-nA5"/>
                 <constraint firstItem="QLP-r2-msO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gs7-7Y-cCB"/>
-                <constraint firstAttribute="centerY" secondItem="sMx-tt-AMm" secondAttribute="centerY" id="kPk-QT-jk0"/>
+                <constraint firstItem="ggG-hN-obY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mnO-ej-Ja9"/>
+                <constraint firstAttribute="centerX" secondItem="eBd-2q-N3M" secondAttribute="centerX" id="nYB-0E-GZw"/>
+                <constraint firstItem="zbV-8y-FIQ" firstAttribute="top" secondItem="eBd-2q-N3M" secondAttribute="bottom" constant="8" id="rnU-EZ-mQo"/>
+                <constraint firstAttribute="trailing" secondItem="ggG-hN-obY" secondAttribute="trailing" constant="20" id="uzW-fe-CKA"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="pebble-qr.png" width="800" height="799"/>
+    </resources>
 </document>

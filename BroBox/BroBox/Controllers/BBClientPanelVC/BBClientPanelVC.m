@@ -50,13 +50,17 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     BBClientPanelInformationRowChat,
 };
 
-@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MKMapViewDelegate>
+@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MKMapViewDelegate, BBQRReaderDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) BBCarrierAnnotation *carrierAnnotation;
+
+@property (nonatomic) BOOL hasCheckedPickUp;
+@property (nonatomic) BOOL hasCheckedDropOff;
+@property (nonatomic) BOOL *selectedCheck;
 
 
 @end
@@ -150,15 +154,16 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
                                       reuseIdentifier:CELL_IDENTIFIER];
     }
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     switch (indexPath.row) {
         case BBClientPanelCheckinRowPickUp:
-            cell.textLabel.text = NSLocalizedString(@"Check Pick up", @"");
+            cell.textLabel.text = NSLocalizedString(@"Pick up", @"");
+            cell.accessoryType = self.hasCheckedPickUp ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryDisclosureIndicator;
             break;
             
         case BBClientPanelCheckinRowDropOff:
-            cell.textLabel.text = NSLocalizedString(@"Check Drop off", @"");
+            cell.textLabel.text = NSLocalizedString(@"Drop off", @"");
+            cell.accessoryType = self.hasCheckedDropOff ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryDisclosureIndicator;
             break;
             
         default:
@@ -284,18 +289,38 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case BBClientPanelSectionCheckins: {
+            return NSLocalizedString(@"Checkings", @"");
+            break;
+        }
+            
+        default:
+            return nil;;
+    }
+}
+
 #pragma mark - Handlers
 
 - (void)pickUpCheckinHandler {
-    BBQRReaderVC *destination = [BBQRReaderVC new];
-    destination.title = NSLocalizedString(@"Pick up", @"");
-    [self.navigationController pushViewController:destination animated:YES];
+    if (!self.hasCheckedPickUp) {
+        BBQRReaderVC *destination = [BBQRReaderVC new];
+        destination.type = BBQRReaderTypePickUp;
+        destination.mission = self.mission;
+        destination.delegate = self;
+        [self.navigationController pushViewController:destination animated:YES];
+    }
 }
 
 - (void)dropOffCheckinHandler {
-    BBQRReaderVC *destination = [BBQRReaderVC new];
-    destination.title = NSLocalizedString(@"Drop off", @"");
-    [self.navigationController pushViewController:destination animated:YES];
+    if (!self.hasCheckedDropOff) {
+        BBQRReaderVC *destination = [BBQRReaderVC new];
+        destination.type = BBQRReaderTypeDropOff;
+        destination.mission = self.mission;
+        destination.delegate = self;
+        [self.navigationController pushViewController:destination animated:YES];
+    }
 }
 
 - (void)missionDetailsHandler {
@@ -449,11 +474,30 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
     MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
-    polylineView.strokeColor = [UIColor blueColor];
-    polylineView.lineWidth = 5.0;
-    polylineView.alpha = 0.7;
+    polylineView.strokeColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
+    polylineView.lineWidth = 15.0;
+    polylineView.alpha = 0.5;
     
     return polylineView;
+}
+
+#pragma mark - BBQRReaderDelegate
+
+- (void)QRReaderDidSucced:(BBQRReaderVC *)readerVC {
+    switch (readerVC.type) {
+        case BBQRReaderTypePickUp: {
+            self.hasCheckedPickUp = YES;
+            break;
+        }
+            
+        case BBQRReaderTypeDropOff: {
+            self.hasCheckedDropOff = YES;
+            break;
+        }
+    }
+    
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:BBClientPanelSectionCheckins];
+    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

@@ -72,7 +72,7 @@
         _titleLabel.numberOfLines = 0;
 
         _titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
-        _titleLabel.textColor = [UIColor grayColor];
+        _titleLabel.textColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
     }
     return _titleLabel;
 }

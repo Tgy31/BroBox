@@ -35,6 +35,8 @@
     [super viewDidLoad];
     
     self.navigationBarShouldCoverViewController = NO;
+    
+    [self setUpAppearance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,9 +93,14 @@
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(debugButtonHandler)];
-        _debugButton.tintColor = [UIColor orangeColor];
+        _debugButton.tintColor = [UIColor grayColor];
     }
     return _debugButton;
+}
+
+#pragma mark - Appearance 
+
+- (void)setUpAppearance {
 }
 
 #pragma mark - Handlers

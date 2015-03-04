@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:identifier];
             }
-            cell.textLabel.text = NSLocalizedString(@"Edit mission", @"");
+            cell.textLabel.text = NSLocalizedString(@"Mission details", @"");
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }
@@ -97,7 +97,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:identifier];
             }
-            cell.textLabel.text = NSLocalizedString(@"Carriers", @"");
+            cell.textLabel.text = NSLocalizedString(@"Select a carrier", @"");
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }

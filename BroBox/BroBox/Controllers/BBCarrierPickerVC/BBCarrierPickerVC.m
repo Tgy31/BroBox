@@ -16,6 +16,7 @@
 
 // Managers
 #import "BBParseManager.h"
+#import "BBInstallationManager.h"
 
 // Views
 #import "BBUserProfileCell.h"
@@ -47,14 +48,25 @@
 #pragma mark - API
 
 - (void)fetchCarriers {
-    [BBParseManager fetchCarriersForMission:self.mission withBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            self.carriers = objects;
-        } else {
-            NSLog(@"%@", error);
-        }
-        [self.refreshControl endRefreshing];
-    }];
+    
+    if ([BBInstallationManager debugMode]) {
+        [BBParseManager fetchCarriersForMission:nil withBlock:^(NSArray *objects, NSError *error) {
+            [self carrierFetched:objects error:error];
+        }];
+    } else {
+        [BBParseManager fetchCarriersForMission:self.mission withBlock:^(NSArray *objects, NSError *error) {
+            [self carrierFetched:objects error:error];
+        }];
+    }
+}
+
+- (void)carrierFetched:(NSArray *)objects error:(NSError *)error {
+    if (!error) {
+        self.carriers = objects;
+    } else {
+        NSLog(@"%@", error);
+    }
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Getters & Setters
@@ -156,6 +168,14 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return NSLocalizedString(@"Available carriers", @"");
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if ([BBInstallationManager debugMode]) {
+        return NSLocalizedString(@"Debug mode is active. All users are shown as available", @"");
+    } else {
+        return nil;
+    }
 }
 
 #pragma mark - UIAlertViewDelegate

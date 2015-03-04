@@ -35,17 +35,22 @@
     self = [super init];
     if (self) {
         self.mapVC = [BBMapNavigationController new];
+        self.mapVC.tabBarItem.image = [UIImage imageNamed:@"map.png"];
         
         self.missionsVC = [BBMissionListNavigationController new];
+        self.missionsVC.tabBarItem.image = [UIImage imageNamed:@"list.png"];
         
         self.createVC = [BBCreateMissionNavigationController new];
+        self.createVC.tabBarItem.image = [UIImage imageNamed:@"mission.png"];
         
         self.notificationVC = [UIViewController new];
         self.notificationVC.view.backgroundColor = [UIColor redColor];
         self.notificationVC.title = @"Notifs";
+        self.notificationVC.tabBarItem.image = [UIImage imageNamed:@"alert.png"];
         
-        self.settingsVC = [[UINavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
+        self.settingsVC = [[BBNavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
         self.settingsVC.title = @"Settings";
+        self.settingsVC.tabBarItem.image = [UIImage imageNamed:@"settings.png"];
         
         [self setViewControllers:@[
                                    self.mapVC,
@@ -55,8 +60,16 @@
                                    self.settingsVC
                                    ]];
         self.tabBar.translucent = NO;
+        
+        [self setUpAppearance];
     }
     return self;
+}
+
+#pragma mark - Appearance
+
+- (void)setUpAppearance {
+    self.tabBar.tintColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
 }
 
 @end
