@@ -17,13 +17,16 @@
 
 @property (weak, nonatomic) id<BBUserPickerDelegate> delegate;
 
+@property (strong, nonatomic) NSString *subtitle;
+
 @property (strong, nonatomic) BBParseMission *mission;
+@property (strong, nonatomic) BBParseUser *selectedUser;
 
 @end
 
 
 @protocol BBUserPickerDelegate <NSObject>
 
-- (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier;
+- (void)userPickerDidSelectUser:(BBParseUser *)user;
 
 @end

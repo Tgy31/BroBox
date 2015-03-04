@@ -26,7 +26,6 @@
 @property (strong, nonatomic) GFPlaceholderView *placeHolderView;
 
 @property (strong, nonatomic) NSArray *carriers;
-@property (strong, nonatomic) BBParseUser *selectedCarrier;
 
 @end
 
@@ -34,8 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = NSLocalizedString(@"Select carrier", @"");
     
     [BBUserProfileCell registerToTableView:self.tableView];
     
@@ -140,26 +137,23 @@
     
     cell.user = [self.carriers objectAtIndex:indexPath.row];
     
+    if ([cell.user.objectId isEqualToString:self.selectedUser.objectId]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedCarrier = [self.carriers objectAtIndex:indexPath.row];
+    BBParseUser *user = [self.carriers objectAtIndex:indexPath.row];
     
-    NSString *title = NSLocalizedString(@"Start mission", @"");
-    NSString *message = NSLocalizedString(@"Do you confirm %@ as your carrier for this mission ?", @"");
-    NSString *cancelButtonTitle = NSLocalizedString(@"No", @"");
-    NSString *confirmButtonTitle = NSLocalizedString(@"Yes", @"");
-    NSString *formattedMessage = [NSString stringWithFormat:message, self.selectedCarrier.firstName];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-                                                        message:formattedMessage
-                                                       delegate:self
-                                              cancelButtonTitle:cancelButtonTitle
-                                              otherButtonTitles:confirmButtonTitle, nil];
-    
-    [alertView show];
+    if ([self.delegate respondsToSelector:@selector(userPickerDidSelectUser:)]) {
+        [self.delegate userPickerDidSelectUser:user];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -167,7 +161,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return NSLocalizedString(@"Available carriers", @"");
+    return self.subtitle;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
@@ -176,22 +170,6 @@
     } else {
         return nil;
     }
-}
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 1: {
-            if ([self.delegate respondsToSelector:@selector(carrierPickerDidSelectCarrier:)]) {
-                [self.delegate carrierPickerDidSelectCarrier:self.selectedCarrier];
-            }
-        }
-            
-        default:
-            break;
-    }
-    self.selectedCarrier = nil;
 }
 
 @end
