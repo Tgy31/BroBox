@@ -87,7 +87,8 @@ static BBCanalTpManager *sharedManager;
              withBlock:(BBJourneyResultBlock)block {
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyyMMdd'T'hhmm"];
+    [dateFormat setDateFormat:@"'20150225T'HHmm"];
+//    [dateFormat setDateFormat:@"yyyyMMdd'T'HHmm"];
     
     NSDictionary *parameters = @{
                                  @"from": [self stringFromCoordinate:from],
