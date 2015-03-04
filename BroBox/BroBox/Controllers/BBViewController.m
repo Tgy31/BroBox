@@ -93,7 +93,7 @@
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(debugButtonHandler)];
-        _debugButton.tintColor = [UIColor orangeColor];
+        _debugButton.tintColor = [UIColor grayColor];
     }
     return _debugButton;
 }
