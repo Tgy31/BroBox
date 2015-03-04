@@ -34,6 +34,23 @@
 		5A1EF5791AA6F39F00C0D1A7 /* BBDirectionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */; };
 		5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */; };
 		5A1EF57D1AA7190500C0D1A7 /* pebble-qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */; };
+		5A1EF57F1AA719FF00C0D1A7 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF57E1AA719FF00C0D1A7 /* error.png */; };
+		5A1EF5881AA7458F00C0D1A7 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5831AA7458F00C0D1A7 /* map.png */; };
+		5A1EF58C1AA758C800C0D1A7 /* checkmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF58B1AA758C800C0D1A7 /* checkmark.jpg */; };
+		5A1EF58F1AA7652100C0D1A7 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF58D1AA7652100C0D1A7 /* map@2x.png */; };
+		5A1EF5901AA7652100C0D1A7 /* map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF58E1AA7652100C0D1A7 /* map@3x.png */; };
+		5A1EF59D1AA76CA100C0D1A7 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5911AA76CA100C0D1A7 /* alert.png */; };
+		5A1EF59E1AA76CA100C0D1A7 /* alert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5921AA76CA100C0D1A7 /* alert@2x.png */; };
+		5A1EF59F1AA76CA100C0D1A7 /* alert@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5931AA76CA100C0D1A7 /* alert@3x.png */; };
+		5A1EF5A01AA76CA100C0D1A7 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5941AA76CA100C0D1A7 /* list.png */; };
+		5A1EF5A11AA76CA100C0D1A7 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5951AA76CA100C0D1A7 /* list@2x.png */; };
+		5A1EF5A21AA76CA100C0D1A7 /* list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5961AA76CA100C0D1A7 /* list@3x.png */; };
+		5A1EF5A31AA76CA100C0D1A7 /* mission.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5971AA76CA100C0D1A7 /* mission.png */; };
+		5A1EF5A41AA76CA100C0D1A7 /* mission@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5981AA76CA100C0D1A7 /* mission@2x.png */; };
+		5A1EF5A51AA76CA100C0D1A7 /* mission@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5991AA76CA100C0D1A7 /* mission@3x.png */; };
+		5A1EF5A61AA76CA100C0D1A7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59A1AA76CA100C0D1A7 /* settings.png */; };
+		5A1EF5A71AA76CA100C0D1A7 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59B1AA76CA100C0D1A7 /* settings@2x.png */; };
+		5A1EF5A81AA76CA100C0D1A7 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59C1AA76CA100C0D1A7 /* settings@3x.png */; };
 		5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */; };
 		5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */; };
@@ -191,6 +208,23 @@
 		5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBDirectionsVC.m; path = BBDirectionsVC/BBDirectionsVC.m; sourceTree = "<group>"; };
 		5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBDirectionsVC.xib; path = BBDirectionsVC/BBDirectionsVC.xib; sourceTree = "<group>"; };
 		5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-qr.png"; sourceTree = "<group>"; };
+		5A1EF57E1AA719FF00C0D1A7 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		5A1EF5831AA7458F00C0D1A7 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		5A1EF58B1AA758C800C0D1A7 /* checkmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkmark.jpg; sourceTree = "<group>"; };
+		5A1EF58D1AA7652100C0D1A7 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		5A1EF58E1AA7652100C0D1A7 /* map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@3x.png"; sourceTree = "<group>"; };
+		5A1EF5911AA76CA100C0D1A7 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
+		5A1EF5921AA76CA100C0D1A7 /* alert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert@2x.png"; sourceTree = "<group>"; };
+		5A1EF5931AA76CA100C0D1A7 /* alert@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert@3x.png"; sourceTree = "<group>"; };
+		5A1EF5941AA76CA100C0D1A7 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		5A1EF5951AA76CA100C0D1A7 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		5A1EF5961AA76CA100C0D1A7 /* list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@3x.png"; sourceTree = "<group>"; };
+		5A1EF5971AA76CA100C0D1A7 /* mission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mission.png; sourceTree = "<group>"; };
+		5A1EF5981AA76CA100C0D1A7 /* mission@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mission@2x.png"; sourceTree = "<group>"; };
+		5A1EF5991AA76CA100C0D1A7 /* mission@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mission@3x.png"; sourceTree = "<group>"; };
+		5A1EF59A1AA76CA100C0D1A7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		5A1EF59B1AA76CA100C0D1A7 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		5A1EF59C1AA76CA100C0D1A7 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
 		5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionNavigationController.h; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.h; sourceTree = "<group>"; };
 		5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionNavigationController.m; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.m; sourceTree = "<group>"; };
 		5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.xib; sourceTree = "<group>"; };
@@ -423,6 +457,9 @@
 		5A0E1EF61A7AAC18002B314E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5A1EF5801AA7458F00C0D1A7 /* tabbar */,
+				5A1EF57E1AA719FF00C0D1A7 /* error.png */,
+				5A1EF58B1AA758C800C0D1A7 /* checkmark.jpg */,
 				5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */,
 				5A6A78231AA516D8003E57AE /* paypal.png */,
 				5A7532311A9112590045D9AF /* pin_black.png */,
@@ -607,6 +644,28 @@
 				5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */,
 			);
 			name = BBDirectionsVC;
+			sourceTree = "<group>";
+		};
+		5A1EF5801AA7458F00C0D1A7 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				5A1EF5911AA76CA100C0D1A7 /* alert.png */,
+				5A1EF5921AA76CA100C0D1A7 /* alert@2x.png */,
+				5A1EF5931AA76CA100C0D1A7 /* alert@3x.png */,
+				5A1EF5941AA76CA100C0D1A7 /* list.png */,
+				5A1EF5951AA76CA100C0D1A7 /* list@2x.png */,
+				5A1EF5961AA76CA100C0D1A7 /* list@3x.png */,
+				5A1EF5971AA76CA100C0D1A7 /* mission.png */,
+				5A1EF5981AA76CA100C0D1A7 /* mission@2x.png */,
+				5A1EF5991AA76CA100C0D1A7 /* mission@3x.png */,
+				5A1EF59A1AA76CA100C0D1A7 /* settings.png */,
+				5A1EF59B1AA76CA100C0D1A7 /* settings@2x.png */,
+				5A1EF59C1AA76CA100C0D1A7 /* settings@3x.png */,
+				5A1EF5831AA7458F00C0D1A7 /* map.png */,
+				5A1EF58D1AA7652100C0D1A7 /* map@2x.png */,
+				5A1EF58E1AA7652100C0D1A7 /* map@3x.png */,
+			);
+			path = tabbar;
 			sourceTree = "<group>";
 		};
 		5A3053DE1A825277006E9A95 /* BBCreateMissionNavigationController */ = {
@@ -1069,38 +1128,55 @@
 			files = (
 				5A8C32741A858DE400F03821 /* LNNotificationsUIAssets.xcassets in Resources */,
 				5A75321B1A90B0640045D9AF /* BBClientModeNavigationController.xib in Resources */,
+				5A1EF5A51AA76CA100C0D1A7 /* mission@3x.png in Resources */,
 				5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */,
 				5A75320E1A909E7A0045D9AF /* BBMissionPanelVC.xib in Resources */,
 				5A6A78241AA516D8003E57AE /* paypal.png in Resources */,
+				5A1EF5A61AA76CA100C0D1A7 /* settings.png in Resources */,
 				5AB990501AA208FC00FCB32E /* user_pin.png in Resources */,
 				5AAC27751A72C18E00ECF6FA /* BBLoginVC.xib in Resources */,
 				5A8C324F1A85028A00F03821 /* BBMissionOverviewVC.xib in Resources */,
 				5AB990551AA229E700FCB32E /* BBPaypalPayementVC.xib in Resources */,
 				5A7532151A90A7160045D9AF /* BBCarrierPickerVC.xib in Resources */,
 				5AAC277F1A72C8CE00ECF6FA /* BBRootVC.xib in Resources */,
+				5A1EF58F1AA7652100C0D1A7 /* map@2x.png in Resources */,
 				5AAC27891A72CFF000ECF6FA /* BBMapNavigationController.xib in Resources */,
 				5A75323F1A9115170045D9AF /* BBUserProfileCell.xib in Resources */,
 				5A0E1EF81A7AAC18002B314E /* pin.png in Resources */,
+				5A1EF57F1AA719FF00C0D1A7 /* error.png in Resources */,
+				5A1EF5881AA7458F00C0D1A7 /* map.png in Resources */,
+				5A1EF58C1AA758C800C0D1A7 /* checkmark.jpg in Resources */,
 				5A1B0C2A1A710CA500425431 /* LaunchScreen.xib in Resources */,
 				5A0E999B1A85B5F5000956AF /* Info.plist in Resources */,
+				5A1EF5A71AA76CA100C0D1A7 /* settings@2x.png in Resources */,
 				5A7532301A910C3F0045D9AF /* BBClientPanelVC.xib in Resources */,
+				5A1EF5901AA7652100C0D1A7 /* map@3x.png in Resources */,
 				5A7532211A90B2310045D9AF /* BBQRReaderVC.xib in Resources */,
 				5A1B0C271A710CA500425431 /* Images.xcassets in Resources */,
 				5A7532321A9112590045D9AF /* pin_black.png in Resources */,
 				5A3054101A826826006E9A95 /* DBPrivacyHelperLocalizable.strings in Resources */,
 				5A3053F41A825F87006E9A95 /* BBLocationAutocompleteVC.xib in Resources */,
+				5A1EF5A31AA76CA100C0D1A7 /* mission.png in Resources */,
 				5AAC276C1A72B9BF00ECF6FA /* BBLogoutVC.xib in Resources */,
+				5A1EF5A41AA76CA100C0D1A7 /* mission@2x.png in Resources */,
+				5A1EF59D1AA76CA100C0D1A7 /* alert.png in Resources */,
+				5A1EF5A21AA76CA100C0D1A7 /* list@3x.png in Resources */,
 				5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */,
 				5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */,
+				5A1EF5A11AA76CA100C0D1A7 /* list@2x.png in Resources */,
+				5A1EF5A01AA76CA100C0D1A7 /* list.png in Resources */,
 				5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */,
 				5A1EF57D1AA7190500C0D1A7 /* pebble-qr.png in Resources */,
+				5A1EF59E1AA76CA100C0D1A7 /* alert@2x.png in Resources */,
 				5A1224121AA5D75A001F4B41 /* BBCarrierPanelVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
+				5A1EF59F1AA76CA100C0D1A7 /* alert@3x.png in Resources */,
 				5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
 				5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */,
 				5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */,
 				5A6A781F1AA511D7003E57AE /* BBSettingsVC.xib in Resources */,
+				5A1EF5A81AA76CA100C0D1A7 /* settings@3x.png in Resources */,
 				5A1224181AA5D804001F4B41 /* BBCarrierModeNavigationController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
