@@ -44,7 +44,7 @@
         self.notificationVC.view.backgroundColor = [UIColor redColor];
         self.notificationVC.title = @"Notifs";
         
-        self.settingsVC = [[UINavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
+        self.settingsVC = [[BBNavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
         self.settingsVC.title = @"Settings";
         
         [self setViewControllers:@[
