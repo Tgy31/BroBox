@@ -33,6 +33,7 @@
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
 		5A1EF5791AA6F39F00C0D1A7 /* BBDirectionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */; };
 		5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */; };
+		5A1EF57D1AA7190500C0D1A7 /* pebble-qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */; };
 		5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */; };
 		5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */; };
@@ -189,6 +190,7 @@
 		5A1EF5761AA6F39F00C0D1A7 /* BBDirectionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBDirectionsVC.h; path = BBDirectionsVC/BBDirectionsVC.h; sourceTree = "<group>"; };
 		5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBDirectionsVC.m; path = BBDirectionsVC/BBDirectionsVC.m; sourceTree = "<group>"; };
 		5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBDirectionsVC.xib; path = BBDirectionsVC/BBDirectionsVC.xib; sourceTree = "<group>"; };
+		5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-qr.png"; sourceTree = "<group>"; };
 		5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionNavigationController.h; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.h; sourceTree = "<group>"; };
 		5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionNavigationController.m; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.m; sourceTree = "<group>"; };
 		5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.xib; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		5A0E1EF61A7AAC18002B314E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5A1EF57C1AA7190500C0D1A7 /* pebble-qr.png */,
 				5A6A78231AA516D8003E57AE /* paypal.png */,
 				5A7532311A9112590045D9AF /* pin_black.png */,
 				5AB9904F1AA208FC00FCB32E /* user_pin.png */,
@@ -1090,6 +1093,7 @@
 				5A8C325B1A85203500F03821 /* BBSignUpVC.xib in Resources */,
 				5A8C32551A85200C00F03821 /* BBSignUpNavigationController.xib in Resources */,
 				5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */,
+				5A1EF57D1AA7190500C0D1A7 /* pebble-qr.png in Resources */,
 				5A1224121AA5D75A001F4B41 /* BBCarrierPanelVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
 				5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */,

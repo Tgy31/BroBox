@@ -32,6 +32,16 @@
     self.textLabel.text = nil;
 }
 
+#pragma mark - Appearance
+
+- (void)setUpAppearance {
+    self.scanButton.backgroundColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
+    [self.scanButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.scanButton.layer.cornerRadius = 5.0;
+}
+
+#pragma mark - Handlers
+
 - (void)presentQRReader {
     QRCodeReaderViewController *reader = [QRCodeReaderViewController new];
     reader.modalPresentationStyle      = UIModalPresentationFormSheet;

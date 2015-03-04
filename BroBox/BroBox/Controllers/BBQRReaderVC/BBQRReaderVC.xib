@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="commentLabel" destination="QLP-r2-msO" id="i6l-nY-8Z6"/>
                 <outlet property="scanButton" destination="ggG-hN-obY" id="VZh-j2-xzv"/>
-                <outlet property="textLabel" destination="sMx-tt-AMm" id="fRa-1b-pWa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-tt-AMm">
-                    <rect key="frame" x="279" y="289" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLP-r2-msO">
-                    <rect key="frame" x="8" y="492" width="584" height="50"/>
+                    <rect key="frame" x="8" y="482" width="584" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Tjk-va-QXp"/>
                     </constraints>
@@ -33,7 +26,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggG-hN-obY">
-                    <rect key="frame" x="277" y="550" width="46" height="30"/>
+                    <rect key="frame" x="20" y="540" width="560" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ybx-k7-6ue"/>
+                    </constraints>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,17 +37,29 @@
                         <action selector="scanButtonHandler:" destination="-1" eventType="touchUpInside" id="zOV-FM-cmK"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pebble-qr.png" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-ok-JeF">
+                    <rect key="frame" x="150" y="90" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="NWT-Ie-2Bc"/>
+                        <constraint firstAttribute="width" constant="300" id="inJ-vu-nQJ"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="ggG-hN-obY" secondAttribute="centerX" id="4Fi-jD-3Lz"/>
                 <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="QLP-r2-msO" secondAttribute="bottom" constant="8" id="4yv-rk-PK3"/>
-                <constraint firstAttribute="centerX" secondItem="sMx-tt-AMm" secondAttribute="centerX" id="APF-pm-qaP"/>
+                <constraint firstAttribute="centerY" secondItem="ozd-ok-JeF" secondAttribute="centerY" constant="60" id="8va-ux-rM1"/>
                 <constraint firstAttribute="trailing" secondItem="QLP-r2-msO" secondAttribute="trailing" constant="8" id="C9D-bW-7Hu"/>
+                <constraint firstAttribute="centerX" secondItem="ozd-ok-JeF" secondAttribute="centerX" id="RFJ-8u-7c1"/>
                 <constraint firstAttribute="bottom" secondItem="ggG-hN-obY" secondAttribute="bottom" constant="20" id="dCo-6j-nA5"/>
                 <constraint firstItem="QLP-r2-msO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gs7-7Y-cCB"/>
-                <constraint firstAttribute="centerY" secondItem="sMx-tt-AMm" secondAttribute="centerY" id="kPk-QT-jk0"/>
+                <constraint firstItem="ggG-hN-obY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mnO-ej-Ja9"/>
+                <constraint firstAttribute="trailing" secondItem="ggG-hN-obY" secondAttribute="trailing" constant="20" id="uzW-fe-CKA"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="pebble-qr.png" width="800" height="799"/>
+    </resources>
 </document>
