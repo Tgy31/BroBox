@@ -51,6 +51,8 @@
 		5A1EF5A61AA76CA100C0D1A7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59A1AA76CA100C0D1A7 /* settings.png */; };
 		5A1EF5A71AA76CA100C0D1A7 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59B1AA76CA100C0D1A7 /* settings@2x.png */; };
 		5A1EF5A81AA76CA100C0D1A7 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF59C1AA76CA100C0D1A7 /* settings@3x.png */; };
+		5A1EF5AF1AA7891B00C0D1A7 /* BBReceiverPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EF5AD1AA7891B00C0D1A7 /* BBReceiverPanelVC.m */; };
+		5A1EF5B01AA7891B00C0D1A7 /* BBReceiverPanelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5AE1AA7891B00C0D1A7 /* BBReceiverPanelVC.xib */; };
 		5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */; };
 		5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */; };
@@ -225,6 +227,9 @@
 		5A1EF59A1AA76CA100C0D1A7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		5A1EF59B1AA76CA100C0D1A7 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		5A1EF59C1AA76CA100C0D1A7 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
+		5A1EF5AC1AA7891B00C0D1A7 /* BBReceiverPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBReceiverPanelVC.h; path = BBReceiverPanelVC/BBReceiverPanelVC.h; sourceTree = "<group>"; };
+		5A1EF5AD1AA7891B00C0D1A7 /* BBReceiverPanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBReceiverPanelVC.m; path = BBReceiverPanelVC/BBReceiverPanelVC.m; sourceTree = "<group>"; };
+		5A1EF5AE1AA7891B00C0D1A7 /* BBReceiverPanelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBReceiverPanelVC.xib; path = BBReceiverPanelVC/BBReceiverPanelVC.xib; sourceTree = "<group>"; };
 		5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionNavigationController.h; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.h; sourceTree = "<group>"; };
 		5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionNavigationController.m; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.m; sourceTree = "<group>"; };
 		5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.xib; sourceTree = "<group>"; };
@@ -587,6 +592,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A1EF5B11AA7892000C0D1A7 /* BBReceiverPanelVC */,
 				5A1EF57B1AA6F3A600C0D1A7 /* BBDirectionsVC */,
 				5A1224131AA5D760001F4B41 /* BBCarrierPanelVC */,
 				5A6A78201AA511DE003E57AE /* BBSettingsVC */,
@@ -666,6 +672,16 @@
 				5A1EF58E1AA7652100C0D1A7 /* map@3x.png */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		5A1EF5B11AA7892000C0D1A7 /* BBReceiverPanelVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A1EF5AC1AA7891B00C0D1A7 /* BBReceiverPanelVC.h */,
+				5A1EF5AD1AA7891B00C0D1A7 /* BBReceiverPanelVC.m */,
+				5A1EF5AE1AA7891B00C0D1A7 /* BBReceiverPanelVC.xib */,
+			);
+			name = BBReceiverPanelVC;
 			sourceTree = "<group>";
 		};
 		5A3053DE1A825277006E9A95 /* BBCreateMissionNavigationController */ = {
@@ -1168,6 +1184,7 @@
 				5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */,
 				5A1EF57D1AA7190500C0D1A7 /* pebble-qr.png in Resources */,
 				5A1EF59E1AA76CA100C0D1A7 /* alert@2x.png in Resources */,
+				5A1EF5B01AA7891B00C0D1A7 /* BBReceiverPanelVC.xib in Resources */,
 				5A1224121AA5D75A001F4B41 /* BBCarrierPanelVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
 				5A1EF59F1AA76CA100C0D1A7 /* alert@3x.png in Resources */,
@@ -1244,6 +1261,7 @@
 				5AAC276B1A72B9BF00ECF6FA /* BBLogoutVC.m in Sources */,
 				5A3054111A826826006E9A95 /* DBPrivateHelperCell.m in Sources */,
 				5A1224111AA5D75A001F4B41 /* BBCarrierPanelVC.m in Sources */,
+				5A1EF5AF1AA7891B00C0D1A7 /* BBReceiverPanelVC.m in Sources */,
 				5A0E99A01A85B5F5000956AF /* LNNotificationCenter.m in Sources */,
 				5AB990541AA229E700FCB32E /* BBPaypalPayementVC.m in Sources */,
 				5AAC277A1A72C3AB00ECF6FA /* BBLoginManager.m in Sources */,

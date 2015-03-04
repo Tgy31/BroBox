@@ -1,12 +1,12 @@
 //
-//  BBClientModeVC.m
+//  BBReceiverPanelVC.m
 //  BroBox
 //
-//  Created by Tanguy Hélesbeux on 15/02/2015.
+//  Created by Tanguy Hélesbeux on 04/03/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBClientPanelVC.h"
+#import "BBReceiverPanelVC.h"
 
 // Frameworks
 #import <MapKit/MapKit.h>
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     BBClientPanelInformationRowChat,
 };
 
-@interface BBClientPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MKMapViewDelegate, BBQRReaderDelegate>
+@interface BBReceiverPanelVC () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, MKMapViewDelegate, BBQRReaderDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -61,10 +61,9 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 @property (nonatomic) BOOL hasCheckedPickUp;
 @property (nonatomic) BOOL hasCheckedDropOff;
 
-
 @end
 
-@implementation BBClientPanelVC
+@implementation BBReceiverPanelVC
 
 #pragma mark - View life cycle
 
