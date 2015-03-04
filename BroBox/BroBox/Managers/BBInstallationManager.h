@@ -17,7 +17,7 @@ static NSString *BBNotificationUserMissionDidChange = @"BBNotificationUserActive
 @interface BBInstallationManager : BBObject
 
 @property (strong, nonatomic) BBParseMission *userMission;
-@property (strong, nonatomic) BBParseMission *carriedMission;
+@property (strong, nonatomic) BBParseMission *activeMission;
 @property (nonatomic) BOOL userMissionIsLoading;
 
 @property (nonatomic) BOOL debugMode;
@@ -28,9 +28,7 @@ static NSString *BBNotificationUserMissionDidChange = @"BBNotificationUserActive
 + (BBParseMission *)userMission;
 + (BOOL)userMissionIsLoading;
 
-+ (void)setCarriedMission:(BBParseMission *)carriedMission;
-+ (BBParseMission *)carriedMission;
-
++ (void)setActiveMission:(BBParseMission *)activeMission;
 + (BBParseMission *)activeMission;
 
 + (BOOL)debugMode;

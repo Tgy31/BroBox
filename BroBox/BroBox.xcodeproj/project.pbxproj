@@ -148,6 +148,8 @@
 		5ACD94661AA385D100F3198F /* BBChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD94651AA385D100F3198F /* BBChatVC.m */; };
 		5ACD946D1AA3878D00F3198F /* BBParseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD946C1AA3878D00F3198F /* BBParseMessage.m */; };
 		5ACD94711AA3889D00F3198F /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */; };
+		5AFB190F1AA7B6260094F7ED /* BBReceiverModeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB190D1AA7B6260094F7ED /* BBReceiverModeNavigationController.m */; };
+		5AFB19101AA7B6260094F7ED /* BBReceiverModeNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB190E1AA7B6260094F7ED /* BBReceiverModeNavigationController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,6 +381,9 @@
 		5ACD946C1AA3878D00F3198F /* BBParseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParseMessage.m; sourceTree = "<group>"; };
 		5ACD946F1AA3889D00F3198F /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		5AFB190C1AA7B6260094F7ED /* BBReceiverModeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBReceiverModeNavigationController.h; path = BBReceiverModeNavigationController/BBReceiverModeNavigationController.h; sourceTree = "<group>"; };
+		5AFB190D1AA7B6260094F7ED /* BBReceiverModeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBReceiverModeNavigationController.m; path = BBReceiverModeNavigationController/BBReceiverModeNavigationController.m; sourceTree = "<group>"; };
+		5AFB190E1AA7B6260094F7ED /* BBReceiverModeNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBReceiverModeNavigationController.xib; path = BBReceiverModeNavigationController/BBReceiverModeNavigationController.xib; sourceTree = "<group>"; };
 		9242A15DA9F2B4233108C1D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FC967E515C162D18BF4910 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1058D1C1D055C96132EF805 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -977,6 +982,7 @@
 			children = (
 				5AAC27811A72CFAE00ECF6FA /* BBNavigationController.h */,
 				5AAC27821A72CFAE00ECF6FA /* BBNavigationController.m */,
+				5AFB19111AA7B63A0094F7ED /* BBReceiverModeNavigationController */,
 				5A1224191AA5D808001F4B41 /* BBCarrierModeNavigationController */,
 				5A75321C1A90B0690045D9AF /* BBClientModeNavigationController */,
 				5A8C32561A85200F00F03821 /* BBSignUpNavigationController */,
@@ -1042,6 +1048,16 @@
 				5ACD94701AA3889D00F3198F /* MessageTableViewCell.m */,
 			);
 			path = MessageTableViewCell;
+			sourceTree = "<group>";
+		};
+		5AFB19111AA7B63A0094F7ED /* BBReceiverModeNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB190C1AA7B6260094F7ED /* BBReceiverModeNavigationController.h */,
+				5AFB190D1AA7B6260094F7ED /* BBReceiverModeNavigationController.m */,
+				5AFB190E1AA7B6260094F7ED /* BBReceiverModeNavigationController.xib */,
+			);
+			name = BBReceiverModeNavigationController;
 			sourceTree = "<group>";
 		};
 		6E560989A1E5A7E3BA32F532 /* Pods */ = {
@@ -1187,6 +1203,7 @@
 				5A1EF5B01AA7891B00C0D1A7 /* BBReceiverPanelVC.xib in Resources */,
 				5A1224121AA5D75A001F4B41 /* BBCarrierPanelVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
+				5AFB19101AA7B6260094F7ED /* BBReceiverModeNavigationController.xib in Resources */,
 				5A1EF59F1AA76CA100C0D1A7 /* alert@3x.png in Resources */,
 				5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
@@ -1311,6 +1328,7 @@
 				5A6A781E1AA511D7003E57AE /* BBSettingsVC.m in Sources */,
 				5A8C32721A85849F00F03821 /* BBNotificationManager.m in Sources */,
 				5AAC278E1A72DF5900ECF6FA /* BBMissionsMapVC.m in Sources */,
+				5AFB190F1AA7B6260094F7ED /* BBReceiverModeNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

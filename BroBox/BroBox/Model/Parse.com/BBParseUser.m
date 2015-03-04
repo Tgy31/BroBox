@@ -23,6 +23,14 @@
     return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
+- (BOOL)isEqual:(id)object {
+    if ([self isKindOfClass:[self class]]) {
+        NSString *objectId = ((PFObject *)object).objectId;
+        return [self.objectId isEqualToString:objectId];
+    }
+    return NO;
+}
+
 #pragma mark - Parse subclassing
 
 + (BBParseUser *)currentUser {

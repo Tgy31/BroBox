@@ -203,7 +203,7 @@ static BBNotificationManager *sharedManager;
 - (void)notificationForSelectedCarrierTapHandler:(NSNotification *)notification {
     
     BBParseMission *mission = (BBParseMission *)notification.object;
-    [BBInstallationManager setCarriedMission:mission];
+    [BBInstallationManager setActiveMission:mission];
     [AppDelegate presentCarrierScreenForMission:mission];
 }
 

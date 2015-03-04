@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
 
 
 typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
+    BBClientPanelInformationRowSender,
     BBClientPanelInformationRowCarrier,
     BBClientPanelInformationRowMission,
     BBClientPanelInformationRowChat,
@@ -113,7 +114,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case BBClientPanelSectionInformations:
-            return 3;
+            return 4;
         case BBClientPanelSectionCheckins:
             return 2;
         case BBClientPanelSectionOptions:
@@ -175,6 +176,23 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
    informationCellForIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.row) {
+            
+        case BBClientPanelInformationRowSender: {
+            NSString *identifier = [BBUserProfileCell reusableIdentifier];
+            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.user = self.mission.creator;
+            cell.title = NSLocalizedString(@"Sender", @"");
+            return cell;
+        }
+            
+        case BBClientPanelInformationRowCarrier: {
+            NSString *identifier = [BBUserProfileCell reusableIdentifier];
+            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.user = self.mission.carrier;
+            cell.title = NSLocalizedString(@"Carrier", @"");
+            return cell;
+        }
+            
         case BBClientPanelInformationRowMission: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
             
@@ -189,12 +207,6 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
             return cell;
         }
             
-        case BBClientPanelInformationRowCarrier: {
-            NSString *identifier = [BBUserProfileCell reusableIdentifier];
-            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            cell.user = self.mission.carrier;
-            return cell;
-        }
         case BBClientPanelInformationRowChat: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
             
@@ -225,8 +237,14 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     }
     
     cell.accessoryType = UITableViewCellAccessoryNone;
-    cell.textLabel.text = NSLocalizedString(@"Abort mission", @"");
-    cell.textLabel.textColor = [UIColor redColor];
+    
+    if (self.hasCheckedDropOff && self.hasCheckedPickUp) {
+        cell.textLabel.text = NSLocalizedString(@"End mission", @"");
+        cell.textLabel.textColor = [UIColor colorWithRed:0.53f green:0.72f blue:0.00f alpha:1.00f];
+    } else {
+        cell.textLabel.text = NSLocalizedString(@"Abort mission", @"");
+        cell.textLabel.textColor = [UIColor redColor];
+    }
     
     return cell;
 }
@@ -280,7 +298,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == BBClientPanelSectionInformations && indexPath.row == BBClientPanelInformationRowCarrier) {
+    if (indexPath.section == BBClientPanelSectionInformations && (indexPath.row == BBClientPanelInformationRowCarrier || indexPath.row == BBClientPanelInformationRowSender)) {
         return [BBUserProfileCell preferedHeight];
     } else {
         return 44.0;
@@ -290,7 +308,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     switch (section) {
         case BBClientPanelSectionCheckins: {
-            return NSLocalizedString(@"Checkings", @"");
+            return NSLocalizedString(@"Checkin", @"");
             break;
         }
             
@@ -336,17 +354,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)abortMissionHandler {
     
-    NSString *title = NSLocalizedString(@"Abort mission", @"");
-    NSString *message = NSLocalizedString(@"If you abort the mission now, you will not get your money back. Do you wish to abort mission ?", @"");
-    NSString *cancelButtonTitle = NSLocalizedString(@"No", @"");
-    NSString *confirmButtonTitle = NSLocalizedString(@"Yes and lose money", @"");
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:self
-                                              cancelButtonTitle:cancelButtonTitle
-                                              otherButtonTitles:confirmButtonTitle, nil];
-    
-    [alertView show];
+    if (self.hasCheckedDropOff && self.hasCheckedPickUp) {
+        [AppDelegate presentRootScreen];
+    } else {
+        NSString *title = NSLocalizedString(@"Abort mission", @"");
+        NSString *message = NSLocalizedString(@"If you abort the mission now, you will not get your money back. Do you wish to abort mission ?", @"");
+        NSString *cancelButtonTitle = NSLocalizedString(@"No", @"");
+        NSString *confirmButtonTitle = NSLocalizedString(@"Yes and lose money", @"");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:self
+                                                  cancelButtonTitle:cancelButtonTitle
+                                                  otherButtonTitles:confirmButtonTitle, nil];
+        
+        [alertView show];
+    }
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -494,8 +516,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         }
     }
     
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:BBClientPanelSectionCheckins];
-    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadData];
 }
 
 @end

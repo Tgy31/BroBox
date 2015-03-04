@@ -116,7 +116,8 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 #pragma mark - DEBUG
 
 - (BOOL)shouldShowDebugBarbutton {
-    return [self.mission.carrier.objectId isEqualToString:[BBParseUser currentUser].objectId];
+    return [self.mission.carrier isEqual:[BBParseUser currentUser]]
+    || [self.mission.receiver isEqual:[BBParseUser currentUser]];
 }
 
 #pragma mark - Getters & Setters
@@ -166,8 +167,13 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 }
 
 - (void)debugButtonHandler {
-    [BBInstallationManager setCarriedMission:self.mission];
-    [AppDelegate presentCarrierScreenForMission:self.mission];
+    [BBInstallationManager setActiveMission:self.mission];
+    
+    if ([[BBParseUser currentUser] isEqual:self.mission.carrier]) {
+        [AppDelegate presentCarrierScreenForMission:self.mission];
+    } else {
+        [AppDelegate presentReceiverScreenForMission:self.mission];
+    }
 }
 
 #pragma mark - API

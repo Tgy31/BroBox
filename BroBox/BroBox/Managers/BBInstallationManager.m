@@ -76,20 +76,12 @@ static BBInstallationManager *sharedManager;
     }
 }
 
-+ (void)setCarriedMission:(BBParseMission *)carriedMission {
-    [[BBInstallationManager sharedManager] setCarriedMission:carriedMission];
-}
-
-+ (BBParseMission *)carriedMission {
-    return [BBInstallationManager sharedManager].carriedMission;
++ (void)setActiveMission:(BBParseMission *)activeMission {
+    [[BBInstallationManager sharedManager] setActiveMission:activeMission];
 }
 
 + (BBParseMission *)activeMission {
-    return [[BBInstallationManager sharedManager] activeMision];
-}
-
-- (BBParseMission *)activeMision {
-    return self.carriedMission ? self.carriedMission : self.userMission;
+    return [BBInstallationManager sharedManager].activeMission;
 }
 
 + (BOOL)debugMode {

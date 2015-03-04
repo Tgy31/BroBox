@@ -62,7 +62,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelUserRow) {
 #pragma mark - Handlers
 
 - (void)debugButtonHandler {
-    [BBInstallationManager setCarriedMission:self.mission];
+    [BBInstallationManager setActiveMission:self.mission];
     [AppDelegate presentClientScreenForMission:self.mission];
 }
 

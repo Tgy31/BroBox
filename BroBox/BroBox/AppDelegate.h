@@ -20,6 +20,7 @@
 + (void)presentSignUpScreen;
 + (void)presentClientScreenForMission:(BBParseMission *)mission;
 + (void)presentCarrierScreenForMission:(BBParseMission *)mission;
++ (void)presentReceiverScreenForMission:(BBParseMission *)mission;
 
 @end
 

@@ -20,6 +20,7 @@
 #import "BBSignUpNavigationController.h"
 #import "BBClientModeNavigationController.h"
 #import "BBCarrierModeNavigationController.h"
+#import "BBReceiverModeNavigationController.h"
 
 // Managers
 #import "BBLoginManager.h"
@@ -151,6 +152,11 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     self.window.rootViewController = [BBCarrierModeNavigationController newWithMission:mission];
 }
 
+- (void)presentReceiverScreenForMission:(BBParseMission *)mission
+{
+    self.window.rootViewController = [BBReceiverModeNavigationController newWithMission:mission];
+}
+
 + (void)presentLoginScreen
 {
     [[self sharedDelegate] presentLoginScreen];
@@ -171,6 +177,10 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 
 + (void)presentCarrierScreenForMission:(BBParseMission *)mission {
     [[self sharedDelegate] presentCarrierScreenForMission:mission];
+}
+
++ (void)presentReceiverScreenForMission:(BBParseMission *)mission {
+    [[self sharedDelegate] presentReceiverScreenForMission:mission];
 }
 
 #pragma mark - Helpers
