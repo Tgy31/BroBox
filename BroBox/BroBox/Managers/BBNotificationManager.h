@@ -42,4 +42,11 @@ typedef NS_ENUM(NSInteger, BBNotificationType) {
                                info:(NSDictionary *)info
                              toUser:(BBParseUser *)user;
 
++ (void)pushNotificationWithMessage:(NSString *)message
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
+                               type:(BBNotificationType)type
+                               info:(NSDictionary *)info
+                            toUsers:(NSArray *)users;
+
 @end

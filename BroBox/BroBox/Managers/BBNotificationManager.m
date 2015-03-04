@@ -256,6 +256,25 @@ static BBNotificationManager *sharedManager;
                               toQuery:query];
 }
 
++ (void)pushNotificationWithMessage:(NSString *)message
+                              title:(NSString *)title
+                           subtitle:(NSString *)subtitle
+                               type:(BBNotificationType)type
+                               info:(NSDictionary *)info
+                            toUsers:(NSArray *)users {
+    
+    PFQuery *query = [PFInstallation query];
+    [query whereKey:@"user" containedIn:users];
+    
+    [self pushNotificationWithMessage:message
+                                title:title
+                             subtitle:subtitle
+                                 type:type
+                                 info:info
+                              toQuery:query];
+    
+}
+
 #pragma mark - Helpers
 
 + (NSString *)keyForNotificationType:(BBNotificationType)type {

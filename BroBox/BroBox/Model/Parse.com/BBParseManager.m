@@ -198,13 +198,19 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
                 NSDictionary *info = @{
                                        };
                 
-                BBParseUser *receiver = ([message.author.objectId isEqualToString:mission.creator.objectId]) ? mission.carrier : mission.creator;
+                NSMutableArray *targets = [@[
+                                            mission.creator,
+                                            mission.receiver,
+                                            mission.carrier
+                                            ] mutableCopy];
+                [targets removeObject:[BBParseUser currentUser]];
                 
                 [BBNotificationManager pushNotificationWithMessage:alert
                                                              title:[message.author fullName]
                                                           subtitle:message.content
                                                               type:BBNotificationTypeNewMessage
-                                                              info:info toUser:receiver];
+                                                              info:info
+                                                           toUsers:targets];
             }
         }];
     }];
