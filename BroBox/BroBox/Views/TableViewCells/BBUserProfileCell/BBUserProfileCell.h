@@ -14,6 +14,7 @@
 @interface BBUserProfileCell : BBTableViewCell
 
 @property (strong, nonatomic) BBParseUser *user;
+@property (strong, nonatomic) NSString *title;
 
 
 @end

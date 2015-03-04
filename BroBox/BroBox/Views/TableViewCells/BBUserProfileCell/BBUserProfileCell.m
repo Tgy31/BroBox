@@ -17,8 +17,8 @@
 @interface BBUserProfileCell()
 
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
-@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roleLabel;
 
 
 @end
@@ -31,14 +31,16 @@
     self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width/2.0;
     self.profilePictureView.backgroundColor = [UIColor lightGrayColor];
     
+    self.roleLabel.textColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
+    
     if (self.user) {
         [self updateViews];
     }
 }
 
 - (void)updateViews {
-    self.firstNameLabel.text = self.user.firstName;
-    self.lastNameLabel.text = self.user.lastName;
+    self.roleLabel.text = self.title;
+    self.nameLabel.text = [self.user fullName];
     
     self.profilePictureView.profileID = self.user.facebookID;
 }
