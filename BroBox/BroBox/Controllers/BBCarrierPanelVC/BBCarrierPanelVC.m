@@ -12,7 +12,7 @@
 #import <MapKit/MapKit.h>
 
 // Controllers
-#import "BBQRReaderVC.h"
+#import "BBDirectionsVC.h"
 #import "BBMissionOverviewVC.h"
 #import "BBChatVC.h"
 
@@ -33,16 +33,9 @@
 
 typedef NS_ENUM(NSInteger, BBClientPanelSection) {
     BBClientPanelSectionInformations,
-    BBClientPanelSectionCheckins,
+    BBClientPanelSectionCanalTp,
     BBClientPanelSectionOptions,
 };
-
-
-typedef NS_ENUM(NSInteger, BBClientPanelCheckinRow) {
-    BBClientPanelCheckinRowPickUp,
-    BBClientPanelCheckinRowDropOff,
-};
-
 
 typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     BBClientPanelInformationRowCreator,
@@ -114,8 +107,8 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     switch (section) {
         case BBClientPanelSectionInformations:
             return 3;
-        case BBClientPanelSectionCheckins:
-            return 0;
+        case BBClientPanelSectionCanalTp:
+            return 1;
         case BBClientPanelSectionOptions:
             return 1;
             
@@ -131,8 +124,8 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
         case BBClientPanelSectionInformations:
             return [self tableView:tableView informationCellForIndexPath:indexPath];
             
-        case BBClientPanelSectionCheckins:
-            return [self tableView:tableView checkinCellForIndexPath:indexPath];
+        case BBClientPanelSectionCanalTp:
+            return [self tableView:tableView canalTpCellForIndexPath:indexPath];
             
         case BBClientPanelSectionOptions:
             return [self tableView:tableView optionCellForIndexPath:indexPath];
@@ -143,7 +136,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-       checkinCellForIndexPath:(NSIndexPath *)indexPath {
+       canalTpCellForIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     
@@ -153,19 +146,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    switch (indexPath.row) {
-        case BBClientPanelCheckinRowPickUp:
-            cell.textLabel.text = NSLocalizedString(@"Check Pick up", @"");
-            break;
-            
-        case BBClientPanelCheckinRowDropOff:
-            cell.textLabel.text = NSLocalizedString(@"Check Drop off", @"");
-            break;
-            
-        default:
-            break;
-    }
+    cell.textLabel.text = NSLocalizedString(@"Directions", @"");
     
     return cell;
 }
@@ -251,18 +232,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
         }
             
-        case BBClientPanelSectionCheckins: {
-            switch (indexPath.row) {
-                case BBClientPanelCheckinRowPickUp:
-                    [self pickUpCheckinHandler];
-                    break;
-                case BBClientPanelCheckinRowDropOff:
-                    [self dropOffCheckinHandler];
-                    break;
-                    
-                default:
-                    break;
-            }
+        case BBClientPanelSectionCanalTp: {
+            [self canalTpDirectionsHandler];
             break;
         }
             
@@ -288,15 +259,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 #pragma mark - Handlers
 
-- (void)pickUpCheckinHandler {
-    BBQRReaderVC *destination = [BBQRReaderVC new];
-    destination.title = NSLocalizedString(@"Pick up", @"");
-    [self.navigationController pushViewController:destination animated:YES];
-}
-
-- (void)dropOffCheckinHandler {
-    BBQRReaderVC *destination = [BBQRReaderVC new];
-    destination.title = NSLocalizedString(@"Drop off", @"");
+- (void)canalTpDirectionsHandler {
+    BBDirectionsVC *destination = [BBDirectionsVC new];
+    destination.json = [[self.canalTpResponse objectForKey:@"journeys"] firstObject];
     [self.navigationController pushViewController:destination animated:YES];
 }
 

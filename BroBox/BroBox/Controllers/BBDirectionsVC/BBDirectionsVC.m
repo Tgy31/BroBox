@@ -10,7 +10,7 @@
 
 #define SECTION_MODE_KEY @"mode"
 #define SECTION_ITEMS_KEY @"items"
-#define SECTION_NAME_KEY @"name"
+#define SECTION_DURATION_KEY @"duration"
 
 #define ITEM_TITLE_KEY @"title"
 #define ITEM_SUBTITLE_KEY @"subtitle"
@@ -51,6 +51,9 @@
     _json = json;
     
     self.directions = [self directionsFromJson:json];
+    
+    NSNumber *duration = [json objectForKey:@"duration"];
+    self.title = [self hydratedDurationWithNumber:duration];
 }
 
 #pragma mark - Data manipulation
@@ -86,6 +89,7 @@
     
     NSDictionary *displayInfo = [json objectForKey:@"display_informations"];
     NSString *mode = [displayInfo objectForKey:@"commercial_mode"];
+    NSNumber *duration = [json objectForKey:@"duration"];
     
     NSDictionary *from = [json objectForKey:@"from"];
     NSDictionary *to = [json objectForKey:@"to"];
@@ -103,6 +107,7 @@
     
     return @{
              SECTION_MODE_KEY: mode,
+             SECTION_DURATION_KEY: duration,
              SECTION_ITEMS_KEY: @[
                      itemFrom,
                      itemTo
@@ -113,6 +118,7 @@
 - (NSDictionary *)streetNetworkSectionFromJson:(NSDictionary *)json {
     
     NSString *mode = [json objectForKey:@"mode"];
+    NSNumber *duration = [json objectForKey:@"duration"];
     
     NSDictionary *from = [json objectForKey:@"from"];
     NSDictionary *to = [json objectForKey:@"to"];
@@ -143,14 +149,35 @@
     
     return @{
              SECTION_MODE_KEY: mode,
+             SECTION_DURATION_KEY: duration,
              SECTION_ITEMS_KEY: items
              };
+}
+
+- (NSString *)hydratedDurationWithNumber:(NSNumber *)duration {
+    
+    int d = [duration intValue];
+    
+    int seconds = d % 60;
+    
+    d = (d - seconds) / 60;
+    
+    int minutes = d % 60;
+    
+    d = (d - minutes) / 60;
+    
+    int hours = d;
+    
+    if (hours > 0) {
+        return [NSString stringWithFormat:@"%d hours %d minutes %d seconds", hours, minutes, seconds];
+    } else {
+        return [NSString stringWithFormat:@"%d minutes %d seconds", minutes, seconds];
+    }
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
     return self.directions.count;
 }
 
@@ -162,9 +189,85 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    
+    NSDictionary *direction = [self.directions objectAtIndex:indexPath.section];
+    NSDictionary *item = [[direction objectForKey:SECTION_ITEMS_KEY] objectAtIndex:indexPath.row];
+    
+    NSString *itemType = [item objectForKey:ITEM_TYPE_KEY];
+    
+    if ([itemType isEqualToString:ITEM_TYPE_PATH]) {
+        return [self tableView:tableView cellForPathForRowAtIndexPath:indexPath withItem:item];
+    } else if ([itemType isEqualToString:ITEM_TYPE_FROM]) {
+        return [self tableView:tableView cellForFromForRowAtIndexPath:indexPath withItem:item];
+    } else if ([itemType isEqualToString:ITEM_TYPE_TO]) {
+        return [self tableView:tableView cellForToForRowAtIndexPath:indexPath withItem:item];
+    }
+    
+    return [[UITableViewCell alloc] init];
+}
+
+#define CELL_PATH_IDENTIFIER @"cellPath"
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForPathForRowAtIndexPath:(NSIndexPath *)indexPath withItem:(NSDictionary *)item {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_PATH_IDENTIFIER];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CELL_PATH_IDENTIFIER];
+    }
+    
+    cell.detailTextLabel.text = [item objectForKey:ITEM_SUBTITLE_KEY];
+    
+    return cell;
+}
+
+#define CELL_FROM_IDENTIFIER @"cellFrom"
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForFromForRowAtIndexPath:(NSIndexPath *)indexPath withItem:(NSDictionary *)item {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_FROM_IDENTIFIER];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CELL_FROM_IDENTIFIER];
+    }
+    
+    cell.textLabel.text = [item objectForKey:ITEM_TITLE_KEY];
+    cell.textLabel.textColor = [UIColor blueColor];
+    cell.detailTextLabel.text = [item objectForKey:ITEM_SUBTITLE_KEY];
+    
+    return cell;
+}
+
+#define CELL_TO_IDENTIFIER @"cellTo"
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForToForRowAtIndexPath:(NSIndexPath *)indexPath withItem:(NSDictionary *)item {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_PATH_IDENTIFIER];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CELL_PATH_IDENTIFIER];
+    }
+    
+    cell.textLabel.text = [item objectForKey:ITEM_TITLE_KEY];
+    cell.textLabel.textColor = [UIColor orangeColor];
+    cell.detailTextLabel.text = [item objectForKey:ITEM_SUBTITLE_KEY];
+    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSDictionary *direction = [self.directions objectAtIndex:section];
+    return [direction objectForKey:SECTION_MODE_KEY];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    NSDictionary *direction = [self.directions objectAtIndex:section];
+    NSNumber *duration = [direction objectForKey:SECTION_DURATION_KEY];
+    
+    return [self hydratedDurationWithNumber:duration];
+}
+
 
 @end
