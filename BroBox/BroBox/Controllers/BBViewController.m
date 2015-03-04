@@ -35,6 +35,8 @@
     [super viewDidLoad];
     
     self.navigationBarShouldCoverViewController = NO;
+    
+    [self setUpAppearance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -94,6 +96,11 @@
         _debugButton.tintColor = [UIColor orangeColor];
     }
     return _debugButton;
+}
+
+#pragma mark - Appearance 
+
+- (void)setUpAppearance {
 }
 
 #pragma mark - Handlers
