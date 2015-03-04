@@ -35,17 +35,22 @@
     self = [super init];
     if (self) {
         self.mapVC = [BBMapNavigationController new];
+        self.mapVC.tabBarItem.image = [UIImage imageNamed:@"map.png"];
         
         self.missionsVC = [BBMissionListNavigationController new];
+        self.missionsVC.tabBarItem.image = [UIImage imageNamed:@"list.png"];
         
         self.createVC = [BBCreateMissionNavigationController new];
+        self.createVC.tabBarItem.image = [UIImage imageNamed:@"mission.png"];
         
         self.notificationVC = [UIViewController new];
         self.notificationVC.view.backgroundColor = [UIColor redColor];
         self.notificationVC.title = @"Notifs";
+        self.notificationVC.tabBarItem.image = [UIImage imageNamed:@"alert.png"];
         
         self.settingsVC = [[BBNavigationController alloc] initWithRootViewController:[BBSettingsVC new]];
         self.settingsVC.title = @"Settings";
+        self.settingsVC.tabBarItem.image = [UIImage imageNamed:@"settings.png"];
         
         [self setViewControllers:@[
                                    self.mapVC,

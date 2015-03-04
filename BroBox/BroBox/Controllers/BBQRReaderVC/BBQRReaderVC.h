@@ -10,8 +10,27 @@
 
 #import "BBParseMission.h"
 
+@protocol BBQRReaderDelegate;
+
+
+typedef NS_ENUM(NSInteger, BBQRReaderType) {
+    BBQRReaderTypePickUp,
+    BBQRReaderTypeDropOff
+};
+
 @interface BBQRReaderVC : BBViewController
 
+@property (weak, nonatomic) id<BBQRReaderDelegate> delegate;
+
 @property (strong, nonatomic) BBParseMission *mission;
+@property (nonatomic) BBQRReaderType type;
+
+@end
+
+
+@protocol BBQRReaderDelegate <NSObject>
+
+- (void)QRReaderDidSucced:(BBQRReaderVC *)readerVC;
+
 
 @end

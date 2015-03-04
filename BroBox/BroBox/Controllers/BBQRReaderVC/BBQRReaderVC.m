@@ -37,6 +37,8 @@
     
     self.profileLabel.hidden = YES;
     self.profileLabel.textColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
+    
+    self.title = self.type ? NSLocalizedString(@"Drop Off", @"") : NSLocalizedString(@"Pick Up", @"");
 }
 
 - (void)viewWillLayoutSubviews {
@@ -88,15 +90,20 @@
 }
 
 - (void)handleSuccess {
-    self.imageView.hidden = YES;
     self.scanButton.hidden = YES;
     self.commentLabel.text = NSLocalizedString(@"Carrier certified", @"");
+    
+    self.imageView.image = [UIImage imageNamed:@"checkmark.jpg"];
     
     self.profilePictureView.hidden = NO;
     self.profilePictureView.profileID = self.mission.carrier.facebookID;
     
     self.profileLabel.hidden = NO;
     self.profileLabel.text = [self.mission.carrier fullName];
+    
+    if ([self.delegate respondsToSelector:@selector(QRReaderDidSucced:)]) {
+        [self.delegate QRReaderDidSucced:self];
+    }
 }
 
 - (void)handleFail {

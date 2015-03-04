@@ -48,15 +48,15 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-2q-N3M" customClass="FBProfilePictureView">
-                    <rect key="frame" x="225" y="225" width="150" height="150"/>
+                    <rect key="frame" x="250" y="350" width="100" height="100"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="4FL-y8-HYK"/>
-                        <constraint firstAttribute="height" constant="150" id="wce-Hq-Tu8"/>
+                        <constraint firstAttribute="width" constant="100" id="4FL-y8-HYK"/>
+                        <constraint firstAttribute="height" constant="100" id="wce-Hq-Tu8"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-8y-FIQ">
-                    <rect key="frame" x="273" y="383" width="53" height="27"/>
+                    <rect key="frame" x="273" y="458" width="53" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                 <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="QLP-r2-msO" secondAttribute="bottom" constant="8" id="4yv-rk-PK3"/>
                 <constraint firstAttribute="centerY" secondItem="ozd-ok-JeF" secondAttribute="centerY" constant="60" id="8va-ux-rM1"/>
                 <constraint firstAttribute="trailing" secondItem="QLP-r2-msO" secondAttribute="trailing" constant="8" id="C9D-bW-7Hu"/>
-                <constraint firstAttribute="centerY" secondItem="eBd-2q-N3M" secondAttribute="centerY" id="Kzg-r3-89j"/>
+                <constraint firstItem="ggG-hN-obY" firstAttribute="top" secondItem="zbV-8y-FIQ" secondAttribute="bottom" constant="55.5" id="NES-SH-HuQ"/>
                 <constraint firstAttribute="centerX" secondItem="ozd-ok-JeF" secondAttribute="centerX" id="RFJ-8u-7c1"/>
                 <constraint firstAttribute="bottom" secondItem="ggG-hN-obY" secondAttribute="bottom" constant="20" id="dCo-6j-nA5"/>
                 <constraint firstItem="QLP-r2-msO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gs7-7Y-cCB"/>
