@@ -51,6 +51,12 @@
     [self updateViews];
 }
 
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    
+    [self updateViews];
+}
+
 #pragma mark - Helpers
 
 + (NSString *)reusableIdentifier {
