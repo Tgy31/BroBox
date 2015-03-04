@@ -118,7 +118,14 @@ confirmSignUpWithBlock:(BBBooleanResultBlock)block {
 
 + (void)fetchCarriersForMission:(BBParseMission *)mission
                       withBlock:(BBArrayResultBlock)block {
-    PFQuery *query = [[mission carriersAwaitingRelation] query];
+    PFQuery *query = nil;
+    if (mission) {
+        query = [[mission carriersAwaitingRelation] query];
+    } else {
+        query = [BBParseUser query];
+        [query whereKeyExists:@"facebookID"];
+    }
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects, error);
     }];
