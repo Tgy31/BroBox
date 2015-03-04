@@ -20,8 +20,14 @@
 
 typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
     BBMissionPanelSectionMission,
-    BBMissionPanelSectionCarriers,
+    BBMissionPanelSectionUsers,
     BBMissionPanelSectionDelete
+};
+
+
+typedef NS_ENUM(NSInteger, BBMissionPanelUserRow) {
+    BBMissionPanelUserRowReceiver,
+    BBMissionPanelUserRowCarrier
 };
 
 @interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBCarrierPickerDelegate, UIAlertViewDelegate>
@@ -71,15 +77,20 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    switch (section) {
+        case BBMissionPanelSectionUsers:
+            return 2;
+            
+        default:
+            return 1;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case BBMissionPanelSectionMission: {
             static NSString *identifier = @"BBMissionPanelSectionMission";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
-                                                                    forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:identifier];
@@ -89,23 +100,18 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
             return cell;
         }
             
-        case BBMissionPanelSectionCarriers: {
-            static NSString *identifier = @"BBMissionPanelSectionCarriers";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
-                                                                    forIndexPath:indexPath];
-            if (!cell) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                              reuseIdentifier:identifier];
+        case BBMissionPanelSectionUsers: {
+            switch (indexPath.row) {
+                case BBMissionPanelUserRowReceiver:
+                    return [self tableView:tableView cellForReceiverForRowAtIndexPath:indexPath];
+                case BBMissionPanelUserRowCarrier:
+                    return [self tableView:tableView cellForCarrierForRowAtIndexPath:indexPath];
             }
-            cell.textLabel.text = NSLocalizedString(@"Select a carrier", @"");
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            return cell;
         }
             
         case BBMissionPanelSectionDelete: {
             static NSString *identifier = @"BBMissionPanelSectionDelete";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
-                                                                    forIndexPath:indexPath];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                               reuseIdentifier:identifier];
@@ -115,9 +121,35 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
             cell.accessoryType = UITableViewCellAccessoryNone;
             return cell;
         }
-            default:
-            return nil;
     }
+    return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForCarrierForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *identifier = @"BBMissionPanelSectionCarriers";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
+                                      reuseIdentifier:identifier];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    cell.textLabel.text = NSLocalizedString(@"Select a carrier", @"");
+    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForReceiverForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *identifier = @"BBMissionPanelSectionReceivers";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
+                                      reuseIdentifier:identifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    cell.textLabel.text = NSLocalizedString(@"Receiver", @"");
+    cell.detailTextLabel.text = NSLocalizedString(@"Select", @"");
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -131,11 +163,15 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
             [self.navigationController pushViewController:destination animated:YES];
             break;
         }
-        case BBMissionPanelSectionCarriers: {
-            BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
-            destination.mission = self.mission;
-            destination.delegate = self;
-            [self.navigationController pushViewController:destination animated:YES];
+        case BBMissionPanelSectionUsers: {
+            switch (indexPath.row) {
+                case BBMissionPanelUserRowReceiver:
+                    [self receiverCellHandler];
+                    break;
+                case BBMissionPanelUserRowCarrier:
+                    [self carrierCellHandler];
+                    break;
+            }
             break;
         }
         case BBMissionPanelSectionDelete: {
@@ -153,6 +189,20 @@ typedef NS_ENUM(NSInteger, BBMissionPanelSection) {
         }
     }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)receiverCellHandler {
+    BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
+    destination.mission = nil;
+    destination.delegate = self;
+    [self.navigationController pushViewController:destination animated:YES];
+}
+
+- (void)carrierCellHandler {
+    BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
+    destination.mission = self.mission;
+    destination.delegate = self;
+    [self.navigationController pushViewController:destination animated:YES];
 }
 
 #pragma mark - BBCarrierPickerDelegate
