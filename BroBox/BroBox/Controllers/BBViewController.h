@@ -22,4 +22,6 @@
 - (BOOL)shouldShowDebugBarbutton;
 - (void)debugButtonHandler;
 
+- (void)setUpAppearance;
+
 @end

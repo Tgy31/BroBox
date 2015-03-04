@@ -55,8 +55,16 @@
                                    self.settingsVC
                                    ]];
         self.tabBar.translucent = NO;
+        
+        [self setUpAppearance];
     }
     return self;
+}
+
+#pragma mark - Appearance
+
+- (void)setUpAppearance {
+    self.tabBar.tintColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
 }
 
 @end
