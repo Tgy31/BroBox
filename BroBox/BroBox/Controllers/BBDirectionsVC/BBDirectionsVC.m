@@ -88,7 +88,13 @@
 - (NSDictionary *)publicTransportSectionFromJson:(NSDictionary *)json {
     
     NSDictionary *displayInfo = [json objectForKey:@"display_informations"];
+    
     NSString *mode = [displayInfo objectForKey:@"commercial_mode"];
+    NSString *label = [displayInfo objectForKey:@"label"];
+    if (label) {
+        mode = [mode stringByAppendingString:label];
+    }
+    
     NSNumber *duration = [json objectForKey:@"duration"];
     
     NSDictionary *from = [json objectForKey:@"from"];
@@ -268,6 +274,5 @@
     
     return [self hydratedDurationWithNumber:duration];
 }
-
 
 @end
