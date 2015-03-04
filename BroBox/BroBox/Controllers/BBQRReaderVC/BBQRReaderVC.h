@@ -8,6 +8,10 @@
 
 #import "BBViewController.h"
 
+#import "BBParseMission.h"
+
 @interface BBQRReaderVC : BBViewController
+
+@property (strong, nonatomic) BBParseMission *mission;
 
 @end

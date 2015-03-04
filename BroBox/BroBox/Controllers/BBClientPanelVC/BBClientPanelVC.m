@@ -289,12 +289,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)pickUpCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
     destination.title = NSLocalizedString(@"Pick up", @"");
+    destination.mission = self.mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)dropOffCheckinHandler {
     BBQRReaderVC *destination = [BBQRReaderVC new];
     destination.title = NSLocalizedString(@"Drop off", @"");
+    destination.mission = self.mission;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
