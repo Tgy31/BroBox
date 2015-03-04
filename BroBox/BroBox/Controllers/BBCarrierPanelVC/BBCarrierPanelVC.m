@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelSection) {
 
 typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
     BBClientPanelInformationRowCreator,
+    BBClientPanelInformationRowReceiver,
     BBClientPanelInformationRowMission,
     BBClientPanelInformationRowChat,
 };
@@ -106,7 +107,7 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case BBClientPanelSectionInformations:
-            return 3;
+            return 4;
         case BBClientPanelSectionCanalTp:
             return 1;
         case BBClientPanelSectionOptions:
@@ -155,6 +156,23 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
    informationCellForIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.row) {
+            
+        case BBClientPanelInformationRowCreator: {
+            NSString *identifier = [BBUserProfileCell reusableIdentifier];
+            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.user = self.mission.creator;
+            cell.title = NSLocalizedString(@"Sender", @"");
+            return cell;
+        }
+            
+        case BBClientPanelInformationRowReceiver: {
+            NSString *identifier = [BBUserProfileCell reusableIdentifier];
+            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+            cell.user = self.mission.receiver;
+            cell.title = NSLocalizedString(@"Receiver", @"");
+            return cell;
+        }
+            
         case BBClientPanelInformationRowMission: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
             
@@ -169,12 +187,6 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
             return cell;
         }
             
-        case BBClientPanelInformationRowCreator: {
-            NSString *identifier = [BBUserProfileCell reusableIdentifier];
-            BBUserProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-            cell.user = self.mission.creator;
-            return cell;
-        }
         case BBClientPanelInformationRowChat: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
             
@@ -260,7 +272,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == BBClientPanelSectionInformations && indexPath.row == BBClientPanelInformationRowCreator) {
+    if (indexPath.section == BBClientPanelSectionInformations && (indexPath.row == BBClientPanelInformationRowCreator || indexPath.row == BBClientPanelInformationRowReceiver)) {
         return [BBUserProfileCell preferedHeight];
     } else {
         return 44.0;
