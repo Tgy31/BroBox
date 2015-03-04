@@ -58,6 +58,8 @@ typedef NS_ENUM(NSInteger, BBClientPanelInformationRow) {
 
 @property (strong, nonatomic) BBCarrierAnnotation *carrierAnnotation;
 
+@property (strong, nonatomic) NSDictionary *canalTpResponse;
+
 
 @end
 
@@ -352,6 +354,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         CLLocationCoordinate2D to = CLLocationCoordinate2DMake(geoTo.coordinate.latitude, geoTo.coordinate.longitude);
         [BBCanalTpManager getJourneyFrom:from to:to withBlock:^(NSDictionary *json, NSError *error) {
             if (!error) {
+                self.canalTpResponse = json;
                 NSDictionary *journey = [[json objectForKey:@"journeys"] firstObject];
                 NSArray *path = [BBCanalTpManager pathForJourney:journey];
                 [self drawRoute:path];

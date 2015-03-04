@@ -31,6 +31,8 @@
 		5A1B0C461A710D5E00425431 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C451A710D5E00425431 /* BBViewController.m */; };
 		5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C4C1A710D9400425431 /* BBObject.m */; };
 		5A1B0C541A710DD000425431 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B0C531A710DD000425431 /* BBView.m */; };
+		5A1EF5791AA6F39F00C0D1A7 /* BBDirectionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */; };
+		5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */; };
 		5A3053DC1A825272006E9A95 /* BBCreateMissionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */; };
 		5A3053DD1A825272006E9A95 /* BBCreateMissionNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */; };
 		5A3053E51A8252DE006E9A95 /* BBCreateMissionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3053E31A8252DE006E9A95 /* BBCreateMissionVC.m */; };
@@ -184,6 +186,9 @@
 		5A1B0C4C1A710D9400425431 /* BBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBObject.m; sourceTree = "<group>"; };
 		5A1B0C521A710DD000425431 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		5A1B0C531A710DD000425431 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
+		5A1EF5761AA6F39F00C0D1A7 /* BBDirectionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBDirectionsVC.h; path = BBDirectionsVC/BBDirectionsVC.h; sourceTree = "<group>"; };
+		5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBDirectionsVC.m; path = BBDirectionsVC/BBDirectionsVC.m; sourceTree = "<group>"; };
+		5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBDirectionsVC.xib; path = BBDirectionsVC/BBDirectionsVC.xib; sourceTree = "<group>"; };
 		5A3053D91A825272006E9A95 /* BBCreateMissionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCreateMissionNavigationController.h; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.h; sourceTree = "<group>"; };
 		5A3053DA1A825272006E9A95 /* BBCreateMissionNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCreateMissionNavigationController.m; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.m; sourceTree = "<group>"; };
 		5A3053DB1A825272006E9A95 /* BBCreateMissionNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBCreateMissionNavigationController.xib; path = BBCreateRequestNavigationController/BBCreateMissionNavigationController.xib; sourceTree = "<group>"; };
@@ -542,6 +547,7 @@
 			children = (
 				5A1B0C441A710D5E00425431 /* BBViewController.h */,
 				5A1B0C451A710D5E00425431 /* BBViewController.m */,
+				5A1EF57B1AA6F3A600C0D1A7 /* BBDirectionsVC */,
 				5A1224131AA5D760001F4B41 /* BBCarrierPanelVC */,
 				5A6A78201AA511DE003E57AE /* BBSettingsVC */,
 				5ACD94671AA3867D00F3198F /* BBChatVC */,
@@ -588,6 +594,16 @@
 				5A0E1EF21A7AA7A0002B314E /* BBMissionAnnotationView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5A1EF57B1AA6F3A600C0D1A7 /* BBDirectionsVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A1EF5761AA6F39F00C0D1A7 /* BBDirectionsVC.h */,
+				5A1EF5771AA6F39F00C0D1A7 /* BBDirectionsVC.m */,
+				5A1EF5781AA6F39F00C0D1A7 /* BBDirectionsVC.xib */,
+			);
+			name = BBDirectionsVC;
 			sourceTree = "<group>";
 		};
 		5A3053DE1A825277006E9A95 /* BBCreateMissionNavigationController */ = {
@@ -1076,6 +1092,7 @@
 				5A3053E61A8252DE006E9A95 /* BBCreateMissionVC.xib in Resources */,
 				5A1224121AA5D75A001F4B41 /* BBCarrierPanelVC.xib in Resources */,
 				5AA60D381A75473D001C07F6 /* BBMissionListNavigationController.xib in Resources */,
+				5A1EF57A1AA6F39F00C0D1A7 /* BBDirectionsVC.xib in Resources */,
 				5A30540E1A826826006E9A95 /* DBPrivacyHelperAssets.xcassets in Resources */,
 				5AAC278F1A72DF5900ECF6FA /* BBMissionsMapVC.xib in Resources */,
 				5AA60D321A7546D9001C07F6 /* BBMissionListVC.xib in Resources */,
@@ -1134,6 +1151,7 @@
 				5A3054181A828956006E9A95 /* GFPlaceholderView.m in Sources */,
 				5A7532141A90A7160045D9AF /* BBCarrierPickerVC.m in Sources */,
 				5A1B0C4D1A710D9400425431 /* BBObject.m in Sources */,
+				5A1EF5791AA6F39F00C0D1A7 /* BBDirectionsVC.m in Sources */,
 				5A8C32621A85277000F03821 /* BBParseUser.m in Sources */,
 				5A3054121A826826006E9A95 /* DBPrivateHelperController.m in Sources */,
 				5ACD946D1AA3878D00F3198F /* BBParseMessage.m in Sources */,
