@@ -57,6 +57,10 @@ typedef NS_ENUM(NSInteger, BBMissionPanelUserRow) {
     return (self.mission.carrier != nil);
 }
 
+- (NSString *)titleForDebugButton {
+    return @"[SENDER]";
+}
+
 #pragma mark - Getters & Setters
 
 #pragma mark - Handlers

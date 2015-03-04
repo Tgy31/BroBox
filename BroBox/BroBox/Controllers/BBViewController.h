@@ -21,6 +21,7 @@
 
 - (BOOL)shouldShowDebugBarbutton;
 - (void)debugButtonHandler;
+- (NSString *)titleForDebugButton;
 
 - (void)setUpAppearance;
 

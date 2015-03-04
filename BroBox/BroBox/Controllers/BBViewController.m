@@ -89,7 +89,7 @@
 
 - (UIBarButtonItem *)debugButton {
     if (!_debugButton) {
-        _debugButton = [[UIBarButtonItem alloc] initWithTitle:@"[DEBUG]"
+        _debugButton = [[UIBarButtonItem alloc] initWithTitle:[self titleForDebugButton]
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(debugButtonHandler)];
@@ -101,6 +101,10 @@
 #pragma mark - Appearance 
 
 - (void)setUpAppearance {
+}
+
+- (NSString *)titleForDebugButton {
+    return @"[DEBUG]";
 }
 
 #pragma mark - Handlers

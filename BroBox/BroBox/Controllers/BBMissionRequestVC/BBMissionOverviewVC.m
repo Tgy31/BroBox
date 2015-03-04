@@ -62,6 +62,8 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
     [self initializeTableView];
     [self initialiazeView];
     [self setViewForMission:self.mission];
+    
+    [self.mission fetchInBackground];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -118,6 +120,14 @@ typedef NS_ENUM(NSInteger, BBMissionOverviewTripCell) {
 - (BOOL)shouldShowDebugBarbutton {
     return [self.mission.carrier isEqual:[BBParseUser currentUser]]
     || [self.mission.receiver isEqual:[BBParseUser currentUser]];
+}
+
+- (NSString *)titleForDebugButton {
+    if ([self.mission.carrier isEqual:[BBParseUser currentUser]]) {
+        return @"[CARRIER]";
+    } else {
+        return @"[RECEIVER]";
+    }
 }
 
 #pragma mark - Getters & Setters
