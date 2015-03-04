@@ -1,12 +1,12 @@
 //
-//  BBCarrierPickerVC.m
+//  BBUserPickerVC.m
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 15/02/2015.
 //  Copyright (c) 2015 Brobox. All rights reserved.
 //
 
-#import "BBCarrierPickerVC.h"
+#import "BBUserPickerVC.h"
 
 // Libraries
 #import "GFPlaceholderView.h"
@@ -21,7 +21,7 @@
 // Views
 #import "BBUserProfileCell.h"
 
-@interface BBCarrierPickerVC () <UIAlertViewDelegate>
+@interface BBUserPickerVC () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) GFPlaceholderView *placeHolderView;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation BBCarrierPickerVC
+@implementation BBUserPickerVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

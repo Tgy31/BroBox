@@ -9,7 +9,7 @@
 #import "BBMissionPanelVC.h"
 
 // Controllers
-#import "BBCarrierPickerVC.h"
+#import "BBUserPickerVC.h"
 #import "BBMissionOverviewVC.h"
 
 // Managers
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, BBMissionPanelUserRow) {
     BBMissionPanelUserRowCarrier
 };
 
-@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBCarrierPickerDelegate, UIAlertViewDelegate>
+@interface BBMissionPanelVC () <UITableViewDataSource, UITableViewDelegate, BBUserPickerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -192,14 +192,14 @@ typedef NS_ENUM(NSInteger, BBMissionPanelUserRow) {
 }
 
 - (void)receiverCellHandler {
-    BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
+    BBUserPickerVC *destination = [BBUserPickerVC new];
     destination.mission = nil;
     destination.delegate = self;
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)carrierCellHandler {
-    BBCarrierPickerVC *destination = [BBCarrierPickerVC new];
+    BBUserPickerVC *destination = [BBUserPickerVC new];
     destination.mission = self.mission;
     destination.delegate = self;
     [self.navigationController pushViewController:destination animated:YES];

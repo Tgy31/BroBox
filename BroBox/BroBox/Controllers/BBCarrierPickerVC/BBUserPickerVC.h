@@ -1,5 +1,5 @@
 //
-//  BBCarrierPickerVC.h
+//  BBUserPickerVC.h
 //  BroBox
 //
 //  Created by Tanguy Hélesbeux on 15/02/2015.
@@ -11,18 +11,18 @@
 // Model
 #import "BBParseMission.h"
 
-@protocol BBCarrierPickerDelegate;
+@protocol BBUserPickerDelegate;
 
-@interface BBCarrierPickerVC : UITableViewController
+@interface BBUserPickerVC : UITableViewController
 
-@property (weak, nonatomic) id<BBCarrierPickerDelegate> delegate;
+@property (weak, nonatomic) id<BBUserPickerDelegate> delegate;
 
 @property (strong, nonatomic) BBParseMission *mission;
 
 @end
 
 
-@protocol BBCarrierPickerDelegate <NSObject>
+@protocol BBUserPickerDelegate <NSObject>
 
 - (void)carrierPickerDidSelectCarrier:(BBParseUser *)carrier;
 
