@@ -449,9 +449,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
     MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
-    polylineView.strokeColor = [UIColor blueColor];
-    polylineView.lineWidth = 5.0;
-    polylineView.alpha = 0.7;
+    polylineView.strokeColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
+    polylineView.lineWidth = 15.0;
+    polylineView.alpha = 0.5;
     
     return polylineView;
 }

@@ -60,6 +60,7 @@
     self.leftCalloutAccessoryView = profileView;
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    rightButton.tintColor = [UIColor colorWithRed:0.89f green:0.40f blue:0.00f alpha:1.00f];
     self.rightCalloutAccessoryView = rightButton;
 }
 
